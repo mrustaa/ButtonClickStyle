@@ -72,6 +72,8 @@ enum Style {
 var addViews: [UIView]?
 ```
 
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
+
 7) If initializing programmatically
 There is a property `addViews` - allows you to pass views / layers
 which you definitely want to use in the click animation only
@@ -106,9 +108,6 @@ btnView.insertSubview(mainView, at: 0)
 btnView.updateSubviews()
 
 ```
-
-## Credits
-
 
 ## License
 
