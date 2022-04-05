@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BorderGreenDarkButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+            <connections>
+                <outlet property="backColor" destination="Mti-QJ-5Sr" id="SR7-Ko-4c8"/>
+                <outlet property="borderGradientView" destination="tmW-jz-Tkn" id="5rl-JU-C6I"/>
+                <outlet property="borderView" destination="qsj-fF-iEi" id="eeh-XS-UNS"/>
+                <outlet property="mainView" destination="PL2-Yo-zn0" id="e2q-eG-sfR"/>
+                <outlet property="textLabel" destination="X30-Mr-SOZ" id="uCN-Rq-fBr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8V-ON-vJF" userLabel=" BorderGreenDarkButton">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mti-QJ-5Sr">
+                    <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PL2-Yo-zn0" userLabel="Frame 1" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                    <rect key="frame" x="33" y="21" width="135" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmW-jz-Tkn" userLabel="Rectangle 4" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="135" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shColor">
+                                    <color key="value" red="0.078431375324726105" green="1" blue="0.55686277151107788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shRadius">
+                                    <real key="value" value="6.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsj-fF-iEi" userLabel="Rectangle 3" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="135" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="brColor">
+                                    <color key="value" red="0.07843136787414548" green="1" blue="0.55764704942703247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="brWidth">
+                                    <real key="value" value="1.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X30-Mr-SOZ" userLabel="Button">
+                            <rect key="frame" x="0.0" y="13" width="135" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                            <color key="textColor" red="0.07843136787414548" green="1" blue="0.55764704942703247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                    </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Mti-QJ-5Sr" secondAttribute="trailing" id="6IN-73-eFb"/>
+                <constraint firstItem="Mti-QJ-5Sr" firstAttribute="top" secondItem="j8V-ON-vJF" secondAttribute="top" id="DfH-er-bku"/>
+                <constraint firstItem="Mti-QJ-5Sr" firstAttribute="leading" secondItem="j8V-ON-vJF" secondAttribute="leading" id="Fau-vR-KRy"/>
+                <constraint firstAttribute="bottom" secondItem="Mti-QJ-5Sr" secondAttribute="bottom" id="r8j-G3-glM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131" y="78"/>
+        </view>
+    </objects>
+</document>
