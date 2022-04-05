@@ -2,19 +2,19 @@
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/all_ipad_random.gif)
 
-This is a layer button
+This is a view button
+
 Has 9 styles of animated click
 
 Inside the layer you can style your button, create your own subviews
 
-+ You can expand the project
-  adding new click-animation-styles
+You can expand the project adding new click-animation-styles
 
 ## Requirements
 
-macOS 10.12+
-Xcode 13+
-Swift 5.5+
+- macOS 10.12+
+- Xcode 13+
+- Swift 5.5+
 
 ## Installation
 
@@ -31,31 +31,36 @@ Swift 5.5+
 ```swift
 #type  #name
 
-hide .alpha
-hide .flash 
-add  .shadow
-add  .shadow color
-add  .color
-add  .color flat (border text)
-move .pulsate new
-move .pulsate
-move .press
-move .shake  new
-move .shake
-add  .androidClickable dark
-add  .androidClickable ligt
+enum Style {
+  # hide
+  case alpha                 
+  case flash // alpha flicker
+  # add
+  case shadow                 
+  case shadowColor            
+  case color                  
+  case colorFlat // border text
+  # move 
+  case pulsateNew             
+  case pulsate                
+  case press                  
+  case shakeNew               
+  case shake                  
+  # add pulsate 
+  case androidClickableDark   
+  case androidClickableLigt
+}
 ```
 
-4) Так же вы можете выбрать   анимировать все слои  `allSubviews`  / или только 1 
+4) Also you can select specific layers to animate / or just 1 specific one `allSubviews`
 
 
-5) Добавить + animation.Duration - время анимации
+5) Add animation duration `animationDuration`
 
-6) Добавить + animation.Value    - под значением имеется ввиду  
-   у анимации тип   
- - "Hide .Alpha/Flash/Shadow/Color"    будет меняться альфа от 0.0 до 1.0
- - "Move .Pulsate/Press/Shake"         будет движения усиливаться уменьшаться от 0.0 до 1.0
- - "Add  .AndroidClickable"            будет увелмчиваться радиус пузырей
+6) Add animation value `animationTypeValue` - meaning means
+- "Hide .Alpha/Flash/Shadow/Color"  - will change alpha from 0.0 to 1.0
+- "Move .Pulsate/Press/Shake"       - will increase movement decrease from 0.0 to 1.0
+- "Add  .AndroidClickable"          - will increase bubble radius
 
 
 ```swift
@@ -65,11 +70,11 @@ add  .androidClickable ligt
 @IBInspectable var animationDuration: CGFloat = 0.0
   
 var addViews: [UIView]?
-
 ```
-7) Если иниализацируйие программно 
-    - Есть свойство  `addViews` - позволяет передать вьшки/слои 
-      которые вы точно захотите задейстовать в анимации нажатия  only
+
+7) If initializing programmatically
+     - There is a property `addViews` - allows you to pass views / layers
+       which you definitely want to use in the click animation only
 
 
 ```swift
@@ -83,8 +88,6 @@ btnView.insertSubview(self.view, at: 0)
 btnView.updateSubviews()
 
 ```
-
- 
 
 ## Credits
 
