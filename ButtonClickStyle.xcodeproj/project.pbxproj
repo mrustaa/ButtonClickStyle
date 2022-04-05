@@ -77,6 +77,7 @@
 		4AC8BCD427FC65AA00F85008 /* TestDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BC8F27FC65AA00F85008 /* TestDemoViewController.swift */; };
 		4AC8BCD527FC65AA00F85008 /* ButtonLayerExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BC9227FC65AA00F85008 /* ButtonLayerExampleView.swift */; };
 		4AC8BCD627FC65AA00F85008 /* ButtonLayerExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC8BC9327FC65AA00F85008 /* ButtonLayerExampleView.xib */; };
+		4AC8BCD827FC6B1100F85008 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4AC8BCD727FC6B1100F85008 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,7 @@
 		4AC8BC8F27FC65AA00F85008 /* TestDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDemoViewController.swift; sourceTree = "<group>"; };
 		4AC8BC9227FC65AA00F85008 /* ButtonLayerExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayerExampleView.swift; sourceTree = "<group>"; };
 		4AC8BC9327FC65AA00F85008 /* ButtonLayerExampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonLayerExampleView.xib; sourceTree = "<group>"; };
+		4AC8BCD727FC6B1100F85008 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC8BC1E27FC652F00F85008 /* ButtonClickStyle */,
+				4AC8BCD727FC6B1100F85008 /* README.md */,
 				4AC8BC1D27FC652F00F85008 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				4AC8BCC527FC65AA00F85008 /* JustPinkButtonView.xib in Resources */,
 				4AC8BC2727FC652F00F85008 /* Main.storyboard in Resources */,
 				4AC8BCD327FC65AA00F85008 /* TestDemoViewController.storyboard in Resources */,
+				4AC8BCD827FC6B1100F85008 /* README.md in Resources */,
 				4AC8BCAB27FC65AA00F85008 /* Proxima Nova Semibold.otf in Resources */,
 				4AC8BCD227FC65AA00F85008 /* TestViewController.storyboard in Resources */,
 				4AC8BCBC27FC65AA00F85008 /* TestDemoSquaresButtonView.xib in Resources */,

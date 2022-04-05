@@ -1,7 +1,10 @@
-# ButtonCustomButtonClickStyle
+# ButtonClickStyle
+
+## Preview
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/all_ipad_random.gif)
 
 Это слой кнопка
- которая имеет 8 стилей анимированного нажатия 
+ которая имеет 9 стилей анимированного нажатия 
 
 Внутри Слоя 
  можно создавать свои собственные кнопки 
@@ -12,79 +15,87 @@
 
 ## Requirements
 
-- iOS 8.0+
-- Xcode 9+
+macOS 10.12+
+Xcode 13+
+Swift 5.5+
 
 ## Installation
-
-For manual instalation, drag Source folder into your project.
-
-os use [CocoaPod](https://cocoapods.org) adding this line to you `Podfile`:
-
-```ruby
-pod 'ButtonCustomButtonClickStyle'
-```
-
-for [Carthage](https://github.com/Carthage/Carthage) users, add this line to you `Cartfile`
-
-```ruby
-github "mrustaa/ButtonCustomButtonClickStyle"
-```
-
-### Swift Package Manager
-
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
-
-Once you have your Swift package set up, adding as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/sparrowcode/SPQRCode", .upToNextMajor(from: "1.0.4"))
-]
-```
-
-
-### Swift Package Manager
-
-[Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
-
-> Xcode 11+ is required to build Harbeth using Swift Package Manager.
-
-To integrate Harbeth into your Xcode project using Swift Package Manager, add it to the dependencies value of your `Package.swift`:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/yangKJ/Harbeth", .upToNextMajor(from: "0.1.15")),
-]
-```
-
 
 
 ## Usage
 
-#### With storyboard or xib files
+#### С storyboard или xib
 
-1) Create a Button that inherits from `Button`
+1) Создайте вьюшку, которая наследуется `ButtonClickStyleView`
 
-2) Add Image for a `Normal` state
+<!--You can now style your button (Теперь вы можете стилизовать свою кнопку )-->
+2) Внутри этого слоя, создавайте свою собственную кнопку из других слоев 
 
-3) Set the `IBOutlet` delegate property to a subclass of `ButtonDelegate`
+3) В атрибутых инспектора (`Attributes Inspector` of `Interface Builder`)а
+  вы можете сразу выбрать тип анимации нажатия кнопки  `animationType` 
+ 
+  Пока  9 стилей анимированного нажатия 
+```swift
+#type  #name
 
-4) ___Optional___ manipulate porperties to change button settings
+"Hide .Alpha"
+"Hide .Flash (more)"
+"Add  .Shadow"
+"Add  .Color"
+"Add  .ColorFlat (border text)" 
+"Move .Pulsate (new)"
+"Move .Pulsate"
+"Move .Press"
+"Move .Shake (new)"
+"Move .Shake"
+"Add  .AndroidClickable (dark)"
+"Add  .AndroidClickable (ligth)"
+```
+
+4) Так же вы можете выбрать   анимировать все слои  `allSubviews`  / или только 1 
+
+
+5) Добавить + animation.Duration - время анимации
+
+6) Добавить + animation.Value    - под значением имеется ввиду  
+   у анимации тип   
+ - "Hide .Alpha/Flash/Shadow/Color"    будет меняться альфа от 0.0 до 1.0
+ - "Move .Pulsate/Press/Shake"         будет движения усиливаться уменьшаться от 0.0 до 1.0
+ - "Add  .AndroidClickable"            будет увелмчиваться радиус пузырей
+
 
 ```swift
-@IBInspectable public var normalColor:     UIColor
-@IBInspectable public var selectedColor:   UIColor
-@IBInspectable public var dotFirstColor:   UIColor
-@IBInspectable public var dotSecondColor:  UIColor
-@IBInspectable public var circleFromColor: UIColor
-@IBInspectable public var circleToColor:   UIColor
+@IBInspectable var allSubviews: Bool = true
+@IBInspectable var animationType: Int = 
+@IBInspectable var animationValue: CGFloat = 0.0
+@IBInspectable var animationDuration: CGFloat = 0.0
+  
+var addViews: [UIView]?
+
 ```
+7) Если иниализацируйие программно 
+    - Есть свойство  `addViews` - позволяет передать вьшки/слои 
+      которые вы точно захотите задейстовать в анимации нажатия  only
+
+
+```swift
+let btnView = ButtonClickStyleView(
+   frame: @frame,
+   animation: @type,
+   value: @value,
+   addViews: @views,
+)
+btnView.insertSubview(self.view, at: 0)
+btnView.updateSubviews()
+
+```
+
+ 
 
 ## Credits
 
 
 ## License
 
-ButtonCustomButtonClickStyle is released under the MIT license.
+ButtonClickStyle is released under the MIT license.
 
