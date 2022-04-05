@@ -1,6 +1,5 @@
 # ButtonClickStyle
 
-## Preview
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/all_ipad_random.gif)
 
 Это слой кнопка
