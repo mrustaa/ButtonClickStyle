@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +11,7 @@
         <!-- -->
         <scene sceneID="xg4-tC-VA3">
             <objects>
-                <viewController storyboardIdentifier="TestDemoViewController" title=" " useStoryboardIdentifierAsRestorationIdentifier="YES" id="t78-RV-KY0" customClass="TestDemoViewController" customModule="ButtonCustomClickStyle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestDemoViewController" title=" " useStoryboardIdentifierAsRestorationIdentifier="YES" id="t78-RV-KY0" customClass="TestDemoViewController" customModule="ButtonClickStyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ed-Au-iL3">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,33 +68,8 @@
                                     <constraint firstAttribute="height" constant="31" id="s3T-RA-0KD"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-n1-SfX">
-                                <rect key="frame" x="286" y="639" width="221" height="31"/>
-                                <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kCX-R2-pSc">
-                                        <rect key="frame" x="172" y="0.0" width="51" height="31"/>
-                                        <color key="onTintColor" red="0.92156862750000001" green="0.20784313730000001" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="button show debug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2B-3M-8uP">
-                                        <rect key="frame" x="1" y="0.0" width="156" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="D2B-3M-8uP" secondAttribute="bottom" id="0WC-HA-A3S"/>
-                                    <constraint firstAttribute="height" constant="31" id="Cnq-14-9sa"/>
-                                    <constraint firstItem="kCX-R2-pSc" firstAttribute="leading" secondItem="D2B-3M-8uP" secondAttribute="trailing" constant="15" id="WUv-Fv-arH"/>
-                                    <constraint firstItem="D2B-3M-8uP" firstAttribute="top" secondItem="xuk-n1-SfX" secondAttribute="top" id="Zj0-HK-pGP"/>
-                                    <constraint firstAttribute="trailing" secondItem="kCX-R2-pSc" secondAttribute="trailing" id="bcG-9u-rZl"/>
-                                    <constraint firstItem="kCX-R2-pSc" firstAttribute="centerY" secondItem="xuk-n1-SfX" secondAttribute="centerY" id="fZx-bl-oxA"/>
-                                    <constraint firstAttribute="width" secondItem="D2B-3M-8uP" secondAttribute="width" constant="65" id="kTa-I3-zrl"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrd-Go-6ZY">
-                                <rect key="frame" x="267" y="684" width="240" height="31"/>
+                                <rect key="frame" x="267" y="639" width="240" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7R-AQ-E5i">
                                         <rect key="frame" x="191" y="0.0" width="51" height="31"/>
@@ -120,9 +94,9 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyc-WS-Y1V">
-                                <rect key="frame" x="357" y="729" width="150" height="31"/>
+                                <rect key="frame" x="357" y="684" width="150" height="31"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KF-CK-r9N" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KF-CK-r9N" customClass="DesignableView" customModule="ButtonClickStyle" customModuleProvider="target">
                                         <rect key="frame" x="120" y="0.5" width="30" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESl-Gn-TeW">
@@ -185,23 +159,20 @@
                             <constraint firstItem="3tO-Mc-4tS" firstAttribute="leading" secondItem="gyc-WS-Y1V" secondAttribute="trailing" constant="16" id="DXg-a6-0jE"/>
                             <constraint firstItem="mnd-dd-Zn0" firstAttribute="top" secondItem="3tO-Mc-4tS" secondAttribute="top" constant="10" id="K3s-SZ-xft"/>
                             <constraint firstItem="VKv-Pl-9Lm" firstAttribute="bottom" secondItem="3tO-Mc-4tS" secondAttribute="bottom" constant="200" id="MmH-b9-bGo"/>
-                            <constraint firstItem="xrd-Go-6ZY" firstAttribute="top" secondItem="3tO-Mc-4tS" secondAttribute="top" constant="100" id="XJT-Pr-N5I"/>
-                            <constraint firstItem="xuk-n1-SfX" firstAttribute="top" secondItem="3tO-Mc-4tS" secondAttribute="top" constant="55" id="bLG-sy-ghB"/>
+                            <constraint firstItem="xrd-Go-6ZY" firstAttribute="top" secondItem="3tO-Mc-4tS" secondAttribute="top" constant="55" id="XJT-Pr-N5I"/>
                             <constraint firstItem="3tO-Mc-4tS" firstAttribute="leading" secondItem="xrd-Go-6ZY" secondAttribute="trailing" constant="16" id="d4s-nd-Bpa"/>
                             <constraint firstItem="3tO-Mc-4tS" firstAttribute="firstBaseline" secondItem="jZ3-bh-z65" secondAttribute="baseline" id="e90-Eg-w3Y"/>
                             <constraint firstItem="3tO-Mc-4tS" firstAttribute="centerX" secondItem="9Ed-Au-iL3" secondAttribute="centerX" id="fHB-dw-cje"/>
                             <constraint firstItem="3tO-Mc-4tS" firstAttribute="leading" secondItem="mnd-dd-Zn0" secondAttribute="trailing" constant="16" id="j3m-1O-DqU"/>
                             <constraint firstItem="jZ3-bh-z65" firstAttribute="centerX" secondItem="9Ed-Au-iL3" secondAttribute="centerX" id="k9v-eE-hRo"/>
                             <constraint firstItem="jZ3-bh-z65" firstAttribute="top" secondItem="dly-j5-t22" secondAttribute="bottom" constant="-30" id="okc-Ia-dfF"/>
-                            <constraint firstItem="3tO-Mc-4tS" firstAttribute="leading" secondItem="xuk-n1-SfX" secondAttribute="trailing" constant="16" id="rBR-Qi-eHp"/>
                             <constraint firstItem="jZ3-bh-z65" firstAttribute="leading" secondItem="dly-j5-t22" secondAttribute="trailing" constant="30" id="uGo-xJ-veW"/>
-                            <constraint firstItem="gyc-WS-Y1V" firstAttribute="top" secondItem="3tO-Mc-4tS" secondAttribute="top" constant="145" id="y5n-mz-9ur"/>
+                            <constraint firstItem="gyc-WS-Y1V" firstAttribute="top" secondItem="3tO-Mc-4tS" secondAttribute="top" constant="100" id="y5n-mz-9ur"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addBackgroundColorSwitch" destination="l7R-AQ-E5i" id="6y9-Zt-V7y"/>
                         <outlet property="allSubviewsSwitch" destination="fE6-h6-Di9" id="aPR-fy-Vba"/>
-                        <outlet property="buttonColorSwitch" destination="kCX-R2-pSc" id="Btl-fm-mDo"/>
                         <outlet property="colorDesignableView" destination="7KF-CK-r9N" id="lLz-ZJ-ZLE"/>
                         <outlet property="testTypePicker" destination="3tO-Mc-4tS" id="4VE-bS-w9g"/>
                         <outlet property="testValueLabel" destination="dly-j5-t22" id="tvT-PR-2Fc"/>

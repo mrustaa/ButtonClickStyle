@@ -10,7 +10,6 @@ class TestDemoViewController: StoryboardController {
   let colorPicker = UIColorPickerViewController()
   
   @IBOutlet var allSubviewsSwitch: UISwitch!
-  @IBOutlet var buttonColorSwitch: UISwitch!
   @IBOutlet var addBackgroundColorSwitch: UISwitch!
   
   @IBOutlet var testValueLabel: UILabel!
@@ -48,7 +47,6 @@ class TestDemoViewController: StoryboardController {
     
     title = "Test Demo"
     
-    buttonColorSwitch.addTarget(self, action: #selector(buttonColorSwitchAction(swtch:event:)), for: .valueChanged)
     
     allSubviewsSwitch.addTarget(self, action: #selector(allSubviewsSwitchAction(swtch:event:)), for: .valueChanged)
     
@@ -72,32 +70,9 @@ class TestDemoViewController: StoryboardController {
     aaa = 0
     bbb = 0
     
-    
-    
-//    buttonTypesCopy = buttonTypes.enumerated().map { (index, name) in
-//      return index
-//    }
-//
-//    func buttonTypesCopyR() {
-//      background {
-//
-//        if self.buttonTypesCopy.count == 0 { return }
-//        let random = Int(arc4random_uniform(UInt32(self.buttonTypesCopy.count)))
-//        let index = self.buttonTypesCopy.remove(at: random)
-//        main {
-//          self.buttonTypeLast = index
-//          self.updateButtons()
-//        }
-//        main(delay: 0.00001) {
-//          buttonTypesCopyR()
-//        }
-//      }
-//    }
-//    buttonTypesCopyR()
-    
     buttonTypes.enumerated().forEach {  (index, name) in
       self.buttonTypeLast = index
-      self.testTypeLast = Int(arc4random_uniform(13))
+//      self.testTypeLast =  Int(arc4random_uniform(13))
       self.updateButtons()
     }
     
@@ -113,10 +88,6 @@ class TestDemoViewController: StoryboardController {
   }
   
   func getState() -> BtnCellState {
-//    let type = testTypeLast
-//    let name = buttonTypes[buttonTypeLast]
-//    let allSubv: Bool = allSubviewsSwitch.isOn
-//    let btnColor: Bool = buttonColorSwitch.isOn
     return .init(
       titleText: buttonTypes[buttonTypeLast],
       allSubviews: allSubviewsSwitch.isOn,
@@ -124,8 +95,7 @@ class TestDemoViewController: StoryboardController {
       animationTypeValue: getValue(),
       new: buttonTypeLast == 1,
       color: colorSelected,
-      addBackgrondColor: addBackgroundColorSwitch.isOn,
-      buttonColor: buttonColorSwitch.isOn
+      addBackgrondColor: addBackgroundColorSwitch.isOn
     )
   }
   
@@ -141,7 +111,6 @@ class TestDemoViewController: StoryboardController {
     )
     
     aaa = aaa + 1
-    
     if aaa == 4 {
       aaa = 0
       bbb = bbb + 1
@@ -153,13 +122,9 @@ class TestDemoViewController: StoryboardController {
   }
   
   @IBAction func colorPickerAction(_ sender: Any) {
-    resetAllColorChangeFlags() // First make sure all the booleans are false for robust design
+    resetAllColorChangeFlags()
     colorChanging = true
     present(colorPicker, animated: true, completion: nil)
-  }
-  
-  @objc func buttonColorSwitchAction(swtch: UISwitch, event: UIEvent) {
-    update()
   }
   
   @objc func allSubviewsSwitchAction(swtch: UISwitch, event: UIEvent) {
@@ -228,22 +193,11 @@ class TestDemoViewController: StoryboardController {
     default:  break
     }
     
-    
-//    buttonPresentView.backgroundColor = .clear
-//    buttonPresentView.subviews.forEach {
-//      $0.removeFromSuperview()
-//    }
     if let child = child {
       child.fill(state: state)
-//      buttonPresentView.addSubview(child)
       child.frame = getFrame()
       self.view.addSubview(child)
       buttonsAdded.append(child)
-//      child.translatesAutoresizingMaskIntoConstraints = false
-//      child.topAnchor.constraint(equalTo: buttonPresentView.topAnchor, constant: 0).isActive = true
-//      child.bottomAnchor.constraint(equalTo: buttonPresentView.bottomAnchor, constant: 0).isActive = true
-//      child.leadingAnchor.constraint(equalTo: buttonPresentView.leadingAnchor, constant: 0).isActive = true
-//      child.trailingAnchor.constraint(equalTo: buttonPresentView.trailingAnchor, constant: 0).isActive = true
     }
   }
   
@@ -320,9 +274,7 @@ extension TestDemoViewController: UIPickerViewDelegate {
   }
   
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-      testTypeLast = row
-//    updateButtons()
-    
+    testTypeLast = row
     update()
   }
 }

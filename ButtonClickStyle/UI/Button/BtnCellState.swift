@@ -12,9 +12,10 @@ struct BtnCellState: Equatable {
   var allSubviews: Bool = true
   var animationType: Int?
   var animationTypeValue: CGFloat?
-  var startClick: Bool = true
+  var animationDuration: CGFloat?
   var new: Bool = false
   var color: UIColor?
   var addBackgrondColor: Bool = true
-  var buttonColor: Bool = false
+//  var startClick: Bool = false
+//  var buttonColor: Bool = false
 }

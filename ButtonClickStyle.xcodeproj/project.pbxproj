@@ -204,12 +204,12 @@
 		4AC8BC3327FC65A900F85008 /* ButtonClickStyle */ = {
 			isa = PBXGroup;
 			children = (
-				4AC8BC3627FC65A900F85008 /* ButtonClick+Styles.swift */,
-				4AC8BC3727FC65A900F85008 /* ButtonClickStyle+AddViewsAnimation.swift */,
-				4AC8BC3927FC65A900F85008 /* ButtonClickStyle+GestureRecognizer.swift */,
 				4AC8BC3A27FC65A900F85008 /* Animations */,
 				4AC8BC4527FC65A900F85008 /* ButtonClickStyleView.swift */,
 				4AC8BC4627FC65A900F85008 /* ButtonClick.swift */,
+				4AC8BC3627FC65A900F85008 /* ButtonClick+Styles.swift */,
+				4AC8BC3727FC65A900F85008 /* ButtonClickStyle+AddViewsAnimation.swift */,
+				4AC8BC3927FC65A900F85008 /* ButtonClickStyle+GestureRecognizer.swift */,
 			);
 			path = ButtonClickStyle;
 			sourceTree = "<group>";
@@ -471,8 +471,8 @@
 		4AC8BC8D27FC65AA00F85008 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4AC8BC8E27FC65AA00F85008 /* TestDemoViewController.storyboard */,
 				4AC8BC8F27FC65AA00F85008 /* TestDemoViewController.swift */,
+				4AC8BC8E27FC65AA00F85008 /* TestDemoViewController.storyboard */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";

@@ -39,7 +39,7 @@ class ButtonListViewController: StoryboardController {
   }()
   
   override func viewDidAppear(_ animated: Bool) {
-    _ = doSomethingOnce
+//    _ = doSomethingOnce
     
     main(delay: 0.35) {
       self.updateButtons()

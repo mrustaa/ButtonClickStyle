@@ -93,14 +93,9 @@ var endAnimationCallback: (() -> ())?
 //      buttonAnimView.addViews = nil
 //      buttonAnimView.allSubviews = true
 //    }
-    buttonAnimView.animationClickDuration = animationClickDuration
+    buttonAnimView.state?.animationDuration = animationClickDuration
     typeLabel.text = "\(ButtonClick.Style.allCases[type].str())"
     buttonAnimView.updateSubviews()
-  }
-  
-  override func awakeFromNib() {
-//    _groupView.alpha = 0
-    
   }
   
   public func buttonStartStopAction() {

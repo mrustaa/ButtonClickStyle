@@ -13,12 +13,9 @@ import UIKit
 class ButtonClickStyleView: UIView {
   
   @IBInspectable var animationType: Int = 0
-  
-  @IBInspectable var allSubviews: Bool = true
   @IBInspectable var animationValue: CGFloat = 0.0
   @IBInspectable var animationDuration: CGFloat = 0.0
-  @IBInspectable var buttonColor: Bool = false
-  @IBInspectable var startClick: Bool = false
+  @IBInspectable var allSubviews: Bool = true
   
   var addViews: [UIView]?
           
@@ -30,8 +27,6 @@ class ButtonClickStyleView: UIView {
   
   
   var cornerRadius: CGFloat = 0.0
-//  var animationTypeValue: CGFloat?
-  var animationClickDuration: CGFloat?
   
   
 //  var frontView: UIView?
@@ -50,14 +45,13 @@ class ButtonClickStyleView: UIView {
       }
       
       let animVal: CGFloat? =  animationValue    != 0.0 ? animationValue    : nil
-//      let animDur: CGFloat? =  animationDuration != 0.0 ? animationDuration : nil
+      let animDur: CGFloat? =  animationDuration != 0.0 ? animationDuration : nil
       
       self.state = .init(
         allSubviews: allSubviews,
         animationType: animationType,
         animationTypeValue: animVal,
-        startClick: startClick,
-        buttonColor: buttonColor
+        animationDuration: animDur
       )
     }
     updateSubviews()
@@ -92,42 +86,13 @@ class ButtonClickStyleView: UIView {
     self.layer.cornerRadius = radius
     self.allSubviews = state.allSubviews
     self.animationType = state.animationType ?? 0
-//    self.animationTypeValue = state.animationTypeValue
-    self.buttonColor = state.buttonColor
     self.addViews = addViews
-    self.startClick = state.startClick
     
     
     if debugPrint { print(" ------------------------------------------") }
     if debugPrint { print(" ButtonClickStyleView 🥶 init (STATE frame radius addViews) 🥶 \(self) ") }
     
   }
-  
-//  public init(
-//    frame: CGRect,
-//    radius: CGFloat = 0.0,
-//    animation: Int = 0,
-//    allSubviews: Bool = true,
-//    value: CGFloat? = nil,
-//    duration: CGFloat? = nil,
-//    addViews: [UIView]? = nil,
-//    startClick: Bool = false
-//  ) {
-//    super.init(frame: frame)
-//    self.cornerRadius = radius
-//    self.allSubviews = allSubviews
-//    self.layer.cornerRadius = radius
-//    self.animationType = animation
-//    self.animationTypeValue = value
-//    self.animationClickDuration = duration
-//    self.addViews = addViews
-//    self.startClick = startClick
-//
-//    if debugPrint { print(" ------------------------------------------") }
-//    if debugPrint { print(" ButtonClickStyleView 🥶 init (frame radius animation value duration addViews startClick) 🥶 \(self) ") }
-////    updateSubviews()
-//  }
-  
   
   // MARK: - Layout subViews Update
   
@@ -152,7 +117,7 @@ class ButtonClickStyleView: UIView {
     if setupDone { return }
     guard let state = state else { return }
     
-    let style = ButtonClick.Style.getClick(state: state)
+    self.style = ButtonClick.Style.getClick(state: state)
     
     var onlyButtonReturn = true
     switch style.typeEasy() {
@@ -180,12 +145,12 @@ class ButtonClickStyleView: UIView {
   }
   
   func updateStartClick() {
-    if startClick {
-      startClick = false
-      
+//    if startClick {
+//      startClick = false
+//
       let nviews = getViews()
-      button?.onClick(views: nviews, radius: cornerRadius, style: style, duration: animationClickDuration)
-    }
+    button?.onClick(views: nviews, radius: cornerRadius, style: style, duration: state?.animationDuration)
+//    }
   }
   
   public func update(animationType: Int, allSubviews: Bool = true) {
@@ -211,7 +176,6 @@ class ButtonClickStyleView: UIView {
   // MARK: - Set Animation Style
   
   public func setAnimation(style: ButtonClick.Style, views: [UIView]? = nil) {
-    self.style = style
     //    updateSubviews()
     
     layer.cornerRadius = cornerRadius
@@ -239,20 +203,10 @@ class ButtonClickStyleView: UIView {
   // MARK: - Create Button
   
   
-  
-//  public func createFrontView() {
-//
-//    let v = UIView(frame: bounds)
-//    v.backgroundColor = .clear
-//    v.clipsToBounds = false
-//    addSubview(v)
-//    self.frontView = v
-//  }
-  
   public func createButton() {
     let btn = UIButton(type: .system)
     btn.frame = bounds
-    btn.backgroundColor = buttonColor ? UIColor.systemRed.withAlphaComponent(0.4) : .clear
+    btn.backgroundColor = .clear
     btn.setTitle(nil, for: .normal)
     btn.layer.cornerRadius = cornerRadius
     btn.clipsToBounds = true
