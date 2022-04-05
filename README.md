@@ -1,17 +1,14 @@
 # ButtonClickStyle
 
-## Preview
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/all_ipad_random.gif)
 
-Это слой кнопка
- которая имеет 9 стилей анимированного нажатия 
+This is a layer button
+Has 9 styles of animated click
 
-Внутри Слоя 
- можно создавать свои собственные кнопки 
-  subviews - с вложенные вьюхами 
+Inside the layer you can style your button, create your own subviews
 
-+ Можно расширять проект
- добавляя новые стили-анимации-нажатия
++ You can expand the project
+  adding new click-animation-styles
 
 ## Requirements
 
@@ -21,35 +18,32 @@ Swift 5.5+
 
 ## Installation
 
-
 ## Usage
 
 #### С storyboard или xib
 
-1) Создайте вьюшку, которая наследуется `ButtonClickStyleView`
+1) Create a "view" that inherits from `ButtonClickStyleView`
 
-<!--You can now style your button (Теперь вы можете стилизовать свою кнопку )-->
-2) Внутри этого слоя, создавайте свою собственную кнопку из других слоев 
+2) Inside this layer, create your own button
 
-3) В атрибутых инспектора (`Attributes Inspector` of `Interface Builder`)а
-  вы можете сразу выбрать тип анимации нажатия кнопки  `animationType` 
- 
-  Пока  9 стилей анимированного нажатия 
+3) In Attributes Inspector of Interface Builder
+   you can immediately select the button click `animationType`
 ```swift
 #type  #name
 
-"Hide .Alpha"
-"Hide .Flash (more)"
-"Add  .Shadow"
-"Add  .Color"
-"Add  .ColorFlat (border text)" 
-"Move .Pulsate (new)"
-"Move .Pulsate"
-"Move .Press"
-"Move .Shake (new)"
-"Move .Shake"
-"Add  .AndroidClickable (dark)"
-"Add  .AndroidClickable (ligth)"
+hide .alpha
+hide .flash 
+add  .shadow
+add  .shadow color
+add  .color
+add  .color flat (border text)
+move .pulsate new
+move .pulsate
+move .press
+move .shake  new
+move .shake
+add  .androidClickable dark
+add  .androidClickable ligt
 ```
 
 4) Так же вы можете выбрать   анимировать все слои  `allSubviews`  / или только 1 
