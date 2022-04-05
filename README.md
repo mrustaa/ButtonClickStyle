@@ -65,7 +65,7 @@ enum Style {
 
 ```swift
 @IBInspectable var allSubviews: Bool = true
-@IBInspectable var animationType: Int = 
+@IBInspectable var animationType: Int = 0
 @IBInspectable var animationValue: CGFloat = 0.0
 @IBInspectable var animationDuration: CGFloat = 0.0
   
@@ -73,18 +73,36 @@ var addViews: [UIView]?
 ```
 
 7) If initializing programmatically
-     - There is a property `addViews` - allows you to pass views / layers
-       which you definitely want to use in the click animation only
+There is a property `addViews` - allows you to pass views / layers
+which you definitely want to use in the click animation only
 
+8) Or initialize through a struct `BtnCellState`
 
 ```swift
-let btnView = ButtonClickStyleView(
-   frame: @frame,
-   animation: @type,
-   value: @value,
-   addViews: @views,
-)
-btnView.insertSubview(self.view, at: 0)
+struct BtnCellState: Equatable {
+  var titleText: String?
+  var allSubviews: Bool = true
+  var animationType: Int?
+  var animationTypeValue: CGFloat?
+  var animationDuration: CGFloat?
+  var new: Bool = false
+  var color: UIColor?
+  var addBackgrondColor: Bool = true
+}
+```
+
+```swift
+@IBOutlet var mainView: UIView!
+
+var views: [UIView]? = [mainView]
+let frame: CGRect = .init(x: 23 , y: 22, width: 156, height: 48)
+let viewAn = ButtonClickStyleView(
+   state: state,
+   frame: frame,
+   radius: 20,
+   addViews: views
+ )
+btnView.insertSubview(mainView, at: 0)
 btnView.updateSubviews()
 
 ```
