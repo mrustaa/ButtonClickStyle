@@ -1,14 +1,14 @@
 # ButtonClickStyle
 
-![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/all_ipad_random.gif)
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
 
-This is a layer button
+This is a view button
+
 Has 9 styles of animated click
 
 Inside the layer you can style your button, create your own subviews
 
-+ You can expand the project
-  adding new click-animation-styles
+You can expand the project adding new click-animation-styles
 
 ## Requirements
 
@@ -28,66 +28,91 @@ Inside the layer you can style your button, create your own subviews
 
 3) In Attributes Inspector of Interface Builder
    you can immediately select the button click `animationType`
-```ruby
-#type  #name
 
-hide .alpha
-hide .flash 
-add  .shadow
-add  .shadow color
-add  .color
-add  .color flat (border text)
-move .pulsate new
-move .pulsate
-move .press
-move .shake  new
-move .shake
-add  .androidClickable dark
-add  .androidClickable ligt
+
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
+
+```swift
+extension ButtonClick {
+  enum Style {
+    case alpha
+    case flash
+    case shadow
+    case shadowColor
+    case color
+    case colorFlat
+    case pulsateNew
+    case pulsate
+    case press
+    case shake
+    case shakeNew
+    case androidClickable
+    case androidClickableDark
+  }
+}  
 ```
 
-4) Так же вы можете выбрать   анимировать все слои  `allSubviews`  / или только 1 
+4) Also you can select specific layers to animate / or just 1 specific one `allSubviews`
 
 
-5) Добавить + animation.Duration - время анимации
+5) Add animation duration `animationDuration`
 
-6) Добавить + animation.Value    - под значением имеется ввиду  
-   у анимации тип   
- - "Hide .Alpha/Flash/Shadow/Color"    будет меняться альфа от 0.0 до 1.0
- - "Move .Pulsate/Press/Shake"         будет движения усиливаться уменьшаться от 0.0 до 1.0
- - "Add  .AndroidClickable"            будет увелмчиваться радиус пузырей
+6) Add animation value `animationTypeValue` - meaning means
+- "Hide .Alpha/Flash/Shadow/Color"  - will change alpha from 0.0 to 1.0
+- "Move .Pulsate/Press/Shake"       - will increase movement decrease from 0.0 to 1.0
+- "Add  .AndroidClickable"          - will increase bubble radius
 
 
 ```swift
 @IBInspectable var allSubviews: Bool = true
-@IBInspectable var animationType: Int = 
+@IBInspectable var animationType: Int = 0
 @IBInspectable var animationValue: CGFloat = 0.0
 @IBInspectable var animationDuration: CGFloat = 0.0
   
 var addViews: [UIView]?
-
 ```
-7) Если иниализацируйие программно 
-    - Есть свойство  `addViews` - позволяет передать вьшки/слои 
-      которые вы точно захотите задейстовать в анимации нажатия  only
 
+<!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
+
+7) If initializing programmatically
+There is a property `addViews` - allows you to pass views / layers
+which you definitely want to use in the click animation only
+
+8) Or initialize through a struct `ButtonClick.State`
 
 ```swift
-let btnView = ButtonClickStyleView(
-   frame: @frame,
-   animation: @type,
-   value: @value,
-   addViews: @views,
-)
-btnView.insertSubview(self.view, at: 0)
+extension ButtonClick {
+  struct State: Equatable {
+    var titleText: String?
+    var allSubviews: Bool = true
+    var animationType: Int?
+    var animationTypeValue: CGFloat?
+    var animationDuration: CGFloat?
+    var new: Bool = false
+    var color: UIColor?
+    var startClick: Bool = false 
+    var addBackgrondColor: Bool = true
+  }
+}
+```
+
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
+
+```swift
+@IBOutlet var mainView: UIView!
+
+var views: [UIView]? = [mainView]
+let frame: CGRect = .init(x: 23 , y: 22, width: 156, height: 48)
+let viewAn = ButtonClickStyleView(
+   state: state,
+   frame: frame,
+   radius: 20,
+   addViews: views
+ )
+btnView.insertSubview(mainView, at: 0)
 btnView.updateSubviews()
 
 ```
-
- 
-
-## Credits
-
 
 ## License
 
