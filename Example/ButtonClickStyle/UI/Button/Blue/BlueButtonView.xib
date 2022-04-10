@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueButtonView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
             <connections>
                 <outlet property="mainView" destination="nKK-Ra-1y6" id="FAi-tw-OgA"/>
                 <outlet property="titleLabel" destination="nZy-Nz-A6n" id="UUo-U0-6lp"/>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-Ra-1y6" userLabel="Button 3" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-Ra-1y6" userLabel="Button 3" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                     <rect key="frame" x="28" y="22" width="146" height="49"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZy-Nz-A6n" userLabel="Buy now">

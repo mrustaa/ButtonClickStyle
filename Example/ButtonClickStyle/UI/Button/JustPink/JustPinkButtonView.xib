@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JustPinkButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JustPinkButtonView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
             <connections>
                 <outlet property="fillView" destination="FAA-fj-qoN" id="Ye4-Fs-8Ou"/>
                 <outlet property="gradientView" destination="j2c-8H-RRB" id="Nek-uc-kLA"/>
@@ -27,13 +27,13 @@
         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oB1-iJ-rbe" userLabel=" JustPink">
             <rect key="frame" x="0.0" y="0.0" width="222" height="93"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAA-fj-qoN" userLabel="🦋" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAA-fj-qoN" userLabel="🦋" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="222" height="93"/>
                     <subviews>
                         <view tag="848" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aJ-Zp-eHO" userLabel="🌟">
                             <rect key="frame" x="23" y="6" width="176" height="80"/>
                             <subviews>
-                                <view tag="484" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUM-nx-3Q5" userLabel="Rectangle 46" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view tag="484" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUM-nx-3Q5" userLabel="Rectangle 46" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                     <rect key="frame" x="24" y="28" width="128" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="128" id="8nY-Ay-IHC"/>
@@ -51,10 +51,10 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-c8-LSm" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-c8-LSm" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="176" height="56"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bu-0h-LKc" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bu-0h-LKc" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="56"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -77,7 +77,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2c-8H-RRB" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2c-8H-RRB" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="56"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUTTON" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-WP-a9e" userLabel="BUTTON">

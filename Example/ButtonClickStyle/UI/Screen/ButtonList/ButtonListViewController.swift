@@ -2,13 +2,17 @@ import UIKit
 
 //MARK: - ButtonList ViewController
 
+
+private let buttonLayerExamplTag = 77
+
 class ButtonListViewController: StoryboardController {
   
   @IBOutlet var buttonPresentView: DesignableView!
   
-  @IBOutlet var buttonLayerExampleView: ButtonLayerExampleView!
+  @IBOutlet var buttonLayerExampleView: ButtonLayerExampleView?
   @IBOutlet var buttonTypePicker: UIPickerView!
   @IBOutlet var animationTypePicker: UIPickerView!
+  var colorSelected: UIColor?
   
   @IBOutlet var animationValueLabel: UILabel!
   @IBOutlet var animationValueSlider: UISlider!
@@ -27,16 +31,38 @@ class ButtonListViewController: StoryboardController {
     "Firefox",
     "Google",
     "Gr Button",
-    "Neomorphism"
+    "Neomorphism",
+    
+    "Test Button",
+    "Test Random",
+    "Test 3 Squares",
+    "Green"
   ]
   
   
   //MARK: - viewDidAppear
   
-  lazy var doSomethingOnce: () -> Void = {
-    testDemoScreenButtonAction(.init())
-    return {}
-  }()
+  @IBAction func exampleButtonsScreenButtonAction(_ sender: UIButton) {
+    navigationController?.pushViewController(ExampleButtonsViewController.instantiate(), animated: true)
+  }
+  
+  
+  @IBAction func exampleAnimationsScreenButtonAction(_ sender: UIButton) {
+    navigationController?.pushViewController(ExampleAnimationsViewController.instantiate(), animated: true)
+  }
+  
+  @IBAction func buttonListScreenButtonAction(_ sender: UIButton) {
+    navigationController?.pushViewController(ButtonListViewController.instantiate(), animated: true)
+  }
+  
+  @IBAction func testScreenButtonAction(_ sender: UIButton) {
+    navigationController?.pushViewController(TestViewController.instantiate(), animated: true)
+  }
+  
+  @IBAction func testDemoScreenButtonAction(_ sender: UIButton) {
+    navigationController?.pushViewController(TestDemoViewController.instantiate(), animated: true)
+  }
+  
   
   override func viewDidAppear(_ animated: Bool) {
 //    _ = doSomethingOnce
@@ -68,28 +94,19 @@ class ButtonListViewController: StoryboardController {
     createButtonLayerExampleView(enable: false)
   }
   
-  
-  @IBAction func testScreenPushButtonAction(_ sender: UIButton) {
-    navigationController?.pushViewController(TestViewController.instantiate(), animated: true)
-  }
-  
-  @IBAction func testDemoScreenButtonAction(_ sender: UIButton) {
-    navigationController?.pushViewController(TestDemoViewController.instantiate(), animated: true)
-  }
-  
   //MARK: - Create ButtonLayerExample
   
   func createButtonLayerExampleView(enable: Bool = true) {
 
     if !enable {
-      buttonLayerExampleView.removeFromSuperview()
+      self.removeButtonLayerExampleView()
       ButtonLayerExampleView.exmpStart = enable
     }
     
     
     var next: Int?
     var type: Int = 0
-    if let v = self.buttonLayerExampleView.animationType {
+    if let v = self.buttonLayerExampleView?.animationType {
       let t = ButtonClick.Style.allCases[v]
       print(" 💙 ButtonLayerExampleView Old \(t.full())")
       
@@ -116,36 +133,52 @@ class ButtonListViewController: StoryboardController {
     }
     type = next ?? ButtonClick.Style.alpha(0.5).indx()
     
+    self.removeButtonLayerExampleView()
     
-    self.buttonLayerExampleView.removeFromSuperview()
-    self.buttonLayerExampleView = nil
-    
-    main(delay: 1) { [weak self] in
-      guard let self = self else { return }
+//    main(delay: 1) { [weak self] in
+//      guard let self = self else { return }
       
       let exampleView = ButtonLayerExampleView()
-      exampleView.animationDuration = 0.45 // 0.3 //
-      exampleView.animationDelay = 1.0 // 0.6 //
+      exampleView.tag = buttonLayerExamplTag
+      exampleView.animationDuration = 0.3 // 0.45 //  //
+    exampleView.animationDelay = 0.0 // 0.6 // 1.0 // //
       exampleView.animationType = type
       exampleView.update()
       exampleView.frame = .init(x: 0, y: 60, width:  UIScreen.main.bounds.size.width, height: 223)
       
-      exampleView.endAnimationCallback = { // [weak self] in
+      exampleView.endAnimationCallback = { [weak self] in
         
-//        main { [weak self] in
-//          guard let mSelf = self else { return }  
+//        main(delay: 1) { [weak self] in
+//          guard let self = self else { return }
           
 //          let t = ButtonClick.Style.allCases[mSelf.buttonLayerExampleView.animationType ?? 0]
 //          print(" ‼️ endAnimationCallback \(t.full()) ‼️ ‼️")
-//          mSelf.createButtonLayerExampleView()
+          self?.createButtonLayerExampleView()
 //        }
       }
-      exampleView.start()
+//      exampleView.start()
       exampleView.buttonStartStopAction()
       self.buttonLayerExampleView = exampleView
       self.view.addSubview(exampleView)
-    }
+//    }
     
+  }
+  
+  func removeButtonLayerExampleView() {
+    
+    if let find = self.view.viewWithTag(buttonLayerExamplTag) {
+      find.subviews.forEach { v1 in
+        v1.removeFromSuperview()
+      }
+      find.removeFromSuperview()
+    }
+    self.view.subviews.forEach { v in
+      if v.tag == buttonLayerExamplTag {
+        v.removeFromSuperview()
+      }
+    }
+    self.buttonLayerExampleView?.removeFromSuperview()
+    self.buttonLayerExampleView = nil
   }
 
   //MARK: - Get State
@@ -155,11 +188,24 @@ class ButtonListViewController: StoryboardController {
   }
   
   func getState() -> ButtonClick.State {
-    let type = animationTypeLast
-    let name = buttonTypes[buttonTypeLast]
-    let state: ButtonClick.State = .init(titleText: name, animationType: type, animationTypeValue: getValue(), new: buttonTypeLast == 1)
-    return state
+    return .init(
+      titleText: buttonTypes[buttonTypeLast],
+      allSubviews: true, // animationType == ButtonClick._Style.color.rawValue ? false : allSubviewsSwitch.isOn,
+      animationType: animationTypeLast,
+      animationTypeValue: getValue(),
+      new: buttonTypeLast == 1,
+      color: colorSelected,
+      startClick: true,// createStartClick.isOn,
+      addBackgrondColor: true// addBackgroundColorSwitch.isOn
+    )
   }
+//
+//  func getState() -> ButtonClick.State {
+//    let type = animationTypeLast
+//    let name = buttonTypes[buttonTypeLast]
+//    let state: ButtonClick.State = .init(titleText: name, animationType: type, animationTypeValue: getValue(), new: buttonTypeLast == 1)
+//    return state
+//  }
   
   //MARK: - Update Buttons View
   
@@ -184,6 +230,10 @@ class ButtonListViewController: StoryboardController {
     case  9: child = GoogleButtonView()
     case 10: child = GradientBlueBasicButtonView()
     case 11: child = NeomorphismButtonView()
+    case 12: child = TestDemoGradientButtonView()
+    case 13: child = TestDemoBlurButtonView()
+    case 14: child = TestDemoSquaresButtonView()
+    case 15: child = BorderGreenDarkButtonView()
     default:  break
     }
     

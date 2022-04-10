@@ -16,12 +16,24 @@ class TestDemoGradientButtonView: BtnView {
     guard let state = state else { return }
     self.state = state
     
-    if let _ = state.animationType {
+    if let type = state.animationType {
+      
+      
+      var addViews: [UIView]? = nil
+      if type == ButtonClick._Style.androidClickable.rawValue ||
+          type == ButtonClick._Style.androidClickableDark.rawValue {
+        addViews = [fillView]
+      } else if (type == ButtonClick._Style.color.rawValue) {
+        addViews = [fillView]
+      }
+      
+      
       let fr: CGRect = .init(x: 45, y: 20, width: 161, height: 58)
       let viewAn = ButtonClickStyleView(
         state: state,
         frame: fr,
-        radius: 20
+        radius: 20,
+        addViews: addViews
       )
       viewAn.insertSubview(mainView, at: 0)
       viewAn.updateSubviews()

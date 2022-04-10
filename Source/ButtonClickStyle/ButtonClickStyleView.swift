@@ -14,8 +14,11 @@ open class ButtonClickStyleView: UIView {
   
   @IBInspectable public var animType: Int = 0
   @IBInspectable public var animValue: CGFloat = 0.0
+  @IBInspectable public var animColor: UIColor = .clear
   @IBInspectable public var animDuration: CGFloat = 0.0
   @IBInspectable public var allSubviews: Bool = true
+  @IBInspectable public var startClick: Bool = false
+  @IBInspectable public var debugButtonShow: Bool = false
   
   public var addViews: [UIView]?
           
@@ -27,6 +30,7 @@ open class ButtonClickStyleView: UIView {
   
   private var cornerRadius: CGFloat = 0.0
   private var button: UIButton?
+//  private var buttons: [UIButton] = []
   
   
   // MARK: - Initialize
@@ -67,7 +71,7 @@ open class ButtonClickStyleView: UIView {
     self.allSubviews = state.allSubviews
     self.animType = state.animationType ?? 0
     self.addViews = addViews
-    
+    self.debugButtonShow = state.debugButtonShow
     
     if debugPrint { print(" ------------------------------------------") }
     if debugPrint { print(" ButtonClickStyleView 🥶 init (STATE frame radius addViews) 🥶 \(self) ") }
@@ -82,14 +86,18 @@ open class ButtonClickStyleView: UIView {
         allSubviews = false
       }
       
-      let animVal: CGFloat? =  animValue    != 0.0 ? animValue    : nil
-      let animDur: CGFloat? =  animDuration != 0.0 ? animDuration : nil
+      let animVal: CGFloat? =  animValue    != 0.0    ? animValue    : nil
+      let animDur: CGFloat? =  animDuration != 0.0    ? animDuration : nil
+      let animClr: UIColor? =  animColor    != .clear ? animColor    : nil
       
       self.state = .init(
         allSubviews: allSubviews,
         animationType: animType,
         animationTypeValue: animVal,
-        animationDuration: animDur
+        animationDuration: animDur,
+        color: animClr,
+        startClick: startClick,
+        debugButtonShow: debugButtonShow
       )
     }
   }
@@ -126,7 +134,11 @@ open class ButtonClickStyleView: UIView {
     default: break
     }
     
-    if button == nil { createButton() }
+    if button == nil {
+      let button = createButton()
+//      self.buttons.append(button)
+      self.button = button
+    }
     
     if onlyButtonReturn {
       let nviews = getViews()
@@ -162,6 +174,11 @@ open class ButtonClickStyleView: UIView {
     button?.removeFromSuperview()
     button = nil
     
+//    buttons.forEach {
+//      $0.removeFromSuperview()
+//    }
+//    buttons.removeAll()
+    
     self.state?.animationType = animationType
     self.state?.allSubviews = allSubviews
     
@@ -184,6 +201,8 @@ open class ButtonClickStyleView: UIView {
     //    updateSubviews()
     
     layer.cornerRadius = cornerRadius
+    
+    
     
     let nviews = getViews(views: views)
     
@@ -208,20 +227,47 @@ open class ButtonClickStyleView: UIView {
   // MARK: - Create Button
   
   
-  public func createButton() {
+  public func createButton() -> UIButton {
     let btn = UIButton(type: .system)
     btn.frame = bounds
-    btn.backgroundColor = .clear
+    btn.backgroundColor = debugButtonShow ? .systemRed.withAlphaComponent(0.45) : .clear
     btn.setTitle(nil, for: .normal)
     btn.layer.cornerRadius = cornerRadius
     btn.clipsToBounds = true
+    btn.isUserInteractionEnabled = true
     addSubview(btn)
-    self.button = btn
+    return btn
   }
   
   // MARK: - Get Views
   
+  public func mainViewsAddBackgrondColor() {
+    
+//    guard let state = state else { return }
+//
+//    if !subviews.isEmpty {
+//      subviews.enumerated().forEach { indx, v1 in
+//        if v1 is UIButton {
+//
+//        } else {
+//          let sBounds = self.bounds
+//          if (sBounds.size.width == v1.bounds.size.width) &&
+//              (sBounds.size.height == v1.bounds.size.height) {
+//
+//            if !state.addBackgrondColor {
+//              if let desFig = v1 as? DesignableView {
+//                desFig.allColorClear()
+//              }
+//              backgroundColor = .clear
+//            }
+//          }
+//        }
+//      }
+//    }
+  }
+  
   public func getViews(views: [UIView]? = nil) -> [UIView] {
+    mainViewsAddBackgrondColor()
     
     var nviews: [UIView] = []
     
@@ -255,14 +301,56 @@ open class ButtonClickStyleView: UIView {
                   }
                 }
               }
-            } else {
+            }
+            else {
+              
+//              if !subviews.isEmpty {
+//                subviews.enumerated().forEach { indx, v1 in
+//
+//                  var findMain = false
+//                    let sBounds = self.bounds
+//                    if (sBounds.size.width == v1.bounds.size.width) &&
+//                        (sBounds.size.height == v1.bounds.size.height) {
+//                      findMain = true
+//                    }
+//
+//
+//                  if !findMain {
+//
+//                    let button = createButton()
+//                    if let desFig = v1 as? DesignableView, desFig.cornerRadius != 0 {
+//                      button.layer.cornerRadius = desFig.cornerRadius
+//                    }
+//                    button.frame = v1.frame
+//                    self.buttons.append(button)
+//
+//                    nviews.append(button)
+//                  }
+//                }
+//              }
               
               
               if !subviews.isEmpty, let vw = subviews.first {
                 //              nviews.append(vw)
                 
-                let framee = vw.convert(vw.bounds, to: superview)
-                btn.frame = framee
+                if let desFig = vw as? DesignableView, desFig.cornerRadius != 0 {
+                  btn.layer.cornerRadius = desFig.cornerRadius
+                }
+//                btn.frame  = vw.convert(vw.bounds, to: superview)
+                
+//                btn.frame  = vw.convert(vw.bounds, to: self)
+
+                btn.frame = vw.frame
+                
+                
+                let sBounds = self.bounds
+                if (sBounds.size.width == btn.bounds.size.width) &&
+                    (sBounds.size.height == btn.bounds.size.height) {
+                  
+                  btn.xx = 0
+                  btn.yy = 0
+                }
+                
                 //              vw.getButtonRadius(btn)
                 nviews.append(btn)
                 
@@ -357,17 +445,45 @@ open class ButtonClickStyleView: UIView {
         {
           
         
+            
+            
+            
           if let addViews = addViews {
             btn.frame = addViews[0].frame
             let oneView = addViews[0]
             let frame = oneView.convert(oneView.bounds, to: superview)
 
+            
             btn.frame = frame
-//            oneView.getButtonRadius(btn)
-          }
-          if let addViews = addViews {
             nviews = addViews
+            
+//            nviews.append(btn)
           }
+//            else {
+//
+//
+              let sBounds = self.bounds
+              if (sBounds.size.width == btn.bounds.size.width) &&
+                  (sBounds.size.height == btn.bounds.size.height) {
+
+
+                if !subviews.isEmpty, let vw = subviews.first {
+                  //              nviews.append(vw)
+
+                  if let desFig = vw as? DesignableView, desFig.cornerRadius != 0 {
+                    btn.layer.cornerRadius = desFig.cornerRadius
+                  }
+                  btn.frame  = vw.convert(vw.bounds, to: superview)
+
+                }
+              }
+//
+////              nviews.append(btn)
+//            }
+            
+            
+            
+            
           nviews.append(btn)
         }
         else if subviews.count != 0 {

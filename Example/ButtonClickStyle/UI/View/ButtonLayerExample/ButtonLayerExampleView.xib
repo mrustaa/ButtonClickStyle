@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonLayerExampleView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonLayerExampleView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
             <connections>
                 <outlet property="_elipseView" destination="Jj9-Yk-Z2y" id="xEb-cV-5ng"/>
                 <outlet property="_groupView" destination="bnK-r7-3BR" id="3FG-gK-RE6"/>
@@ -41,10 +41,10 @@
         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTq-4F-tdq" userLabel=" ButtonLayerExample ">
             <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-2u-LmT" userLabel=" ButtonLayerExample " customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCX-2u-LmT" userLabel=" ButtonLayerExample " customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
                     <subviews>
-                        <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lna-LU-b3h" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lna-LU-b3h" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="-44" y="0.0" width="206" height="104"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +60,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-ax-2pb" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-ax-2pb" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="24" y="140" width="206" height="65"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,7 +115,7 @@
                     <rect key="frame" x="24" y="14" width="154" height="183"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-LP-IkG" userLabel="Rectangle 46" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-LP-IkG" userLabel="Rectangle 46" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="18.3505859375" y="150.08027648925781" width="95.617523193359375" height="32.8160400390625"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <userDefinedRuntimeAttributes>
@@ -130,7 +130,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jj9-Yk-Z2y" userLabel="Ellipse 6" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jj9-Yk-Z2y" userLabel="Ellipse 6" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="35" width="131.47412109375" height="31.324405670166016"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <userDefinedRuntimeAttributes>
@@ -146,7 +146,7 @@
                             <rect key="frame" x="0.42230224609375" y="83" width="131.47412109375" height="41.765892028808594"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-QM-KNM" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-QM-KNM" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="131" height="42"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <userDefinedRuntimeAttributes>
@@ -158,7 +158,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9j-j9-iHb" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9j-j9-iHb" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                     <rect key="frame" x="-0.42230224609375" y="-1" width="131" height="42"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <userDefinedRuntimeAttributes>
@@ -182,7 +182,7 @@
                                 </view>
                             </subviews>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUTTON" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhp-rv-ukK" userLabel="BUTTON" customClass="DesignableLabel" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUTTON" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhp-rv-ukK" userLabel="BUTTON" customClass="DesignableLabel" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="16" y="0.0" width="61.254974365234375" height="13.424749374389648"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="13"/>
@@ -199,11 +199,11 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXi-Tl-Er9" userLabel="icons8-скачать-96 (1) 1" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXi-Tl-Er9" userLabel="icons8-скачать-96 (1) 1" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="89.316741943359375" y="0.0" width="18.67529296875" height="17.153846740722656"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="download"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="icDownload"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="imageMode">
                                     <real key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
@@ -220,7 +220,7 @@
                         </view>
                     </subviews>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mld-fs-OMv" userLabel="JustPink" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mld-fs-OMv" userLabel="JustPink" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                     <rect key="frame" x="186" y="90" width="150.89642333984375" height="79.056861877441406"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -228,11 +228,11 @@
                             <rect key="frame" x="10" y="10" width="131" height="59"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-6m-ujx" userLabel="JustPink" customClass="ButtonClickStyleView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-6m-ujx" userLabel="JustPink" customClass="ButtonClickStyleView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="131" height="59"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DVI-qz-XIj" userLabel="Rectangle 46" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DVI-qz-XIj" userLabel="Rectangle 46" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                             <rect key="frame" x="17" y="26" width="95.5" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <userDefinedRuntimeAttributes>
@@ -251,7 +251,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="52"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-44-cyt" userLabel="Ellipse 6" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-44-cyt" userLabel="Ellipse 6" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="20" width="131.5" height="31.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -263,11 +263,11 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3TF-6z-EsA" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3TF-6z-EsA" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="131" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOw-qw-Kwn" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOw-qw-Kwn" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="131" height="42"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <userDefinedRuntimeAttributes>
@@ -289,7 +289,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUTTON" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-C5-6yG" userLabel="BUTTON" customClass="DesignableLabel" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUTTON" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-C5-6yG" userLabel="BUTTON" customClass="DesignableLabel" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                                             <rect key="frame" x="15" y="14" width="61.5" height="13.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="13"/>
@@ -306,11 +306,11 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gr-zU-1vT" userLabel="icons8-скачать-96 (1) 1" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gr-zU-1vT" userLabel="icons8-скачать-96 (1) 1" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                                             <rect key="frame" x="102" y="12" width="18.5" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="download"/>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="icDownload"/>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="imageMode">
                                                                     <real key="value" value="2"/>
                                                                 </userDefinedRuntimeAttribute>
@@ -413,7 +413,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="download" width="96" height="96"/>
+        <image name="icDownload" width="96" height="96"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

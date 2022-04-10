@@ -21,7 +21,7 @@ class FirefoxButtonView: BtnView {
        addViews = [gradientView]
      } else if type == ButtonClick._Style.androidClickable.rawValue ||
                 type == ButtonClick._Style.androidClickableDark.rawValue {
-       addViews = nil
+       addViews = [gradientView]
      } else {
        addViews = [mainView]
      }
