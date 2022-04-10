@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+            <connections>
+                <outlet property="backColor" destination="f0k-V1-ON7" id="Dit-Ra-2yj"/>
+                <outlet property="designImageView" destination="szT-gc-fjg" id="uVL-lf-aeI"/>
+                <outlet property="mainView" destination="zyn-cp-f1m" id="rtY-LN-qml"/>
+                <outlet property="subtitleLabel" destination="mB9-bl-qbP" id="oFy-JY-JtE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="K8L-qv-tC2" userLabel=" DeleteButton">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0k-V1-ON7" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="0.97900176279999995" green="0.9164132868" blue="0.85085844919999998" alpha="0.7480552650290313" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="figureType">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="blur">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyn-cp-f1m" userLabel="Button 5" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                    <rect key="frame" x="18" y="22" width="166" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szT-gc-fjg" userLabel="Button 5" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="166" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="24.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="imgDeleteTexture"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delete" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB9-bl-qbP" userLabel="Delete">
+                            <rect key="frame" x="0.0" y="18" width="166" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" red="0.42745098471641541" green="0.40784314274787903" blue="0.45882353186607361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                    </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="24.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="0.9629806876" green="0.79069441559999998" blue="0.62742167709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="W5U-xS-eCw"/>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="f0k-V1-ON7" secondAttribute="bottom" id="4H7-uf-2pS"/>
+                <constraint firstAttribute="trailing" secondItem="f0k-V1-ON7" secondAttribute="trailing" id="IcN-Ud-Nuc"/>
+                <constraint firstItem="f0k-V1-ON7" firstAttribute="leading" secondItem="K8L-qv-tC2" secondAttribute="leading" id="L6e-zv-wIA"/>
+                <constraint firstItem="f0k-V1-ON7" firstAttribute="top" secondItem="K8L-qv-tC2" secondAttribute="top" id="fn5-b9-Rqu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-87" y="-367"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imgDeleteTexture" width="498" height="147"/>
+    </resources>
+</document>

@@ -1,0 +1,977 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41F65848B23528DD818989C5 /* Pods_ButtonClickStyle_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C1A339472B772504181DB /* Pods_ButtonClickStyle_Example.framework */; };
+		4A62F3722803115C00534ABA /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F30D2803115C00534ABA /* DesignableLabel.swift */; };
+		4A62F3732803115C00534ABA /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F30E2803115C00534ABA /* DesignableView.swift */; };
+		4A62F3742803115C00534ABA /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F30F2803115C00534ABA /* DispatchQueue.swift */; };
+		4A62F3752803115C00534ABA /* StoryboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3112803115C00534ABA /* StoryboardController.swift */; };
+		4A62F3762803115C00534ABA /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3122803115C00534ABA /* XibView.swift */; };
+		4A62F3772803115C00534ABA /* Proxima Nova Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3142803115C00534ABA /* Proxima Nova Semibold.otf */; };
+		4A62F3782803115C00534ABA /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3152803115C00534ABA /* Proxima Nova Bold.otf */; };
+		4A62F3792803115C00534ABA /* ScreenDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3162803115C00534ABA /* ScreenDevice.swift */; };
+		4A62F37A2803115C00534ABA /* UIView+Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3172803115C00534ABA /* UIView+Positions.swift */; };
+		4A62F37B2803115C00534ABA /* FirefoxButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F31B2803115C00534ABA /* FirefoxButtonView.swift */; };
+		4A62F37C2803115C00534ABA /* FirefoxButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F31C2803115C00534ABA /* FirefoxButtonView.xib */; };
+		4A62F37D2803115C00534ABA /* BuyNowButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F31E2803115C00534ABA /* BuyNowButtonView.xib */; };
+		4A62F37E2803115C00534ABA /* BuyNowButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F31F2803115C00534ABA /* BuyNowButtonView.swift */; };
+		4A62F37F2803115C00534ABA /* BlueButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3212803115C00534ABA /* BlueButtonView.xib */; };
+		4A62F3802803115C00534ABA /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3222803115C00534ABA /* BlueButtonView.swift */; };
+		4A62F3812803115C00534ABA /* DeleteButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3242803115C00534ABA /* DeleteButtonView.xib */; };
+		4A62F3822803115C00534ABA /* DeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3252803115C00534ABA /* DeleteButtonView.swift */; };
+		4A62F3832803115C00534ABA /* TestDemoBlurButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3272803115C00534ABA /* TestDemoBlurButtonView.xib */; };
+		4A62F3842803115C00534ABA /* TestDemoBlurButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3282803115C00534ABA /* TestDemoBlurButtonView.swift */; };
+		4A62F3852803115C00534ABA /* GoogleButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F32A2803115C00534ABA /* GoogleButtonView.xib */; };
+		4A62F3862803115C00534ABA /* GoogleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F32B2803115C00534ABA /* GoogleButtonView.swift */; };
+		4A62F3872803115C00534ABA /* TestDemoSquaresButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F32D2803115C00534ABA /* TestDemoSquaresButtonView.xib */; };
+		4A62F3882803115C00534ABA /* TestDemoSquaresButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F32E2803115C00534ABA /* TestDemoSquaresButtonView.swift */; };
+		4A62F3892803115C00534ABA /* GradientBlueBasicButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3302803115C00534ABA /* GradientBlueBasicButtonView.xib */; };
+		4A62F38A2803115C00534ABA /* GradientBlueBasicButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3312803115C00534ABA /* GradientBlueBasicButtonView.swift */; };
+		4A62F38B2803115C00534ABA /* SearchButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3332803115C00534ABA /* SearchButtonView.xib */; };
+		4A62F38C2803115C00534ABA /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3342803115C00534ABA /* SearchButtonView.swift */; };
+		4A62F38D2803115C00534ABA /* SubscribeButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3362803115C00534ABA /* SubscribeButtonView.xib */; };
+		4A62F38E2803115C00534ABA /* SubscribeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3372803115C00534ABA /* SubscribeButtonView.swift */; };
+		4A62F38F2803115C00534ABA /* JustPinkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3392803115C00534ABA /* JustPinkButtonView.swift */; };
+		4A62F3902803115C00534ABA /* JustPinkButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F33A2803115C00534ABA /* JustPinkButtonView.xib */; };
+		4A62F3912803115C00534ABA /* DownloadButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F33C2803115C00534ABA /* DownloadButtonView.swift */; };
+		4A62F3922803115C00534ABA /* DownloadButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F33D2803115C00534ABA /* DownloadButtonView.xib */; };
+		4A62F3932803115C00534ABA /* BorderGreenDarkButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F33F2803115C00534ABA /* BorderGreenDarkButtonView.xib */; };
+		4A62F3942803115C00534ABA /* BorderGreenDarkButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3402803115C00534ABA /* BorderGreenDarkButtonView.swift */; };
+		4A62F3952803115C00534ABA /* NeomorphismButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3422803115C00534ABA /* NeomorphismButtonView.swift */; };
+		4A62F3962803115C00534ABA /* NeomorphismButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3432803115C00534ABA /* NeomorphismButtonView.xib */; };
+		4A62F3972803115C00534ABA /* TestDemoGradientButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3452803115C00534ABA /* TestDemoGradientButtonView.xib */; };
+		4A62F3982803115C00534ABA /* TestDemoGradientButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3462803115C00534ABA /* TestDemoGradientButtonView.swift */; };
+		4A62F3992803115C00534ABA /* BtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3472803115C00534ABA /* BtnView.swift */; };
+		4A62F39A2803115C00534ABA /* ButtonListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F34A2803115C00534ABA /* ButtonListViewController.storyboard */; };
+		4A62F39B2803115C00534ABA /* ButtonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F34B2803115C00534ABA /* ButtonListViewController.swift */; };
+		4A62F39C2803115C00534ABA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F34D2803115C00534ABA /* TestViewController.swift */; };
+		4A62F39D2803115C00534ABA /* TestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F34E2803115C00534ABA /* TestViewController.storyboard */; };
+		4A62F39E2803115C00534ABA /* TestDemoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3502803115C00534ABA /* TestDemoViewController.storyboard */; };
+		4A62F39F2803115C00534ABA /* TestDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3512803115C00534ABA /* TestDemoViewController.swift */; };
+		4A62F3A02803115C00534ABA /* ExampleAnimationsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3532803115C00534ABA /* ExampleAnimationsViewController.storyboard */; };
+		4A62F3A12803115C00534ABA /* ExampleAnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3542803115C00534ABA /* ExampleAnimationsViewController.swift */; };
+		4A62F3A22803115C00534ABA /* ButtonLayerExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3572803115C00534ABA /* ButtonLayerExampleView.swift */; };
+		4A62F3A32803115C00534ABA /* ButtonLayerExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */; };
+		4A62F3A42803115C00534ABA /* ButtonClickStyleShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F35C2803115C00534ABA /* ButtonClickStyleShort.swift */; };
+		4A62F3A52803115C00534ABA /* ButtonClickStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F35D2803115C00534ABA /* ButtonClickStyle.swift */; };
+		4A62F3A62803115C00534ABA /* ButtonClickStyleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F35E2803115C00534ABA /* ButtonClickStyleBase.swift */; };
+		4A62F3A72803115D00534ABA /* ButtonClickStyleEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F35F2803115C00534ABA /* ButtonClickStyleEmoji.swift */; };
+		4A62F3A82803115D00534ABA /* ButtonClickStyleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3602803115C00534ABA /* ButtonClickStyleGestureRecognizer.swift */; };
+		4A62F3A92803115D00534ABA /* ButtonClickState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3622803115C00534ABA /* ButtonClickState.swift */; };
+		4A62F3AA2803115D00534ABA /* ButtonClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3632803115C00534ABA /* ButtonClick.swift */; };
+		4A62F3AB2803115D00534ABA /* ButtonClicClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3642803115C00534ABA /* ButtonClicClosure.swift */; };
+		4A62F3AC2803115D00534ABA /* ButtonClickStyleAddViewsAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3652803115C00534ABA /* ButtonClickStyleAddViewsAnimation.swift */; };
+		4A62F3AD2803115D00534ABA /* UIView+AnimationAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3672803115C00534ABA /* UIView+AnimationAlpha.swift */; };
+		4A62F3AE2803115D00534ABA /* UIView+AnimationShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3682803115C00534ABA /* UIView+AnimationShadow.swift */; };
+		4A62F3AF2803115D00534ABA /* UIView+AnimationPulsate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3692803115C00534ABA /* UIView+AnimationPulsate.swift */; };
+		4A62F3B02803115D00534ABA /* UIView+AnimationAndroidPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F36A2803115C00534ABA /* UIView+AnimationAndroidPulse.swift */; };
+		4A62F3B12803115D00534ABA /* UIView+AnimationColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F36B2803115C00534ABA /* UIView+AnimationColor.swift */; };
+		4A62F3B22803115D00534ABA /* UIView+AnimationPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F36C2803115C00534ABA /* UIView+AnimationPulse.swift */; };
+		4A62F3B32803115D00534ABA /* UIView+AnimationColorFlat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F36D2803115C00534ABA /* UIView+AnimationColorFlat.swift */; };
+		4A62F3B42803115D00534ABA /* UIView+AnimationSnake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F36E2803115C00534ABA /* UIView+AnimationSnake.swift */; };
+		4A62F3B52803115D00534ABA /* UIView+AnimationFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F36F2803115C00534ABA /* UIView+AnimationFlash.swift */; };
+		4A62F3B62803115D00534ABA /* UIView+AnimationPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3702803115C00534ABA /* UIView+AnimationPress.swift */; };
+		4A62F3B72803115D00534ABA /* ButtonClickStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3712803115C00534ABA /* ButtonClickStyleView.swift */; };
+		4A62F3B92803122700534ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3B82803122700534ABA /* SceneDelegate.swift */; };
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		008AEF06A9D32E0C9EFBF7B1 /* Pods-ButtonClickStyle_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonClickStyle_Example.debug.xcconfig"; path = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		03911DCE224C9681A312A56C /* Pods_ButtonClickStyle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonClickStyle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05BD0C048E17837785AA335C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3CC8C58CF19BEF113F8B61A0 /* ButtonClickStyle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ButtonClickStyle.podspec; path = ../ButtonClickStyle.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4A62F30D2803115C00534ABA /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		4A62F30E2803115C00534ABA /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		4A62F30F2803115C00534ABA /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		4A62F3112803115C00534ABA /* StoryboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardController.swift; sourceTree = "<group>"; };
+		4A62F3122803115C00534ABA /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		4A62F3142803115C00534ABA /* Proxima Nova Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Semibold.otf"; sourceTree = "<group>"; };
+		4A62F3152803115C00534ABA /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		4A62F3162803115C00534ABA /* ScreenDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDevice.swift; sourceTree = "<group>"; };
+		4A62F3172803115C00534ABA /* UIView+Positions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Positions.swift"; sourceTree = "<group>"; };
+		4A62F31B2803115C00534ABA /* FirefoxButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirefoxButtonView.swift; sourceTree = "<group>"; };
+		4A62F31C2803115C00534ABA /* FirefoxButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirefoxButtonView.xib; sourceTree = "<group>"; };
+		4A62F31E2803115C00534ABA /* BuyNowButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyNowButtonView.xib; sourceTree = "<group>"; };
+		4A62F31F2803115C00534ABA /* BuyNowButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyNowButtonView.swift; sourceTree = "<group>"; };
+		4A62F3212803115C00534ABA /* BlueButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlueButtonView.xib; sourceTree = "<group>"; };
+		4A62F3222803115C00534ABA /* BlueButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		4A62F3242803115C00534ABA /* DeleteButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteButtonView.xib; sourceTree = "<group>"; };
+		4A62F3252803115C00534ABA /* DeleteButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteButtonView.swift; sourceTree = "<group>"; };
+		4A62F3272803115C00534ABA /* TestDemoBlurButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestDemoBlurButtonView.xib; sourceTree = "<group>"; };
+		4A62F3282803115C00534ABA /* TestDemoBlurButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDemoBlurButtonView.swift; sourceTree = "<group>"; };
+		4A62F32A2803115C00534ABA /* GoogleButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoogleButtonView.xib; sourceTree = "<group>"; };
+		4A62F32B2803115C00534ABA /* GoogleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButtonView.swift; sourceTree = "<group>"; };
+		4A62F32D2803115C00534ABA /* TestDemoSquaresButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestDemoSquaresButtonView.xib; sourceTree = "<group>"; };
+		4A62F32E2803115C00534ABA /* TestDemoSquaresButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDemoSquaresButtonView.swift; sourceTree = "<group>"; };
+		4A62F3302803115C00534ABA /* GradientBlueBasicButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GradientBlueBasicButtonView.xib; sourceTree = "<group>"; };
+		4A62F3312803115C00534ABA /* GradientBlueBasicButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBlueBasicButtonView.swift; sourceTree = "<group>"; };
+		4A62F3332803115C00534ABA /* SearchButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchButtonView.xib; sourceTree = "<group>"; };
+		4A62F3342803115C00534ABA /* SearchButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
+		4A62F3362803115C00534ABA /* SubscribeButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscribeButtonView.xib; sourceTree = "<group>"; };
+		4A62F3372803115C00534ABA /* SubscribeButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeButtonView.swift; sourceTree = "<group>"; };
+		4A62F3392803115C00534ABA /* JustPinkButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustPinkButtonView.swift; sourceTree = "<group>"; };
+		4A62F33A2803115C00534ABA /* JustPinkButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JustPinkButtonView.xib; sourceTree = "<group>"; };
+		4A62F33C2803115C00534ABA /* DownloadButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadButtonView.swift; sourceTree = "<group>"; };
+		4A62F33D2803115C00534ABA /* DownloadButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadButtonView.xib; sourceTree = "<group>"; };
+		4A62F33F2803115C00534ABA /* BorderGreenDarkButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BorderGreenDarkButtonView.xib; sourceTree = "<group>"; };
+		4A62F3402803115C00534ABA /* BorderGreenDarkButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderGreenDarkButtonView.swift; sourceTree = "<group>"; };
+		4A62F3422803115C00534ABA /* NeomorphismButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeomorphismButtonView.swift; sourceTree = "<group>"; };
+		4A62F3432803115C00534ABA /* NeomorphismButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NeomorphismButtonView.xib; sourceTree = "<group>"; };
+		4A62F3452803115C00534ABA /* TestDemoGradientButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestDemoGradientButtonView.xib; sourceTree = "<group>"; };
+		4A62F3462803115C00534ABA /* TestDemoGradientButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDemoGradientButtonView.swift; sourceTree = "<group>"; };
+		4A62F3472803115C00534ABA /* BtnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnView.swift; sourceTree = "<group>"; };
+		4A62F34A2803115C00534ABA /* ButtonListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ButtonListViewController.storyboard; sourceTree = "<group>"; };
+		4A62F34B2803115C00534ABA /* ButtonListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonListViewController.swift; sourceTree = "<group>"; };
+		4A62F34D2803115C00534ABA /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4A62F34E2803115C00534ABA /* TestViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TestViewController.storyboard; sourceTree = "<group>"; };
+		4A62F3502803115C00534ABA /* TestDemoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TestDemoViewController.storyboard; sourceTree = "<group>"; };
+		4A62F3512803115C00534ABA /* TestDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDemoViewController.swift; sourceTree = "<group>"; };
+		4A62F3532803115C00534ABA /* ExampleAnimationsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExampleAnimationsViewController.storyboard; sourceTree = "<group>"; };
+		4A62F3542803115C00534ABA /* ExampleAnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAnimationsViewController.swift; sourceTree = "<group>"; };
+		4A62F3572803115C00534ABA /* ButtonLayerExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayerExampleView.swift; sourceTree = "<group>"; };
+		4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonLayerExampleView.xib; sourceTree = "<group>"; };
+		4A62F35C2803115C00534ABA /* ButtonClickStyleShort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleShort.swift; sourceTree = "<group>"; };
+		4A62F35D2803115C00534ABA /* ButtonClickStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyle.swift; sourceTree = "<group>"; };
+		4A62F35E2803115C00534ABA /* ButtonClickStyleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleBase.swift; sourceTree = "<group>"; };
+		4A62F35F2803115C00534ABA /* ButtonClickStyleEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleEmoji.swift; sourceTree = "<group>"; };
+		4A62F3602803115C00534ABA /* ButtonClickStyleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleGestureRecognizer.swift; sourceTree = "<group>"; };
+		4A62F3622803115C00534ABA /* ButtonClickState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickState.swift; sourceTree = "<group>"; };
+		4A62F3632803115C00534ABA /* ButtonClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClick.swift; sourceTree = "<group>"; };
+		4A62F3642803115C00534ABA /* ButtonClicClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClicClosure.swift; sourceTree = "<group>"; };
+		4A62F3652803115C00534ABA /* ButtonClickStyleAddViewsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleAddViewsAnimation.swift; sourceTree = "<group>"; };
+		4A62F3672803115C00534ABA /* UIView+AnimationAlpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationAlpha.swift"; sourceTree = "<group>"; };
+		4A62F3682803115C00534ABA /* UIView+AnimationShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationShadow.swift"; sourceTree = "<group>"; };
+		4A62F3692803115C00534ABA /* UIView+AnimationPulsate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationPulsate.swift"; sourceTree = "<group>"; };
+		4A62F36A2803115C00534ABA /* UIView+AnimationAndroidPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationAndroidPulse.swift"; sourceTree = "<group>"; };
+		4A62F36B2803115C00534ABA /* UIView+AnimationColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationColor.swift"; sourceTree = "<group>"; };
+		4A62F36C2803115C00534ABA /* UIView+AnimationPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationPulse.swift"; sourceTree = "<group>"; };
+		4A62F36D2803115C00534ABA /* UIView+AnimationColorFlat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationColorFlat.swift"; sourceTree = "<group>"; };
+		4A62F36E2803115C00534ABA /* UIView+AnimationSnake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationSnake.swift"; sourceTree = "<group>"; };
+		4A62F36F2803115C00534ABA /* UIView+AnimationFlash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationFlash.swift"; sourceTree = "<group>"; };
+		4A62F3702803115C00534ABA /* UIView+AnimationPress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationPress.swift"; sourceTree = "<group>"; };
+		4A62F3712803115C00534ABA /* ButtonClickStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleView.swift; sourceTree = "<group>"; };
+		4A62F3B82803122700534ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F15AAFA673DA24A3C49A947 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		585C1A339472B772504181DB /* Pods_ButtonClickStyle_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonClickStyle_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* ButtonClickStyle_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonClickStyle_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7D249352F383BCB56C66F21A /* Pods-ButtonClickStyle_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonClickStyle_Example.release.xcconfig"; path = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C559D4BC525D42F1618D70F1 /* Pods-ButtonClickStyle_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonClickStyle_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA518B715A95E09302EEA8DC /* Pods-ButtonClickStyle_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonClickStyle_Tests.release.xcconfig"; path = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F65848B23528DD818989C5 /* Pods_ButtonClickStyle_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A62F30B2803115C00534ABA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F30C2803115C00534ABA /* Designable */,
+				4A62F30F2803115C00534ABA /* DispatchQueue.swift */,
+				4A62F3102803115C00534ABA /* LoadNib */,
+				4A62F3132803115C00534ABA /* Font */,
+				4A62F3162803115C00534ABA /* ScreenDevice.swift */,
+				4A62F3172803115C00534ABA /* UIView+Positions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4A62F30C2803115C00534ABA /* Designable */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F30D2803115C00534ABA /* DesignableLabel.swift */,
+				4A62F30E2803115C00534ABA /* DesignableView.swift */,
+			);
+			path = Designable;
+			sourceTree = "<group>";
+		};
+		4A62F3102803115C00534ABA /* LoadNib */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3112803115C00534ABA /* StoryboardController.swift */,
+				4A62F3122803115C00534ABA /* XibView.swift */,
+			);
+			path = LoadNib;
+			sourceTree = "<group>";
+		};
+		4A62F3132803115C00534ABA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3142803115C00534ABA /* Proxima Nova Semibold.otf */,
+				4A62F3152803115C00534ABA /* Proxima Nova Bold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4A62F3182803115C00534ABA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3192803115C00534ABA /* Button */,
+				4A62F3482803115C00534ABA /* Screen */,
+				4A62F3552803115C00534ABA /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4A62F3192803115C00534ABA /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F31A2803115C00534ABA /* Firefox */,
+				4A62F31D2803115C00534ABA /* BuyNow */,
+				4A62F3202803115C00534ABA /* Blue */,
+				4A62F3232803115C00534ABA /* Delete */,
+				4A62F3262803115C00534ABA /* TestDemoBlur */,
+				4A62F3292803115C00534ABA /* Google */,
+				4A62F32C2803115C00534ABA /* TestDemoSquares */,
+				4A62F32F2803115C00534ABA /* GradientBlue */,
+				4A62F3322803115C00534ABA /* Search */,
+				4A62F3352803115C00534ABA /* Subscribe */,
+				4A62F3382803115C00534ABA /* JustPink */,
+				4A62F33B2803115C00534ABA /* Download */,
+				4A62F33E2803115C00534ABA /* BorderGreenDark */,
+				4A62F3412803115C00534ABA /* Neomorphism */,
+				4A62F3442803115C00534ABA /* TestDemoGradient */,
+				4A62F3472803115C00534ABA /* BtnView.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		4A62F31A2803115C00534ABA /* Firefox */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F31B2803115C00534ABA /* FirefoxButtonView.swift */,
+				4A62F31C2803115C00534ABA /* FirefoxButtonView.xib */,
+			);
+			path = Firefox;
+			sourceTree = "<group>";
+		};
+		4A62F31D2803115C00534ABA /* BuyNow */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F31E2803115C00534ABA /* BuyNowButtonView.xib */,
+				4A62F31F2803115C00534ABA /* BuyNowButtonView.swift */,
+			);
+			path = BuyNow;
+			sourceTree = "<group>";
+		};
+		4A62F3202803115C00534ABA /* Blue */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3212803115C00534ABA /* BlueButtonView.xib */,
+				4A62F3222803115C00534ABA /* BlueButtonView.swift */,
+			);
+			path = Blue;
+			sourceTree = "<group>";
+		};
+		4A62F3232803115C00534ABA /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3242803115C00534ABA /* DeleteButtonView.xib */,
+				4A62F3252803115C00534ABA /* DeleteButtonView.swift */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		4A62F3262803115C00534ABA /* TestDemoBlur */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3272803115C00534ABA /* TestDemoBlurButtonView.xib */,
+				4A62F3282803115C00534ABA /* TestDemoBlurButtonView.swift */,
+			);
+			path = TestDemoBlur;
+			sourceTree = "<group>";
+		};
+		4A62F3292803115C00534ABA /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F32A2803115C00534ABA /* GoogleButtonView.xib */,
+				4A62F32B2803115C00534ABA /* GoogleButtonView.swift */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
+		4A62F32C2803115C00534ABA /* TestDemoSquares */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F32D2803115C00534ABA /* TestDemoSquaresButtonView.xib */,
+				4A62F32E2803115C00534ABA /* TestDemoSquaresButtonView.swift */,
+			);
+			path = TestDemoSquares;
+			sourceTree = "<group>";
+		};
+		4A62F32F2803115C00534ABA /* GradientBlue */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3302803115C00534ABA /* GradientBlueBasicButtonView.xib */,
+				4A62F3312803115C00534ABA /* GradientBlueBasicButtonView.swift */,
+			);
+			path = GradientBlue;
+			sourceTree = "<group>";
+		};
+		4A62F3322803115C00534ABA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3332803115C00534ABA /* SearchButtonView.xib */,
+				4A62F3342803115C00534ABA /* SearchButtonView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4A62F3352803115C00534ABA /* Subscribe */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3362803115C00534ABA /* SubscribeButtonView.xib */,
+				4A62F3372803115C00534ABA /* SubscribeButtonView.swift */,
+			);
+			path = Subscribe;
+			sourceTree = "<group>";
+		};
+		4A62F3382803115C00534ABA /* JustPink */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3392803115C00534ABA /* JustPinkButtonView.swift */,
+				4A62F33A2803115C00534ABA /* JustPinkButtonView.xib */,
+			);
+			path = JustPink;
+			sourceTree = "<group>";
+		};
+		4A62F33B2803115C00534ABA /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F33C2803115C00534ABA /* DownloadButtonView.swift */,
+				4A62F33D2803115C00534ABA /* DownloadButtonView.xib */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		4A62F33E2803115C00534ABA /* BorderGreenDark */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F33F2803115C00534ABA /* BorderGreenDarkButtonView.xib */,
+				4A62F3402803115C00534ABA /* BorderGreenDarkButtonView.swift */,
+			);
+			path = BorderGreenDark;
+			sourceTree = "<group>";
+		};
+		4A62F3412803115C00534ABA /* Neomorphism */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3422803115C00534ABA /* NeomorphismButtonView.swift */,
+				4A62F3432803115C00534ABA /* NeomorphismButtonView.xib */,
+			);
+			path = Neomorphism;
+			sourceTree = "<group>";
+		};
+		4A62F3442803115C00534ABA /* TestDemoGradient */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3452803115C00534ABA /* TestDemoGradientButtonView.xib */,
+				4A62F3462803115C00534ABA /* TestDemoGradientButtonView.swift */,
+			);
+			path = TestDemoGradient;
+			sourceTree = "<group>";
+		};
+		4A62F3482803115C00534ABA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3492803115C00534ABA /* ButtonList */,
+				4A62F34C2803115C00534ABA /* Test */,
+				4A62F34F2803115C00534ABA /* TestDemo */,
+				4A62F3522803115C00534ABA /* ExampleAnimations */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		4A62F3492803115C00534ABA /* ButtonList */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F34A2803115C00534ABA /* ButtonListViewController.storyboard */,
+				4A62F34B2803115C00534ABA /* ButtonListViewController.swift */,
+			);
+			path = ButtonList;
+			sourceTree = "<group>";
+		};
+		4A62F34C2803115C00534ABA /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F34D2803115C00534ABA /* TestViewController.swift */,
+				4A62F34E2803115C00534ABA /* TestViewController.storyboard */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		4A62F34F2803115C00534ABA /* TestDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3502803115C00534ABA /* TestDemoViewController.storyboard */,
+				4A62F3512803115C00534ABA /* TestDemoViewController.swift */,
+			);
+			path = TestDemo;
+			sourceTree = "<group>";
+		};
+		4A62F3522803115C00534ABA /* ExampleAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3532803115C00534ABA /* ExampleAnimationsViewController.storyboard */,
+				4A62F3542803115C00534ABA /* ExampleAnimationsViewController.swift */,
+			);
+			path = ExampleAnimations;
+			sourceTree = "<group>";
+		};
+		4A62F3552803115C00534ABA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3562803115C00534ABA /* ButtonLayerExample */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A62F3562803115C00534ABA /* ButtonLayerExample */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3572803115C00534ABA /* ButtonLayerExampleView.swift */,
+				4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */,
+			);
+			path = ButtonLayerExample;
+			sourceTree = "<group>";
+		};
+		4A62F3592803115C00534ABA /* ButtonClickStyle */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F35A2803115C00534ABA /* ButtonClick */,
+				4A62F3652803115C00534ABA /* ButtonClickStyleAddViewsAnimation.swift */,
+				4A62F3662803115C00534ABA /* Animations */,
+				4A62F3712803115C00534ABA /* ButtonClickStyleView.swift */,
+			);
+			path = ButtonClickStyle;
+			sourceTree = "<group>";
+		};
+		4A62F35A2803115C00534ABA /* ButtonClick */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F35B2803115C00534ABA /* Style */,
+				4A62F3612803115C00534ABA /* State */,
+				4A62F3632803115C00534ABA /* ButtonClick.swift */,
+				4A62F3642803115C00534ABA /* ButtonClicClosure.swift */,
+			);
+			path = ButtonClick;
+			sourceTree = "<group>";
+		};
+		4A62F35B2803115C00534ABA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F35C2803115C00534ABA /* ButtonClickStyleShort.swift */,
+				4A62F35D2803115C00534ABA /* ButtonClickStyle.swift */,
+				4A62F35E2803115C00534ABA /* ButtonClickStyleBase.swift */,
+				4A62F35F2803115C00534ABA /* ButtonClickStyleEmoji.swift */,
+				4A62F3602803115C00534ABA /* ButtonClickStyleGestureRecognizer.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		4A62F3612803115C00534ABA /* State */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3622803115C00534ABA /* ButtonClickState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		4A62F3662803115C00534ABA /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3672803115C00534ABA /* UIView+AnimationAlpha.swift */,
+				4A62F3682803115C00534ABA /* UIView+AnimationShadow.swift */,
+				4A62F3692803115C00534ABA /* UIView+AnimationPulsate.swift */,
+				4A62F36A2803115C00534ABA /* UIView+AnimationAndroidPulse.swift */,
+				4A62F36B2803115C00534ABA /* UIView+AnimationColor.swift */,
+				4A62F36C2803115C00534ABA /* UIView+AnimationPulse.swift */,
+				4A62F36D2803115C00534ABA /* UIView+AnimationColorFlat.swift */,
+				4A62F36E2803115C00534ABA /* UIView+AnimationSnake.swift */,
+				4A62F36F2803115C00534ABA /* UIView+AnimationFlash.swift */,
+				4A62F3702803115C00534ABA /* UIView+AnimationPress.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* ButtonClickStyle */,
+				607FACD11AFB9204008FA782 /* Products */,
+				DAC04F657E8533F49312BD6B /* Pods */,
+				D5539BDBFA63C79BA8EAC757 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD01AFB9204008FA782 /* ButtonClickStyle_Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACD21AFB9204008FA782 /* ButtonClickStyle */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F3592803115C00534ABA /* ButtonClickStyle */,
+				4A62F3182803115C00534ABA /* UI */,
+				4A62F30B2803115C00534ABA /* Utils */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				4A62F3B82803122700534ABA /* SceneDelegate.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
+			);
+			path = ButtonClickStyle;
+			sourceTree = "<group>";
+		};
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD41AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				3CC8C58CF19BEF113F8B61A0 /* ButtonClickStyle.podspec */,
+				05BD0C048E17837785AA335C /* README.md */,
+				4F15AAFA673DA24A3C49A947 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		D5539BDBFA63C79BA8EAC757 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				585C1A339472B772504181DB /* Pods_ButtonClickStyle_Example.framework */,
+				03911DCE224C9681A312A56C /* Pods_ButtonClickStyle_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAC04F657E8533F49312BD6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				008AEF06A9D32E0C9EFBF7B1 /* Pods-ButtonClickStyle_Example.debug.xcconfig */,
+				7D249352F383BCB56C66F21A /* Pods-ButtonClickStyle_Example.release.xcconfig */,
+				C559D4BC525D42F1618D70F1 /* Pods-ButtonClickStyle_Tests.debug.xcconfig */,
+				FA518B715A95E09302EEA8DC /* Pods-ButtonClickStyle_Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		607FACCF1AFB9204008FA782 /* ButtonClickStyle_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ButtonClickStyle_Example" */;
+			buildPhases = (
+				22E04CD9862E1282C47CDE47 /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				E77A549ADF311C2CB62B338A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ButtonClickStyle_Example;
+			productName = ButtonClickStyle;
+			productReference = 607FACD01AFB9204008FA782 /* ButtonClickStyle_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Y7546NLJW9;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "ButtonClickStyle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607FACCF1AFB9204008FA782 /* ButtonClickStyle_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		607FACCE1AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A62F3932803115C00534ABA /* BorderGreenDarkButtonView.xib in Resources */,
+				4A62F38D2803115C00534ABA /* SubscribeButtonView.xib in Resources */,
+				4A62F3812803115C00534ABA /* DeleteButtonView.xib in Resources */,
+				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				4A62F3A32803115C00534ABA /* ButtonLayerExampleView.xib in Resources */,
+				4A62F3972803115C00534ABA /* TestDemoGradientButtonView.xib in Resources */,
+				4A62F37F2803115C00534ABA /* BlueButtonView.xib in Resources */,
+				4A62F3A02803115C00534ABA /* ExampleAnimationsViewController.storyboard in Resources */,
+				4A62F38B2803115C00534ABA /* SearchButtonView.xib in Resources */,
+				4A62F3902803115C00534ABA /* JustPinkButtonView.xib in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				4A62F39E2803115C00534ABA /* TestDemoViewController.storyboard in Resources */,
+				4A62F3772803115C00534ABA /* Proxima Nova Semibold.otf in Resources */,
+				4A62F39D2803115C00534ABA /* TestViewController.storyboard in Resources */,
+				4A62F3872803115C00534ABA /* TestDemoSquaresButtonView.xib in Resources */,
+				4A62F3892803115C00534ABA /* GradientBlueBasicButtonView.xib in Resources */,
+				4A62F37C2803115C00534ABA /* FirefoxButtonView.xib in Resources */,
+				4A62F3782803115C00534ABA /* Proxima Nova Bold.otf in Resources */,
+				4A62F3922803115C00534ABA /* DownloadButtonView.xib in Resources */,
+				4A62F3962803115C00534ABA /* NeomorphismButtonView.xib in Resources */,
+				4A62F3852803115C00534ABA /* GoogleButtonView.xib in Resources */,
+				4A62F3832803115C00534ABA /* TestDemoBlurButtonView.xib in Resources */,
+				4A62F37D2803115C00534ABA /* BuyNowButtonView.xib in Resources */,
+				4A62F39A2803115C00534ABA /* ButtonListViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22E04CD9862E1282C47CDE47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ButtonClickStyle_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E77A549ADF311C2CB62B338A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ButtonClickStyle/ButtonClickStyle.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ButtonClickStyle.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		607FACCC1AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A62F3A42803115C00534ABA /* ButtonClickStyleShort.swift in Sources */,
+				4A62F3912803115C00534ABA /* DownloadButtonView.swift in Sources */,
+				4A62F3A82803115D00534ABA /* ButtonClickStyleGestureRecognizer.swift in Sources */,
+				4A62F3862803115C00534ABA /* GoogleButtonView.swift in Sources */,
+				4A62F3A12803115C00534ABA /* ExampleAnimationsViewController.swift in Sources */,
+				4A62F3A52803115C00534ABA /* ButtonClickStyle.swift in Sources */,
+				4A62F3B42803115D00534ABA /* UIView+AnimationSnake.swift in Sources */,
+				4A62F3B02803115D00534ABA /* UIView+AnimationAndroidPulse.swift in Sources */,
+				4A62F3B52803115D00534ABA /* UIView+AnimationFlash.swift in Sources */,
+				4A62F38A2803115C00534ABA /* GradientBlueBasicButtonView.swift in Sources */,
+				4A62F3B62803115D00534ABA /* UIView+AnimationPress.swift in Sources */,
+				4A62F3732803115C00534ABA /* DesignableView.swift in Sources */,
+				4A62F3A22803115C00534ABA /* ButtonLayerExampleView.swift in Sources */,
+				4A62F3B22803115D00534ABA /* UIView+AnimationPulse.swift in Sources */,
+				4A62F3762803115C00534ABA /* XibView.swift in Sources */,
+				4A62F3A62803115C00534ABA /* ButtonClickStyleBase.swift in Sources */,
+				4A62F3822803115C00534ABA /* DeleteButtonView.swift in Sources */,
+				4A62F3A92803115D00534ABA /* ButtonClickState.swift in Sources */,
+				4A62F3AA2803115D00534ABA /* ButtonClick.swift in Sources */,
+				4A62F37E2803115C00534ABA /* BuyNowButtonView.swift in Sources */,
+				4A62F37A2803115C00534ABA /* UIView+Positions.swift in Sources */,
+				4A62F3AE2803115D00534ABA /* UIView+AnimationShadow.swift in Sources */,
+				4A62F3AD2803115D00534ABA /* UIView+AnimationAlpha.swift in Sources */,
+				4A62F3B72803115D00534ABA /* ButtonClickStyleView.swift in Sources */,
+				4A62F39B2803115C00534ABA /* ButtonListViewController.swift in Sources */,
+				4A62F3AC2803115D00534ABA /* ButtonClickStyleAddViewsAnimation.swift in Sources */,
+				4A62F3B12803115D00534ABA /* UIView+AnimationColor.swift in Sources */,
+				4A62F3992803115C00534ABA /* BtnView.swift in Sources */,
+				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				4A62F3752803115C00534ABA /* StoryboardController.swift in Sources */,
+				4A62F3A72803115D00534ABA /* ButtonClickStyleEmoji.swift in Sources */,
+				4A62F3722803115C00534ABA /* DesignableLabel.swift in Sources */,
+				4A62F38F2803115C00534ABA /* JustPinkButtonView.swift in Sources */,
+				4A62F3942803115C00534ABA /* BorderGreenDarkButtonView.swift in Sources */,
+				4A62F3B32803115D00534ABA /* UIView+AnimationColorFlat.swift in Sources */,
+				4A62F38E2803115C00534ABA /* SubscribeButtonView.swift in Sources */,
+				4A62F39C2803115C00534ABA /* TestViewController.swift in Sources */,
+				4A62F38C2803115C00534ABA /* SearchButtonView.swift in Sources */,
+				4A62F37B2803115C00534ABA /* FirefoxButtonView.swift in Sources */,
+				4A62F3882803115C00534ABA /* TestDemoSquaresButtonView.swift in Sources */,
+				4A62F3792803115C00534ABA /* ScreenDevice.swift in Sources */,
+				4A62F3B92803122700534ABA /* SceneDelegate.swift in Sources */,
+				4A62F3982803115C00534ABA /* TestDemoGradientButtonView.swift in Sources */,
+				4A62F3742803115C00534ABA /* DispatchQueue.swift in Sources */,
+				4A62F3AB2803115D00534ABA /* ButtonClicClosure.swift in Sources */,
+				4A62F39F2803115C00534ABA /* TestDemoViewController.swift in Sources */,
+				4A62F3802803115C00534ABA /* BlueButtonView.swift in Sources */,
+				4A62F3AF2803115D00534ABA /* UIView+AnimationPulsate.swift in Sources */,
+				4A62F3842803115C00534ABA /* TestDemoBlurButtonView.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				4A62F3952803115C00534ABA /* NeomorphismButtonView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDA1AFB9204008FA782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDF1AFB9204008FA782 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF01AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008AEF06A9D32E0C9EFBF7B1 /* Pods-ButtonClickStyle_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7546NLJW9;
+				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = mrustaa.ContainerController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		607FACF11AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D249352F383BCB56C66F21A /* Pods-ButtonClickStyle_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7546NLJW9;
+				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = mrustaa.ContainerController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "ButtonClickStyle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ButtonClickStyle_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}

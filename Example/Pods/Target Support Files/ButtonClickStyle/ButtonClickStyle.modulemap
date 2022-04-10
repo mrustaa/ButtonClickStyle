@@ -1,0 +1,6 @@
+framework module ButtonClickStyle {
+  umbrella header "ButtonClickStyle-umbrella.h"
+
+  export *
+  module * { export * }
+}

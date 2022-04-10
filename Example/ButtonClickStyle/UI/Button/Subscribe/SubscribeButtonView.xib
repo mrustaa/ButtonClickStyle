@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscribeButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="YQs-BU-AHC" id="oTP-eF-jeW"/>
+                <outlet property="secondImageView" destination="Jrx-ow-L8c" id="c33-rn-GiM"/>
+                <outlet property="titleLabel" destination="pXG-8M-YW1" id="px8-fx-gLw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="Jem-Ps-Hn2" userLabel="SubscribeButton">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQs-BU-AHC" userLabel="Button 4" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                    <rect key="frame" x="15" y="20.5" width="172" height="52"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXG-8M-YW1" userLabel="Subscribe">
+                            <rect key="frame" x="20" y="18" width="83.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" red="0.17916665971279144" green="0.17916665971279144" blue="0.17916665971279144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCheck" translatesAutoresizingMaskIntoConstraints="NO" id="Jrx-ow-L8c">
+                            <rect key="frame" x="124" y="14" width="30" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="SmR-ub-vUZ"/>
+                                <constraint firstAttribute="height" constant="24" id="b9y-qk-lRe"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="172" id="0Lr-Gi-aKz"/>
+                        <constraint firstAttribute="bottom" secondItem="pXG-8M-YW1" secondAttribute="bottom" constant="18" id="GWm-EG-bq7"/>
+                        <constraint firstAttribute="bottom" secondItem="Jrx-ow-L8c" secondAttribute="bottom" constant="14" id="Oqa-BK-JB2"/>
+                        <constraint firstAttribute="trailing" secondItem="Jrx-ow-L8c" secondAttribute="trailing" constant="18" id="S3z-9e-cI8"/>
+                        <constraint firstItem="pXG-8M-YW1" firstAttribute="leading" secondItem="YQs-BU-AHC" secondAttribute="leading" constant="20" id="dWT-lU-pp3"/>
+                        <constraint firstItem="pXG-8M-YW1" firstAttribute="top" secondItem="YQs-BU-AHC" secondAttribute="top" constant="18" id="dmu-S5-wUo"/>
+                        <constraint firstAttribute="height" constant="52" id="nZI-Yq-VuX"/>
+                        <constraint firstItem="Jrx-ow-L8c" firstAttribute="top" secondItem="YQs-BU-AHC" secondAttribute="top" constant="14" id="oFq-xW-tvC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="26"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shColor">
+                            <color key="value" red="0.17916665971279144" green="0.17916665971279144" blue="0.17916665971279144" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shRadius">
+                            <real key="value" value="7.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shOffset">
+                            <size key="value" width="0.0" height="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="csj-0i-TI9"/>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="YQs-BU-AHC" firstAttribute="centerY" secondItem="Jem-Ps-Hn2" secondAttribute="centerY" id="6F9-7U-uCc"/>
+                <constraint firstItem="YQs-BU-AHC" firstAttribute="centerX" secondItem="Jem-Ps-Hn2" secondAttribute="centerX" id="MG3-Bs-z6l"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="490"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icCheck" width="24" height="24"/>
+    </resources>
+</document>
