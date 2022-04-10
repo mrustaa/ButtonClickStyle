@@ -10,13 +10,10 @@
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
 
-This is a view button
-
-Has 9 styles of animated click
-
-Inside the layer you can style your button, create your own subviews
-
-You can expand the project adding new click-animation-styles
+- This is a customizable designable button view.
+- Inside the layer you can style your button, create your own subviews.
+- Can choose 1 of 9 button click animation styles.
+- You can expand the project adding new click-animation-styles.
 
 ## Requirements
 
