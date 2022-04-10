@@ -936,7 +936,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -957,7 +957,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
