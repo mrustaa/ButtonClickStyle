@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
-    setupWindowIfNeeded()
+//    setupWindowIfNeeded()
     
     return true
   }
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let window = UIWindow(frame: UIScreen.main.bounds)
     
     //    let vc = TestViewController.instantiate()
-    let vc = ButtonListViewController.instantiate()
+    let vc = ExampleAnimationsViewController.instantiate()
     let nav = UINavigationController(rootViewController: vc)
     nav.setNavigationBarHidden(false, animated: false)
     window.rootViewController = nav

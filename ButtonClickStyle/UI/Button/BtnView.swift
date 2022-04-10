@@ -11,10 +11,10 @@ class BtnView: XibView {
   
   // MARK: Properties
   
-  var state: BtnCellState?
+  var state: ButtonClick.State?
   var animation: ButtonClickStyleView?
   
-  func fill(state: BtnCellState?) {
+  func fill(state: ButtonClick.State?) {
     
     guard let state = state else { return }
     self.state = state

@@ -9,7 +9,7 @@ class BorderGreenDarkButtonView: BtnView {
   
   @IBOutlet var backColor: UIView!
   
-  override func fill(state: BtnCellState?) {
+  override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
     
@@ -17,10 +17,10 @@ class BorderGreenDarkButtonView: BtnView {
       
       var views: [UIView]? = [mainView]
       
-      if type == ButtonClick.StyleEasy.color.rawValue  {
+      if type == ButtonClick._Style.color.rawValue  {
         views = [borderView, textLabel]
-      } else if type == ButtonClick.StyleEasy.androidClickable.rawValue ||
-                  type == ButtonClick.StyleEasy.androidClickableDark.rawValue {
+      } else if type == ButtonClick._Style.androidClickable.rawValue ||
+                  type == ButtonClick._Style.androidClickableDark.rawValue {
         views = nil
       }
       

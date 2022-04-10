@@ -9,7 +9,7 @@ extension UIView {
   
   // MARK: - Add Animation Color Flat
   
-  func animationColorFlat(duration: CGFloat, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat,  color: UIColor? = nil) {
+  func buttonClickStyleColorFlat(duration: CGFloat, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat,  color: UIColor? = nil) {
     
     guard let superview = self.superview else { return }
     

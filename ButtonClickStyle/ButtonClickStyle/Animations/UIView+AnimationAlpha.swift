@@ -6,7 +6,7 @@ extension UIView {
   
   // MARK: - Alpha
   
-  func updateChangeAlpha(with views: [UIView], visible: Bool, value: CGFloat, duration: CGFloat?) {
+  func buttonClickStyleAlpha(with views: [UIView], visible: Bool, value: CGFloat, duration: CGFloat?) {
     
     var alpha: CGFloat = 1.0
     if visible != true {

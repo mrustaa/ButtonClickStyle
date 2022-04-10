@@ -12,9 +12,9 @@ Inside the layer you can style your button, create your own subviews
 
 ## Requirements
 
-macOS 10.12+
-Xcode 13+
-Swift 5.5+
+- macOS 10.12+
+- Xcode 13+
+- Swift 5.5+
 
 ## Installation
 
@@ -28,7 +28,7 @@ Swift 5.5+
 
 3) In Attributes Inspector of Interface Builder
    you can immediately select the button click `animationType`
-```swift
+```ruby
 #type  #name
 
 hide .alpha

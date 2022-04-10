@@ -6,7 +6,7 @@ class SubscribeButtonView: BtnView {
   @IBOutlet private weak var titleLabel: UILabel?
     @IBOutlet private weak var secondImageView: UIImageView?
   
-  override func fill(state: BtnCellState?) {
+  override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
     

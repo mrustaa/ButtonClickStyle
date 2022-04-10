@@ -4,11 +4,11 @@ import UIKit
 
 class TestViewController: StoryboardController {
   
-  @IBOutlet var allSubviewsSwitch: UISwitch!
-  @IBOutlet var counterTypeStepper: UIStepper!
+//  @IBOutlet var allSubviewsSwitch: UISwitch?
+//  @IBOutlet var counterTypeStepper: UIStepper?
   
-  @IBOutlet var buttonAnim1View: ButtonClickStyleView?
-  @IBOutlet var buttonAnim2View: ButtonClickStyleView?
+//  @IBOutlet var buttonAnim1View: ButtonClickStyleView?
+//  @IBOutlet var buttonAnim2View: ButtonClickStyleView?
   @IBOutlet var buttonAnim3View: ButtonClickStyleView?
   
   @IBOutlet var typeLabel: UILabel!
@@ -23,7 +23,7 @@ class TestViewController: StoryboardController {
       action: nil
     )
     
-    title = "Test"
+//    title = "Test"
     
     update()
   }
@@ -37,13 +37,13 @@ class TestViewController: StoryboardController {
   }
   
   func update() {
-    let type: Int = Int(counterTypeStepper.value)
-    let allSubv: Bool = allSubviewsSwitch.isOn
-    
-    typeLabel.text = "\(ButtonClick.Style.allCases[type].str())"
-    
-    buttonAnim1View?.update(animationType: type, allSubviews: allSubv)
-    buttonAnim2View?.update(animationType: type, allSubviews: allSubv)
-    buttonAnim3View?.update(animationType: type, allSubviews: allSubv)
+//    let type: Int = Int(counterTypeStepper.value)
+//    let allSubv: Bool = allSubviewsSwitch.isOn
+//
+//    typeLabel.text = "\(ButtonClick.Style.allCases[type].str())"
+//
+//    buttonAnim1View?.update(animationType: type, allSubviews: allSubv)
+//    buttonAnim2View?.update(animationType: type, allSubviews: allSubv)
+//    buttonAnim3View?.update(animationType: type, allSubviews: true)
   }
 }

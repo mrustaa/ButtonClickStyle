@@ -98,7 +98,7 @@ class ButtonListViewController: StoryboardController {
       if  _next == ButtonClick.Style.color(0.5, color: .red).indx() ||
             _next == ButtonClick.Style.colorFlat(0.5, color: .red).indx() {
         _next = ButtonClick.Style.allCases[5].indx()
-      } else if _next == ButtonClick.Style.androidClickable(0.5, dark: false).indx() {
+      } else if _next == ButtonClick.Style.androidClickable(0.5, color: nil).indx() {
         _next = ButtonClick.Style.allCases[0].indx()
       }
       
@@ -154,10 +154,10 @@ class ButtonListViewController: StoryboardController {
     CGFloat(animationValueSlider.value)
   }
   
-  func getState() -> BtnCellState {
+  func getState() -> ButtonClick.State {
     let type = animationTypeLast
     let name = buttonTypes[buttonTypeLast]
-    let state: BtnCellState = .init(titleText: name, animationType: type, animationTypeValue: getValue(), new: buttonTypeLast == 1)
+    let state: ButtonClick.State = .init(titleText: name, animationType: type, animationTypeValue: getValue(), new: buttonTypeLast == 1)
     return state
   }
   
@@ -166,7 +166,7 @@ class ButtonListViewController: StoryboardController {
   func updateButtons() {
     
     
-    let state: BtnCellState = getState()
+    let state: ButtonClick.State = getState()
     
     
     var child: BtnView?

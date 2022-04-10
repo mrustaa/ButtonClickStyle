@@ -8,7 +8,7 @@ extension UIView {
   
   // MARK: - Layer Gray
   
-  func getShadowView(superView: Bool) -> UIView? {
+  private func buttonClickStyleGetShadowView(superView: Bool) -> UIView? {
     guard let mainView = (superView ? self.superview : self) else { return nil }
     
     var shadowView: UIView?
@@ -22,7 +22,7 @@ extension UIView {
   
   // MARK: - Add Shadow View
   
-  func addShadowView(with views: [UIView],
+  func buttonClickStyleAddShadowView(with views: [UIView],
                      superView: Bool = false,
                      shadowColor: UIColor?,
                      value: CGFloat = 1.0
@@ -46,28 +46,18 @@ extension UIView {
     shadowView.addSubview(shadowContentView)
     
     views.forEach {
-//      let imgView = UIImageViewWithMask(frame: superView ? $0.frame : $0.bounds)
       let clip = $0.superview?.clipsToBounds ?? false
       
-      
-//      if let desV = $0 as? DesignableView {
-//        desV.
-//      }
       
       if wMax < $0.right  { wMax = $0.right  }
       if hMax < $0.bottom { hMax = $0.bottom }
       
       let frame = $0.convert($0.bounds, to: mainView)
-      
-//      let fr: CGRect =  $0.bounds// superView ? $0.frame : $0.bounds
       let imgBtn = UIButton(frame: frame)
-      //      imgBtn.alpha = 0.5
-      
       let image: UIImage!
       
       let tinttColor = shadowColor ?? shColor
       
-//      if let tinttColor = shadowColor  {
       $0.superview?.clipsToBounds = false
       
         image = $0.asImage().withRenderingMode(.alwaysTemplate)
@@ -76,17 +66,6 @@ extension UIView {
         imgBtn.setImage(image, for: .normal)
         imgBtn.tintColor = tinttColor
         
-//        imgView.image =// #imageLiteral(resourceName: "imgDeleteTexture")
-//        imgView.maskImage = image
-        
-//      } else {
-        //        image = $0.asImage()
-        //        imgView.image = image
-        //        imgView.maskImage = image
-        //        imgView.setImage(image, for: .normal)
-//      }
-      
-      //      shadowContentView.addSubview(imgView)
       shadowContentView.addSubview(imgBtn)
     }
     shadowView.width = wMax
@@ -97,11 +76,11 @@ extension UIView {
     return shadowView
   }
   
-  func updateLayerGray(with views: [UIView], superView: Bool = true, color: UIColor? = nil, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat, duration: CGFloat?) {
+  func buttonClickStyleShadow(with views: [UIView], superView: Bool = true, color: UIColor? = nil, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat, duration: CGFloat?) {
     
     if visible {
       
-      guard let shadowView = getShadowView(superView: superView) else { return }
+      guard let shadowView = buttonClickStyleGetShadowView(superView: superView) else { return }
       
       if let duration = duration {
         UIView.animate(withDuration: duration,
@@ -120,7 +99,7 @@ extension UIView {
       
     } else {
       
-      guard let shadowView = addShadowView(with: views, superView: superView, shadowColor: color, value: value) else { return }
+      guard let shadowView = buttonClickStyleAddShadowView(with: views, superView: superView, shadowColor: color, value: value) else { return }
       
       shadowView.alpha = ((duration == nil) ? 1 : 0)
       if let duration = duration {
@@ -148,29 +127,3 @@ extension UIView {
   }
 }
 
-
-@IBDesignable
-class UIImageViewWithMask: UIImageView {
-  var maskImageView = UIImageView()
-  
-  @IBInspectable
-  var maskImage: UIImage? {
-    didSet {
-      maskImageView.image = maskImage
-      updateView()
-    }
-  }
-  
-  // This updates mask size when changing device orientation (portrait/landscape)
-  override func layoutSubviews() {
-    super.layoutSubviews()
-    updateView()
-  }
-  
-  func updateView() {
-    if maskImageView.image != nil {
-      maskImageView.frame = bounds
-      mask = maskImageView
-    }
-  }
-}

@@ -32,7 +32,7 @@ extension UIButton {
   ) {
     
     switch style {
-    case .androidClickable(let value, let dark): do {
+    case .androidClickable(let value, let color): do {
       if views.count != 1 { return }
       guard let frontButton = views.last else { return }
       
@@ -47,8 +47,8 @@ extension UIButton {
             guard let self = self else { return }
             
             let touchPoint = sender.location(in: frontButton)
-            let dur = ButtonClick.Style.androidClickable(value, dark: dark).defaultDuration()
-            self.androidPulseAnimation(radius: value, duration: dur, dark: dark, position: touchPoint)
+            let dur = ButtonClick.Style.androidClickable(value, color: color).defaultDuration()
+            self.buttonClickStyleAndroidPulse(radius: value, duration: dur, color: color, position: touchPoint)
             
           }
         frontButton.addGestureRecognizer(tap)
@@ -104,13 +104,13 @@ extension UIButton {
     print("onClick \(style.indx()) \(style.str())")
     
     switch style {
-    case .androidClickable(let value, let dark):
+    case .androidClickable(let value, let color):
       
       func randPointAndroidPulse() {
         let view = views[0]
         let position: CGPoint = .init(x: CGFloat.random(min: 0, max: view.width), y: CGFloat.random(min: 0, max: view.height))
-        let dur = ButtonClick.Style.androidClickable(value, dark: dark).defaultDuration()
-        androidPulseAnimation(radius: value, duration: dur, dark: dark, position: position)
+        let dur = ButtonClick.Style.androidClickable(value, color: color).defaultDuration()
+        buttonClickStyleAndroidPulse(radius: value, duration: dur, color: color, position: position)
       }
       main(delay: 0.1) {
         randPointAndroidPulse()
@@ -167,12 +167,12 @@ extension UIButton {
     switch style {
     case .alpha(let value):
       
-      updateChangeAlpha(with: views, visible: visible, value: 1.0 - value, duration: dur)
+       buttonClickStyleAlpha(with: views, visible: visible, value: 1.0 - value, duration: dur)
     case .shadow(let value, let color):
       if event == .touchDown {
-        updateLayerGray(with: views, color: color, cornRadius: radius,  visible: false, value: value, duration: dur / 3)
+        buttonClickStyleShadow(with: views, color: color, cornRadius: radius,  visible: false, value: value, duration: dur / 3)
       } else {
-        updateLayerGray(with: views, color: color, cornRadius: radius, visible: true, value: value, duration: dur)
+        buttonClickStyleShadow(with: views, color: color, cornRadius: radius, visible: true, value: value, duration: dur)
       }
     default: break
     }
@@ -181,11 +181,11 @@ extension UIButton {
     case .press(let power):
       
       if views.count > 0 {
-        views[0].press(duration: dur, cornRadius: radius, value: power, shadow: false, visible: event != .touchDown)
+        views[0].buttonClickStylePress(duration: dur, cornRadius: radius, value: power, shadow: false, visible: event != .touchDown)
       }
-      if views.count > 1 {
+//      if views.count > 1 {
 //        views[1].press(duration: dur, cornRadius: radius, value: 0.5, shadow: true, visible: event != .touchDown)
-      }
+//      }
       
     default: break
     }
@@ -194,29 +194,29 @@ extension UIButton {
     views.forEach {
       switch style {
       case .flash(let value):
-        $0.flash(value: value, duration: dur)
+        $0.buttonClickStyleFlash(value: value, duration: dur)
         
       case .color(let value, let color):
         
         if event == .touchDown {
-          $0.animationColorTouchDown(cornRadius: radius, color: color, alpha: value)
+          $0.buttonClickStyleColorTouchDown(cornRadius: radius, color: color, alpha: value)
         } else if event == .touchUpInside {
-          $0.animationColor(duration: dur, cornRadius: radius, color: color, alpha: value)
+          $0.buttonClickStyleColor(duration: dur, cornRadius: radius, color: color, alpha: value)
         }
         
       case .colorFlat(let value, let color):
         if event == .touchDown {
-          $0.animationColorFlat(duration: dur, cornRadius: radius, visible: false, value: value,  color: color)
+          $0.buttonClickStyleColorFlat(duration: dur, cornRadius: radius, visible: false, value: value,  color: color)
         } else if event == .touchUpInside {
-          $0.animationColorFlat(duration: dur, cornRadius: radius, visible: true, value: value,  color: color)
+          $0.buttonClickStyleColorFlat(duration: dur, cornRadius: radius, visible: true, value: value,  color: color)
         }
         
       case .pulsate(let value, let new):
         if new {
-          $0.pulsateNew(duration: dur, value: value, visible: visible)
+          $0.buttonClickStylePulsateNew(duration: dur, value: value, visible: visible)
         } else {
           if event == .touchDown {
-            $0.pulsate(value: value, duration: dur)
+            $0.buttonClickStylePulsate(value: value, duration: dur)
           }
         }
         
@@ -224,8 +224,12 @@ extension UIButton {
 //        $0.press(duration: dur, value: power, visible: event != .touchDown)
         
       case .shake(let value, let new):
-        if new { $0.shake(value: value, duration: dur) }
-        else { $0.shakeNew(value: value, duration: dur) }
+        if new {
+          $0.buttonClickStyleShake(value: value, duration: dur)
+          
+        }  else {
+          $0.buttonClickStyleShakeNew(value: value, duration: dur)
+        }
       default: break
       }
     }

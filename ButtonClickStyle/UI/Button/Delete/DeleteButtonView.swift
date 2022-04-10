@@ -9,7 +9,7 @@ class DeleteButtonView: BtnView {
   @IBOutlet var backColor: DesignableView!
   
   
-  override func fill(state: BtnCellState?) {
+  override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
     

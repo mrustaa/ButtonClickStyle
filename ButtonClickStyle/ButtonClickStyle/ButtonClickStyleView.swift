@@ -12,14 +12,14 @@ import UIKit
 @IBDesignable
 class ButtonClickStyleView: UIView {
   
-  @IBInspectable var animationType: Int = 0
-  @IBInspectable var animationValue: CGFloat = 0.0
-  @IBInspectable var animationDuration: CGFloat = 0.0
+  @IBInspectable var animType: Int = 0
+  @IBInspectable var animValue: CGFloat = 0.0
+  @IBInspectable var animDuration: CGFloat = 0.0
   @IBInspectable var allSubviews: Bool = true
   
   var addViews: [UIView]?
           
-  var state: BtnCellState?
+  var state: ButtonClick.State?
   
   private var style: ButtonClick.Style = .alpha(0.5)
   private let debugPrint: Bool = true
@@ -38,22 +38,6 @@ class ButtonClickStyleView: UIView {
   required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
-    if self.state == nil {
-      var allSubviews = self.allSubviews
-      if animationType == ButtonClick.StyleEasy.colorFlat.rawValue {
-        allSubviews = false
-      }
-      
-      let animVal: CGFloat? =  animationValue    != 0.0 ? animationValue    : nil
-      let animDur: CGFloat? =  animationDuration != 0.0 ? animationDuration : nil
-      
-      self.state = .init(
-        allSubviews: allSubviews,
-        animationType: animationType,
-        animationTypeValue: animVal,
-        animationDuration: animDur
-      )
-    }
     updateSubviews()
     
     if debugPrint { print(" ------------------------------------------") }
@@ -68,7 +52,7 @@ class ButtonClickStyleView: UIView {
   
   
   public init(
-    state: BtnCellState,
+    state: ButtonClick.State,
     frame: CGRect,
     radius: CGFloat = 0.0,
     addViews: [UIView]? = nil
@@ -77,7 +61,7 @@ class ButtonClickStyleView: UIView {
     super.init(frame: frame)
     
     var state = state
-    if state.animationType == ButtonClick.StyleEasy.colorFlat.rawValue {
+    if state.animationType == ButtonClick._Style.colorFlat.rawValue {
       state.allSubviews = false
     }
     
@@ -85,13 +69,33 @@ class ButtonClickStyleView: UIView {
     self.cornerRadius = radius
     self.layer.cornerRadius = radius
     self.allSubviews = state.allSubviews
-    self.animationType = state.animationType ?? 0
+    self.animType = state.animationType ?? 0
     self.addViews = addViews
     
     
     if debugPrint { print(" ------------------------------------------") }
     if debugPrint { print(" ButtonClickStyleView 🥶 init (STATE frame radius addViews) 🥶 \(self) ") }
     
+  }
+  
+  func createState() {
+    
+    if self.state == nil {
+      var allSubviews = self.allSubviews
+      if animType == ButtonClick._Style.colorFlat.rawValue {
+        allSubviews = false
+      }
+      
+      let animVal: CGFloat? =  animValue    != 0.0 ? animValue    : nil
+      let animDur: CGFloat? =  animDuration != 0.0 ? animDuration : nil
+      
+      self.state = .init(
+        allSubviews: allSubviews,
+        animationType: animType,
+        animationTypeValue: animVal,
+        animationDuration: animDur
+      )
+    }
   }
   
   // MARK: - Layout subViews Update
@@ -105,6 +109,7 @@ class ButtonClickStyleView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
     if debugPrint { print(" ButtonClickStyleView 😢Designable💚 layoutSubviews  \(self) ")}
+    createState()
     updateSubviews()
   }
   
@@ -145,12 +150,16 @@ class ButtonClickStyleView: UIView {
   }
   
   func updateStartClick() {
-//    if startClick {
-//      startClick = false
-//
+    if self.state?.startClick ?? false {
+      self.state?.startClick = false
+      
+      guard let state = state else { return }
+      
+      self.style = ButtonClick.Style.getClick(state: state)
       let nviews = getViews()
-    button?.onClick(views: nviews, radius: cornerRadius, style: style, duration: state?.animationDuration)
-//    }
+      button?.onClick(views: nviews, radius: cornerRadius, style: style, duration: state.animationDuration)
+    }
+    
   }
   
   public func update(animationType: Int, allSubviews: Bool = true) {
@@ -160,7 +169,7 @@ class ButtonClickStyleView: UIView {
     self.state?.animationType = animationType
     self.state?.allSubviews = allSubviews
     
-    self.animationType = animationType
+    self.animType = animationType
     self.allSubviews = allSubviews
     
     setupDone = false
@@ -230,15 +239,15 @@ class ButtonClickStyleView: UIView {
 //      else {
         if allSubviews {
         
-          if animationType == ButtonClick.StyleEasy.color.rawValue ||
-            animationType == ButtonClick.StyleEasy.androidClickable.rawValue ||
-            animationType == ButtonClick.StyleEasy.androidClickableDark.rawValue {
+          if animType == ButtonClick._Style.color.rawValue ||
+            animType == ButtonClick._Style.androidClickable.rawValue ||
+            animType == ButtonClick._Style.androidClickableDark.rawValue {
           
           if let btn = button {
             
             if let addViews = addViews {
-            if animationType == ButtonClick.StyleEasy.androidClickable.rawValue ||
-                animationType == ButtonClick.StyleEasy.androidClickableDark.rawValue {
+            if animType == ButtonClick._Style.androidClickable.rawValue ||
+                animType == ButtonClick._Style.androidClickableDark.rawValue {
               
                 if addViews.count == 1 {
                   let vi = addViews[0]
@@ -281,7 +290,7 @@ class ButtonClickStyleView: UIView {
         
       }
         else {
-          if animationType == ButtonClick.StyleEasy.color.rawValue {
+          if animType == ButtonClick._Style.color.rawValue {
 //
           if let addViews = addViews {
 
@@ -346,8 +355,8 @@ class ButtonClickStyleView: UIView {
           }
         }
         
-          else if animationType == ButtonClick.StyleEasy.androidClickable.rawValue ||
-              animationType == ButtonClick.StyleEasy.androidClickableDark.rawValue,
+          else if animType == ButtonClick._Style.androidClickable.rawValue ||
+              animType == ButtonClick._Style.androidClickableDark.rawValue,
                 let btn = button
         {
           

@@ -10,7 +10,7 @@ class DownloadButtonView: BtnView {
   
   @IBOutlet var fillView: UIView!
   
-  override func fill(state: BtnCellState?) {
+  override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
     
@@ -22,8 +22,8 @@ class DownloadButtonView: BtnView {
        addViews = [fillView, shadowView]
        mainView.fillColor = .clear
        mainView.setNeedsLayout()
-     } else if type == ButtonClick.StyleEasy.androidClickable.rawValue ||
-                type == ButtonClick.StyleEasy.androidClickableDark.rawValue {
+     } else if type == ButtonClick._Style.androidClickable.rawValue ||
+                type == ButtonClick._Style.androidClickableDark.rawValue {
        addViews = nil
      }  else {
        addViews = [mainView]

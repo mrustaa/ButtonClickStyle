@@ -11,7 +11,7 @@ extension UIView {
   
   // MARK: - Flash
   
-  func flash(value: CGFloat, duration: CGFloat) {
+  func buttonClickStyleFlash(value: CGFloat, duration: CGFloat) {
     
     let flash = CABasicAnimation(keyPath: "opacity")
     flash.duration = duration

@@ -83,7 +83,7 @@ var endAnimationCallback: (() -> ())?
 
     guard let type = animationType else { return }
     
-    buttonAnimView.animationType = type
+    buttonAnimView.animType = type
 //    buttonAnimView.allSubviews
 //    if type == ButtonClick.Style.color(0.5, color: .red).indx() {
 //      buttonAnimView.addViews = [_mainView]

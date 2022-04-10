@@ -13,7 +13,7 @@ extension UIView {
   
   // MARK: - Pulsate
   
-  func pulsate(value: CGFloat, duration: CGFloat) {
+  func buttonClickStylePulsate(value: CGFloat, duration: CGFloat) {
     
     let pulse = CASpringAnimation(keyPath: "transform.scale")
     pulse.duration = duration
@@ -30,7 +30,7 @@ extension UIView {
   
   // MARK: - Pulsate 2
   
-  func pulsateNew(duration: CGFloat, value: CGFloat, visible: Bool) {
+  func buttonClickStylePulsateNew(duration: CGFloat, value: CGFloat, visible: Bool) {
     if visible {
       animate(duration: duration, view: self, transform: .identity)
     } else {

@@ -11,7 +11,7 @@ class GradientBlueBasicButtonView: BtnView {
     
   @IBOutlet var backColor: UIView!
   
-  override func fill(state: BtnCellState?) {
+  override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
 
@@ -26,8 +26,8 @@ class GradientBlueBasicButtonView: BtnView {
       mainH.constant = 60
       mainW.constant = 158
       
-      if (type == ButtonClick.StyleEasy.shadow.rawValue) ||
-          (type == ButtonClick.StyleEasy.shadowColor.rawValue )
+      if (type == ButtonClick._Style.shadow.rawValue) ||
+          (type == ButtonClick._Style.shadowColor.rawValue )
      {
        addViews = [mainView]
         mainView.fillColor = .clear
@@ -35,10 +35,10 @@ class GradientBlueBasicButtonView: BtnView {
         mainH.constant = 80
         mainW.constant = 178
         mainView.setNeedsLayout()
-      } else if (type == ButtonClick.StyleEasy.colorFlat.rawValue) {
+      } else if (type == ButtonClick._Style.colorFlat.rawValue) {
         addViews = [mainView]
-      } else if type == ButtonClick.StyleEasy.androidClickable.rawValue ||
-                  type == ButtonClick.StyleEasy.androidClickableDark.rawValue {
+      } else if type == ButtonClick._Style.androidClickable.rawValue ||
+                  type == ButtonClick._Style.androidClickableDark.rawValue {
         addViews = nil
       }  else {
         mainView.fillColor = .clear

@@ -14,7 +14,7 @@ class JustPinkButtonView: BtnView {
   
   // MARK: Initialize
  
-  override func fill(state: BtnCellState?) {
+  override func fill(state: ButtonClick.State?) {
      guard let state = state else { return }
      self.state = state
 
@@ -79,8 +79,8 @@ class JustPinkButtonView: BtnView {
      if type == ButtonClick.Style.colorFlat(0.5, color: .red).indx() {
        views = [subMainView, titleLabel]// [mainDetailsView]
      }
-    if type == ButtonClick.StyleEasy.androidClickable.rawValue ||
-              type == ButtonClick.StyleEasy.androidClickableDark.rawValue {
+    if type == ButtonClick._Style.androidClickable.rawValue ||
+              type == ButtonClick._Style.androidClickableDark.rawValue {
 //       views = nil
       views = [subMainView]
      }

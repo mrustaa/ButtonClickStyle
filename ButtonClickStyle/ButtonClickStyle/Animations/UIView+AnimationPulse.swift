@@ -9,7 +9,7 @@ import UIKit
 
 //MARK: - Pulse Animation
 
-class PulseAnimation: CALayer {
+class ButtonClickStylePulseAnimation: CALayer {
   
   var animationGroup = CAAnimationGroup()
   var animationDuration: TimeInterval = 1.5

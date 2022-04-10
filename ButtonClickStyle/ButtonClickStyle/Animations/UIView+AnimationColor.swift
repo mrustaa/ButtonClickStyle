@@ -16,7 +16,7 @@ extension UIView {
   
   // MARK: - Change Color
   
-  func DesignableViewBorderUpdate() {
+  private func buttonClickStyleDesignableBorderUpdate() {
     if let desFig = self as? DesignableView, desFig.brWidth != 0 {
       
       if desFig.brWidth != 0 {
@@ -32,8 +32,7 @@ extension UIView {
     }
   }
   
-  func animationColorTouchDown(cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
-    
+  func buttonClickStyleColorTouchDown(cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
     
     let from = color.withAlphaComponent(alpha)
     
@@ -41,7 +40,7 @@ extension UIView {
       label.textColor = from
     }
     else if let desFig = self as? DesignableView,  desFig.brColor != .clear {
-      DesignableViewBorderUpdate()
+      buttonClickStyleDesignableBorderUpdate()
 
       layer.borderColor = from.cgColor
     } else {
@@ -49,7 +48,7 @@ extension UIView {
     }
   }
   
-  func animationColor(duration: CGFloat, cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
+  func buttonClickStyleColor(duration: CGFloat, cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
     
 //    return;
     
@@ -67,10 +66,6 @@ extension UIView {
       if let desLab = self as? DesignableLabel, let grColor = desLab.grColor1 {
         to = grColor
       }
-      
-      //      label.textColor = from
-      
-      //      main(delay: 0.1) {
       
       UIView.transition(
         with: label,
@@ -91,13 +86,10 @@ extension UIView {
           )
           
         })
-      //      }
-      
-      
     }
     
     else if let desFig = self as? DesignableView, desFig.brColor != .clear {
-      DesignableViewBorderUpdate()
+      buttonClickStyleDesignableBorderUpdate()
     
       let to = desFig.brColor
       layer.borderColor = to.cgColor
@@ -107,30 +99,18 @@ extension UIView {
       animation2.fromValue = from.cgColor
       animation2.toValue = to.cgColor
       animation2.duration = duration
-//              animation2.beginTime = CACurrentMediaTime() + 0.1
-//              animation2.autoreverses = false
       layer.add(animation2, forKey: "animationColor")
       layer.borderColor = to.cgColor
       
     } else {
       
       
-      //        let fills = layer.sublayers?.filter {
-      //          $0.name == "fill"
-      //        }
-      //        fills?.forEach {
-      //          $0.removeFromSuperlayer()
-      //        }
-      
       let toColor = UIColor.clear.cgColor
       
       let animation = CABasicAnimation(keyPath: "backgroundColor")
-      animation.fromValue = fromColor    //UIColor.white.cgColor
+      animation.fromValue = fromColor
       animation.toValue = toColor
       animation.duration = duration
-      //      animation.beginTime = CACurrentMediaTime() + 0.1
-      //      animation.autoreverses = false
-      
       layer.cornerRadius = radiusSearch(cornRadius)
       layer.add(animation, forKey: "animationColor")
       backgroundColor = .clear
@@ -164,6 +144,6 @@ extension UIColor {
   var inverted: UIColor {
     var r: CGFloat = 0.0, g: CGFloat = 0.0, b: CGFloat = 0.0, a: CGFloat = 0.0
     self.getRed(&r, green: &g, blue: &b, alpha: &a)
-    return UIColor(red: (1 - r), green: (1 - g), blue: (1 - b), alpha: a) // Assuming you want the same alpha value.
+    return UIColor(red: (1 - r), green: (1 - g), blue: (1 - b), alpha: a) 
   }
 }

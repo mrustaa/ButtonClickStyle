@@ -12,7 +12,7 @@ class NeomorphismButtonView: BtnView {
  override func awakeFromNib() { }
   @IBOutlet var cardView: DesignableView!
   
-  override func fill(state: BtnCellState?) {
+  override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
 
@@ -36,15 +36,15 @@ class NeomorphismButtonView: BtnView {
 //       addViews = [fillView]
 //     }
      
-     if type == ButtonClick.StyleEasy.color.rawValue ||
-          (type == ButtonClick.StyleEasy.shadow.rawValue) ||
-          (type == ButtonClick.StyleEasy.shadowColor.rawValue )
-//          type == ButtonClick.StyleEasy.androidClickable.rawValue ||
-//          type == ButtonClick.StyleEasy.androidClickableDark.rawValue
+     if type == ButtonClick._Style.color.rawValue ||
+          (type == ButtonClick._Style.shadow.rawValue) ||
+          (type == ButtonClick._Style.shadowColor.rawValue )
+//          type == ButtonClick._Style.androidClickable.rawValue ||
+//          type == ButtonClick._Style.androidClickableDark.rawValue
      {
        addViews = [fillView]
-     } else if type == ButtonClick.StyleEasy.androidClickable.rawValue ||
-                type == ButtonClick.StyleEasy.androidClickableDark.rawValue {
+     } else if type == ButtonClick._Style.androidClickable.rawValue ||
+                type == ButtonClick._Style.androidClickableDark.rawValue {
        addViews = nil
      } 
       
