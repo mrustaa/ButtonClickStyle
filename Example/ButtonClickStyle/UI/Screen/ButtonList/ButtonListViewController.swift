@@ -133,7 +133,7 @@ class ButtonListViewController: StoryboardController {
       exampleView.endAnimationCallback = { [weak self] in
         
 //        main { [weak self] in
-          guard let mSelf = self else { return }
+//          guard let mSelf = self else { return }
           
 //          let t = ButtonClick.Style.allCases[mSelf.buttonLayerExampleView.animationType ?? 0]
 //          print(" ‼️ endAnimationCallback \(t.full()) ‼️ ‼️")

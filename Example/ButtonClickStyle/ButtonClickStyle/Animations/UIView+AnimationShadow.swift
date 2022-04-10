@@ -4,7 +4,7 @@ import UIKit
 private let shTag = 31
 private let shColor: UIColor = .init(red: 10.0 / 255.0, green: 13.0 / 255.0, blue: 38.0 / 255.0, alpha: 1.0)
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Layer Gray
   
@@ -22,7 +22,7 @@ public extension UIView {
   
   // MARK: - Add Shadow View
   
-  func buttonClickStyleAddShadowView(with views: [UIView],
+  public func buttonClickStyleAddShadowView(with views: [UIView],
                      superView: Bool = false,
                      shadowColor: UIColor?,
                      value: CGFloat = 1.0
@@ -76,7 +76,7 @@ public extension UIView {
     return shadowView
   }
   
-  func buttonClickStyleShadow(with views: [UIView], superView: Bool = true, color: UIColor? = nil, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat, duration: CGFloat?) {
+  public func buttonClickStyleShadow(with views: [UIView], superView: Bool = true, color: UIColor? = nil, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat, duration: CGFloat?) {
     
     if visible {
       
@@ -119,7 +119,7 @@ public extension UIView {
 //MARK: - extensions
 
 extension UIView {
-  func asImage() -> UIImage {
+  public func asImage() -> UIImage {
     let renderer = UIGraphicsImageRenderer(bounds: bounds)
     return renderer.image { rendererContext in
       layer.render(in: rendererContext.cgContext)

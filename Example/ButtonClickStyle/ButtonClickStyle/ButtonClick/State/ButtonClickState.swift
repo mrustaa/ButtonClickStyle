@@ -7,7 +7,7 @@
 
 import UIKit
 
-c extension ButtonClick {
+extension ButtonClick {
   
   struct State: Equatable {
     var titleText: String?

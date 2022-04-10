@@ -7,13 +7,13 @@
 
 import UIKit
 
-private let vDef: CGFloat = 0.5
+public let vDef: CGFloat = 0.5
 
-public extension ButtonClick {
+extension ButtonClick {
   
   //MARK: - Style
   
-  enum Style: CaseIterable {
+  public enum Style: CaseIterable {
     case alpha(           _ alpha: CGFloat = vDef) // 0.5                       // HIDE Alpha
     case flash(           _ alpha: CGFloat = vDef)                              // HIDE Flash More
     case shadow(          _ alpha: CGFloat = vDef, color: UIColor? = nil) // 0.1845 add black shadow   // ADD  Shadow
@@ -22,16 +22,14 @@ public extension ButtonClick {
     case press(           _ power: CGFloat = vDef)                              // MOVE Press
     case pulsate(         _ power: CGFloat = vDef, new:  Bool = false)          // MOVE Pulsate
     case shake(           _ power: CGFloat = vDef, new:  Bool = false)          // MOVE Shake
-    case androidClickable(_ alpha: CGFloat = vDef, color: UIColor? = nil)          // ADD  Android Clickable
-    
-    case test_Hide(_ alpha: CGFloat? = nil)
+    case androidClickable(_ alpha: CGFloat = vDef, color: UIColor? = nil)       // ADD  Android Clickable
     
     //MARK: All Cases, Indxs & Names
     
-    static var allIndx: [Int]         = ButtonClick.Style.allCases.map { $0.indx() }
-    static var allNameFull: [Full]    = ButtonClick.Style.allCases.map { $0.nameFull() }
-    static var allName: [String]      = ButtonClick.Style.allCases.map { $0.name()  }
-    static var allCases: [ButtonClick.Style] = [
+    public static var allIndx: [Int]         = ButtonClick.Style.allCases.map { $0.indx() }
+    public static var allNameFull: [Full]    = ButtonClick.Style.allCases.map { $0.nameFull() }
+    public static var allName: [String]      = ButtonClick.Style.allCases.map { $0.name()  }
+    public static var allCases: [ButtonClick.Style] = [
       .alpha(),
       .flash(),
       .shadow(),
@@ -47,24 +45,21 @@ public extension ButtonClick {
       .androidClickable(color: .random()),
     ]
     
-    func typeEasy() -> _Style {
+    public func typeEasy() -> _Style {
       _Style.allCases[indx()] 
     }
     
     //MARK: String
     
-    func nameFull() -> Full {
+    public func nameFull() -> Full {
       return (baseStyle().rawValue, str(), emoji(), indx())
     }
     
-    func name(full: Bool = false) -> String {
+    public func name(full: Bool = false) -> String {
       return "\(full ? baseStyle().rawValue : "") \(str())"
     }
     
-    
-    
-    
-    func str() -> String {
+    public func str() -> String {
       switch self {
       case .alpha(_):                      return         "Alpha"
       case .flash(_):                      return         "Alpha Flash"
@@ -77,15 +72,14 @@ public extension ButtonClick {
                                                         : "Pulsate"
       case .shake(_, let new):             return new   ? "Shake New"
                                                         : "Shake"
-      case .androidClickable(_, let color):   return color == nil ? "AndroidClickable"
+      case .androidClickable(_, let color): return color == nil ? "AndroidClickable"
                                                         : "AndroidClickable Color"
-      case .test_Hide(_): return "test"
       }
     }
     
     // MARK: Base Style
     
-    func baseStyle() -> StyleBase {
+    public func baseStyle() -> StyleBase {
       switch self {
       case .alpha(_),
           .flash(_): return .hide
@@ -96,19 +90,18 @@ public extension ButtonClick {
           .press(_),
           .shake(_,_): return .move
       case .androidClickable(_,_): return .android
-      case .test_Hide(_): return .none
       }
     }
     
     //MARK: Full
     
-    func full() -> String {
+    public func full() -> String {
       return "[\(indx())] \(str())"
     }
     
     //MARK: Index
     
-    func indx() -> Int {
+    public func indx() -> Int {
       switch self {
       case .alpha(_):                      return         0
       case .flash(_):                      return         1
@@ -123,14 +116,12 @@ public extension ButtonClick {
                                                        : 10
       case .androidClickable(_, let color):   return color == nil ? 11
                                                        : 12
-      case .test_Hide(_):                         return 13
-//      default: return -1
       }
     }
     
     // MARK: Default Duration
     
-    func defaultDuration() -> CGFloat {
+    public func defaultDuration() -> CGFloat {
       switch self {
       case .alpha(_):                return 0.3
       case .shadow(_, let color):    return color == nil ? 0.3 : 0.3              // .ms300
@@ -141,8 +132,6 @@ public extension ButtonClick {
       case .color(_, _):             return 0.3              // .ms300
       case .colorFlat(_, _):         return 0.3              // .ms300
       case .androidClickable(_, _):  return 1.0              // .s1
-      case .test_Hide(_): return 1.0
-//      default: return 0.3
       }
     }
     

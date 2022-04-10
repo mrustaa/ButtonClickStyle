@@ -10,14 +10,14 @@ import UIKit
 // MARK: - ButtonClickStyleView
 
 @IBDesignable
-public class ButtonClickStyleView: UIView {
+open class ButtonClickStyleView: UIView {
   
-  @IBInspectable var animType: Int = 0
-  @IBInspectable var animValue: CGFloat = 0.0
-  @IBInspectable var animDuration: CGFloat = 0.0
-  @IBInspectable var allSubviews: Bool = true
+  @IBInspectable public var animType: Int = 0
+  @IBInspectable public var animValue: CGFloat = 0.0
+  @IBInspectable public var animDuration: CGFloat = 0.0
+  @IBInspectable public var allSubviews: Bool = true
   
-  var addViews: [UIView]?
+  public var addViews: [UIView]?
           
   var state: ButtonClick.State?
   
@@ -25,12 +25,8 @@ public class ButtonClickStyleView: UIView {
   private let debugPrint: Bool = true
   private var setupDone = false
   
-  
-  var cornerRadius: CGFloat = 0.0
-  
-  
-//  var frontView: UIView?
-  var button: UIButton?
+  private var cornerRadius: CGFloat = 0.0
+  private var button: UIButton?
   
   
   // MARK: - Initialize
@@ -44,14 +40,14 @@ public class ButtonClickStyleView: UIView {
     if debugPrint { print(" ButtonClickStyleView 👹 init coder 👹 \(self) ") }
   }
   
-  override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     if debugPrint { print(" ------------------------------------------") }
     if debugPrint { print(" ButtonClickStyleView 🥶 init frame 🥶 \(self) ") }
   }
   
   
-  public init(
+  init(
     state: ButtonClick.State,
     frame: CGRect,
     radius: CGFloat = 0.0,
@@ -78,7 +74,7 @@ public class ButtonClickStyleView: UIView {
     
   }
   
-  func createState() {
+  public func createState() {
     
     if self.state == nil {
       var allSubviews = self.allSubviews
@@ -101,12 +97,12 @@ public class ButtonClickStyleView: UIView {
   // MARK: - Layout subViews Update
   
   
-  override func draw(_ rect: CGRect) {
+  public override func draw(_ rect: CGRect) {
     super.draw(rect)
     if debugPrint { print(" ButtonClickStyleView 😢Designable💙 draw(_ rect: CGRect)  \(self) ")}
   }
   
-  override func layoutSubviews() {
+  public override func layoutSubviews() {
     super.layoutSubviews()
     if debugPrint { print(" ButtonClickStyleView 😢Designable💚 layoutSubviews  \(self) ")}
     createState()
@@ -149,7 +145,7 @@ public class ButtonClickStyleView: UIView {
     setupDone = true
   }
   
-  func updateStartClick() {
+  public func updateStartClick() {
     if self.state?.startClick ?? false {
       self.state?.startClick = false
       
@@ -225,7 +221,7 @@ public class ButtonClickStyleView: UIView {
   
   // MARK: - Get Views
   
-  func getViews(views: [UIView]? = nil) -> [UIView] {
+  public func getViews(views: [UIView]? = nil) -> [UIView] {
     
     var nviews: [UIView] = []
     
@@ -401,7 +397,7 @@ extension UIColor {
 }
 
 extension UIView {
-  func getButtonRadius(_ btn: UIButton) {
+  public func getButtonRadius(_ btn: UIButton) {
     if btn.layer.cornerRadius == 0 {
       if let desFig = self as? DesignableView, desFig.cornerRadius != 0 {
         btn.layer.cornerRadius = desFig.cornerRadius

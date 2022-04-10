@@ -2,12 +2,12 @@
 
 import UIKit
 
-public class ButtonClick {
+open class ButtonClick {
   
-  var button: UIButton?
-  var closureSleeve: ButtonClick.Closure?
+  public var button: UIButton?
+  public var closureSleeve: ButtonClick.Closure?
   
-  init(_ closure: @escaping ButtonClick.Closure) {
+  public init(_ closure: @escaping ButtonClick.Closure) {
     self.closureSleeve = closure
   }
   

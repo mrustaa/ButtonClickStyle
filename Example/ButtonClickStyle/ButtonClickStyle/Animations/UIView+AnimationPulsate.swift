@@ -7,12 +7,12 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
   
   
   // MARK: - Pulsate
   
-  func buttonClickStylePulsate(value: CGFloat, duration: CGFloat) {
+  public func buttonClickStylePulsate(value: CGFloat, duration: CGFloat) {
     
     let pulse = CASpringAnimation(keyPath: "transform.scale")
     pulse.duration = duration
@@ -29,7 +29,7 @@ public extension UIView {
   
   // MARK: - Pulsate 2
   
-  func buttonClickStylePulsateNew(duration: CGFloat, value: CGFloat, visible: Bool) {
+  public func buttonClickStylePulsateNew(duration: CGFloat, value: CGFloat, visible: Bool) {
     if visible {
       animate(duration: duration, view: self, transform: .identity)
     } else {
@@ -38,7 +38,7 @@ public extension UIView {
     }
   }
   
-  func animate(duration: CGFloat, view: UIView, transform: CGAffineTransform) {
+  public func animate(duration: CGFloat, view: UIView, transform: CGAffineTransform) {
     UIView.animate(withDuration: duration, // 0.4,
                    delay: 0,
                    usingSpringWithDamping: 0.5,

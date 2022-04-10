@@ -7,11 +7,11 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Flash
   
-  func buttonClickStyleFlash(value: CGFloat, duration: CGFloat) {
+  public func buttonClickStyleFlash(value: CGFloat, duration: CGFloat) {
     
     let flash = CABasicAnimation(keyPath: "opacity")
     flash.duration = duration

@@ -7,9 +7,9 @@
 
 import UIKit
 
-public extension ButtonClick.Style {
+extension ButtonClick.Style {
   
-  func emojiNew() -> String {
+  public func emojiNew() -> String {
     switch self {
     case .alpha(_):                         return                ""
     case .flash(_):                         return                ""
@@ -20,11 +20,10 @@ public extension ButtonClick.Style {
     case .pulsate(_, let new):              return new ? "🆕"  :  ""
     case .shake(_, let new):                return new ? "🆕"  :  ""
     case .androidClickable(_, let color):   return color == nil ? ""  : ""
-    case .test_Hide(_): return "test"
     }
   }
   
-  func emojiType() -> String {
+  public func emojiType() -> String {
     switch self {
     case .alpha(_):                 return "👁"
     case .flash(_):                 return "👁"
@@ -35,11 +34,10 @@ public extension ButtonClick.Style {
     case .pulsate(_, _):            return "💢"
     case .shake(_, _):              return "🔛"
     case .androidClickable(_, _):   return "🧿"
-    case .test_Hide(_): return "test"
     }
   }
   
-  func emojRepeat() -> String {
+  public func emojRepeat() -> String {
     switch self {
     case .alpha(_):                      return ""
     case .flash(_):                      return "♻️"
@@ -50,12 +48,11 @@ public extension ButtonClick.Style {
     case .pulsate(_, _):                 return "♻️"
     case .shake(_, _):                   return "♻️"
     case .androidClickable(_, _):        return ""
-    case .test_Hide(_): return "test"
     }
   }
   
   
-  func emojiColor() -> String {
+  public func emojiColor() -> String {
     switch self {
     case .alpha(_):                      return         ""
     case .flash(_):                      return         ""
@@ -66,11 +63,10 @@ public extension ButtonClick.Style {
     case .pulsate(_, let new):           return new   ? ""  : ""
     case .shake(_, let new):             return new   ? ""  : ""
     case .androidClickable(_, let color):   return color == nil ? "⚫️"  : "🔵"
-    case .test_Hide(_): return "test"
     }
   }
   
-  func emoji() -> ButtonClick.Emoji {
+  public func emoji() -> ButtonClick.Emoji {
     return (emojiType(), emojiColor(), emojRepeat(), emojiNew())
   }
   

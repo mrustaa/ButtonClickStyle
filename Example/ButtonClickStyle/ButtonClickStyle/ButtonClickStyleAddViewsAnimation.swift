@@ -11,7 +11,7 @@ extension UIButton {
 
   // MARK: Add View
   
-  func addClickStyle(
+  public func addClickStyle(
     view: UIView?,
     style: ButtonClick.Style = .alpha(0.0),
     duration: CGFloat? = nil,
@@ -23,7 +23,7 @@ extension UIButton {
   
   // MARK: Add Views
   
-  func addClickStyle(
+  public func addClickStyle(
     views: [UIView],
     radius: CGFloat? = nil,
     style: ButtonClick.Style = .alpha(0.0),
@@ -90,7 +90,7 @@ extension UIButton {
   
   // MARK: - onClick
   
-  func onClick(
+  public func onClick(
     views: [UIView],
     radius: CGFloat? = nil,
     style: ButtonClick.Style = .alpha(0.0),
@@ -137,7 +137,7 @@ extension UIButton {
   
   // MARK: - De-Select
   
-  func deselected(_ views: [UIView]) {
+  public func deselected(_ views: [UIView]) {
     
     if (tag < 0) || (10 < tag) { return }
     
@@ -151,7 +151,7 @@ extension UIButton {
   
   // MARK: - Animation Filter
   
-  func addClickStyleAnimation(
+  public func addClickStyleAnimation(
     with views: [UIView],
     radius: CGFloat? = nil,
     style: ButtonClick.Style,
@@ -242,11 +242,11 @@ extension UIButton {
 
 extension UIControl.Event {
   
-  func strName() -> String {
+  public func strName() -> String {
     return enevtName(self)
   }
   
-  func enevtName(_ event: UIControl.Event) -> String {
+  public func enevtName(_ event: UIControl.Event) -> String {
     switch event {
     case .touchDown:      return "touch.Down"
     case .touchCancel:    return "touch.Cancel"

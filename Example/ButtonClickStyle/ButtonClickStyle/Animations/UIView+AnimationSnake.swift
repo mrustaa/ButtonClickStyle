@@ -7,11 +7,11 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Shake
   
-  func buttonClickStyleShake(value: CGFloat, duration: CGFloat) {
+  public func buttonClickStyleShake(value: CGFloat, duration: CGFloat) {
     let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
     animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
     animation.duration = duration // 0.6
@@ -25,7 +25,7 @@ public extension UIView {
   
   // MARK: - Shake 2
   
-  func buttonClickStyleShakeNew(value: CGFloat, duration: CGFloat) {
+  public func buttonClickStyleShakeNew(value: CGFloat, duration: CGFloat) {
     
     let shake = CABasicAnimation(keyPath: "position")
     shake.duration = duration

@@ -44,7 +44,7 @@ public class ButtonClickStylePulseAnimation: CALayer {
     }
   }
   
-  func scaleAnimation() -> CABasicAnimation {
+  public func scaleAnimation() -> CABasicAnimation {
     let scaleAnimaton = CABasicAnimation(keyPath: "transform.scale.xy")
     scaleAnimaton.fromValue = NSNumber(value: 0)
     scaleAnimaton.toValue = NSNumber(value: 1)
@@ -52,7 +52,7 @@ public class ButtonClickStylePulseAnimation: CALayer {
     return scaleAnimaton
   }
   
-  func createOpacityAnimation() -> CAKeyframeAnimation {
+  public func createOpacityAnimation() -> CAKeyframeAnimation {
     let opacityAnimiation = CAKeyframeAnimation(keyPath: "opacity")
     opacityAnimiation.duration = animationDuration
     opacityAnimiation.values = [0.4,0.8,0]
@@ -60,7 +60,7 @@ public class ButtonClickStylePulseAnimation: CALayer {
     return opacityAnimiation
   }
   
-  func setupAnimationGroup() {
+  public func setupAnimationGroup() {
     self.animationGroup.duration = animationDuration
     self.animationGroup.repeatCount = numebrOfPulse
     let defaultCurve = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)

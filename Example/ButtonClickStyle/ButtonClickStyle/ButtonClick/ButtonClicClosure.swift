@@ -1,22 +1,20 @@
 
 import UIKit
 
-public extension ButtonClick {
+extension ButtonClick {
   
-  typealias Emoji = (type: String, color: String, repeats: String, new: String)
+  public typealias Emoji = (type: String, color: String, repeats: String, new: String)
+  public typealias Full = (base: String, name: String, emoji: Emoji, index: Int)
+  public typealias Closure = () -> ()
   
-  typealias Full = (base: String, name: String, emoji: Emoji, index: Int)
-  
-  typealias Closure = () -> ()
-  
-  @objc func invoke () {
+  @objc public func invoke() {
     closureSleeve?()
   }
 }
 
 
-public extension UIControl {
-  func click(for controlEvents: UIControl.Event = .touchUpInside,
+extension UIControl {
+  public func click(for controlEvents: UIControl.Event = .touchUpInside,
              _ closure: @escaping ButtonClick.Closure) {
     let sleeve = ButtonClick(closure)
     addTarget(sleeve, action: #selector(ButtonClick.invoke), for: controlEvents)

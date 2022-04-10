@@ -1,11 +1,11 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Press
   
-  func buttonClickStylePress(duration: CGFloat, cornRadius: CGFloat? = nil, value: CGFloat, shadow: Bool, visible: Bool) {
+  public func buttonClickStylePress(duration: CGFloat, cornRadius: CGFloat? = nil, value: CGFloat, shadow: Bool, visible: Bool) {
     if visible {
       animate(duration: duration, view: self, transform: .identity)
       if shadow {

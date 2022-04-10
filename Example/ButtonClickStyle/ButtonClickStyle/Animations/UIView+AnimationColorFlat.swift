@@ -5,11 +5,11 @@ private let flatBorderTag = 62
 private let flatTextTag = 63
 private let flatImageTag = 64
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Add Animation Color Flat
   
-  func buttonClickStyleColorFlat(duration: CGFloat, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat,  color: UIColor? = nil) {
+  public func buttonClickStyleColorFlat(duration: CGFloat, cornRadius: CGFloat? = nil, visible: Bool, value: CGFloat,  color: UIColor? = nil) {
     
     guard let superview = self.superview else { return }
     
@@ -182,7 +182,7 @@ public extension UIView {
 
 extension DesignableView {
   
-  enum ColorType {
+  public enum ColorType {
     case fill
     case border
     case gradient
@@ -190,7 +190,7 @@ extension DesignableView {
   
   
   
-  func getFirstFindColorSubviews() -> (color: UIColor?, typee: ColorType) {
+  public func getFirstFindColorSubviews() -> (color: UIColor?, typee: ColorType) {
     if let fill = getFillColor()  {
       return (fill, .fill)
     }
@@ -200,7 +200,7 @@ extension DesignableView {
     return (getFillColorSubviews(), .fill)
   }
   
-  func getFillColorSubviews() -> UIColor? {
+  public func getFillColorSubviews() -> UIColor? {
     var fill: UIColor? = self.getFillColor()
     if fill == nil {
       let subFigures = self.subviews.compactMap { $0 as? DesignableView }
@@ -214,7 +214,7 @@ extension DesignableView {
   }
   
   
-  func getBorderColor() -> UIColor? {
+  public func getBorderColor() -> UIColor? {
     var br: UIColor?
     if self.brColor != .clear {
       br = self.brColor
@@ -227,7 +227,7 @@ extension DesignableView {
     return br
   }
   
-  func getFillColor() -> UIColor?{
+  public func getFillColor() -> UIColor?{
     var fill: UIColor?
     if let fillColor = self.fillColor, fillColor != .clear {
       fill = fillColor
@@ -239,7 +239,7 @@ extension DesignableView {
     return fill
   }
   
-  func getAllLabelsSubviews() -> [UILabel] {
+  public func getAllLabelsSubviews() -> [UILabel] {
     var labels = self.subviews.compactMap { $0 as? UILabel }
     self.subviews.forEach { v2 in
       labels += v2.subviews.compactMap { $0 as? UILabel }
@@ -251,7 +251,7 @@ extension DesignableView {
   }
   
   
-  func getAllImageViewSubviews() -> [UIImageView] {
+  public func getAllImageViewSubviews() -> [UIImageView] {
     var imageVs = self.subviews.compactMap { $0 as? UIImageView }
     self.subviews.forEach { v2 in
       imageVs += v2.subviews.compactMap { $0 as? UIImageView }

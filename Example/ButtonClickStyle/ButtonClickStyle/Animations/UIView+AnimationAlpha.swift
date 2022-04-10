@@ -2,11 +2,11 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Alpha
   
-  func buttonClickStyleAlpha(with views: [UIView], visible: Bool, value: CGFloat, duration: CGFloat?) {
+  public func buttonClickStyleAlpha(with views: [UIView], visible: Bool, value: CGFloat, duration: CGFloat?) {
     
     var alpha: CGFloat = 1.0
     if visible != true {

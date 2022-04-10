@@ -89,9 +89,9 @@
 		57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5996FBBF401A36029B98D15034DA99CF /* ButtonClickStyle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ButtonClickStyle.modulemap; sourceTree = "<group>"; };
 		5BDE9C99F96799F499A125846D577EBC /* Pods-ButtonClickStyle_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ButtonClickStyle_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F00F706634AB3D399D05596BFD41F5 /* ButtonClickStyle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ButtonClickStyle-umbrella.h"; sourceTree = "<group>"; };
-		64ADBF7327BF96DCD618EE3CEED900AF /* Pods-ButtonClickStyle_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ButtonClickStyle_Example"; path = Pods_ButtonClickStyle_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64ADBF7327BF96DCD618EE3CEED900AF /* Pods_ButtonClickStyle_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonClickStyle_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		65BC5B114641BF127DF148F0E85A382D /* Pods-ButtonClickStyle_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ButtonClickStyle_Tests.modulemap"; sourceTree = "<group>"; };
 		6979AD8A67400E6173245AD6C5C26AD4 /* Pods-ButtonClickStyle_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ButtonClickStyle_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		D47CDEC3AF93BC03389DDAD31900B6F4 /* Pods-ButtonClickStyle_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ButtonClickStyle_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D54D0AD9A7CCFCBCD16CF866B52A4C72 /* ButtonClickStyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ButtonClickStyle.release.xcconfig; sourceTree = "<group>"; };
-		D81B129B77A38AA06F1522559E0E895F /* Pods-ButtonClickStyle_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ButtonClickStyle_Tests"; path = Pods_ButtonClickStyle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D81B129B77A38AA06F1522559E0E895F /* Pods_ButtonClickStyle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonClickStyle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		DA60842834E38D7AB45CAD867CFEAF74 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = ButtonClickStyle/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		E172BE3093EEFE9DF464C5BA72838EC9 /* Pods-ButtonClickStyle_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ButtonClickStyle_Example-Info.plist"; sourceTree = "<group>"; };
@@ -314,9 +314,9 @@
 			isa = PBXGroup;
 			children = (
 				E7F8AD9C6B3FA016DC17CBBA4EADEE69 /* ButtonClickStyle.framework */,
-				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */,
-				64ADBF7327BF96DCD618EE3CEED900AF /* Pods-ButtonClickStyle_Example */,
-				D81B129B77A38AA06F1522559E0E895F /* Pods-ButtonClickStyle_Tests */,
+				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */,
+				64ADBF7327BF96DCD618EE3CEED900AF /* Pods_ButtonClickStyle_Example.framework */,
+				D81B129B77A38AA06F1522559E0E895F /* Pods_ButtonClickStyle_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,7 +436,7 @@
 			);
 			name = "Pods-ButtonClickStyle_Example";
 			productName = Pods_ButtonClickStyle_Example;
-			productReference = 64ADBF7327BF96DCD618EE3CEED900AF /* Pods-ButtonClickStyle_Example */;
+			productReference = 64ADBF7327BF96DCD618EE3CEED900AF /* Pods_ButtonClickStyle_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		970A561E6198E93B1BCA1247B46F2695 /* Pods-ButtonClickStyle_Tests */ = {
@@ -456,7 +456,7 @@
 			);
 			name = "Pods-ButtonClickStyle_Tests";
 			productName = Pods_ButtonClickStyle_Tests;
-			productReference = D81B129B77A38AA06F1522559E0E895F /* Pods-ButtonClickStyle_Tests */;
+			productReference = D81B129B77A38AA06F1522559E0E895F /* Pods_ButtonClickStyle_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */ = {
@@ -474,7 +474,7 @@
 			);
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
-			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */;
+			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -484,7 +484,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					523EF1BF9900425319A036DC3CC07E76 = {
 						LastSwiftMigration = 1320;
@@ -624,7 +624,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -693,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -721,7 +721,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example.modulemap";
@@ -753,7 +753,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ButtonClickStyle/ButtonClickStyle-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ButtonClickStyle/ButtonClickStyle-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ButtonClickStyle/ButtonClickStyle.modulemap";
 				PRODUCT_MODULE_NAME = ButtonClickStyle;
@@ -784,7 +784,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests.modulemap";
@@ -817,7 +817,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ButtonClickStyle/ButtonClickStyle-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ButtonClickStyle/ButtonClickStyle-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ButtonClickStyle/ButtonClickStyle.modulemap";
 				PRODUCT_MODULE_NAME = ButtonClickStyle;
@@ -847,7 +847,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -877,7 +877,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests.modulemap";
@@ -944,7 +944,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -970,7 +970,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example.modulemap";

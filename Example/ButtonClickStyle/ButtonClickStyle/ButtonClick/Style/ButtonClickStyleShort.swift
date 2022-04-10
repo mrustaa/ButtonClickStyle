@@ -7,11 +7,11 @@
 
 import UIKit
 
-public extension ButtonClick {
+extension ButtonClick {
   
   //MARK: - Style
   
-  enum _Style: Int, CaseIterable {
+  public enum _Style: Int, CaseIterable {
     case alpha
     case flash
     case shadow

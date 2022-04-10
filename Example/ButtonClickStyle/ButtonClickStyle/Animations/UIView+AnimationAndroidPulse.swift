@@ -7,11 +7,11 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Android Pulse
   
-  func buttonClickStyleAndroidPulse(radius: CGFloat, duration: CGFloat, color: UIColor? = nil, value: CGFloat? = nil, position: CGPoint) {
+  public func buttonClickStyleAndroidPulse(radius: CGFloat, duration: CGFloat, color: UIColor? = nil, value: CGFloat? = nil, position: CGPoint) {
     
     var rcolor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2786076018)
     

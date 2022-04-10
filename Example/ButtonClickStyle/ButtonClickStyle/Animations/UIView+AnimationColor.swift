@@ -1,11 +1,11 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
   
   // MARK: - Color inversion
   
-  func inversionColor(duration: CGFloat, cornRadius: CGFloat? = nil, value: UIColor) { // .s1
+  public func inversionColor(duration: CGFloat, cornRadius: CGFloat? = nil, value: UIColor) { // .s1
     
     let v = UIView(frame: frame)
     v.backgroundColor = value.inverted
@@ -32,7 +32,7 @@ public extension UIView {
     }
   }
   
-  func buttonClickStyleColorTouchDown(cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
+  public func buttonClickStyleColorTouchDown(cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
     
     let from = color.withAlphaComponent(alpha)
     
@@ -48,7 +48,7 @@ public extension UIView {
     }
   }
   
-  func buttonClickStyleColor(duration: CGFloat, cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
+  public func buttonClickStyleColor(duration: CGFloat, cornRadius: CGFloat? = nil, color: UIColor, alpha: CGFloat) { // .s1
     
 //    return;
     
@@ -118,7 +118,7 @@ public extension UIView {
     }
   }
   
-  func radiusSearch(_ cornRadius: CGFloat? = nil) -> CGFloat {
+  public func radiusSearch(_ cornRadius: CGFloat? = nil) -> CGFloat {
     if let r = cornRadius { return r }
     guard let mainView = self.superview else { return 0 }
     var radius = mainView.layer.cornerRadius
