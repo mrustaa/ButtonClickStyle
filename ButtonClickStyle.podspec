@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ButtonClickStyle'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 9 click animation styles'
 
 # This description is used to generate tags and improve search results.
