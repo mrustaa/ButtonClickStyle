@@ -9,7 +9,7 @@ import UIKit
 
 private let vDef: CGFloat = 0.5
 
-extension ButtonClick {
+public extension ButtonClick {
   
   //MARK: - Style
   

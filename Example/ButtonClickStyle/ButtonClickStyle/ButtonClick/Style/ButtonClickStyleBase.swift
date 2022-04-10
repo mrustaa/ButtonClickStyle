@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ButtonClick {
+public extension ButtonClick {
   
   enum StyleBase: String, CaseIterable {
     case hide = "Hide"

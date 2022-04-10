@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ButtonClick.Style {
+public extension ButtonClick.Style {
   
   func emojiNew() -> String {
     switch self {

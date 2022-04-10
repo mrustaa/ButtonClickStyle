@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ButtonClick {
+public class ButtonClick {
   
   var button: UIButton?
   var closureSleeve: ButtonClick.Closure?

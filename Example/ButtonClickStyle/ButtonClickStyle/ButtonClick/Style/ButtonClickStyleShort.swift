@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ButtonClick {
+public extension ButtonClick {
   
   //MARK: - Style
   

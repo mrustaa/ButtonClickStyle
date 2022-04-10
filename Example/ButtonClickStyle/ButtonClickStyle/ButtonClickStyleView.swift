@@ -10,7 +10,7 @@ import UIKit
 // MARK: - ButtonClickStyleView
 
 @IBDesignable
-class ButtonClickStyleView: UIView {
+public class ButtonClickStyleView: UIView {
   
   @IBInspectable var animType: Int = 0
   @IBInspectable var animValue: CGFloat = 0.0

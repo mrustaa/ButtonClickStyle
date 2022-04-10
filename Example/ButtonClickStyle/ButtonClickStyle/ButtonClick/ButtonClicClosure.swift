@@ -1,8 +1,7 @@
 
 import UIKit
 
-extension ButtonClick {
-  
+public extension ButtonClick {
   
   typealias Emoji = (type: String, color: String, repeats: String, new: String)
   
@@ -16,7 +15,7 @@ extension ButtonClick {
 }
 
 
-extension UIControl {
+public extension UIControl {
   func click(for controlEvents: UIControl.Event = .touchUpInside,
              _ closure: @escaping ButtonClick.Closure) {
     let sleeve = ButtonClick(closure)

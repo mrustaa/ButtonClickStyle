@@ -5,7 +5,7 @@ private let flatBorderTag = 62
 private let flatTextTag = 63
 private let flatImageTag = 64
 
-extension UIView {
+public extension UIView {
   
   // MARK: - Add Animation Color Flat
   

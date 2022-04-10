@@ -4,7 +4,7 @@ import UIKit
 private let shTag = 31
 private let shColor: UIColor = .init(red: 10.0 / 255.0, green: 13.0 / 255.0, blue: 38.0 / 255.0, alpha: 1.0)
 
-extension UIView {
+public extension UIView {
   
   // MARK: - Layer Gray
   

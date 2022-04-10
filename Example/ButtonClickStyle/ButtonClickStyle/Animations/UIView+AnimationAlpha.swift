@@ -2,7 +2,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
   
   // MARK: - Alpha
   

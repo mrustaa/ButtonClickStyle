@@ -7,8 +7,7 @@
 
 import UIKit
 
-
-extension ButtonClick.Style {
+public extension ButtonClick.Style {
   
   class GestureRecognizer: UITapGestureRecognizer {
     private var action: (UITapGestureRecognizer) -> Void
