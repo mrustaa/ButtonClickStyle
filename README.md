@@ -42,7 +42,7 @@ pod 'ButtonClickStyle'
 2) Inside this layer, create your own button
 
 3) In Attributes Inspector of Interface Builder
-   you can immediately select the button click `animationType`
+   you can immediately select the button click style `animationType`
 
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
