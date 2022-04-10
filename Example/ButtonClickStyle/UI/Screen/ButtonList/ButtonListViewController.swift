@@ -130,7 +130,7 @@ class ButtonListViewController: StoryboardController {
       exampleView.update()
       exampleView.frame = .init(x: 0, y: 60, width:  UIScreen.main.bounds.size.width, height: 223)
       
-      exampleView.endAnimationCallback = { [weak self] in
+      exampleView.endAnimationCallback = { // [weak self] in
         
 //        main { [weak self] in
 //          guard let mSelf = self else { return }  
