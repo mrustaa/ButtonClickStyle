@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.ios.deployment_target = '14.0'
   s.platform = :ios, "14.0"
 
-  s.source_files = 'Sources/**/*.{swift}'
+  s.source_files = 'Source/**/*.{swift}'
   
   # s.resource_bundles = {
   #   'ButtonClickStyle' => ['ButtonClickStyle/Assets/*.png']
