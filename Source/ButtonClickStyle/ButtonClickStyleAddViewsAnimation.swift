@@ -108,7 +108,7 @@ extension UIButton {
       
       func randPointAndroidPulse() {
         let view = views[0]
-        let position: CGPoint = .init(x: CGFloat.random(min: 0, max: view.width), y: CGFloat.random(min: 0, max: view.height))
+        let position: CGPoint = .init(x: CGFloat.random(min: 0, max: view.wwidth), y: CGFloat.random(min: 0, max: view.hheight))
         let dur = ButtonClick.Style.androidClickable(value, color: color).defaultDuration()
         buttonClickStyleAndroidPulse(radius: value, duration: dur, color: color, position: position)
       }

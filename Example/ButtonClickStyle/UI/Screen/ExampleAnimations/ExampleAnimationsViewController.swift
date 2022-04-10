@@ -198,9 +198,9 @@ class ExampleAnimationsViewController: StoryboardController {
     label.font = UIFont.boldSystemFont(ofSize: 19)
     label.frame = getFrame()
     label.text =  buttonTypes[animationType].name
-    label.x = label.x + 250
-    label.y = label.y - 12
-    label.width = label.width + 100
+    label.xx = label.xx + 250
+    label.yy = label.yy - 12
+    label.wwidth = label.wwidth + 100
     self.view.addSubview(label)
     labelsAdded.append(label)
     
@@ -216,9 +216,9 @@ class ExampleAnimationsViewController: StoryboardController {
     label.textAlignment = .center
     label.frame = getFrame()
     label.text = buttonTypes[animationType].base // //.isEmpty ? "" : "☑️"
-    label.x = xX
-    label.width = xW + 30
-    label.y = label.y - 12
+    label.xx = xX
+    label.wwidth = xW + 30
+    label.yy = label.yy - 12
     label.alpha = 0.0
     label.backgroundColor = .black.withAlphaComponent(xC)
     self.view.addSubview(label)
@@ -231,11 +231,11 @@ class ExampleAnimationsViewController: StoryboardController {
     label.textAlignment = .center
     label.frame = getFrame()
     label.text = buttonTypes[animationType].emoji.color //.isEmpty ? "" : "☑️"
-    label.x = xX
-    label.width = xW
+    label.xx = xX
+    label.wwidth = xW
     label.alpha = xA / xD
     label.backgroundColor = .black.withAlphaComponent(xC * xD)
-    label.y = label.y - 12
+    label.yy = label.yy - 12
     self.view.addSubview(label)
     labelsAdded.append(label)
     xX = label.right + xP
@@ -245,9 +245,9 @@ class ExampleAnimationsViewController: StoryboardController {
     label.textAlignment = .center
     label.frame = getFrame()
     label.text = buttonTypes[animationType].emoji.repeats.isEmpty ? "" : "☑️"
-    label.x = xX
-    label.width = xW
-    label.y = label.y - 12
+    label.xx = xX
+    label.wwidth = xW
+    label.yy = label.yy - 12
     label.alpha = xA
     label.backgroundColor = .black.withAlphaComponent(xC)
     self.view.addSubview(label)
@@ -259,9 +259,9 @@ class ExampleAnimationsViewController: StoryboardController {
     label.textAlignment = .center
     label.frame = getFrame()
     label.text = buttonTypes[animationType].emoji.new //.isEmpty ? "" : "☑️"
-    label.x = xX
-    label.width = xW
-    label.y = label.y - 12
+    label.xx = xX
+    label.wwidth = xW
+    label.yy = label.yy - 12
     label.alpha = xA
     label.backgroundColor = .black.withAlphaComponent(xC)
     self.view.addSubview(label)

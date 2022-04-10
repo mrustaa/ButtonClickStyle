@@ -68,8 +68,8 @@ extension UIView {
         
       shadowContentView.addSubview(imgBtn)
     }
-    shadowView.width = wMax
-    shadowView.height = hMax
+    shadowView.wwidth = wMax
+    shadowView.hheight = hMax
     
     mainView.addSubview(shadowView)
     
