@@ -28,6 +28,10 @@ You can expand the project adding new click-animation-styles
 
 3) In Attributes Inspector of Interface Builder
    you can immediately select the button click `animationType`
+
+
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
+
 ```swift
 extension ButtonClick {
   enum Style {
@@ -47,8 +51,6 @@ extension ButtonClick {
   }
 }  
 ```
-
-![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 4) Also you can select specific layers to animate / or just 1 specific one `allSubviews`
 
