@@ -1,6 +1,6 @@
 # ButtonClickStyle
 
-![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/all_ipad_random.gif)
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
 
 This is a view button
 
@@ -29,28 +29,26 @@ You can expand the project adding new click-animation-styles
 3) In Attributes Inspector of Interface Builder
    you can immediately select the button click `animationType`
 ```swift
-#type  #name
-
-enum Style {
-  # hide
-  case alpha                 
-  case flash // alpha flicker
-  # add
-  case shadow                 
-  case shadowColor            
-  case color                  
-  case colorFlat // border text
-  # move 
-  case pulsateNew             
-  case pulsate                
-  case press                  
-  case shakeNew               
-  case shake                  
-  # add pulsate 
-  case androidClickableDark   
-  case androidClickableLigt
-}
+extension ButtonClick {
+  enum Style {
+    case alpha
+    case flash
+    case shadow
+    case shadowColor
+    case color
+    case colorFlat
+    case pulsateNew
+    case pulsate
+    case press
+    case shake
+    case shakeNew
+    case androidClickable
+    case androidClickableDark
+  }
+}  
 ```
+
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 4) Also you can select specific layers to animate / or just 1 specific one `allSubviews`
 
@@ -72,26 +70,31 @@ enum Style {
 var addViews: [UIView]?
 ```
 
-![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
+<!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
 7) If initializing programmatically
 There is a property `addViews` - allows you to pass views / layers
 which you definitely want to use in the click animation only
 
-8) Or initialize through a struct `BtnCellState`
+8) Or initialize through a struct `ButtonClick.State`
 
 ```swift
-struct BtnCellState: Equatable {
-  var titleText: String?
-  var allSubviews: Bool = true
-  var animationType: Int?
-  var animationTypeValue: CGFloat?
-  var animationDuration: CGFloat?
-  var new: Bool = false
-  var color: UIColor?
-  var addBackgrondColor: Bool = true
+extension ButtonClick {
+  struct State: Equatable {
+    var titleText: String?
+    var allSubviews: Bool = true
+    var animationType: Int?
+    var animationTypeValue: CGFloat?
+    var animationDuration: CGFloat?
+    var new: Bool = false
+    var color: UIColor?
+    var startClick: Bool = false 
+    var addBackgrondColor: Bool = true
+  }
 }
 ```
+
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
 
 ```swift
 @IBOutlet var mainView: UIView!
