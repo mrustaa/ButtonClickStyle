@@ -16,7 +16,17 @@ You can expand the project adding new click-animation-styles
 - Xcode 13+
 - Swift 5.5+
 
-## Installation
+
+## Installation 
+
+### CocoaPods
+
+ContainerControllerSwift is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'ButtonClickStyleView'
+```
 
 ## Usage
 
