@@ -200,6 +200,7 @@
 		4A14CBC22803437C00DA8A68 /* ButtonClickStyle */ = {
 			isa = PBXGroup;
 			children = (
+				4A62F30B2803115C00534ABA /* Utils */,
 				4A14CBC32803437C00DA8A68 /* ButtonClick */,
 				4A14CBCE2803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift */,
 				4A14CBCF2803437C00DA8A68 /* Animations */,
@@ -259,9 +260,9 @@
 		4A62F30B2803115C00534ABA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4A62F3102803115C00534ABA /* LoadNib */,
 				4A62F30C2803115C00534ABA /* Designable */,
 				4A62F30F2803115C00534ABA /* DispatchQueue.swift */,
-				4A62F3102803115C00534ABA /* LoadNib */,
 				4A62F3132803115C00534ABA /* Font */,
 				4A62F3162803115C00534ABA /* ScreenDevice.swift */,
 				4A62F3172803115C00534ABA /* UIView+Positions.swift */,
@@ -552,7 +553,6 @@
 			isa = PBXGroup;
 			children = (
 				4A62F3182803115C00534ABA /* UI */,
-				4A62F30B2803115C00534ABA /* Utils */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				4A62F3B82803122700534ABA /* SceneDelegate.swift */,

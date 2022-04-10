@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ButtonClickStyle'
-  s.version          = '1.0.4'
+  s.version          = '1.0.3'
   s.summary          = 'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 9 click animation styles'
 
 # This description is used to generate tags and improve search results.
@@ -29,10 +29,10 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.swift_version          = "5.0"
   
-  # s.ios.deployment_target = '14.0'
+  s.ios.deployment_target = '14.0'
   s.platform = :ios, "14.0"
 
-  s.source_files = 'Source/**/*.{swift}'
+  s.source_files = 'ButtonClickStyle/**/*.{swift}'
   
   # s.resource_bundles = {
   #   'ButtonClickStyle' => ['ButtonClickStyle/Assets/*.png']
