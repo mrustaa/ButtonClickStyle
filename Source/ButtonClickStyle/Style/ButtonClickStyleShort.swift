@@ -25,5 +25,6 @@ extension ButtonClick {
     case shakeNew
     case androidClickable
     case androidClickableDark
+    case fave
   }
 }

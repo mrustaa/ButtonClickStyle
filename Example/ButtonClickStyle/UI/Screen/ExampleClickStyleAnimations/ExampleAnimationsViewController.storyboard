@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!-- -->
         <scene sceneID="xg4-tC-VA3">
             <objects>
-                <viewController storyboardIdentifier="ExampleAnimationsViewController" title=" " useStoryboardIdentifierAsRestorationIdentifier="YES" id="t78-RV-KY0" customClass="ExampleAnimationsViewController" customModule="ButtonClickStyle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExampleAnimationsViewController" title=" " useStoryboardIdentifierAsRestorationIdentifier="YES" id="t78-RV-KY0" customClass="ExampleAnimationsViewController" customModule="ButtonClickStyle_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ed-Au-iL3">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +111,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyc-WS-Y1V">
                                         <rect key="frame" x="20" y="188" width="210" height="31"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KF-CK-r9N" customClass="DesignableView" customModule="ButtonClickStyle" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KF-CK-r9N" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                                 <rect key="frame" x="161" y="0.5" width="51" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESl-Gn-TeW">
@@ -254,6 +255,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Fv-fj-hvd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1t5-3Y-2I6" secondAttribute="bottom" constant="30" id="03u-ZG-9wi"/>

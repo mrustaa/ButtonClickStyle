@@ -12,12 +12,20 @@ class ButtonListViewController: StoryboardController {
   @IBOutlet var buttonLayerExampleView: ButtonLayerExampleView?
   @IBOutlet var buttonTypePicker: UIPickerView!
   @IBOutlet var animationTypePicker: UIPickerView!
-  var colorSelected: UIColor?
   
   @IBOutlet var animationValueLabel: UILabel!
   @IBOutlet var animationValueSlider: UISlider!
   var animationTypeLast: Int = 0
   var buttonTypeLast: Int = 0
+  
+  
+  
+  @IBOutlet var colorClearButton: UIButton!
+  var colorChanging: Bool = false
+  @IBOutlet var colorDesignableView: DesignableView!
+  var colorSelected: UIColor?
+  let colorPicker = UIColorPickerViewController()
+  
   
   let buttonTypes = [
     "JustPink",
@@ -39,6 +47,25 @@ class ButtonListViewController: StoryboardController {
     "Green"
   ]
   
+  
+  @IBAction func colorPickerAction(_ sender: Any) {
+    resetAllColorChangeFlags()
+    colorChanging = true
+    present(colorPicker, animated: true, completion: nil)
+  }
+  
+  @IBAction func buttonColorClear(_ sender: Any) {
+    colorSelected = nil
+    colorClearButton.isHidden = true
+    colorDesignableView.fillColor = .clear
+    colorDesignableView.setNeedsLayout()
+    updateButtons()
+  }
+  
+  
+  @IBAction func buttonReloadAction(_ sender: Any) {
+    updateButtons()
+  }
   
   //MARK: - viewDidAppear
   
@@ -77,6 +104,8 @@ class ButtonListViewController: StoryboardController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    colorPicker.delegate = self
     
     animationValueSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
     
@@ -347,4 +376,32 @@ extension ButtonListViewController: UIPickerViewDelegate {
     
     updateButtons()
   }
+}
+
+
+extension ButtonListViewController: UIColorPickerViewControllerDelegate {
+  
+  func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+    
+    if colorChanging
+    {
+      colorSelected = viewController.selectedColor
+    }
+    colorClearButton.isHidden = (colorSelected == nil) || (colorSelected == .clear)
+  }
+  
+  func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController)
+  {
+    updateButtons()
+    colorDesignableView.fillColor = colorSelected
+    colorDesignableView.setNeedsLayout()
+    resetAllColorChangeFlags()
+    
+  } // ends colorPickerViewControllerDidFinish
+  
+  func resetAllColorChangeFlags()
+  {
+    colorChanging = false
+    
+  } // ends resetAllColorChangeFlags
 }

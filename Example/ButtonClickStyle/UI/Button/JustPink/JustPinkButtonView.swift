@@ -90,6 +90,9 @@ class JustPinkButtonView: BtnView {
 //       views = nil
       views = [subMainView]
      }
+     if type == ButtonClick._Style.fave.rawValue {
+       views = [mainDetailsView, gradientView]
+     }
      
      mainDetailsView.setNeedsLayout()
      mainShadowView.setNeedsLayout()

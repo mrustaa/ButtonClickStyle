@@ -185,11 +185,19 @@ extension UIButton {
     }
     
     switch style {
+    case .fave(let power, let color):
+      if event == .touchDown {
+        if views.count > 1 {
+          self.buttonClickStyleFave(mainView: views[1], secondView: views[0], color: color, value: power, duration: dur)
+        }
+      }
+      
     case .press(let power):
       
       if views.count > 0 {
         views[0].buttonClickStylePress(duration: dur, cornRadius: radius, value: power, shadow: false, visible: event != .touchDown)
       }
+      
 //      if views.count > 1 {
 //        views[1].press(duration: dur, cornRadius: radius, value: 0.5, shadow: true, visible: event != .touchDown)
 //      }
