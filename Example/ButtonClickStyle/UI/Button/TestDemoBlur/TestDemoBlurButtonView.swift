@@ -48,7 +48,7 @@ class TestDemoBlurButtonView: BtnView {
         addViews = [mainView]
       } else if type == ButtonClick._Style.androidClickable.rawValue ||
                   type == ButtonClick._Style.androidClickableDark.rawValue {
-        addViews = nil
+        addViews = [fillView]
       }  else {
         mainView.fillColor = .clear
         mainView.setNeedsLayout()

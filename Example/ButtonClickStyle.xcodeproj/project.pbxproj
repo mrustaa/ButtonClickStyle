@@ -79,6 +79,9 @@
 		4A62F3A22803115C00534ABA /* ButtonLayerExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3572803115C00534ABA /* ButtonLayerExampleView.swift */; };
 		4A62F3A32803115C00534ABA /* ButtonLayerExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */; };
 		4A62F3B92803122700534ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3B82803122700534ABA /* SceneDelegate.swift */; };
+		4ADE26E42803837C00634B6C /* ExampleButtonsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */; };
+		4ADE26E52803837C00634B6C /* ExampleButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */; };
+		4ADE26E7280383DC00634B6C /* ButtonClickStyle+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -162,6 +165,9 @@
 		4A62F3572803115C00534ABA /* ButtonLayerExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayerExampleView.swift; sourceTree = "<group>"; };
 		4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonLayerExampleView.xib; sourceTree = "<group>"; };
 		4A62F3B82803122700534ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExampleButtonsViewController.storyboard; sourceTree = "<group>"; };
+		4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleButtonsViewController.swift; sourceTree = "<group>"; };
+		4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyle+Buttons.swift"; sourceTree = "<group>"; };
 		4F15AAFA673DA24A3C49A947 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		585C1A339472B772504181DB /* Pods_ButtonClickStyle_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonClickStyle_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* ButtonClickStyle_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonClickStyle_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,24 +206,16 @@
 		4A14CBC22803437C00DA8A68 /* ButtonClickStyle */ = {
 			isa = PBXGroup;
 			children = (
-				4A62F30B2803115C00534ABA /* Utils */,
-				4A14CBC32803437C00DA8A68 /* ButtonClick */,
-				4A14CBCE2803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift */,
 				4A14CBCF2803437C00DA8A68 /* Animations */,
-				4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */,
-			);
-			path = ButtonClickStyle;
-			sourceTree = "<group>";
-		};
-		4A14CBC32803437C00DA8A68 /* ButtonClick */ = {
-			isa = PBXGroup;
-			children = (
+				4A62F30B2803115C00534ABA /* Utils */,
 				4A14CBC42803437C00DA8A68 /* Style */,
-				4A14CBCA2803437C00DA8A68 /* State */,
+				4A14CBCE2803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift */,
+				4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */,
+				4A14CBCB2803437C00DA8A68 /* ButtonClickState.swift */,
 				4A14CBCC2803437C00DA8A68 /* ButtonClick.swift */,
 				4A14CBCD2803437C00DA8A68 /* ButtonClicClosure.swift */,
 			);
-			path = ButtonClick;
+			path = ButtonClickStyle;
 			sourceTree = "<group>";
 		};
 		4A14CBC42803437C00DA8A68 /* Style */ = {
@@ -230,14 +228,6 @@
 				4A14CBC92803437C00DA8A68 /* ButtonClickStyleGestureRecognizer.swift */,
 			);
 			path = Style;
-			sourceTree = "<group>";
-		};
-		4A14CBCA2803437C00DA8A68 /* State */ = {
-			isa = PBXGroup;
-			children = (
-				4A14CBCB2803437C00DA8A68 /* ButtonClickState.swift */,
-			);
-			path = State;
 			sourceTree = "<group>";
 		};
 		4A14CBCF2803437C00DA8A68 /* Animations */ = {
@@ -326,6 +316,7 @@
 				4A62F3412803115C00534ABA /* Neomorphism */,
 				4A62F3442803115C00534ABA /* TestDemoGradient */,
 				4A62F3472803115C00534ABA /* BtnView.swift */,
+				4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -468,10 +459,11 @@
 		4A62F3482803115C00534ABA /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				4A62F3492803115C00534ABA /* ButtonList */,
 				4A62F34C2803115C00534ABA /* Test */,
 				4A62F34F2803115C00534ABA /* TestDemo */,
-				4A62F3522803115C00534ABA /* ExampleAnimations */,
+				4ADE26E12803837C00634B6C /* ExampleButtons */,
+				4A62F3522803115C00534ABA /* ExampleClickStyleAnimations */,
+				4A62F3492803115C00534ABA /* ButtonList */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -479,8 +471,8 @@
 		4A62F3492803115C00534ABA /* ButtonList */ = {
 			isa = PBXGroup;
 			children = (
-				4A62F34A2803115C00534ABA /* ButtonListViewController.storyboard */,
 				4A62F34B2803115C00534ABA /* ButtonListViewController.swift */,
+				4A62F34A2803115C00534ABA /* ButtonListViewController.storyboard */,
 			);
 			path = ButtonList;
 			sourceTree = "<group>";
@@ -497,19 +489,19 @@
 		4A62F34F2803115C00534ABA /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4A62F3502803115C00534ABA /* TestDemoViewController.storyboard */,
 				4A62F3512803115C00534ABA /* TestDemoViewController.swift */,
+				4A62F3502803115C00534ABA /* TestDemoViewController.storyboard */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";
 		};
-		4A62F3522803115C00534ABA /* ExampleAnimations */ = {
+		4A62F3522803115C00534ABA /* ExampleClickStyleAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				4A62F3532803115C00534ABA /* ExampleAnimationsViewController.storyboard */,
 				4A62F3542803115C00534ABA /* ExampleAnimationsViewController.swift */,
+				4A62F3532803115C00534ABA /* ExampleAnimationsViewController.storyboard */,
 			);
-			path = ExampleAnimations;
+			path = ExampleClickStyleAnimations;
 			sourceTree = "<group>";
 		};
 		4A62F3552803115C00534ABA /* View */ = {
@@ -527,6 +519,15 @@
 				4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */,
 			);
 			path = ButtonLayerExample;
+			sourceTree = "<group>";
+		};
+		4ADE26E12803837C00634B6C /* ExampleButtons */ = {
+			isa = PBXGroup;
+			children = (
+				4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */,
+				4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */,
+			);
+			path = ExampleButtons;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -688,6 +689,7 @@
 				4A62F3962803115C00534ABA /* NeomorphismButtonView.xib in Resources */,
 				4A62F3852803115C00534ABA /* GoogleButtonView.xib in Resources */,
 				4A62F3832803115C00534ABA /* TestDemoBlurButtonView.xib in Resources */,
+				4ADE26E42803837C00634B6C /* ExampleButtonsViewController.storyboard in Resources */,
 				4A62F37D2803115C00534ABA /* BuyNowButtonView.xib in Resources */,
 				4A62F39A2803115C00534ABA /* ButtonListViewController.storyboard in Resources */,
 			);
@@ -753,6 +755,7 @@
 				4A62F3732803115C00534ABA /* DesignableView.swift in Sources */,
 				4A62F3A22803115C00534ABA /* ButtonLayerExampleView.swift in Sources */,
 				4A62F3762803115C00534ABA /* XibView.swift in Sources */,
+				4ADE26E52803837C00634B6C /* ExampleButtonsViewController.swift in Sources */,
 				4A62F3822803115C00534ABA /* DeleteButtonView.swift in Sources */,
 				4A14CBEA2803437C00DA8A68 /* UIView+AnimationColorFlat.swift in Sources */,
 				4A14CBEC2803437C00DA8A68 /* UIView+AnimationFlash.swift in Sources */,
@@ -761,6 +764,7 @@
 				4A14CBE02803437C00DA8A68 /* ButtonClickState.swift in Sources */,
 				4A62F37A2803115C00534ABA /* UIView+Positions.swift in Sources */,
 				4A62F39B2803115C00534ABA /* ButtonListViewController.swift in Sources */,
+				4ADE26E7280383DC00634B6C /* ButtonClickStyle+Buttons.swift in Sources */,
 				4A14CBDE2803437C00DA8A68 /* ButtonClickStyleEmoji.swift in Sources */,
 				4A62F3992803115C00534ABA /* BtnView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
@@ -936,7 +940,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -957,7 +961,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";

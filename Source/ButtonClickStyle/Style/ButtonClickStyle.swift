@@ -23,6 +23,7 @@ extension ButtonClick {
     case pulsate(         _ power: CGFloat = vDef, new:  Bool = false)          // MOVE Pulsate
     case shake(           _ power: CGFloat = vDef, new:  Bool = false)          // MOVE Shake
     case androidClickable(_ alpha: CGFloat = vDef, color: UIColor? = nil)       // ADD  Android Clickable
+    case fave(            _ power: CGFloat = vDef, color: UIColor? = nil)   // Fave
     
     //MARK: All Cases, Indxs & Names
     
@@ -43,6 +44,7 @@ extension ButtonClick {
       .shake(new: true),
       .androidClickable(),
       .androidClickable(color: .random()),
+      .fave(vDef, color: .random())
     ]
     
     public func typeEasy() -> _Style {
@@ -74,6 +76,7 @@ extension ButtonClick {
                                                         : "Shake"
       case .androidClickable(_, let color): return color == nil ? "AndroidClickable"
                                                         : "AndroidClickable Color"
+      case .fave(_,_):                        return "Fave"
       }
     }
     
@@ -89,7 +92,8 @@ extension ButtonClick {
       case .pulsate(_,_),
           .press(_),
           .shake(_,_): return .move
-      case .androidClickable(_,_): return .android
+      case .androidClickable(_,_): return .tapGesture
+      case .fave(_,_): return .tapGesture
       }
     }
     
@@ -116,6 +120,7 @@ extension ButtonClick {
                                                        : 10
       case .androidClickable(_, let color):   return color == nil ? 11
                                                        : 12
+      case .fave(_, _):                   return         13
       }
     }
     
@@ -132,6 +137,7 @@ extension ButtonClick {
       case .color(_, _):             return 0.3              // .ms300
       case .colorFlat(_, _):         return 0.3              // .ms300
       case .androidClickable(_, _):  return 1.0              // .s1
+      case .fave(_, _):              return 0.4
       }
     }
     
@@ -164,6 +170,7 @@ extension ButtonClick {
         case 10:  return .shake(a ?? 0.15, new: true)
         case 11: return .androidClickable(v, color: nil)
         case 12: return .androidClickable(v, color: color ?? UIColor.random())
+        case 13: return .fave(v, color: color ?? UIColor.random())
         default: return .alpha(v)
         }
       }()

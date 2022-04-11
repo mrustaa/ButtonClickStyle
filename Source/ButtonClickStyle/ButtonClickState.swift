@@ -17,7 +17,8 @@ extension ButtonClick {
     var animationDuration: CGFloat?
     var new: Bool = false
     var color: UIColor?
-    var startClick: Bool = false 
+    var startClick: Bool = false
+    var debugButtonShow: Bool = false
     var addBackgrondColor: Bool = true
   }
   

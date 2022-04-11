@@ -38,7 +38,19 @@ class DesignableView: UIView {
     @IBInspectable var shRadius: CGFloat = 0.0
     @IBInspectable var shOffset: CGSize = .zero
     
-
+  func allColorClear() {
+    fillColor = .clear
+    brColor = .clear
+    shColor = .clear
+    inShColor = .clear
+    grColor1 = .clear
+    grColor2 = .clear
+    grColor3 = .clear
+    grColor4 = .clear
+    grColor5 = .clear
+    grColor6 = .clear
+    setNeedsLayout()
+  }
   
     func setup() {
         

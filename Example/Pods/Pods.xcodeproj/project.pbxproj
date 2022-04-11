@@ -725,6 +725,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.5;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -757,7 +758,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				MODULEMAP_FILE = "Target Support Files/ButtonClickStyle/ButtonClickStyle.modulemap";
 				PRODUCT_MODULE_NAME = ButtonClickStyle;
 				PRODUCT_NAME = ButtonClickStyle;
@@ -791,6 +792,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.5;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -824,7 +826,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				MODULEMAP_FILE = "Target Support Files/ButtonClickStyle/ButtonClickStyle.modulemap";
 				PRODUCT_MODULE_NAME = ButtonClickStyle;
 				PRODUCT_NAME = ButtonClickStyle;
@@ -888,6 +890,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.5;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Tests/Pods-ButtonClickStyle_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -982,6 +985,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.5;
 				MODULEMAP_FILE = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";

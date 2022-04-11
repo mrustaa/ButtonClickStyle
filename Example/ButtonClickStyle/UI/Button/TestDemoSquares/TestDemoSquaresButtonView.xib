@@ -9,8 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestDemoSquaresButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestDemoSquaresButtonView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
             <connections>
+                <outlet property="firstView" destination="Wcx-A1-Qvd" id="Z20-Vt-l0v"/>
                 <outlet property="mainView" destination="eE8-Er-H4p" id="g5r-qV-zG0"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="93"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wcx-A1-Qvd" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wcx-A1-Qvd" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="20" y="5" width="79" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,7 +34,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0u-Tq-KgX" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0u-Tq-KgX" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="71" y="25" width="79" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,7 +50,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5P-lW-qdB" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5P-lW-qdB" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                             <rect key="frame" x="121" y="41" width="79" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

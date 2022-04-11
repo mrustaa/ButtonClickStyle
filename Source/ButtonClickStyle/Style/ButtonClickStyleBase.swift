@@ -14,7 +14,7 @@ extension ButtonClick {
     case move = "Move"
     case add = "Add"
     case addHide = "Add & Hide"
-    case android = "TapGesture.Pulse"
+    case tapGesture = "TapGesture.Pulse"
     case none = "❌"
   }
 }

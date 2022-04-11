@@ -125,12 +125,13 @@ var endAnimationCallback: (() -> ())?
     override func setup() {
       
       startStopButton.click { [weak self] in
-        ButtonLayerExampleView.exmpStart = !ButtonLayerExampleView.exmpStart
         
-        guard let self = self else { return }
-        main {
-          self.buttonStartStopAction()
-        }
+//        guard let self = self else { return }
+//        main {
+          
+          ButtonLayerExampleView.exmpStart = !ButtonLayerExampleView.exmpStart
+          self?.buttonStartStopAction()
+//        }
       }
       
       backgroundColor = .clear
@@ -159,6 +160,7 @@ var endAnimationCallback: (() -> ())?
   }
   
   func onClick() {
+    
     self.buttonAnimView.onClick(animationClickDuration)
   }
   
@@ -199,6 +201,7 @@ var endAnimationCallback: (() -> ())?
         }
         
         if !back {
+          print(" onClick 💭🌀‼️ step1 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
 //        if back {
@@ -247,6 +250,7 @@ var endAnimationCallback: (() -> ())?
         }
         
 //        if !back {
+        print(" onClick 💭🌀‼️ step2 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
 //        }
         
@@ -301,6 +305,7 @@ var endAnimationCallback: (() -> ())?
         }
         
         if !back {
+          print(" onClick 💭🌀‼️ step3 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
 //        self.step4(back)
@@ -349,6 +354,7 @@ var endAnimationCallback: (() -> ())?
         
         
         if !back {
+          print(" onClick 💭🌀‼️ step4 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
 //        self.step5(back)
@@ -388,6 +394,7 @@ var endAnimationCallback: (() -> ())?
           self.iconView.alpha = 1
         }
         if !back {
+          print(" onClick 💭🌀‼️ step5 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
         

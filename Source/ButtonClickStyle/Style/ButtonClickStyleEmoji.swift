@@ -20,6 +20,8 @@ extension ButtonClick.Style {
     case .pulsate(_, let new):              return new ? "🆕"  :  ""
     case .shake(_, let new):                return new ? "🆕"  :  ""
     case .androidClickable(_, let color):   return color == nil ? ""  : ""
+    case .fave(_, _): return "🆕"
+       
     }
   }
   
@@ -34,6 +36,7 @@ extension ButtonClick.Style {
     case .pulsate(_, _):            return "💢"
     case .shake(_, _):              return "🔛"
     case .androidClickable(_, _):   return "🧿"
+    case .fave(_, _): return "✨"
     }
   }
   
@@ -48,6 +51,7 @@ extension ButtonClick.Style {
     case .pulsate(_, _):                 return "♻️"
     case .shake(_, _):                   return "♻️"
     case .androidClickable(_, _):        return ""
+    case .fave(_, _): return ""
     }
   }
   
@@ -63,6 +67,7 @@ extension ButtonClick.Style {
     case .pulsate(_, let new):           return new   ? ""  : ""
     case .shake(_, let new):             return new   ? ""  : ""
     case .androidClickable(_, let color):   return color == nil ? "⚫️"  : "🔵"
+    case .fave(_, _): return "🔵"
     }
   }
   

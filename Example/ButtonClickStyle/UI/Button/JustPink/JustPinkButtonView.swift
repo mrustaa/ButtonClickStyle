@@ -12,6 +12,7 @@ class JustPinkButtonView: BtnView {
   @IBOutlet var gradientView: DesignableView!
   @IBOutlet var titleLabel: UILabel!
   
+  
   // MARK: Initialize
  
   override func fill(state: ButtonClick.State?) {
@@ -22,6 +23,11 @@ class JustPinkButtonView: BtnView {
      let fr: CGRect = .init(x: 13 , y: 10, width: 176, height: 56)
      var views: [UIView]? = []
      
+     
+     if !state.addBackgrondColor {
+       backgroundColor = .clear
+     }
+     fillView.isHidden = !state.addBackgrondColor
      
      if state.new {
        let color: UIColor = #colorLiteral(red: 0.568627451, green: 0.2784313725, blue: 1, alpha: 1)
@@ -83,6 +89,9 @@ class JustPinkButtonView: BtnView {
               type == ButtonClick._Style.androidClickableDark.rawValue {
 //       views = nil
       views = [subMainView]
+     }
+     if type == ButtonClick._Style.fave.rawValue {
+       views = [mainDetailsView, gradientView]
      }
      
      mainDetailsView.setNeedsLayout()

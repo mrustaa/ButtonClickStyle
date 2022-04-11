@@ -7,6 +7,8 @@
 
 import UIKit
 
+private let btnTapGesture = 49
+
 extension UIButton {
 
   // MARK: Add View
@@ -36,14 +38,19 @@ extension UIButton {
       if views.count != 1 { return }
       guard let frontButton = views.last else { return }
       
+      
+      let tagAdded: Bool = frontButton.tag == btnTapGesture
+      
       var tapAdded: Bool = false
       gestureRecognizers?.forEach {
         if $0 is UITapGestureRecognizer {
           tapAdded = true
         }
       }
-      if !tapAdded {
+      if !(tapAdded && tagAdded) {
+        frontButton.tag = btnTapGesture
         let tap = ButtonClick.Style.GestureRecognizer { [weak self] sender in
+          
             guard let self = self else { return }
             
             let touchPoint = sender.location(in: frontButton)
@@ -178,11 +185,19 @@ extension UIButton {
     }
     
     switch style {
+    case .fave(let power, let color):
+      if event == .touchDown {
+        if views.count > 1 {
+          self.buttonClickStyleFave(mainView: views[1], secondView: views[0], color: color, value: power, duration: dur)
+        }
+      }
+      
     case .press(let power):
       
       if views.count > 0 {
         views[0].buttonClickStylePress(duration: dur, cornRadius: radius, value: power, shadow: false, visible: event != .touchDown)
       }
+      
 //      if views.count > 1 {
 //        views[1].press(duration: dur, cornRadius: radius, value: 0.5, shadow: true, visible: event != .touchDown)
 //      }

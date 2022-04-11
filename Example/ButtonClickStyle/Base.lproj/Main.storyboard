@@ -28,7 +28,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonClickStyle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonClickStyle_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,21 +52,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-He-sJB">
-                                <rect key="frame" x="105" y="224" width="204" height="30"/>
+                                <rect key="frame" x="98.5" y="224" width="217" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="ExampleAnimations Screen "/>
+                                <state key="normal" title="Click Style Anim. List  Screen "/>
                                 <connections>
                                     <action selector="exampleAnimationsScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTw-b2-Irj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXW-y9-Vhi">
-                                <rect key="frame" x="141" y="262" width="132" height="30"/>
+                                <rect key="frame" x="141" y="304" width="132" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="ButtonList Screen"/>
                                 <connections>
                                     <action selector="buttonListScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i30-fC-Jkb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18u-xo-eAM">
+                                <rect key="frame" x="131.5" y="264" width="151" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Buttons List  Screen "/>
+                                <connections>
+                                    <action selector="exampleButtonsScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blv-iq-0CV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,9 +86,11 @@
                             <constraint firstItem="mXW-y9-Vhi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6gz-Es-SwW"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="EwE-0I-jHL"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" constant="10" id="J5M-I6-KR6"/>
-                            <constraint firstItem="mXW-y9-Vhi" firstAttribute="top" secondItem="Bw3-He-sJB" secondAttribute="bottom" constant="8" symbolic="YES" id="NHz-z8-mid"/>
+                            <constraint firstItem="mXW-y9-Vhi" firstAttribute="top" secondItem="Bw3-He-sJB" secondAttribute="bottom" constant="50" id="NHz-z8-mid"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NQG-Ih-XNE"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="OBx-lA-c9u"/>
+                            <constraint firstItem="18u-xo-eAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UZ5-LE-85j"/>
+                            <constraint firstItem="18u-xo-eAM" firstAttribute="top" secondItem="Bw3-He-sJB" secondAttribute="bottom" constant="10" id="ekk-cC-Zdk"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="moj-pA-DX3"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" constant="10" id="yo9-iw-cSf"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="centerX" secondItem="U4i-jN-1m6" secondAttribute="centerX" id="zg8-Lb-G5U"/>

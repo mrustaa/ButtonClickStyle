@@ -9,9 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
   
+    lazy var doSomethingOnce: () -> Void = {
+      buttonListScreenButtonAction(.init())
+      return {}
+    }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+        _ = doSomethingOnce
     // Do any additional setup after loading the view.
+  }
+  
+  @IBAction func exampleButtonsScreenButtonAction(_ sender: UIButton) {
+    navigationController?.pushViewController(ExampleButtonsViewController.instantiate(), animated: true)
   }
   
   
