@@ -18,7 +18,8 @@ class ButtonListViewController: StoryboardController {
   var animationTypeLast: Int = 0
   var buttonTypeLast: Int = 0
   
-  
+  @IBOutlet var animationDurationLabel: UILabel!
+  @IBOutlet var animationDurationSlider: UISlider!
   
   @IBOutlet var colorClearButton: UIButton!
   var colorChanging: Bool = false
@@ -108,6 +109,8 @@ class ButtonListViewController: StoryboardController {
     colorPicker.delegate = self
     
     animationValueSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+    
+    animationDurationSlider.addTarget(self, action: #selector(onSliderDurationChanged(slider:event:)), for: .valueChanged)
     
     buttonTypePicker.delegate = self
     buttonTypePicker.dataSource = self
@@ -217,11 +220,15 @@ class ButtonListViewController: StoryboardController {
   }
   
   func getState() -> ButtonClick.State {
+    
+    let dur: CGFloat? = animationDurationSlider.value != 0.0 ? CGFloat(animationDurationSlider.value) : nil
+    
     return .init(
       titleText: buttonTypes[buttonTypeLast],
       allSubviews: true, // animationType == ButtonClick._Style.color.rawValue ? false : allSubviewsSwitch.isOn,
       animationType: animationTypeLast,
       animationTypeValue: getValue(),
+      animationDuration: dur,
       new: buttonTypeLast == 1,
       color: colorSelected,
       startClick: true,// createStartClick.isOn,
@@ -293,6 +300,7 @@ class ButtonListViewController: StoryboardController {
       }
     }
     
+    
     let v = String(format: "%.2f",slider.value)
     
 //    animationTypes = [
@@ -312,6 +320,21 @@ class ButtonListViewController: StoryboardController {
     
     animationTypePicker.reloadAllComponents()
   }
+  
+  
+  @objc func onSliderDurationChanged(slider: UISlider, event: UIEvent) {
+    if let touchEvent = event.allTouches?.first {
+      switch touchEvent.phase {
+      case .ended:
+        updateButtons()
+      default:
+        break
+      }
+    }
+    let v = String(format: "%.2f",slider.value)
+    animationDurationLabel.text = v
+  }
+  
   
 }
 

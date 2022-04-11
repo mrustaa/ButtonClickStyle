@@ -12,7 +12,7 @@ import UIKit
 extension UIView {
   
   public func buttonClickStyleFave(mainView: UIView, secondView: UIView, color: UIColor? = nil, value: CGFloat, duration: CGFloat) {
-    let maxSize = max(mainView.wwidth, mainView.hheight)
+    let maxSize = max(mainView.wwidth, mainView.hheight) * 0.85
     let _y = (mainView.hheight / 2) - (maxSize / 2)
     let _x = (mainView.wwidth  / 2) - (maxSize / 2)
     
@@ -31,16 +31,18 @@ extension UIView {
     
     secondView .addSubview(circle)
     
-    main(delay: 0.25) {
+    let durr = 0.35
+    
+//    main(delay: 0.25) {
       
       let borderWidthAnimation: CABasicAnimation = CABasicAnimation(keyPath: "borderWidth")
       borderWidthAnimation.fromValue = circle.layer.borderWidth
       borderWidthAnimation.toValue = 0
-      borderWidthAnimation.duration = 0.15
+    borderWidthAnimation.duration = durr // * 0.8
       circle.layer.add(borderWidthAnimation, forKey: "borderWidth")
       circle.layer.borderWidth = 0
       
-    }
+//    }
     
 //    let pulse = CASpringAnimation(keyPath: "transform.scale")
 //    pulse.duration = 0.45
@@ -58,10 +60,10 @@ extension UIView {
 //      circle.transform = .identity
 //    }
     
-    UIView.animate(withDuration: 0.45,
-                   delay: 0.0,
-                   usingSpringWithDamping: 0.8,
-                   initialSpringVelocity: 6,
+    UIView.animate(withDuration: durr ,
+                   delay: 0.00,
+                   usingSpringWithDamping: 2.8,
+                   initialSpringVelocity: 4,
                    options: [.curveEaseOut],
                    animations: {
       circle.transform = .identity
@@ -86,7 +88,7 @@ extension UIView {
 //    })
     
     UIView.animate(withDuration: 0.35, // 0.4,
-                   delay: 0.32,
+                   delay: 0.3,// 0.23,
                    usingSpringWithDamping: 0.38,
                    initialSpringVelocity: 10.0,
                    options: [.allowUserInteraction],

@@ -16,14 +16,16 @@ extension ButtonClick {
   public enum Style: CaseIterable {
     case alpha(           _ alpha: CGFloat = vDef) // 0.5                       // HIDE Alpha
     case flash(           _ alpha: CGFloat = vDef)                              // HIDE Flash More
-    case shadow(          _ alpha: CGFloat = vDef, color: UIColor? = nil) // 0.1845 add black shadow   // ADD  Shadow
+    case shadow(          _ alpha: CGFloat = vDef, color: UIColor? = nil)       // 0.1845 add black shadow   // ADD  Shadow
     case color(           _ alpha: CGFloat = vDef, color: UIColor = .red)       // ADD  Color
     case colorFlat(       _ alpha: CGFloat = vDef, color: UIColor? = nil)       // ADD  Color
     case press(           _ power: CGFloat = vDef)                              // MOVE Press
     case pulsate(         _ power: CGFloat = vDef, new:  Bool = false)          // MOVE Pulsate
     case shake(           _ power: CGFloat = vDef, new:  Bool = false)          // MOVE Shake
     case androidClickable(_ alpha: CGFloat = vDef, color: UIColor? = nil)       // ADD  Android Clickable
-    case fave(            _ power: CGFloat = vDef, color: UIColor? = nil)   // Fave
+    case fave(            _ power: CGFloat = vDef, color: UIColor? = nil)       //
+    case glare(           _ alpha: CGFloat = vDef, color: UIColor? = nil)       //
+    
     
     //MARK: All Cases, Indxs & Names
     
@@ -44,7 +46,8 @@ extension ButtonClick {
       .shake(new: true),
       .androidClickable(),
       .androidClickable(color: .random()),
-      .fave(vDef, color: .random())
+      .fave(vDef, color: .random()),
+      .glare(vDef, color: .random()),
     ]
     
     public func typeEasy() -> _Style {
@@ -77,6 +80,7 @@ extension ButtonClick {
       case .androidClickable(_, let color): return color == nil ? "AndroidClickable"
                                                         : "AndroidClickable Color"
       case .fave(_,_):                        return "Fave"
+      case .glare(_,_):                       return "Glare"
       }
     }
     
@@ -94,6 +98,7 @@ extension ButtonClick {
           .shake(_,_): return .move
       case .androidClickable(_,_): return .tapGesture
       case .fave(_,_): return .tapGesture
+      case .glare(_,_): return .loading
       }
     }
     
@@ -121,6 +126,7 @@ extension ButtonClick {
       case .androidClickable(_, let color):   return color == nil ? 11
                                                        : 12
       case .fave(_, _):                   return         13
+      case .glare(_, _):                   return        14
       }
     }
     
@@ -138,6 +144,7 @@ extension ButtonClick {
       case .colorFlat(_, _):         return 0.3              // .ms300
       case .androidClickable(_, _):  return 1.0              // .s1
       case .fave(_, _):              return 0.4
+      case .glare(_, _):             return 1.0
       }
     }
     
@@ -171,6 +178,7 @@ extension ButtonClick {
         case 11: return .androidClickable(v, color: nil)
         case 12: return .androidClickable(v, color: color ?? UIColor.random())
         case 13: return .fave(v, color: color ?? UIColor.random())
+        case 14: return .glare(v, color: color)
         default: return .alpha(v)
         }
       }()

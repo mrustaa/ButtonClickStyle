@@ -79,6 +79,7 @@
 		4A62F3A22803115C00534ABA /* ButtonLayerExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3572803115C00534ABA /* ButtonLayerExampleView.swift */; };
 		4A62F3A32803115C00534ABA /* ButtonLayerExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */; };
 		4A62F3B92803122700534ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3B82803122700534ABA /* SceneDelegate.swift */; };
+		4A85B5A32803D59800DFD435 /* UIView+AnimationGlare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5A22803D59800DFD435 /* UIView+AnimationGlare.swift */; };
 		4ADE26E42803837C00634B6C /* ExampleButtonsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */; };
 		4ADE26E52803837C00634B6C /* ExampleButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */; };
 		4ADE26E7280383DC00634B6C /* ButtonClickStyle+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */; };
@@ -165,6 +166,7 @@
 		4A62F3572803115C00534ABA /* ButtonLayerExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayerExampleView.swift; sourceTree = "<group>"; };
 		4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonLayerExampleView.xib; sourceTree = "<group>"; };
 		4A62F3B82803122700534ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4A85B5A22803D59800DFD435 /* UIView+AnimationGlare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationGlare.swift"; sourceTree = "<group>"; };
 		4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExampleButtonsViewController.storyboard; sourceTree = "<group>"; };
 		4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleButtonsViewController.swift; sourceTree = "<group>"; };
 		4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyle+Buttons.swift"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				4A14CBD02803437C00DA8A68 /* UIView+AnimationAlpha.swift */,
+				4A85B5A22803D59800DFD435 /* UIView+AnimationGlare.swift */,
 				4A14CBD12803437C00DA8A68 /* UIView+AnimationShadow.swift */,
 				4A14CBD22803437C00DA8A68 /* UIView+AnimationPulsate.swift */,
 				4A14CBD32803437C00DA8A68 /* UIView+AnimationAndroidPulse.swift */,
@@ -753,6 +756,7 @@
 				4A62F3A12803115C00534ABA /* ExampleAnimationsViewController.swift in Sources */,
 				4A62F38A2803115C00534ABA /* GradientBlueBasicButtonView.swift in Sources */,
 				4A62F3732803115C00534ABA /* DesignableView.swift in Sources */,
+				4A85B5A32803D59800DFD435 /* UIView+AnimationGlare.swift in Sources */,
 				4A62F3A22803115C00534ABA /* ButtonLayerExampleView.swift in Sources */,
 				4A62F3762803115C00534ABA /* XibView.swift in Sources */,
 				4ADE26E52803837C00634B6C /* ExampleButtonsViewController.swift in Sources */,

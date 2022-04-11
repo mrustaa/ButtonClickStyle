@@ -208,6 +208,18 @@ extension UIButton {
     
     views.forEach {
       switch style {
+        
+      case .glare(let alpha, let color):
+        if event == .touchDown {
+          
+          let v1 = $0
+          main(delay: 10) {
+            v1.buttonClickStyleGlareStop()
+          }
+          
+          $0.buttonClickStyleGlare(alpha: alpha, color: color, duration: dur)
+        }
+        
       case .flash(let value):
         $0.buttonClickStyleFlash(value: value, duration: dur)
         

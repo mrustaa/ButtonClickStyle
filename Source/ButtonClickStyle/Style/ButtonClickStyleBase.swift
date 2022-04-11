@@ -15,6 +15,7 @@ extension ButtonClick {
     case add = "Add"
     case addHide = "Add & Hide"
     case tapGesture = "TapGesture.Pulse"
+    case loading = "Loading"
     case none = "❌"
   }
 }
