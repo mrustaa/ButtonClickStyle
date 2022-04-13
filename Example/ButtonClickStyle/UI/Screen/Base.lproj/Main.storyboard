@@ -55,17 +55,8 @@
                                     <action selector="buttonTableListScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xeA-Go-FXd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-rs-wzT">
-                                <rect key="frame" x="132.66666666666666" y="476.66666666666669" width="110" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Test 1 Screen iPad"/>
-                                <connections>
-                                    <action selector="testScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVi-i8-Lfc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4i-jN-1m6">
-                                <rect key="frame" x="119.66666666666669" y="503.66666666666674" width="136" height="27"/>
+                                <rect key="frame" x="119.66666666666669" y="476.66666666666669" width="136" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="TestDemo Screen iPad"/>
@@ -74,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-He-sJB">
-                                <rect key="frame" x="84.666666666666686" y="530.66666666666663" width="206" height="27"/>
+                                <rect key="frame" x="84.666666666666686" y="503.66666666666674" width="206" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Click Style Anim. List  Screen iPad"/>
@@ -83,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18u-xo-eAM">
-                                <rect key="frame" x="113.66666666666669" y="557.66666666666663" width="148" height="27"/>
+                                <rect key="frame" x="113.66666666666669" y="530.66666666666663" width="148" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Buttons List Screen iPad"/>
@@ -99,19 +90,28 @@
                                     <constraint firstAttribute="height" constant="223" id="xEq-iK-dxt"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-rs-wzT">
+                                <rect key="frame" x="132.66666666666666" y="567.66666666666663" width="110" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Test 1 Screen iPad"/>
+                                <connections>
+                                    <action selector="testScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVi-i8-Lfc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kUF-dc-MTn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="05k-aE-9T4"/>
                             <constraint firstItem="ZeK-fQ-uaF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1iv-aD-McI"/>
-                            <constraint firstItem="U4i-jN-1m6" firstAttribute="top" secondItem="qXM-rs-wzT" secondAttribute="bottom" id="5AC-Zi-Xmv"/>
                             <constraint firstItem="mXW-y9-Vhi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6gz-Es-SwW"/>
+                            <constraint firstItem="U4i-jN-1m6" firstAttribute="top" secondItem="kUF-dc-MTn" secondAttribute="bottom" constant="30" id="8Ci-be-y2u"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" id="J5M-I6-KR6"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NQG-Ih-XNE"/>
-                            <constraint firstItem="qXM-rs-wzT" firstAttribute="top" secondItem="kUF-dc-MTn" secondAttribute="bottom" constant="30" id="Q8v-MA-B0a"/>
                             <constraint firstItem="ZeK-fQ-uaF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SUP-3g-kgF"/>
                             <constraint firstItem="18u-xo-eAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UZ5-LE-85j"/>
+                            <constraint firstItem="qXM-rs-wzT" firstAttribute="top" secondItem="18u-xo-eAM" secondAttribute="bottom" constant="10" id="ad1-TS-n92"/>
                             <constraint firstItem="18u-xo-eAM" firstAttribute="top" secondItem="Bw3-He-sJB" secondAttribute="bottom" id="ekk-cC-Zdk"/>
                             <constraint firstItem="mXW-y9-Vhi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hlk-e8-D8c"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="moj-pA-DX3"/>

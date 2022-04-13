@@ -27,7 +27,6 @@ class JustPinkButtonView: BtnView {
      if !state.addBackgrondColor {
        backgroundColor = .clear
      }
-     fillView.isHidden = !state.addBackgrondColor
      
      if state.new {
        let color: UIColor = #colorLiteral(red: 0.568627451, green: 0.2784313725, blue: 1, alpha: 1)
@@ -96,6 +95,8 @@ class JustPinkButtonView: BtnView {
      
      mainDetailsView.setNeedsLayout()
      mainShadowView.setNeedsLayout()
+     
+     fillView.isHidden = !state.addBackgrondColor
      
      let viewAn = ButtonClickStyleView(
       state: state,

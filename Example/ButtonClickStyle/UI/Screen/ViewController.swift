@@ -35,7 +35,7 @@ class ViewController: UIViewController {
   
   //MARK: - Create ButtonLayerExample
   
-  func createButtonLayerExampleView(enable: Bool = true, defaultIndex: Int = ButtonClick._Style.fave.rawValue) {
+  func createButtonLayerExampleView(enable: Bool = true, defaultIndex: Int = 0) {
     
     if !enable {
       self.removeButtonLayerExampleView()

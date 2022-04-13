@@ -208,22 +208,8 @@ class ButtonListViewController: StoryboardController {
         break
       }
     }
-    
-    
+  
     let v = String(format: "%.2f",slider.value)
-    
-//    animationTypes = [
-//      ".hide(alpha \(v))",
-//      ".shadow(alpha \(v))", // ".layerGray(0.28)",
-//      ".pulsate(force \(v))",
-//      ".pulsate(force \(v), new)",
-//      ".shake(force \(v))",
-//      ".shake(force \(v), new)",
-//      ".flash(alpha: \(v))",
-//      ".color(alpha: \(v))",
-//      ".androidClickable(ligth)",
-//      ".androidClickable(dark)",
-//    ]
     
     animationValueLabel.text = v
     
