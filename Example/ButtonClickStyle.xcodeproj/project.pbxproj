@@ -28,6 +28,8 @@
 		4A14CBEC2803437C00DA8A68 /* UIView+AnimationFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBD82803437C00DA8A68 /* UIView+AnimationFlash.swift */; };
 		4A14CBED2803437C00DA8A68 /* UIView+AnimationPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBD92803437C00DA8A68 /* UIView+AnimationPress.swift */; };
 		4A14CBEE2803437C00DA8A68 /* ButtonClickStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */; };
+		4A4545C52806C7570041D039 /* ButtonTableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4545C32806C7570041D039 /* ButtonTableListViewController.swift */; };
+		4A4545C62806C7570041D039 /* ButtonTableListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4545C42806C7570041D039 /* ButtonTableListViewController.storyboard */; };
 		4A62F3722803115C00534ABA /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F30D2803115C00534ABA /* DesignableLabel.swift */; };
 		4A62F3732803115C00534ABA /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F30E2803115C00534ABA /* DesignableView.swift */; };
 		4A62F3742803115C00534ABA /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F30F2803115C00534ABA /* DispatchQueue.swift */; };
@@ -80,6 +82,32 @@
 		4A62F3A32803115C00534ABA /* ButtonLayerExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */; };
 		4A62F3B92803122700534ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F3B82803122700534ABA /* SceneDelegate.swift */; };
 		4A85B5A32803D59800DFD435 /* UIView+AnimationGlare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5A22803D59800DFD435 /* UIView+AnimationGlare.swift */; };
+		4A85B5A82803EBA400DFD435 /* ButtonListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5A62803EBA400DFD435 /* ButtonListCell.swift */; };
+		4A85B5A92803EBA400DFD435 /* ButtonListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A85B5A72803EBA400DFD435 /* ButtonListCell.xib */; };
+		4A85B5CF2803EBFE00DFD435 /* TextAdapterField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5AB2803EBFD00DFD435 /* TextAdapterField.swift */; };
+		4A85B5D02803EBFE00DFD435 /* TableAdapterView+AddGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5AD2803EBFD00DFD435 /* TableAdapterView+AddGradient.swift */; };
+		4A85B5D12803EBFE00DFD435 /* TableAdapterView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5AE2803EBFD00DFD435 /* TableAdapterView+Delegate.swift */; };
+		4A85B5D22803EBFE00DFD435 /* TableAdapterView+CallbackTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5AF2803EBFD00DFD435 /* TableAdapterView+CallbackTypes.swift */; };
+		4A85B5D32803EBFE00DFD435 /* TableAdapterView+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5B02803EBFD00DFD435 /* TableAdapterView+Set.swift */; };
+		4A85B5D42803EBFE00DFD435 /* TableAdapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5B12803EBFD00DFD435 /* TableAdapterView.swift */; };
+		4A85B5D52803EBFE00DFD435 /* TableAdapterView+UpdateRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5B22803EBFD00DFD435 /* TableAdapterView+UpdateRows.swift */; };
+		4A85B5D62803EBFE00DFD435 /* TableAdapterCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5B42803EBFD00DFD435 /* TableAdapterCellData.swift */; };
+		4A85B5D72803EBFE00DFD435 /* TableAdapterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5B52803EBFD00DFD435 /* TableAdapterItem.swift */; };
+		4A85B5D82803EBFE00DFD435 /* TableAdapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5B62803EBFD00DFD435 /* TableAdapterCell.swift */; };
+		4A85B5D92803EBFE00DFD435 /* TitleTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A85B5B82803EBFD00DFD435 /* TitleTextCell.xib */; };
+		4A85B5DA2803EBFE00DFD435 /* TitleTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5B92803EBFD00DFD435 /* TitleTextCell.swift */; };
+		4A85B5DB2803EBFE00DFD435 /* MainCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5BB2803EBFD00DFD435 /* MainCollectionCell.swift */; };
+		4A85B5DC2803EBFE00DFD435 /* MainCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A85B5BC2803EBFD00DFD435 /* MainCollectionCell.xib */; };
+		4A85B5DD2803EBFE00DFD435 /* TableAdapterView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5BD2803EBFD00DFD435 /* TableAdapterView+DataSource.swift */; };
+		4A85B5DE2803EBFE00DFD435 /* TableAdapterView+ScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5BE2803EBFD00DFD435 /* TableAdapterView+ScrollDelegate.swift */; };
+		4A85B5DF2803EBFE00DFD435 /* TableAdapterView+AddRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5BF2803EBFD00DFD435 /* TableAdapterView+AddRefresh.swift */; };
+		4A85B5E22803EBFE00DFD435 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5C72803EBFD00DFD435 /* UICollectionViewLeftAlignedLayout.swift */; };
+		4A85B5E32803EBFE00DFD435 /* UICollectionViewCenteredFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5C82803EBFE00DFD435 /* UICollectionViewCenteredFlowLayout.swift */; };
+		4A85B5E42803EBFE00DFD435 /* CollectionAdapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5C92803EBFE00DFD435 /* CollectionAdapterView.swift */; };
+		4A85B5E52803EBFE00DFD435 /* CollectionAdapterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5CB2803EBFE00DFD435 /* CollectionAdapterItem.swift */; };
+		4A85B5E62803EBFE00DFD435 /* CollectionAdapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5CC2803EBFE00DFD435 /* CollectionAdapterCell.swift */; };
+		4A85B5E72803EBFE00DFD435 /* CollectionAdapterCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5CD2803EBFE00DFD435 /* CollectionAdapterCellData.swift */; };
+		4A85B5E82803EBFE00DFD435 /* CollectionAdapterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B5CE2803EBFE00DFD435 /* CollectionAdapterTypes.swift */; };
 		4ADE26E42803837C00634B6C /* ExampleButtonsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */; };
 		4ADE26E52803837C00634B6C /* ExampleButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */; };
 		4ADE26E7280383DC00634B6C /* ButtonClickStyle+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */; };
@@ -115,6 +143,8 @@
 		4A14CBD82803437C00DA8A68 /* UIView+AnimationFlash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationFlash.swift"; sourceTree = "<group>"; };
 		4A14CBD92803437C00DA8A68 /* UIView+AnimationPress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationPress.swift"; sourceTree = "<group>"; };
 		4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleView.swift; sourceTree = "<group>"; };
+		4A4545C32806C7570041D039 /* ButtonTableListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableListViewController.swift; sourceTree = "<group>"; };
+		4A4545C42806C7570041D039 /* ButtonTableListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ButtonTableListViewController.storyboard; sourceTree = "<group>"; };
 		4A62F30D2803115C00534ABA /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
 		4A62F30E2803115C00534ABA /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		4A62F30F2803115C00534ABA /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
@@ -167,6 +197,32 @@
 		4A62F3582803115C00534ABA /* ButtonLayerExampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonLayerExampleView.xib; sourceTree = "<group>"; };
 		4A62F3B82803122700534ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A85B5A22803D59800DFD435 /* UIView+AnimationGlare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationGlare.swift"; sourceTree = "<group>"; };
+		4A85B5A62803EBA400DFD435 /* ButtonListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonListCell.swift; sourceTree = "<group>"; };
+		4A85B5A72803EBA400DFD435 /* ButtonListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonListCell.xib; sourceTree = "<group>"; };
+		4A85B5AB2803EBFD00DFD435 /* TextAdapterField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAdapterField.swift; sourceTree = "<group>"; };
+		4A85B5AD2803EBFD00DFD435 /* TableAdapterView+AddGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+AddGradient.swift"; sourceTree = "<group>"; };
+		4A85B5AE2803EBFD00DFD435 /* TableAdapterView+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+Delegate.swift"; sourceTree = "<group>"; };
+		4A85B5AF2803EBFD00DFD435 /* TableAdapterView+CallbackTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+CallbackTypes.swift"; sourceTree = "<group>"; };
+		4A85B5B02803EBFD00DFD435 /* TableAdapterView+Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+Set.swift"; sourceTree = "<group>"; };
+		4A85B5B12803EBFD00DFD435 /* TableAdapterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapterView.swift; sourceTree = "<group>"; };
+		4A85B5B22803EBFD00DFD435 /* TableAdapterView+UpdateRows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+UpdateRows.swift"; sourceTree = "<group>"; };
+		4A85B5B42803EBFD00DFD435 /* TableAdapterCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapterCellData.swift; sourceTree = "<group>"; };
+		4A85B5B52803EBFD00DFD435 /* TableAdapterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapterItem.swift; sourceTree = "<group>"; };
+		4A85B5B62803EBFD00DFD435 /* TableAdapterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapterCell.swift; sourceTree = "<group>"; };
+		4A85B5B82803EBFD00DFD435 /* TitleTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleTextCell.xib; sourceTree = "<group>"; };
+		4A85B5B92803EBFD00DFD435 /* TitleTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextCell.swift; sourceTree = "<group>"; };
+		4A85B5BB2803EBFD00DFD435 /* MainCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionCell.swift; sourceTree = "<group>"; };
+		4A85B5BC2803EBFD00DFD435 /* MainCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionCell.xib; sourceTree = "<group>"; };
+		4A85B5BD2803EBFD00DFD435 /* TableAdapterView+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+DataSource.swift"; sourceTree = "<group>"; };
+		4A85B5BE2803EBFD00DFD435 /* TableAdapterView+ScrollDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+ScrollDelegate.swift"; sourceTree = "<group>"; };
+		4A85B5BF2803EBFD00DFD435 /* TableAdapterView+AddRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+AddRefresh.swift"; sourceTree = "<group>"; };
+		4A85B5C72803EBFD00DFD435 /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
+		4A85B5C82803EBFE00DFD435 /* UICollectionViewCenteredFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCenteredFlowLayout.swift; sourceTree = "<group>"; };
+		4A85B5C92803EBFE00DFD435 /* CollectionAdapterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAdapterView.swift; sourceTree = "<group>"; };
+		4A85B5CB2803EBFE00DFD435 /* CollectionAdapterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAdapterItem.swift; sourceTree = "<group>"; };
+		4A85B5CC2803EBFE00DFD435 /* CollectionAdapterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAdapterCell.swift; sourceTree = "<group>"; };
+		4A85B5CD2803EBFE00DFD435 /* CollectionAdapterCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAdapterCellData.swift; sourceTree = "<group>"; };
+		4A85B5CE2803EBFE00DFD435 /* CollectionAdapterTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAdapterTypes.swift; sourceTree = "<group>"; };
 		4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExampleButtonsViewController.storyboard; sourceTree = "<group>"; };
 		4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleButtonsViewController.swift; sourceTree = "<group>"; };
 		4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyle+Buttons.swift"; sourceTree = "<group>"; };
@@ -250,6 +306,15 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		4A4545C22806C7570041D039 /* ButtonTableList */ = {
+			isa = PBXGroup;
+			children = (
+				4A4545C32806C7570041D039 /* ButtonTableListViewController.swift */,
+				4A4545C42806C7570041D039 /* ButtonTableListViewController.storyboard */,
+			);
+			path = ButtonTableList;
+			sourceTree = "<group>";
+		};
 		4A62F30B2803115C00534ABA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +361,7 @@
 				4A62F3192803115C00534ABA /* Button */,
 				4A62F3482803115C00534ABA /* Screen */,
 				4A62F3552803115C00534ABA /* View */,
+				4A85B5A42803EBA400DFD435 /* Cell */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -303,6 +369,8 @@
 		4A62F3192803115C00534ABA /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */,
+				4A62F3472803115C00534ABA /* BtnView.swift */,
 				4A62F31A2803115C00534ABA /* Firefox */,
 				4A62F31D2803115C00534ABA /* BuyNow */,
 				4A62F3202803115C00534ABA /* Blue */,
@@ -318,8 +386,6 @@
 				4A62F33E2803115C00534ABA /* BorderGreenDark */,
 				4A62F3412803115C00534ABA /* Neomorphism */,
 				4A62F3442803115C00534ABA /* TestDemoGradient */,
-				4A62F3472803115C00534ABA /* BtnView.swift */,
-				4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -462,10 +528,13 @@
 		4A62F3482803115C00534ABA /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				4A62F34C2803115C00534ABA /* Test */,
 				4A62F34F2803115C00534ABA /* TestDemo */,
 				4ADE26E12803837C00634B6C /* ExampleButtons */,
 				4A62F3522803115C00534ABA /* ExampleClickStyleAnimations */,
+				4A4545C22806C7570041D039 /* ButtonTableList */,
 				4A62F3492803115C00534ABA /* ButtonList */,
 			);
 			path = Screen;
@@ -524,6 +593,110 @@
 			path = ButtonLayerExample;
 			sourceTree = "<group>";
 		};
+		4A85B5A42803EBA400DFD435 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5A52803EBA400DFD435 /* ButtonListCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4A85B5A52803EBA400DFD435 /* ButtonListCell */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5A62803EBA400DFD435 /* ButtonListCell.swift */,
+				4A85B5A72803EBA400DFD435 /* ButtonListCell.xib */,
+			);
+			path = ButtonListCell;
+			sourceTree = "<group>";
+		};
+		4A85B5AA2803EBFD00DFD435 /* AdapterView */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5AB2803EBFD00DFD435 /* TextAdapterField.swift */,
+				4A85B5AC2803EBFD00DFD435 /* TableAdapterView */,
+				4A85B5C02803EBFD00DFD435 /* CollectionAdapterView */,
+			);
+			path = AdapterView;
+			sourceTree = "<group>";
+		};
+		4A85B5AC2803EBFD00DFD435 /* TableAdapterView */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5AD2803EBFD00DFD435 /* TableAdapterView+AddGradient.swift */,
+				4A85B5AE2803EBFD00DFD435 /* TableAdapterView+Delegate.swift */,
+				4A85B5AF2803EBFD00DFD435 /* TableAdapterView+CallbackTypes.swift */,
+				4A85B5B02803EBFD00DFD435 /* TableAdapterView+Set.swift */,
+				4A85B5B12803EBFD00DFD435 /* TableAdapterView.swift */,
+				4A85B5B22803EBFD00DFD435 /* TableAdapterView+UpdateRows.swift */,
+				4A85B5B32803EBFD00DFD435 /* Cell */,
+				4A85B5BD2803EBFD00DFD435 /* TableAdapterView+DataSource.swift */,
+				4A85B5BE2803EBFD00DFD435 /* TableAdapterView+ScrollDelegate.swift */,
+				4A85B5BF2803EBFD00DFD435 /* TableAdapterView+AddRefresh.swift */,
+			);
+			path = TableAdapterView;
+			sourceTree = "<group>";
+		};
+		4A85B5B32803EBFD00DFD435 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5B42803EBFD00DFD435 /* TableAdapterCellData.swift */,
+				4A85B5B52803EBFD00DFD435 /* TableAdapterItem.swift */,
+				4A85B5B62803EBFD00DFD435 /* TableAdapterCell.swift */,
+				4A85B5B72803EBFD00DFD435 /* TitleTextCell */,
+				4A85B5BA2803EBFD00DFD435 /* СustomizableCollectionView */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4A85B5B72803EBFD00DFD435 /* TitleTextCell */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5B82803EBFD00DFD435 /* TitleTextCell.xib */,
+				4A85B5B92803EBFD00DFD435 /* TitleTextCell.swift */,
+			);
+			path = TitleTextCell;
+			sourceTree = "<group>";
+		};
+		4A85B5BA2803EBFD00DFD435 /* СustomizableCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5BB2803EBFD00DFD435 /* MainCollectionCell.swift */,
+				4A85B5BC2803EBFD00DFD435 /* MainCollectionCell.xib */,
+			);
+			path = "СustomizableCollectionView";
+			sourceTree = "<group>";
+		};
+		4A85B5C02803EBFD00DFD435 /* CollectionAdapterView */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5C62803EBFD00DFD435 /* Layout */,
+				4A85B5C92803EBFE00DFD435 /* CollectionAdapterView.swift */,
+				4A85B5CA2803EBFE00DFD435 /* Cell */,
+				4A85B5CE2803EBFE00DFD435 /* CollectionAdapterTypes.swift */,
+			);
+			path = CollectionAdapterView;
+			sourceTree = "<group>";
+		};
+		4A85B5C62803EBFD00DFD435 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5C72803EBFD00DFD435 /* UICollectionViewLeftAlignedLayout.swift */,
+				4A85B5C82803EBFE00DFD435 /* UICollectionViewCenteredFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		4A85B5CA2803EBFE00DFD435 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A85B5CB2803EBFE00DFD435 /* CollectionAdapterItem.swift */,
+				4A85B5CC2803EBFE00DFD435 /* CollectionAdapterCell.swift */,
+				4A85B5CD2803EBFE00DFD435 /* CollectionAdapterCellData.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4ADE26E12803837C00634B6C /* ExampleButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,11 +729,10 @@
 		607FACD21AFB9204008FA782 /* ButtonClickStyle */ = {
 			isa = PBXGroup;
 			children = (
+				4A85B5AA2803EBFD00DFD435 /* AdapterView */,
 				4A62F3182803115C00534ABA /* UI */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				4A62F3B82803122700534ABA /* SceneDelegate.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -691,10 +863,14 @@
 				4A62F3922803115C00534ABA /* DownloadButtonView.xib in Resources */,
 				4A62F3962803115C00534ABA /* NeomorphismButtonView.xib in Resources */,
 				4A62F3852803115C00534ABA /* GoogleButtonView.xib in Resources */,
+				4A85B5DC2803EBFE00DFD435 /* MainCollectionCell.xib in Resources */,
 				4A62F3832803115C00534ABA /* TestDemoBlurButtonView.xib in Resources */,
 				4ADE26E42803837C00634B6C /* ExampleButtonsViewController.storyboard in Resources */,
 				4A62F37D2803115C00534ABA /* BuyNowButtonView.xib in Resources */,
+				4A85B5D92803EBFE00DFD435 /* TitleTextCell.xib in Resources */,
 				4A62F39A2803115C00534ABA /* ButtonListViewController.storyboard in Resources */,
+				4A4545C62806C7570041D039 /* ButtonTableListViewController.storyboard in Resources */,
+				4A85B5A92803EBA400DFD435 /* ButtonListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,8 +930,11 @@
 				4A62F3912803115C00534ABA /* DownloadButtonView.swift in Sources */,
 				4A62F3862803115C00534ABA /* GoogleButtonView.swift in Sources */,
 				4A62F3A12803115C00534ABA /* ExampleAnimationsViewController.swift in Sources */,
+				4A85B5D12803EBFE00DFD435 /* TableAdapterView+Delegate.swift in Sources */,
 				4A62F38A2803115C00534ABA /* GradientBlueBasicButtonView.swift in Sources */,
+				4A85B5D62803EBFE00DFD435 /* TableAdapterCellData.swift in Sources */,
 				4A62F3732803115C00534ABA /* DesignableView.swift in Sources */,
+				4A85B5D82803EBFE00DFD435 /* TableAdapterCell.swift in Sources */,
 				4A85B5A32803D59800DFD435 /* UIView+AnimationGlare.swift in Sources */,
 				4A62F3A22803115C00534ABA /* ButtonLayerExampleView.swift in Sources */,
 				4A62F3762803115C00534ABA /* XibView.swift in Sources */,
@@ -763,6 +942,8 @@
 				4A62F3822803115C00534ABA /* DeleteButtonView.swift in Sources */,
 				4A14CBEA2803437C00DA8A68 /* UIView+AnimationColorFlat.swift in Sources */,
 				4A14CBEC2803437C00DA8A68 /* UIView+AnimationFlash.swift in Sources */,
+				4A85B5E52803EBFE00DFD435 /* CollectionAdapterItem.swift in Sources */,
+				4A4545C52806C7570041D039 /* ButtonTableListViewController.swift in Sources */,
 				4A14CBE42803437C00DA8A68 /* UIView+AnimationAlpha.swift in Sources */,
 				4A62F37E2803115C00534ABA /* BuyNowButtonView.swift in Sources */,
 				4A14CBE02803437C00DA8A68 /* ButtonClickState.swift in Sources */,
@@ -771,18 +952,31 @@
 				4ADE26E7280383DC00634B6C /* ButtonClickStyle+Buttons.swift in Sources */,
 				4A14CBDE2803437C00DA8A68 /* ButtonClickStyleEmoji.swift in Sources */,
 				4A62F3992803115C00534ABA /* BtnView.swift in Sources */,
+				4A85B5E32803EBFE00DFD435 /* UICollectionViewCenteredFlowLayout.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				4A85B5DF2803EBFE00DFD435 /* TableAdapterView+AddRefresh.swift in Sources */,
+				4A85B5A82803EBA400DFD435 /* ButtonListCell.swift in Sources */,
+				4A85B5E72803EBFE00DFD435 /* CollectionAdapterCellData.swift in Sources */,
+				4A85B5D02803EBFE00DFD435 /* TableAdapterView+AddGradient.swift in Sources */,
 				4A62F3752803115C00534ABA /* StoryboardController.swift in Sources */,
 				4A62F3722803115C00534ABA /* DesignableLabel.swift in Sources */,
 				4A14CBDD2803437C00DA8A68 /* ButtonClickStyleBase.swift in Sources */,
 				4A62F38F2803115C00534ABA /* JustPinkButtonView.swift in Sources */,
+				4A85B5D52803EBFE00DFD435 /* TableAdapterView+UpdateRows.swift in Sources */,
 				4A62F3942803115C00534ABA /* BorderGreenDarkButtonView.swift in Sources */,
+				4A85B5D32803EBFE00DFD435 /* TableAdapterView+Set.swift in Sources */,
 				4A14CBE82803437C00DA8A68 /* UIView+AnimationColor.swift in Sources */,
 				4A14CBE52803437C00DA8A68 /* UIView+AnimationShadow.swift in Sources */,
 				4A14CBE32803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift in Sources */,
+				4A85B5DB2803EBFE00DFD435 /* MainCollectionCell.swift in Sources */,
 				4A62F38E2803115C00534ABA /* SubscribeButtonView.swift in Sources */,
+				4A85B5D22803EBFE00DFD435 /* TableAdapterView+CallbackTypes.swift in Sources */,
+				4A85B5DD2803EBFE00DFD435 /* TableAdapterView+DataSource.swift in Sources */,
 				4A14CBDC2803437C00DA8A68 /* ButtonClickStyle.swift in Sources */,
+				4A85B5D72803EBFE00DFD435 /* TableAdapterItem.swift in Sources */,
+				4A85B5CF2803EBFE00DFD435 /* TextAdapterField.swift in Sources */,
 				4A14CBEB2803437C00DA8A68 /* UIView+AnimationSnake.swift in Sources */,
+				4A85B5E42803EBFE00DFD435 /* CollectionAdapterView.swift in Sources */,
 				4A14CBE92803437C00DA8A68 /* UIView+AnimationPulse.swift in Sources */,
 				4A62F39C2803115C00534ABA /* TestViewController.swift in Sources */,
 				4A62F38C2803115C00534ABA /* SearchButtonView.swift in Sources */,
@@ -790,16 +984,22 @@
 				4A62F3882803115C00534ABA /* TestDemoSquaresButtonView.swift in Sources */,
 				4A14CBE22803437C00DA8A68 /* ButtonClicClosure.swift in Sources */,
 				4A62F3792803115C00534ABA /* ScreenDevice.swift in Sources */,
+				4A85B5E62803EBFE00DFD435 /* CollectionAdapterCell.swift in Sources */,
 				4A62F3B92803122700534ABA /* SceneDelegate.swift in Sources */,
+				4A85B5DA2803EBFE00DFD435 /* TitleTextCell.swift in Sources */,
 				4A62F3982803115C00534ABA /* TestDemoGradientButtonView.swift in Sources */,
 				4A14CBDF2803437C00DA8A68 /* ButtonClickStyleGestureRecognizer.swift in Sources */,
 				4A14CBE72803437C00DA8A68 /* UIView+AnimationAndroidPulse.swift in Sources */,
+				4A85B5DE2803EBFE00DFD435 /* TableAdapterView+ScrollDelegate.swift in Sources */,
 				4A14CBDB2803437C00DA8A68 /* ButtonClickStyleShort.swift in Sources */,
+				4A85B5D42803EBFE00DFD435 /* TableAdapterView.swift in Sources */,
 				4A62F3742803115C00534ABA /* DispatchQueue.swift in Sources */,
 				4A14CBE12803437C00DA8A68 /* ButtonClick.swift in Sources */,
 				4A62F39F2803115C00534ABA /* TestDemoViewController.swift in Sources */,
 				4A62F3802803115C00534ABA /* BlueButtonView.swift in Sources */,
+				4A85B5E22803EBFE00DFD435 /* UICollectionViewLeftAlignedLayout.swift in Sources */,
 				4A62F3842803115C00534ABA /* TestDemoBlurButtonView.swift in Sources */,
+				4A85B5E82803EBFE00DFD435 /* CollectionAdapterTypes.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				4A62F3952803115C00534ABA /* NeomorphismButtonView.swift in Sources */,
 			);

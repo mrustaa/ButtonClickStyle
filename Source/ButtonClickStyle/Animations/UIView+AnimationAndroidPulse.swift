@@ -24,7 +24,6 @@ extension UIView {
     }
     
     let to = 0 + (radius * 400) // 200
-//    print(" 💙💜 androidPulse \(to) ")
     
     let pulse = ButtonClickStylePulseAnimation(numberOfPulse: 1, radius: to, postion: position)
     pulse.animationDuration = duration

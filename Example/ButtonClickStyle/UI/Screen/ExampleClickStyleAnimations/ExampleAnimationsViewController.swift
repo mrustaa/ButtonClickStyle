@@ -102,14 +102,6 @@ class ExampleAnimationsViewController: StoryboardController {
       height: size.height
     )
     
-//    aaa = aaa + 1
-//    if aaa == 1 {
-//      aaa = 0
-//      bbb = bbb + 1
-//    }
-    
-    print(" \(buttonType) 🐸🐸 \(aaa) 🐥 \(bbb) ")
-    
     return framee
   }
   

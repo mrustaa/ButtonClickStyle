@@ -118,8 +118,6 @@ class TestDemoViewController: StoryboardController {
       bbb = bbb + 1
     }
     
-    print(" \(buttonTypeLast) 🐸🐸 \(aaa) 🐥 \(bbb) ")
-    
     return framee
   }
   

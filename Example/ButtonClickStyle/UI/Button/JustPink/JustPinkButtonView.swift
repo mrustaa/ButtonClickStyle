@@ -74,15 +74,15 @@ class JustPinkButtonView: BtnView {
      mainDetailsView.layoutSubviews()
      
      
-     if type == ButtonClick.Style.color(0.5, color: .red).indx()  {
+     if type == ButtonClick._Style.color.rawValue {
 //        type == ButtonClick.Style.androidClickable(0.5, dark: true).indx() ||
 //        type == ButtonClick.Style.androidClickable(0.5, dark: false).indx() {
        views = [subMainView]
      }
-     if type == ButtonClick.Style.press(0.5).indx() {
+     if type == ButtonClick._Style.press.rawValue {
        views = [subMainView, mainShadowView]
      }
-     if type == ButtonClick.Style.colorFlat(0.5, color: .red).indx() {
+     if type == ButtonClick._Style.colorFlat.rawValue {
        views = [subMainView, titleLabel]// [mainDetailsView]
      }
     if type == ButtonClick._Style.androidClickable.rawValue ||

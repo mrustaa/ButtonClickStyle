@@ -15,13 +15,18 @@ var endAnimationCallback: (() -> ())?
   @IBOutlet var presentView: UIView!
   @IBOutlet var shadowView: DesignableView!
   @IBOutlet var elipseView: DesignableView!
+  @IBOutlet var gerenalView: UIView!
   @IBOutlet var mainView: DesignableView!
+  @IBOutlet var fullView: UIView!
+  @IBOutlet var detailsView: DesignableView!
+  @IBOutlet var gradientView: DesignableView!
   @IBOutlet var titleLabel: DesignableLabel!
   @IBOutlet var iconView: DesignableView!
   
   @IBOutlet var _groupView: UIView!
   @IBOutlet var _shadowView: DesignableView!
   @IBOutlet var _mainView: UIView!
+  @IBOutlet var _gradientView: DesignableView!
   @IBOutlet var _elipseView: DesignableView!
   @IBOutlet var _titleLabel: DesignableLabel!
   @IBOutlet var _iconView: DesignableView!
@@ -30,6 +35,8 @@ var endAnimationCallback: (() -> ())?
   @IBOutlet var typeLabel: UILabel!
   @IBOutlet var buttonAnimView: ButtonClickStyleView!
     
+  var oneView: Bool = false
+  
   static var exmpStart: Bool = true
   var animationDuration = 0.45
   var animationClickDuration: CGFloat?
@@ -83,22 +90,42 @@ var endAnimationCallback: (() -> ())?
 
     guard let type = animationType else { return }
     
+//    buttonAnimView.
+    
     buttonAnimView.animType = type
-//    buttonAnimView.allSubviews
-//    if type == ButtonClick.Style.color(0.5, color: .red).indx() {
-//      buttonAnimView.addViews = [_mainView]
-//      buttonAnimView.cornerRadius = 8
-//      buttonAnimView.allSubviews = false
-//    } else {
-//      buttonAnimView.addViews = nil
-//      buttonAnimView.allSubviews = true
-//    }
+    buttonAnimView.allSubviews = true
+    
+    
+    if type == ButtonClick._Style.colorFlat.rawValue ||
+        type == ButtonClick._Style.androidClickable.rawValue ||
+        type == ButtonClick._Style.androidClickableDark.rawValue ||
+        type == ButtonClick._Style.glare.rawValue ||
+        type == ButtonClick._Style.fave.rawValue ||
+        type == ButtonClick._Style.color.rawValue {
+//      buttonAnimView
+      
+      oneView = true
+      buttonAnimView.cornerRadius = 8
+      buttonAnimView.allSubviews = false
+//      buttonAnimView.addViews = [ shadowView ]
+    }
+    
     buttonAnimView.state?.animationDuration = animationClickDuration
     typeLabel.text = "\(ButtonClick.Style.allCases[type].str())"
     buttonAnimView.updateSubviews()
   }
   
-  public func buttonStartStopAction() {
+  public func startStopAction(_ value: Bool? = nil) {
+    if let value = value {
+      ButtonLayerExampleView.exmpStart = value
+    } else {
+      ButtonLayerExampleView.exmpStart = !ButtonLayerExampleView.exmpStart
+    }
+    
+    startStopUpdate()
+  }
+  
+  public func startStopUpdate() {
   
       self.startStopButton.setTitle(" \(ButtonLayerExampleView.exmpStart ? "🛑 Stop Hide" : "▶ Show Animated Demo")", for: .normal)
       
@@ -125,13 +152,8 @@ var endAnimationCallback: (() -> ())?
     override func setup() {
       
       startStopButton.click { [weak self] in
-        
-//        guard let self = self else { return }
-//        main {
           
-          ButtonLayerExampleView.exmpStart = !ButtonLayerExampleView.exmpStart
-          self?.buttonStartStopAction()
-//        }
+          self?.startStopAction()
       }
       
       backgroundColor = .clear
@@ -173,6 +195,12 @@ var endAnimationCallback: (() -> ())?
       fillView.addSubview(presentView)
       fillView.addSubview(_groupView)
     } else {
+      
+      if oneView {
+        buttonAnimView.addViews = [ shadowView ]
+      }
+      
+      
       fillView.addSubview(_groupView)
       fillView.addSubview(presentView)
     }
@@ -201,15 +229,8 @@ var endAnimationCallback: (() -> ())?
         }
         
         if !back {
-          print(" onClick 💭🌀‼️ step1 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
-//        if back {
-//          self.step3(back)
-//        } else {
-//          self.step2(back)
-//        }
-        
         
         if !back {
           self.step2(back)
@@ -225,6 +246,18 @@ var endAnimationCallback: (() -> ())?
     if !ButtonLayerExampleView.exmpStart { return }
     
     if !back {
+      if oneView {
+        buttonAnimView.addViews = [ mainView ]
+      }
+      if buttonAnimView.animType == ButtonClick._Style.fave.rawValue {
+        
+        mainView.fillColor = .clear
+        mainView.layer.backgroundColor = UIColor.clear.cgColor
+        mainView.setNeedsLayout()
+        buttonAnimView.addViews = [ fullView, gerenalView ]
+      }
+      
+      
       fillView.addSubview(presentView)
       fillView.addSubview(_groupView)
     }
@@ -250,7 +283,6 @@ var endAnimationCallback: (() -> ())?
         }
         
 //        if !back {
-        print(" onClick 💭🌀‼️ step2 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
 //        }
         
@@ -305,7 +337,6 @@ var endAnimationCallback: (() -> ())?
         }
         
         if !back {
-          print(" onClick 💭🌀‼️ step3 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
 //        self.step4(back)
@@ -354,7 +385,6 @@ var endAnimationCallback: (() -> ())?
         
         
         if !back {
-          print(" onClick 💭🌀‼️ step4 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
 //        self.step5(back)
@@ -394,7 +424,6 @@ var endAnimationCallback: (() -> ())?
           self.iconView.alpha = 1
         }
         if !back {
-          print(" onClick 💭🌀‼️ step5 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
         

@@ -105,9 +105,6 @@ extension UIButton {
     callback: ((UIControl.Event) -> Void)? = nil
   ) {
     
-    if views.count == 0 {
-      
-    }
     print("onClick \(style.indx()) \(style.str())")
     
     switch style {

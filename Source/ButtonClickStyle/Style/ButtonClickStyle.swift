@@ -14,7 +14,7 @@ extension ButtonClick {
   //MARK: - Style
   
   public enum Style: CaseIterable {
-    case alpha(           _ alpha: CGFloat = vDef) // 0.5                       // HIDE Alpha
+    case alpha(           _ alpha: CGFloat = vDef)                              // HIDE Alpha
     case flash(           _ alpha: CGFloat = vDef)                              // HIDE Flash More
     case shadow(          _ alpha: CGFloat = vDef, color: UIColor? = nil)       // 0.1845 add black shadow   // ADD  Shadow
     case color(           _ alpha: CGFloat = vDef, color: UIColor = .red)       // ADD  Color

@@ -39,10 +39,11 @@ class ExampleButtonsViewController: StoryboardController {
     
     debugButtonShow.addTarget(self, action: #selector(adebugButtonShowSwitchAction(swtch:event:)), for: .valueChanged)
     
+    createStartClick.addTarget(self, action: #selector(createStartClickSwitchAction(swtch:event:)), for: .valueChanged)
+    
     testValueSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
     
     
-    createStartClick.addTarget(self, action: #selector(createStartClickSwitchAction(swtch:event:)), for: .valueChanged)
     
     update()
   }
@@ -105,14 +106,6 @@ class ExampleButtonsViewController: StoryboardController {
       width: size.width,
       height: size.height
     )
-    
-//    aaa = aaa + 1
-//    if aaa == 1 {
-//      aaa = 0
-//      bbb = bbb + 1
-//    }
-    
-    print(" \(buttonType) 🐸🐸 \(aaa) 🐥 \(bbb) ")
     
     return framee
   }

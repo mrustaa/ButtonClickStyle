@@ -3,15 +3,18 @@ import UIKit
 //MARK: - ButtonList ViewController
 
 
-private let buttonLayerExamplTag = 77
-
 class ButtonListViewController: StoryboardController {
   
   @IBOutlet var buttonPresentView: DesignableView!
-  
-  @IBOutlet var buttonLayerExampleView: ButtonLayerExampleView?
+
   @IBOutlet var buttonTypePicker: UIPickerView!
   @IBOutlet var animationTypePicker: UIPickerView!
+  
+  @IBOutlet var allSubviewsSwitch: UISwitch!
+  @IBOutlet var addBackgroundColorSwitch: UISwitch!
+  @IBOutlet var createStartClick: UISwitch!
+  @IBOutlet var debugButtonShow: UISwitch!
+  
   
   @IBOutlet var animationValueLabel: UILabel!
   @IBOutlet var animationValueSlider: UISlider!
@@ -70,30 +73,15 @@ class ButtonListViewController: StoryboardController {
   
   //MARK: - viewDidAppear
   
-  @IBAction func exampleButtonsScreenButtonAction(_ sender: UIButton) {
-    navigationController?.pushViewController(ExampleButtonsViewController.instantiate(), animated: true)
-  }
-  
-  
-  @IBAction func exampleAnimationsScreenButtonAction(_ sender: UIButton) {
-    navigationController?.pushViewController(ExampleAnimationsViewController.instantiate(), animated: true)
-  }
-  
-  @IBAction func buttonListScreenButtonAction(_ sender: UIButton) {
-    navigationController?.pushViewController(ButtonListViewController.instantiate(), animated: true)
-  }
-  
-  @IBAction func testScreenButtonAction(_ sender: UIButton) {
-    navigationController?.pushViewController(TestViewController.instantiate(), animated: true)
-  }
-  
-  @IBAction func testDemoScreenButtonAction(_ sender: UIButton) {
-    navigationController?.pushViewController(TestDemoViewController.instantiate(), animated: true)
-  }
-  
-  
   override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
 //    _ = doSomethingOnce
+    
+    allSubviewsSwitch.addTarget(self, action: #selector(allSubviewsSwitchAction(swtch:event:)), for: .valueChanged)
+    addBackgroundColorSwitch.addTarget(self, action: #selector(addBackgroundColorSwitchAction(swtch:event:)), for: .valueChanged)
+    debugButtonShow.addTarget(self, action: #selector(adebugButtonShowSwitchAction(swtch:event:)), for: .valueChanged)
+    createStartClick.addTarget(self, action: #selector(createStartClickSwitchAction(swtch:event:)), for: .valueChanged)
+    
     
     main(delay: 0.35) {
       self.updateButtons()
@@ -122,95 +110,6 @@ class ButtonListViewController: StoryboardController {
     animationTypePicker.tag = 1
     
 //    title = "ButtonList"
-        
-    createButtonLayerExampleView(enable: false)
-  }
-  
-  //MARK: - Create ButtonLayerExample
-  
-  func createButtonLayerExampleView(enable: Bool = true) {
-
-    if !enable {
-      self.removeButtonLayerExampleView()
-      ButtonLayerExampleView.exmpStart = enable
-    }
-    
-    
-    var next: Int?
-    var type: Int = 0
-    if let v = self.buttonLayerExampleView?.animationType {
-      let t = ButtonClick.Style.allCases[v]
-      print(" 💙 ButtonLayerExampleView Old \(t.full())")
-      
-      var _next = (v + 1)
-      
-      if  _next == ButtonClick.Style.color(0.5, color: .red).indx() ||
-            _next == ButtonClick.Style.colorFlat(0.5, color: .red).indx() {
-        _next = ButtonClick.Style.allCases[5].indx()
-      } else if _next == ButtonClick.Style.androidClickable(0.5, color: nil).indx() {
-        _next = ButtonClick.Style.allCases[0].indx()
-      }
-      
-      //        if n == ButtonClick.Style.allCases[ButtonClick.Style.allCases.count-3].indx() { //   ButtonClick.Style.shake(0.5, new: true).indx()
-      //          n = ButtonClick.Style.allCases[0].indx()
-      //        }
-      next = _next
-      
-      let tt = ButtonClick.Style.allCases[_next]
-      print(" 💜 ButtonLayerExampleView New \(tt.full())")
-    }
-    if next == nil {
-      let t = ButtonClick.Style.alpha(0.5)
-      print(" ❤️‍🔥🧡 ButtonLayerExampleView Start Default  \(t.full())")
-    }
-    type = next ?? ButtonClick.Style.alpha(0.5).indx()
-    
-    self.removeButtonLayerExampleView()
-    
-//    main(delay: 1) { [weak self] in
-//      guard let self = self else { return }
-      
-      let exampleView = ButtonLayerExampleView()
-      exampleView.tag = buttonLayerExamplTag
-      exampleView.animationDuration = 0.3 // 0.45 //  //
-    exampleView.animationDelay = 0.0 // 0.6 // 1.0 // //
-      exampleView.animationType = type
-      exampleView.update()
-      exampleView.frame = .init(x: 0, y: 60, width:  UIScreen.main.bounds.size.width, height: 223)
-      
-      exampleView.endAnimationCallback = { [weak self] in
-        
-//        main(delay: 1) { [weak self] in
-//          guard let self = self else { return }
-          
-//          let t = ButtonClick.Style.allCases[mSelf.buttonLayerExampleView.animationType ?? 0]
-//          print(" ‼️ endAnimationCallback \(t.full()) ‼️ ‼️")
-          self?.createButtonLayerExampleView()
-//        }
-      }
-//      exampleView.start()
-      exampleView.buttonStartStopAction()
-      self.buttonLayerExampleView = exampleView
-      self.view.addSubview(exampleView)
-//    }
-    
-  }
-  
-  func removeButtonLayerExampleView() {
-    
-    if let find = self.view.viewWithTag(buttonLayerExamplTag) {
-      find.subviews.forEach { v1 in
-        v1.removeFromSuperview()
-      }
-      find.removeFromSuperview()
-    }
-    self.view.subviews.forEach { v in
-      if v.tag == buttonLayerExamplTag {
-        v.removeFromSuperview()
-      }
-    }
-    self.buttonLayerExampleView?.removeFromSuperview()
-    self.buttonLayerExampleView = nil
   }
 
   //MARK: - Get State
@@ -225,7 +124,7 @@ class ButtonListViewController: StoryboardController {
     
     return .init(
       titleText: buttonTypes[buttonTypeLast],
-      allSubviews: true, // animationType == ButtonClick._Style.color.rawValue ? false : allSubviewsSwitch.isOn,
+      allSubviews: allSubviewsSwitch.isOn, 
       animationType: animationTypeLast,
       animationTypeValue: getValue(),
       animationDuration: dur,
@@ -235,13 +134,23 @@ class ButtonListViewController: StoryboardController {
       addBackgrondColor: true// addBackgroundColorSwitch.isOn
     )
   }
-//
-//  func getState() -> ButtonClick.State {
-//    let type = animationTypeLast
-//    let name = buttonTypes[buttonTypeLast]
-//    let state: ButtonClick.State = .init(titleText: name, animationType: type, animationTypeValue: getValue(), new: buttonTypeLast == 1)
-//    return state
-//  }
+  
+  @objc func allSubviewsSwitchAction(swtch: UISwitch, event: UIEvent) {
+    updateButtons()
+  }
+  
+  @objc func addBackgroundColorSwitchAction(swtch: UISwitch, event: UIEvent) {
+    updateButtons()
+  }
+  
+  @objc func adebugButtonShowSwitchAction(swtch: UISwitch, event: UIEvent) {
+    updateButtons()
+  }
+  
+  
+  @objc func createStartClickSwitchAction(swtch: UISwitch, event: UIEvent) {
+    updateButtons()
+  }
   
   //MARK: - Update Buttons View
   

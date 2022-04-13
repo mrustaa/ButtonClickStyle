@@ -19,14 +19,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonLayerExampleView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
             <connections>
                 <outlet property="_elipseView" destination="Jj9-Yk-Z2y" id="xEb-cV-5ng"/>
+                <outlet property="_gradientView" destination="d9j-j9-iHb" id="q8J-zd-0cp"/>
                 <outlet property="_groupView" destination="bnK-r7-3BR" id="3FG-gK-RE6"/>
                 <outlet property="_iconView" destination="tXi-Tl-Er9" id="MMk-zi-S7n"/>
                 <outlet property="_mainView" destination="e47-sJ-7Qd" id="2zI-0f-TyH"/>
                 <outlet property="_shadowView" destination="MwL-LP-IkG" id="jfA-cC-RhB"/>
                 <outlet property="_titleLabel" destination="Mhp-rv-ukK" id="ekh-d0-c5j"/>
                 <outlet property="buttonAnimView" destination="ELq-6m-ujx" id="QTF-x4-dLp"/>
+                <outlet property="detailsView" destination="Dwa-tq-XeM" id="ov9-5e-4rd"/>
                 <outlet property="elipseView" destination="1GY-44-cyt" id="Boe-8G-TME"/>
                 <outlet property="fillView" destination="jCX-2u-LmT" id="hlL-Xg-1cb"/>
+                <outlet property="fullView" destination="Th1-nv-Cqj" id="70g-fd-nWB"/>
+                <outlet property="gerenalView" destination="rBB-Rk-0se" id="a9a-bu-YDD"/>
+                <outlet property="gradientView" destination="qOw-qw-Kwn" id="oPS-fa-W4X"/>
                 <outlet property="iconView" destination="9gr-zU-1vT" id="s9M-6p-ORj"/>
                 <outlet property="mainView" destination="3TF-6z-EsA" id="tL4-iN-1ZB"/>
                 <outlet property="presentView" destination="mld-fs-OMv" id="OYl-Am-eZj"/>
@@ -232,6 +237,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="131" height="59"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Th1-nv-Cqj" userLabel="Frame 1">
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </view>
                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DVI-qz-XIj" userLabel="Rectangle 46" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                             <rect key="frame" x="17" y="26" width="95.5" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -267,6 +276,18 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="131" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwa-tq-XeM" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="131" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                                    <color key="value" red="0.92156863209999995" green="0.20784313979999999" blue="0.50588238240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOw-qw-Kwn" userLabel="Rectangle 45" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="131" height="42"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
