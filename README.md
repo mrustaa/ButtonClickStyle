@@ -47,7 +47,7 @@ pod 'ButtonClickStyle'
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 ```swift
-extension ButtonClick {
+extension ButtonClick {  // animationType
   enum Style {
     case alpha
     case flash
@@ -74,20 +74,25 @@ extension ButtonClick {
 
 6) Add animation value `animationTypeValue` -  meaning means for some types - alpha or power
 
-- "Hide       .Alpha/.Flash"              
-will change alpha for "self.view" from 0.0 to 1.0
+- Hide       
+   .Alpha / .Flash         
+   Will change alpha for "self.view" from 0.0 to 1.0
 
-- "Add        .Shadow/.Color/.ColorFlat"  
-will change alpha for "add.view" from 0.0 to 1.0
+- Add       
+   .Shadow / .Color / .ColorFlat
+   Will change alpha for "add.view" from 0.0 to 1.0
 
-- "Move       .Pulsate/.Press/.Shake"     
-will change the strength of movement for "self.view" from 0.0 to 1.0
+- "Move       
+   .Pulsate / .Press / .Shake   
+   Will change the strength of movement for "self.view" from 0.0 to 1.0
 
-- "TapGesture .Fave/.AndroidClickable"    
-will increase bubble radius
+- "TapGesture 
+   .Fave / .AndroidClickable
+   Will increase bubble radius
 
-- "Loading    .Glare"                     
-no change
+- Loading   
+   .Glare                  
+   No change
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
