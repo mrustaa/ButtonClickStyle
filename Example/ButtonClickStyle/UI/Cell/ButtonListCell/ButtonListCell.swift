@@ -115,33 +115,10 @@ class ButtonListCell: TableAdapterCell {
     labelsAdded.removeAll()
     
     
-    var child: BtnView?
+    let child: BtnView? = ButtonClick.Buttons.newBtnView(buttonType)
     
-    switch buttonType { //
-    case  0: child = JustPinkButtonView()
-    case  1: child = JustPinkButtonView()
-    case  2: child = BlueButtonView()
-    case  3: child = BuyNowButtonView()
-    case  4: child = DownloadButtonView()
-    case  5: child = DeleteButtonView()
-    case  6: child = SearchButtonView()
-    case  7: child = SubscribeButtonView()
-    case  8: child = FirefoxButtonView()
-    case  9: child = GoogleButtonView()
-    case 10: child = GradientBlueBasicButtonView()
-    case 11: child = NeomorphismButtonView()
-    case 12: child = TestDemoGradientButtonView()
-    case 13: child = TestDemoBlurButtonView()
-    case 14: child = TestDemoSquaresButtonView()
-    case 15: child = BorderGreenDarkButtonView()
-    default:  break
-    }
-    
-    self.titleLabel?.text = ButtonClick.Buttons.shortNames[buttonType] // .name
-    self.subtitleLabel?.text = clickAnimType.base
-    self.label2?.text = clickAnimType.emoji.color
-    self.label3?.text = clickAnimType.emoji.repeats.isEmpty ? "" : "☑️"
-    self.label4?.text = clickAnimType.emoji.new //.isEmpty ? "" : "☑️"
+    self.subtitleLabel?.text = ButtonClick.Buttons.allNameFull[buttonType] // .name
+    self.titleLabel?.text = clickAnimType.base
     
     if let child = child {
       child.fill(state: state)

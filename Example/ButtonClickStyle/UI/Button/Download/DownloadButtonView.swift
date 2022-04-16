@@ -4,10 +4,11 @@ import UIKit
 class DownloadButtonView: BtnView {
   
   @IBOutlet private weak var titleLabel: UILabel?
-  @IBOutlet var mainView: DesignableView!
-  @IBOutlet var shadowView: DesignableView!
+  @IBOutlet var mainView: ButtonClickStyleDesignView!
+  @IBOutlet var shadowView: ButtonClickStyleDesignView!
   @IBOutlet var mainTitleLabel: UILabel!
   
+  @IBOutlet var backColor: ButtonClickStyleDesignView!
   @IBOutlet var fillView: UIView!
   
   override func fill(state: ButtonClick.State?) {
@@ -15,17 +16,24 @@ class DownloadButtonView: BtnView {
     self.state = state
     
     
+    if !state.addBackgrondColor {
+      backgroundColor = .clear
+    }
+    backColor.isHidden = !state.addBackgrondColor
     
    if let type = state.animationType {
      var addViews: [UIView]? = []
-     if type == ButtonClick.Style.press(0.5).indx() {
+     if type == ButtonClick._Style.press.rawValue {
        addViews = [fillView, shadowView]
        mainView.fillColor = .clear
        mainView.setNeedsLayout()
      } else if type == ButtonClick._Style.androidClickable.rawValue ||
                 type == ButtonClick._Style.androidClickableDark.rawValue {
        addViews = nil
-     }  else {
+     } else if type == ButtonClick._Style.color.rawValue {
+       addViews = nil
+
+     } else {
        addViews = [mainView]
      }
      
@@ -51,7 +59,7 @@ class DownloadButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
     mainTitleLabel?.text = state.titleText
        // secondImageView?.image = state.secondImage

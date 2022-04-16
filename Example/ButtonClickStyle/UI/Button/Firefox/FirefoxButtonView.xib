@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="202" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcI-RZ-T1w" userLabel="FirefoxButtonCell" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcI-RZ-T1w" userLabel="FirefoxButtonCell" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="202" height="89"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="grColor1">
@@ -40,15 +38,15 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-qB-sof" userLabel="Frame 3183351" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-qB-sof" userLabel="Frame 3183351" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                     <rect key="frame" x="30" y="19" width="141" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quZ-mM-YSc" userLabel="Rectangle 785" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quZ-mM-YSc" userLabel="Rectangle 785" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="141" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hry-XP-SAo" userLabel="Rectangle 786" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hry-XP-SAo" userLabel="Rectangle 786" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="7" y="0.0" width="133" height="40.5"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <userDefinedRuntimeAttributes>

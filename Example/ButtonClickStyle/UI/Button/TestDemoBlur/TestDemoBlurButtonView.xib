@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestDemoBlurButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestDemoBlurButtonView" customModule="ButtonClickStyle" customModuleProvider="target">
             <connections>
                 <outlet property="fillView" destination="zWH-lY-JRL" id="d0e-Qb-StE"/>
                 <outlet property="groupView" destination="dCX-8P-tBg" id="x2t-Fm-RD2"/>
@@ -23,13 +23,13 @@
             <rect key="frame" x="0.0" y="0.0" width="240" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLh-Fh-HqP" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLh-Fh-HqP" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                     <rect key="frame" x="40" y="11" width="160" height="71"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCX-8P-tBg" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCX-8P-tBg" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                             <rect key="frame" x="10" y="10" width="140" height="51"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivd-nm-gNQ" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivd-nm-gNQ" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="-18" y="-11" width="184" height="82"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -59,7 +59,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWH-lY-JRL" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWH-lY-JRL" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="140" height="51"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>

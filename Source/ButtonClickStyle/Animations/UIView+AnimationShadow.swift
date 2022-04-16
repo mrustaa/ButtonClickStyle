@@ -48,9 +48,8 @@ extension UIView {
     views.forEach {
       let clip = $0.superview?.clipsToBounds ?? false
       
-      
-      if wMax < $0.right  { wMax = $0.right  }
-      if hMax < $0.bottom { hMax = $0.bottom }
+      if wMax < ($0.frame.origin.x + frame.size.width)  { wMax = ($0.frame.origin.x + frame.size.width)  }
+      if hMax < ($0.frame.origin.y + frame.size.height) { hMax = ($0.frame.origin.y + frame.size.height) }
       
       let frame = $0.convert($0.bounds, to: mainView)
       let imgBtn = UIButton(frame: frame)
@@ -68,8 +67,11 @@ extension UIView {
         
       shadowContentView.addSubview(imgBtn)
     }
-    shadowView.wwidth = wMax
-    shadowView.hheight = hMax
+    
+    
+    var frr = shadowView.frame
+    frr.size = .init(width: wMax, height: hMax)
+    shadowView.frame = frr
     
     mainView.addSubview(shadowView)
     

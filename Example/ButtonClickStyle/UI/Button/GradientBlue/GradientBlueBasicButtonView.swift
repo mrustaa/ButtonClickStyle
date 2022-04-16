@@ -2,11 +2,11 @@ import UIKit
 
 class GradientBlueBasicButtonView: BtnView {
   
-  @IBOutlet var mainView: DesignableView!
+  @IBOutlet var mainView: ButtonClickStyleDesignView!
   @IBOutlet var mainH: NSLayoutConstraint!
   @IBOutlet var mainW: NSLayoutConstraint!
-  @IBOutlet var fillView: DesignableView!
-  @IBOutlet var groupView: DesignableView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
+  @IBOutlet var groupView: ButtonClickStyleDesignView!
   @IBOutlet private weak var titleLabel: UILabel?
     
   @IBOutlet var backColor: UIView!
@@ -72,7 +72,7 @@ class GradientBlueBasicButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
    
      titleLabel?.text = state.titleText

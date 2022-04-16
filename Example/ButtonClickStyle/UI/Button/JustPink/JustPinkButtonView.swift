@@ -4,12 +4,12 @@ class JustPinkButtonView: BtnView {
   
   // MARK: Outlets
   
-  @IBOutlet var fillView: DesignableView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
   @IBOutlet var mainView: UIView!
-  @IBOutlet var mainShadowView: DesignableView!
-  @IBOutlet var subMainView: DesignableView!
-  @IBOutlet var mainDetailsView: DesignableView!
-  @IBOutlet var gradientView: DesignableView!
+  @IBOutlet var mainShadowView: ButtonClickStyleDesignView!
+  @IBOutlet var subMainView: ButtonClickStyleDesignView!
+  @IBOutlet var mainDetailsView: ButtonClickStyleDesignView!
+  @IBOutlet var gradientView: ButtonClickStyleDesignView!
   @IBOutlet var titleLabel: UILabel!
   
   
@@ -118,7 +118,7 @@ class JustPinkButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
      
      
    }

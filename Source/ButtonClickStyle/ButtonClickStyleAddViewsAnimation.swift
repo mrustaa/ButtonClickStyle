@@ -68,30 +68,13 @@ extension UIButton {
     click(for: .touchDown) { [weak self] in
       guard let self = self else { return }
       callback?(.touchDown)
-//      Logs.add(".touchDown")
-      
       self.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchDown, duration: duration)
     }
     
     click(for: .touchUpInside) { [weak self] in
       guard let self = self else { return }
       callback?(.touchUpInside)
-//      Logs.add(".touchUpInside")
       self.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchUpInside, visible: true)
-    }
-    
-    click(for: .touchUpOutside) { [weak self] in
-      guard let self = self else { return }
-      callback?(.touchUpOutside)
-//      Logs.add(".touchUpOutside")
-      self.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchUpOutside, visible: true)
-    }
-    
-    click(for: .touchCancel) { [weak self] in
-      guard let self = self else { return }
-      callback?(.touchCancel)
-//      Logs.add(".touchCancel")
-      self.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchCancel, visible: true)
     }
   }
   
@@ -112,17 +95,19 @@ extension UIButton {
       
       func randPointAndroidPulse() {
         let view = views[0]
-        let position: CGPoint = .init(x: CGFloat.random(min: 0, max: view.wwidth), y: CGFloat.random(min: 0, max: view.hheight))
+        
+        
+        let position: CGPoint = .init(x: CGFloat.random(min: 0, max: view.frame.size.width), y: CGFloat.random(min: 0, max: view.frame.size.height))
         let dur = ButtonClick.Style.androidClickable(value, color: color).defaultDuration()
         buttonClickStyleAndroidPulse(radius: value, duration: dur, color: color, position: position)
       }
-      main(delay: 0.1) {
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
         randPointAndroidPulse()
-        main(delay: 0.15) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.15) {
           randPointAndroidPulse()
-          main(delay: 0.22) {
+          DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.22) {
             randPointAndroidPulse()
-            main(delay: 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
               randPointAndroidPulse()
             }
           }
@@ -130,9 +115,9 @@ extension UIButton {
       }
       
     default:
-      main(delay: 0.1) { [weak self] in
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) { [weak self] in
         self?.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchDown, duration: duration)
-        main(delay: 0.35) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.35) { [weak self] in
           self?.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchUpInside, duration: duration, visible: true)
         }
       }
@@ -195,10 +180,6 @@ extension UIButton {
         views[0].buttonClickStylePress(duration: dur, cornRadius: radius, value: power, shadow: false, visible: event != .touchDown)
       }
       
-//      if views.count > 1 {
-//        views[1].press(duration: dur, cornRadius: radius, value: 0.5, shadow: true, visible: event != .touchDown)
-//      }
-      
     default: break
     }
     
@@ -210,10 +191,11 @@ extension UIButton {
         if event == .touchDown {
           
           let v1 = $0
-          main(delay: 10) {
+          DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             v1.buttonClickStyleGlareStop()
           }
           
+          v1.buttonClickStyleGlareStop()
           $0.buttonClickStyleGlare(alpha: alpha, color: color, duration: dur)
         }
         
@@ -273,8 +255,6 @@ extension UIControl.Event {
   public func enevtName(_ event: UIControl.Event) -> String {
     switch event {
     case .touchDown:      return "touch.Down"
-    case .touchCancel:    return "touch.Cancel"
-    case .touchUpOutside: return "touch.Up.Outside"
     case .touchUpInside:  return "touch.Up.Inside"
     default: return ""
     }

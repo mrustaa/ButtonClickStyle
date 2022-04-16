@@ -6,16 +6,44 @@ class SubscribeButtonView: BtnView {
   @IBOutlet private weak var titleLabel: UILabel?
     @IBOutlet private weak var secondImageView: UIImageView?
   
+  
+  @IBOutlet var backColor: ButtonClickStyleDesignView!
+  @IBOutlet var shadowVieww: ButtonClickStyleDesignView!
+  @IBOutlet var cardView: UIView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
+  
   override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
     
-   if let _ = state.animationType {
+   if let type = state.animationType {
+     
+     var addViews: [UIView]? = []
+     if type == ButtonClick._Style.press.rawValue {
+       addViews = [cardView, shadowVieww]
+     } else if type == ButtonClick._Style.androidClickable.rawValue ||
+                type == ButtonClick._Style.androidClickableDark.rawValue {
+       addViews = nil
+     } else if type == ButtonClick._Style.color.rawValue {
+       addViews = nil
+       
+     }  else {
+       addViews = [mainView]
+     }
+     
+     
+     if !state.addBackgrondColor {
+       backgroundColor = .clear
+     }
+     backColor.isHidden = !state.addBackgrondColor
+     
+     
      let fr: CGRect = .init(x: 15 , y: 20.5, width: 172, height: 52)
      let viewAn = ButtonClickStyleView(
       state: state,
       frame: fr,
-      radius: 26
+      radius: 26,
+      addViews: addViews
      )
      viewAn.insertSubview(mainView, at: 0)
      viewAn.updateSubviews()
@@ -29,7 +57,7 @@ class SubscribeButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
      titleLabel?.text = state.titleText
        // secondImageView?.image = state.secondImage

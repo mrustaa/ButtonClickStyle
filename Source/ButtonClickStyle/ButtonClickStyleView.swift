@@ -52,7 +52,8 @@ open class ButtonClickStyleView: UIView {
     super.init(frame: frame)
     
     var state = state
-    if state.animationType == ButtonClick._Style.colorFlat.rawValue {
+    if state.animationType == ButtonClick._Style.colorFlat.rawValue ||
+        state.animationType == ButtonClick._Style.color.rawValue {
       state.allSubviews = false
     }
     
@@ -259,7 +260,7 @@ open class ButtonClickStyleView: UIView {
 //                  if !findMain {
 //
 //                    let button = createButton()
-//                    if let desFig = v1 as? DesignableView, desFig.cornerRadius != 0 {
+//                    if let desFig = v1 as? ButtonClickStyleDesignView, desFig.cornerRadius != 0 {
 //                      button.layer.cornerRadius = desFig.cornerRadius
 //                    }
 //                    button.frame = v1.frame
@@ -274,7 +275,7 @@ open class ButtonClickStyleView: UIView {
               if !subviews.isEmpty, let vw = subviews.first {
                 //              nviews.append(vw)
                 
-                if let desFig = vw as? DesignableView, desFig.cornerRadius != 0 {
+                if let desFig = vw as? ButtonClickStyleDesignView, desFig.cornerRadius != 0 {
                   btn.layer.cornerRadius = desFig.cornerRadius
                 }
 //                btn.frame  = vw.convert(vw.bounds, to: superview)
@@ -288,8 +289,9 @@ open class ButtonClickStyleView: UIView {
                 if (sBounds.size.width == btn.bounds.size.width) &&
                     (sBounds.size.height == btn.bounds.size.height) {
                   
-                  btn.xx = 0
-                  btn.yy = 0
+                  var btnFr = btn.frame
+                  btnFr.origin = .zero
+                  btn.frame = btnFr
                 }
                 
                 //              vw.getButtonRadius(btn)
@@ -332,7 +334,7 @@ open class ButtonClickStyleView: UIView {
               for vv in addViews {
                 if let _ = vv as? UILabel {
                   nviews.append(vv)
-                } else if let desFig = vv as? DesignableView, desFig.brWidth != 0, desFig.brColor != .clear {
+                } else if let desFig = vv as? ButtonClickStyleDesignView, desFig.brWidth != 0, desFig.brColor != .clear {
                   nviews.append(vv)
                 } else if vv.layer.borderWidth != 0, vv.layer.borderColor != UIColor.clear.cgColor {
                   nviews.append(vv)
@@ -405,7 +407,7 @@ open class ButtonClickStyleView: UIView {
 
                 if !subviews.isEmpty, let vw = subviews.first {
 
-                  if let desFig = vw as? DesignableView, desFig.cornerRadius != 0 {
+                  if let desFig = vw as? ButtonClickStyleDesignView, desFig.cornerRadius != 0 {
                     btn.layer.cornerRadius = desFig.cornerRadius
                   }
                   btn.frame  = vw.convert(vw.bounds, to: superview)
@@ -444,7 +446,7 @@ extension UIColor {
 extension UIView {
   public func getButtonRadius(_ btn: UIButton) {
     if btn.layer.cornerRadius == 0 {
-      if let desFig = self as? DesignableView, desFig.cornerRadius != 0 {
+      if let desFig = self as? ButtonClickStyleDesignView, desFig.cornerRadius != 0 {
         btn.layer.cornerRadius = desFig.cornerRadius
       } else if self.layer.cornerRadius != 0 {
         btn.layer.cornerRadius = self.layer.cornerRadius

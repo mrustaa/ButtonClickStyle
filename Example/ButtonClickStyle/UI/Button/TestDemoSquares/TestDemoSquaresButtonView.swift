@@ -8,7 +8,7 @@ class TestDemoSquaresButtonView: BtnView {
   
   @IBOutlet var mainView: UIView!
   
-  @IBOutlet var firstView: DesignableView!
+  @IBOutlet var firstView: ButtonClickStyleDesignView!
   override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
@@ -42,7 +42,7 @@ class TestDemoSquaresButtonView: BtnView {
       
       self.animation?.removeFromSuperview()
       self.animation = viewAn
-      mainView.origin = .zero
+      var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
     }
     
     

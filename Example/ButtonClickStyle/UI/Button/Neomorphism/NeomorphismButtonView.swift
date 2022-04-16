@@ -3,14 +3,14 @@ import UIKit
 class NeomorphismButtonView: BtnView {
   
   @IBOutlet var mainView: UIView!
-  @IBOutlet var fillView: DesignableView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
   @IBOutlet private weak var titleLabel: UILabel?
     
   @IBOutlet var backColor: UIView!
   // MARK: Initialize
   
  override func awakeFromNib() { }
-  @IBOutlet var cardView: DesignableView!
+  @IBOutlet var cardView: ButtonClickStyleDesignView!
   
   override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
@@ -67,7 +67,7 @@ class NeomorphismButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
    
      titleLabel?.text = state.titleText

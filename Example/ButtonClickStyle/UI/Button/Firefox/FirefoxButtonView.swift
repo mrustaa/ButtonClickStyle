@@ -3,9 +3,9 @@ import UIKit
 class FirefoxButtonView: BtnView {
   @IBOutlet var mainView: UIView!
   @IBOutlet var titleLabel: UILabel!
-  @IBOutlet var backColor: DesignableView!
-  @IBOutlet var gradientView: DesignableView!
-  @IBOutlet var gradientBackView: DesignableView!
+  @IBOutlet var backColor: ButtonClickStyleDesignView!
+  @IBOutlet var gradientView: ButtonClickStyleDesignView!
+  @IBOutlet var gradientBackView: ButtonClickStyleDesignView!
   
   override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
@@ -22,7 +22,10 @@ class FirefoxButtonView: BtnView {
      } else if type == ButtonClick._Style.androidClickable.rawValue ||
                 type == ButtonClick._Style.androidClickableDark.rawValue {
        addViews = [gradientView]
-     } else {
+     } else if type == ButtonClick._Style.color.rawValue {
+       addViews = nil
+       
+     }  else {
        addViews = [mainView]
      }
      
@@ -48,7 +51,7 @@ class FirefoxButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
      titleLabel?.text = state.titleText
         

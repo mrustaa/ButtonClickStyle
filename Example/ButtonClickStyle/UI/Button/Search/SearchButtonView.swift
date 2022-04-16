@@ -30,7 +30,7 @@ class SearchButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
      titleLabel?.text = state.titleText
         

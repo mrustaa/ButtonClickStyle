@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyNowButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyNowButtonView" customModule="ButtonClickStyle" customModuleProvider="target">
             <connections>
                 <outlet property="borderView" destination="Z35-He-YyU" id="3gF-8x-Ff4"/>
                 <outlet property="mainView" destination="wmD-rz-B1b" id="DBX-aR-2nb"/>
@@ -20,10 +20,10 @@
             <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-rz-B1b" userLabel="Button 2" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-rz-B1b" userLabel="Button 2" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                     <rect key="frame" x="23" y="22.5" width="156" height="48"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z35-He-YyU" userLabel="Button 2" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z35-He-YyU" userLabel="Button 2" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="156" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="AW0-QZ-AFc"/>
@@ -41,7 +41,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhj-XH-uTV" userLabel="Buy now" customClass="DesignableLabel" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhj-XH-uTV" userLabel="Buy now" customClass="ButtonClickStyleDesignLabel" customModule="ButtonClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="156" height="48"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                             <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
