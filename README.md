@@ -74,13 +74,24 @@ extension ButtonClick {
 
 6) Add animation value `animationTypeValue` -  meaning means for some types - alpha or power
 
-- "Hide       .Alpha/.Flash"              - will change alpha for "self.view" from 0.0 to 1.0
-- "Add        .Shadow/.Color/.ColorFlat"  - will change alpha for "add.view" from 0.0 to 1.0
-- "Move       .Pulsate/.Press/.Shake"     - will change the strength of movement for "self.view" from 0.0 to 1.0
-- "TapGesture .Fave/.AndroidClickable"    - will increase bubble radius
-- "Loading    .Glare"                     - no change
+- "Hide       .Alpha/.Flash"              
+will change alpha for "self.view" from 0.0 to 1.0
+
+- "Add        .Shadow/.Color/.ColorFlat"  
+will change alpha for "add.view" from 0.0 to 1.0
+
+- "Move       .Pulsate/.Press/.Shake"     
+will change the strength of movement for "self.view" from 0.0 to 1.0
+
+- "TapGesture .Fave/.AndroidClickable"    
+will increase bubble radius
+
+- "Loading    .Glare"                     
+no change
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
+
+## Init Programmatically
 
 7) If initializing programmatically
 There is a property `addViews` - allows you to pass views / layers
@@ -148,6 +159,10 @@ class ViewController: UIViewController {
 ```
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
+
+## Author
+
+<motionrustam@gmail.com> 📩| [mrustaa](https://github.com/mrustaa/)
 
 ## License
 
