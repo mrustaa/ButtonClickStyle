@@ -10,7 +10,7 @@
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
 
-- This is a customizable designable button view/leayr.
+- This is a customizable designable button view/layer.
 - Inside the layer you can style your button, create your own subviews.
 - Can choose 1 of 15 button click animation styles.
 - You can expand the project adding new click-animation-styles.
@@ -72,12 +72,13 @@ extension ButtonClick {
 
 5) Add animation duration `animationDuration`
 
-6) Add animation value `animationTypeValue` - meaning means
-- "Hide       .Alpha/.Flash"              - will change alpha from 0.0 to 1.0
-- "Add        .Shadow/.Color/.ColorFlat"  
-- "Move       .Pulsate/.Press/.Shake"     - will increase movement decrease from 0.0 to 1.0
+6) Add animation value `animationTypeValue` -  meaning means for some types - alpha or power
+
+- "Hide       .Alpha/.Flash"              - will change alpha for "self.view" from 0.0 to 1.0
+- "Add        .Shadow/.Color/.ColorFlat"  - will change alpha for "add.view" from 0.0 to 1.0
+- "Move       .Pulsate/.Press/.Shake"     - will change the strength of movement for "self.view" from 0.0 to 1.0
 - "TapGesture .Fave/.AndroidClickable"    - will increase bubble radius
-- "Loading    .Glare"                     - 
+- "Loading    .Glare"                     - no change
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
@@ -93,13 +94,15 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  //MARK: Init Xib/Storyboards
+  
   @IBOutlet var xibButtonClickStyleView: ButtonClickStyleView?
+  
+  //MARK: Init Programmaticaly
   
   var prgmButtonClickStyleView: ButtonClickStyleView?
   var prgmFigureView: UIView!
   var prgmRectangleView: UIView!
-  
-  //MARK: - Create Programmaticaly
   
   override func viewDidLoad() {
     super.viewDidLoad()
