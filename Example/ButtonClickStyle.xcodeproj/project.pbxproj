@@ -234,33 +234,6 @@
 		4A14CBC22803437C00DA8A68 /* ButtonClickStyle */ = {
 			isa = PBXGroup;
 			children = (
-				4A14CBCF2803437C00DA8A68 /* Animations */,
-				4A62F30C2803115C00534ABA /* UIDesignable */,
-				4A14CBC42803437C00DA8A68 /* Style */,
-				4A14CBCE2803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift */,
-				4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */,
-				4A14CBCB2803437C00DA8A68 /* ButtonClickState.swift */,
-				4A14CBCC2803437C00DA8A68 /* ButtonClick.swift */,
-				4A14CBCD2803437C00DA8A68 /* ButtonClicClosure.swift */,
-			);
-			path = ButtonClickStyle;
-			sourceTree = "<group>";
-		};
-		4A14CBC42803437C00DA8A68 /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				4A14CBC52803437C00DA8A68 /* ButtonClickStyleShort.swift */,
-				4A14CBC62803437C00DA8A68 /* ButtonClickStyle.swift */,
-				4A231B79280A82250073284C /* ButtonClickStyleEmoji.swift */,
-				4A14CBC72803437C00DA8A68 /* ButtonClickStyleBase.swift */,
-				4A14CBC92803437C00DA8A68 /* ButtonClickStyleGestureRecognizer.swift */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		4A14CBCF2803437C00DA8A68 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
 				4A14CBD02803437C00DA8A68 /* UIView+AnimationAlpha.swift */,
 				4A14CBD12803437C00DA8A68 /* UIView+AnimationShadow.swift */,
 				4A14CBD22803437C00DA8A68 /* UIView+AnimationPulsate.swift */,
@@ -272,6 +245,35 @@
 				4A14CBD82803437C00DA8A68 /* UIView+AnimationFlash.swift */,
 				4A14CBD92803437C00DA8A68 /* UIView+AnimationPress.swift */,
 				4A85B5A22803D59800DFD435 /* UIView+AnimationGlare.swift */,
+				4A62F30D2803115C00534ABA /* ButtonClickStyleDesignLabel.swift */,
+				4A62F30E2803115C00534ABA /* ButtonClickStyleDesignView.swift */,
+				4A14CBC52803437C00DA8A68 /* ButtonClickStyleShort.swift */,
+				4A14CBC62803437C00DA8A68 /* ButtonClickStyle.swift */,
+				4A231B79280A82250073284C /* ButtonClickStyleEmoji.swift */,
+				4A14CBC72803437C00DA8A68 /* ButtonClickStyleBase.swift */,
+				4A14CBC92803437C00DA8A68 /* ButtonClickStyleGestureRecognizer.swift */,
+				4A14CBCE2803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift */,
+				4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */,
+				4A14CBCB2803437C00DA8A68 /* ButtonClickState.swift */,
+				4A14CBCC2803437C00DA8A68 /* ButtonClick.swift */,
+				4A14CBCD2803437C00DA8A68 /* ButtonClicClosure.swift */,
+				4A14CBCF2803437C00DA8A68 /* Animations */,
+				4A62F30C2803115C00534ABA /* UIDesignable */,
+				4A14CBC42803437C00DA8A68 /* Style */,
+			);
+			path = ButtonClickStyle;
+			sourceTree = "<group>";
+		};
+		4A14CBC42803437C00DA8A68 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		4A14CBCF2803437C00DA8A68 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -288,8 +290,6 @@
 		4A62F30C2803115C00534ABA /* UIDesignable */ = {
 			isa = PBXGroup;
 			children = (
-				4A62F30D2803115C00534ABA /* ButtonClickStyleDesignLabel.swift */,
-				4A62F30E2803115C00534ABA /* ButtonClickStyleDesignView.swift */,
 			);
 			path = UIDesignable;
 			sourceTree = "<group>";

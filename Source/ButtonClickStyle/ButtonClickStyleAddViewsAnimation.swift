@@ -68,13 +68,13 @@ extension UIButton {
     click(for: .touchDown) { [weak self] in
       guard let self = self else { return }
       callback?(.touchDown)
-      self.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchDown, duration: duration)
+      self.addClickStyleAnimation(views: views, radius: radius, style: style, event: .touchDown, duration: duration)
     }
     
     click(for: .touchUpInside) { [weak self] in
       guard let self = self else { return }
       callback?(.touchUpInside)
-      self.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchUpInside, visible: true)
+      self.addClickStyleAnimation(views: views, radius: radius, style: style, event: .touchUpInside, visible: true)
     }
   }
   
@@ -96,7 +96,6 @@ extension UIButton {
       func randPointAndroidPulse() {
         let view = views[0]
         
-        
         let position: CGPoint = .init(x: CGFloat.random(min: 0, max: view.frame.size.width), y: CGFloat.random(min: 0, max: view.frame.size.height))
         let dur = ButtonClick.Style.androidClickable(value, color: color).defaultDuration()
         buttonClickStyleAndroidPulse(radius: value, duration: dur, color: color, position: position)
@@ -116,9 +115,9 @@ extension UIButton {
       
     default:
       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) { [weak self] in
-        self?.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchDown, duration: duration)
+        self?.addClickStyleAnimation(views: views, radius: radius, style: style, event: .touchDown, duration: duration)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.35) { [weak self] in
-          self?.addClickStyleAnimation(with: views, radius: radius, style: style, event: .touchUpInside, duration: duration, visible: true)
+          self?.addClickStyleAnimation(views: views, radius: radius, style: style, event: .touchUpInside, duration: duration, visible: true)
         }
       }
     }
@@ -131,7 +130,7 @@ extension UIButton {
     if (tag < 0) || (10 < tag) { return }
     
     addClickStyleAnimation(
-      with: views,
+      views: views,
       style: ButtonClick.Style.allCases[tag-1],
       visible: true
     )
@@ -141,7 +140,7 @@ extension UIButton {
   // MARK: - Animation Filter
   
   public func addClickStyleAnimation(
-    with views: [UIView],
+    views: [UIView],
     radius: CGFloat? = nil,
     style: ButtonClick.Style,
     event: UIControl.Event = .touchUpInside,
@@ -225,10 +224,6 @@ extension UIButton {
             $0.buttonClickStylePulsate(value: value, duration: dur)
           }
         }
-        
-//      case .press(let power):
-//        $0.press(duration: dur, value: power, visible: event != .touchDown)
-        
       case .shake(let value, let new):
         if new {
           $0.buttonClickStyleShake(value: value, duration: dur)

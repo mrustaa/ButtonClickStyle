@@ -1,44 +1,43 @@
 
 import UIKit
 
-
 @IBDesignable
-class ButtonClickStyleDesignView: UIView {
+open class ButtonClickStyleDesignView: UIView {
     /// Rectange | Ellipse | Polygon | Star
-    @IBInspectable var figureType: Int = 0
-    @IBInspectable var starRadius: CGFloat = 0
-    @IBInspectable var starCount: Int = 5
-    @IBInspectable var cornerRadius: CGFloat = 0.0
-    @IBInspectable var blur: CGFloat = 0.0
-    @IBInspectable var image: UIImage?
+    @IBInspectable public var figureType: Int = 0
+    @IBInspectable public var starRadius: CGFloat = 0
+    @IBInspectable public var starCount: Int = 5
+    @IBInspectable public var cornerRadius: CGFloat = 0.0
+    @IBInspectable public var blur: CGFloat = 0.0
+    @IBInspectable public var image: UIImage?
     /// ScaleToFill | Fit | Fill
-    @IBInspectable var imageMode: Int = 1
-    @IBInspectable var fillColor: UIColor?
-    @IBInspectable var grColor1: UIColor?
-    @IBInspectable var grColor2: UIColor?
-    @IBInspectable var grColor3: UIColor?
-    @IBInspectable var grColor4: UIColor?
-    @IBInspectable var grColor5: UIColor?
-    @IBInspectable var grColor6: UIColor?
-    @IBInspectable var grStartPoint: CGPoint = .zero
-    @IBInspectable var grEndPoint: CGPoint = .zero
+    @IBInspectable public var imageMode: Int = 1
+    @IBInspectable public var fillColor: UIColor?
+    @IBInspectable public var grColor1: UIColor?
+    @IBInspectable public var grColor2: UIColor?
+    @IBInspectable public var grColor3: UIColor?
+    @IBInspectable public var grColor4: UIColor?
+    @IBInspectable public var grColor5: UIColor?
+    @IBInspectable public var grColor6: UIColor?
+    @IBInspectable public var grStartPoint: CGPoint = .zero
+    @IBInspectable public var grEndPoint: CGPoint = .zero
     /// Default: Linear
-    @IBInspectable var grRadial: Bool = false
-    @IBInspectable var grDrawsOptions: Bool = true
-    @IBInspectable var grDebug: Bool = false
-    @IBInspectable var grPointPercent: Bool = true
-    @IBInspectable var grBlendMode: Int = 0
-    @IBInspectable var brColor: UIColor = .clear
-    @IBInspectable var brWidth: CGFloat = 0.0
-    @IBInspectable var brDash: Int = 0
-    @IBInspectable var inShColor: UIColor = .clear
-    @IBInspectable var inShRadius: CGFloat = 0.0
-    @IBInspectable var inShOffset: CGSize = .zero
-    @IBInspectable var shColor: UIColor = .clear
-    @IBInspectable var shRadius: CGFloat = 0.0
-    @IBInspectable var shOffset: CGSize = .zero
+    @IBInspectable public var grRadial: Bool = false
+    @IBInspectable public var grDrawsOptions: Bool = true
+    @IBInspectable public var grDebug: Bool = false
+    @IBInspectable public var grPointPercent: Bool = true
+    @IBInspectable public var grBlendMode: Int = 0
+    @IBInspectable public var brColor: UIColor = .clear
+    @IBInspectable public var brWidth: CGFloat = 0.0
+    @IBInspectable public var brDash: Int = 0
+    @IBInspectable public var inShColor: UIColor = .clear
+    @IBInspectable public var inShRadius: CGFloat = 0.0
+    @IBInspectable public var inShOffset: CGSize = .zero
+    @IBInspectable public var shColor: UIColor = .clear
+    @IBInspectable public var shRadius: CGFloat = 0.0
+    @IBInspectable public var shOffset: CGSize = .zero
     
-  func allColorClear() {
+  public func allColorClear() {
     fillColor = .clear
     brColor = .clear
     shColor = .clear
@@ -52,7 +51,7 @@ class ButtonClickStyleDesignView: UIView {
     setNeedsLayout()
   }
   
-    func setup() {
+  public func setup() {
         
         if let foundView = viewWithTag(55) {
             foundView.removeFromSuperview()
@@ -117,16 +116,16 @@ class ButtonClickStyleDesignView: UIView {
 //    fatalError("init(coder:) has not been implemented")
 //  }
   
-  func createCopy() -> ButtonClickStyleDesignView {
+  public func createCopy() -> ButtonClickStyleDesignView {
     ButtonClickStyleDesignView()
   }
   
-    override func layoutSubviews() { setup() }
+  open override func layoutSubviews() { setup() }
     
 }
 
 extension ButtonClickStyleDesignView: NSCopying {
-  func copy(with zone: NSZone? = nil) -> Any
+  public func copy(with zone: NSZone? = nil) -> Any
   {
     let d = ButtonClickStyleDesignView()
     d.frame = self.frame

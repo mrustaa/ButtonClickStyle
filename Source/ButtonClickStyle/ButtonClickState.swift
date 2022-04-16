@@ -9,7 +9,7 @@ import UIKit
 
 extension ButtonClick {
   
-  struct State: Equatable {
+  public struct State: Equatable {
     var titleText: String?
     var allSubviews: Bool = true
     var animationType: Int?

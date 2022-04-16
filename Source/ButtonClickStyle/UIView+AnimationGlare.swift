@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
   
-  func buttonClickStyleGlare(alpha: CGFloat, color: UIColor? = nil, duration: CGFloat? = nil) {
+  public func buttonClickStyleGlare(alpha: CGFloat, color: UIColor? = nil, duration: CGFloat? = nil) {
     
 //    let snapshot = self.asImage().withRenderingMode(.alwaysTemplate)
     let snapshot = self.snapshot?.withRenderingMode(.alwaysTemplate)
@@ -53,7 +53,7 @@ extension UIView {
     gradientLayer.add(animation, forKey: "shine")
   }
   
-  func buttonClickStyleGlareStop() {
+  public func buttonClickStyleGlareStop() {
     layer.sublayers?.forEach {
       $0.mask?.removeAnimation(forKey: "shine")
     }
