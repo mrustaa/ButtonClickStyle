@@ -35,7 +35,7 @@ pod 'ButtonClickStyle'
 
 ## Usage
 
-#### С storyboard или xib
+#### With storyboard or xib files
 
 1) Create a "view" that inherits from `ButtonClickStyleView`
 
