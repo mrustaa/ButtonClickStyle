@@ -74,7 +74,7 @@ extension ButtonClick {  // animationType
 
 6) Add animation value `animationTypeValue` -  meaning means for some types - alpha or power
 
-- Hide       
+- Hide 
    .Alpha / .Flash         
    Will change alpha for "self.view" from 0.0 to 1.0
 
@@ -82,17 +82,17 @@ extension ButtonClick {  // animationType
    .Shadow / .Color / .ColorFlat
    Will change alpha for "add.view" from 0.0 to 1.0
 
-- "Move       
+- Move       
    .Pulsate / .Press / .Shake   
    Will change the strength of movement for "self.view" from 0.0 to 1.0
 
-- "TapGesture 
-   .Fave / .AndroidClickable
-   Will increase bubble radius
+- Tap Gesture 
+   .Fave / .AndroidClickable 
+   Will increase bubble radius for "add.view"
 
 - Loading   
-   .Glare                  
-   No change
+   .Glare               
+   No change for "add.view"
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
