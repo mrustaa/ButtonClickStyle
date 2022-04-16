@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="64" id="8Re-Fe-eX6" customClass="ButtonListCell" customModule="ButtonClickStyle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Re-Fe-eX6" id="Nk4-un-IoO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zd1-Vk-dQd" userLabel=" ButtonList">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="59P-TW-ezt" userLabel="Alpha">
+                                <rect key="frame" x="212" y="0.0" width="75" height="93"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="so7-Qr-lCJ" userLabel="Alpha">
+                                <rect key="frame" x="289" y="0.0" width="86" height="93"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyx-Hq-UeM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="so7-Qr-lCJ" firstAttribute="width" secondItem="Zd1-Vk-dQd" secondAttribute="width" multiplier="0.229333" id="4sW-FI-cdG"/>
+                            <constraint firstItem="Fyx-Hq-UeM" firstAttribute="leading" secondItem="Zd1-Vk-dQd" secondAttribute="leading" id="5MR-32-Ore"/>
+                            <constraint firstItem="59P-TW-ezt" firstAttribute="leading" secondItem="Zd1-Vk-dQd" secondAttribute="leading" constant="212" id="Hyl-R6-83B"/>
+                            <constraint firstAttribute="bottom" secondItem="Fyx-Hq-UeM" secondAttribute="bottom" id="JbO-wk-TuQ"/>
+                            <constraint firstItem="59P-TW-ezt" firstAttribute="top" secondItem="Zd1-Vk-dQd" secondAttribute="top" id="Mrc-Hh-jg9"/>
+                            <constraint firstAttribute="bottom" secondItem="59P-TW-ezt" secondAttribute="bottom" id="Nin-06-4nf"/>
+                            <constraint firstAttribute="bottom" secondItem="so7-Qr-lCJ" secondAttribute="bottom" id="OwZ-wb-9r7"/>
+                            <constraint firstAttribute="trailing" secondItem="so7-Qr-lCJ" secondAttribute="trailing" id="VGP-zK-W17"/>
+                            <constraint firstItem="so7-Qr-lCJ" firstAttribute="top" secondItem="Zd1-Vk-dQd" secondAttribute="top" id="YsL-4X-qOe"/>
+                            <constraint firstAttribute="trailing" secondItem="Fyx-Hq-UeM" secondAttribute="trailing" id="ZLf-bO-wxE"/>
+                            <constraint firstItem="59P-TW-ezt" firstAttribute="width" secondItem="Zd1-Vk-dQd" secondAttribute="width" multiplier="0.2" id="aXi-xs-XgE"/>
+                            <constraint firstItem="Fyx-Hq-UeM" firstAttribute="top" secondItem="Zd1-Vk-dQd" secondAttribute="top" id="uF5-dV-W40"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWd-Xu-ljI" customClass="JustPinkButtonView" customModule="ButtonClickStyle" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="202" id="1qX-GX-w20"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Zd1-Vk-dQd" secondAttribute="trailing" id="5BX-kF-MCp"/>
+                    <constraint firstAttribute="bottom" secondItem="Zd1-Vk-dQd" secondAttribute="bottom" id="dKw-dl-hdz"/>
+                    <constraint firstItem="YWd-Xu-ljI" firstAttribute="leading" secondItem="Nk4-un-IoO" secondAttribute="leading" id="emI-Vc-Neu"/>
+                    <constraint firstItem="Zd1-Vk-dQd" firstAttribute="leading" secondItem="Nk4-un-IoO" secondAttribute="leading" id="gRH-JX-rkg"/>
+                    <constraint firstItem="Zd1-Vk-dQd" firstAttribute="top" secondItem="Nk4-un-IoO" secondAttribute="top" id="h9U-tp-FZv"/>
+                    <constraint firstItem="YWd-Xu-ljI" firstAttribute="top" secondItem="Nk4-un-IoO" secondAttribute="top" id="swe-cE-PRR"/>
+                    <constraint firstAttribute="bottom" secondItem="YWd-Xu-ljI" secondAttribute="bottom" id="wWe-4J-RH7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="button" destination="Fyx-Hq-UeM" id="BGB-2h-fsC"/>
+                <outlet property="buttonClickView" destination="YWd-Xu-ljI" id="fJ9-P5-e2H"/>
+                <outlet property="subtitleLabel" destination="59P-TW-ezt" id="LKP-WK-6X0"/>
+                <outlet property="titleLabel" destination="so7-Qr-lCJ" id="ZRB-2u-4oN"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="98.50074962518741"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

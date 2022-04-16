@@ -24,11 +24,10 @@ extension UIView {
     }
     
     let to = 0 + (radius * 400) // 200
-//    print(" 💙💜 androidPulse \(to) ")
     
     let pulse = ButtonClickStylePulseAnimation(numberOfPulse: 1, radius: to, postion: position)
     pulse.animationDuration = duration
-    pulse.backgroundColor = rcolor.cgColor// #colorLiteral(red: 0.05282949957, green: 0.5737867104, blue: 1, alpha: 1)
+    pulse.backgroundColor = rcolor.cgColor
     layer.insertSublayer(pulse, below: layer)
   }
   

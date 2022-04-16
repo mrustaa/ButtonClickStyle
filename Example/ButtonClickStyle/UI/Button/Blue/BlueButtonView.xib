@@ -8,8 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueButtonView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueButtonView" customModule="ButtonClickStyle" customModuleProvider="target">
             <connections>
+                <outlet property="backColor" destination="UxW-mP-AhQ" id="kqG-vE-bH9"/>
                 <outlet property="mainView" destination="nKK-Ra-1y6" id="FAi-tw-OgA"/>
                 <outlet property="titleLabel" destination="nZy-Nz-A6n" id="UUo-U0-6lp"/>
             </connections>
@@ -19,7 +20,22 @@
             <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-Ra-1y6" userLabel="Button 3" customClass="DesignableView" customModule="ButtonClickStyle_Example" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxW-mP-AhQ" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="0.80958292201789572" green="0.9552578200709404" blue="0.97900176279999995" alpha="0.74805526499999997" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="figureType">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="blur">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-Ra-1y6" userLabel="Button 3" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                     <rect key="frame" x="28" y="22" width="146" height="49"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZy-Nz-A6n" userLabel="Buy now">
@@ -49,8 +65,12 @@
             <viewLayoutGuide key="safeArea" id="H7J-uR-29M"/>
             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="UxW-mP-AhQ" firstAttribute="top" secondItem="sUU-mk-60L" secondAttribute="top" id="4yz-ft-ng7"/>
                 <constraint firstItem="nKK-Ra-1y6" firstAttribute="centerY" secondItem="sUU-mk-60L" secondAttribute="centerY" id="8R3-nL-zIQ"/>
+                <constraint firstItem="UxW-mP-AhQ" firstAttribute="leading" secondItem="H7J-uR-29M" secondAttribute="leading" id="GiM-R2-YeA"/>
                 <constraint firstItem="nKK-Ra-1y6" firstAttribute="centerX" secondItem="sUU-mk-60L" secondAttribute="centerX" id="KR0-4k-hdl"/>
+                <constraint firstItem="UxW-mP-AhQ" firstAttribute="bottom" secondItem="H7J-uR-29M" secondAttribute="bottom" id="Vbf-kP-ken"/>
+                <constraint firstItem="UxW-mP-AhQ" firstAttribute="trailing" secondItem="H7J-uR-29M" secondAttribute="trailing" id="z7p-Kh-xze"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-377" y="490"/>

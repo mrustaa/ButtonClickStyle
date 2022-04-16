@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mC-8m-A43">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="2mC-8m-A43" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gBt-LV-vze">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -28,79 +28,142 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonClickStyle_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonClickStyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-rs-wzT">
-                                <rect key="frame" x="146" y="144" width="122" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXW-y9-Vhi">
+                                <rect key="frame" x="62.666666666666657" y="402.66666666666669" width="249.99999999999997" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="LGN-KJ-YRR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Test Screen"/>
-                                <connections>
-                                    <action selector="testScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVi-i8-Lfc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4i-jN-1m6">
-                                <rect key="frame" x="142.5" y="184" width="129" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="TestDemo Screen"/>
-                                <connections>
-                                    <action selector="testDemoScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LPc-xK-hkU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-He-sJB">
-                                <rect key="frame" x="98.5" y="224" width="217" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Click Style Anim. List  Screen "/>
-                                <connections>
-                                    <action selector="exampleAnimationsScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTw-b2-Irj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXW-y9-Vhi">
-                                <rect key="frame" x="141" y="304" width="132" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="ButtonList Screen"/>
+                                <state key="normal" title="One Button">
+                                    <color key="titleColor" red="0.92156863209999995" green="0.20784313979999999" blue="0.50588238240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonListScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i30-fC-Jkb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18u-xo-eAM">
-                                <rect key="frame" x="131.5" y="264" width="151" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUF-dc-MTn">
+                                <rect key="frame" x="62.666666666666657" y="429.66666666666669" width="249.99999999999997" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="haG-YB-Axk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Buttons List  Screen "/>
+                                <state key="normal" title="Table List Buttons">
+                                    <color key="titleColor" red="0.92156863209999995" green="0.20784313979999999" blue="0.50588238240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTableListScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xeA-Go-FXd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4i-jN-1m6">
+                                <rect key="frame" x="62.666666666666657" y="516.66666666666663" width="249.99999999999997" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="qap-Ps-vt2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="All Buttons Collection "/>
+                                <connections>
+                                    <action selector="testDemoScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LPc-xK-hkU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-He-sJB">
+                                <rect key="frame" x="62.666666666666657" y="543.66666666666663" width="249.99999999999997" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="xyE-NL-cdP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Click Style Anim. List  "/>
+                                <connections>
+                                    <action selector="exampleAnimationsScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTw-b2-Irj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18u-xo-eAM">
+                                <rect key="frame" x="62.666666666666657" y="570.66666666666663" width="249.99999999999997" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="NbM-PY-NTp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Buttons List"/>
                                 <connections>
                                     <action selector="exampleButtonsScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blv-iq-0CV"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeK-fQ-uaF" customClass="ButtonLayerExampleView" customModule="ButtonClickStyle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="223"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="qaK-x0-uTs"/>
+                                    <constraint firstAttribute="height" constant="223" id="xEq-iK-dxt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-rs-wzT">
+                                <rect key="frame" x="62.666666666666657" y="597.66666666666663" width="249.99999999999997" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="v06-P1-lQb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Test 1 "/>
+                                <connections>
+                                    <action selector="testScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVi-i8-Lfc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad Screens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByY-Uq-qdL">
+                                <rect key="frame" x="62.666666666666664" y="489.33333333333331" width="94.333333333333343" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone Screens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq8-pe-CLh">
+                                <rect key="frame" x="62.666666666666664" y="375.33333333333331" width="112.66666666666669" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="U4i-jN-1m6" firstAttribute="top" secondItem="qXM-rs-wzT" secondAttribute="bottom" constant="10" id="5AC-Zi-Xmv"/>
+                            <constraint firstItem="kUF-dc-MTn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="05k-aE-9T4"/>
+                            <constraint firstItem="ZeK-fQ-uaF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1iv-aD-McI"/>
+                            <constraint firstItem="cq8-pe-CLh" firstAttribute="leading" secondItem="mXW-y9-Vhi" secondAttribute="leading" id="3wh-bk-m3a"/>
                             <constraint firstItem="mXW-y9-Vhi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6gz-Es-SwW"/>
-                            <constraint firstItem="qXM-rs-wzT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="EwE-0I-jHL"/>
-                            <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" constant="10" id="J5M-I6-KR6"/>
-                            <constraint firstItem="mXW-y9-Vhi" firstAttribute="top" secondItem="Bw3-He-sJB" secondAttribute="bottom" constant="50" id="NHz-z8-mid"/>
+                            <constraint firstItem="U4i-jN-1m6" firstAttribute="top" secondItem="kUF-dc-MTn" secondAttribute="bottom" constant="60" id="8Ci-be-y2u"/>
+                            <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" id="J5M-I6-KR6"/>
+                            <constraint firstItem="ByY-Uq-qdL" firstAttribute="leading" secondItem="U4i-jN-1m6" secondAttribute="leading" id="JDw-yR-TUO"/>
+                            <constraint firstItem="mXW-y9-Vhi" firstAttribute="top" secondItem="cq8-pe-CLh" secondAttribute="bottom" constant="8" id="Mt0-CE-MNn"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NQG-Ih-XNE"/>
-                            <constraint firstItem="qXM-rs-wzT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="OBx-lA-c9u"/>
+                            <constraint firstItem="ZeK-fQ-uaF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SUP-3g-kgF"/>
                             <constraint firstItem="18u-xo-eAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UZ5-LE-85j"/>
-                            <constraint firstItem="18u-xo-eAM" firstAttribute="top" secondItem="Bw3-He-sJB" secondAttribute="bottom" constant="10" id="ekk-cC-Zdk"/>
+                            <constraint firstItem="qXM-rs-wzT" firstAttribute="top" secondItem="18u-xo-eAM" secondAttribute="bottom" id="ad1-TS-n92"/>
+                            <constraint firstItem="U4i-jN-1m6" firstAttribute="top" secondItem="ByY-Uq-qdL" secondAttribute="bottom" constant="8" id="cn0-Sl-68K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ByY-Uq-qdL" secondAttribute="trailing" symbolic="YES" id="ees-Tg-bDv"/>
+                            <constraint firstItem="18u-xo-eAM" firstAttribute="top" secondItem="Bw3-He-sJB" secondAttribute="bottom" id="ekk-cC-Zdk"/>
+                            <constraint firstItem="mXW-y9-Vhi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="hlk-e8-D8c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cq8-pe-CLh" secondAttribute="trailing" symbolic="YES" id="icM-uB-Gun"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="moj-pA-DX3"/>
-                            <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" constant="10" id="yo9-iw-cSf"/>
+                            <constraint firstItem="kUF-dc-MTn" firstAttribute="top" secondItem="mXW-y9-Vhi" secondAttribute="bottom" id="tow-2P-Nin"/>
+                            <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" id="yo9-iw-cSf"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="centerX" secondItem="U4i-jN-1m6" secondAttribute="centerX" id="zg8-Lb-G5U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="U4X-kX-AuW"/>
+                    <connections>
+                        <outlet property="buttonLayerExampleView" destination="ZeK-fQ-uaF" id="Wxh-H0-Ku7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468" y="-115"/>
+            <point key="canvasLocation" x="466.40624999999994" y="-115.51976573938505"/>
         </scene>
     </scenes>
     <resources>

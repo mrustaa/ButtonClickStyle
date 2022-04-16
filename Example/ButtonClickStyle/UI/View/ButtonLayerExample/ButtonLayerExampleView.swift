@@ -13,23 +13,30 @@ var endAnimationCallback: (() -> ())?
   @IBOutlet var startStopButton: UIButton!
   
   @IBOutlet var presentView: UIView!
-  @IBOutlet var shadowView: DesignableView!
-  @IBOutlet var elipseView: DesignableView!
-  @IBOutlet var mainView: DesignableView!
-  @IBOutlet var titleLabel: DesignableLabel!
-  @IBOutlet var iconView: DesignableView!
+  @IBOutlet var shadowView: ButtonClickStyleDesignView!
+  @IBOutlet var elipseView: ButtonClickStyleDesignView!
+  @IBOutlet var gerenalView: UIView!
+  @IBOutlet var mainView: ButtonClickStyleDesignView!
+  @IBOutlet var fullView: UIView!
+  @IBOutlet var detailsView: ButtonClickStyleDesignView!
+  @IBOutlet var gradientView: ButtonClickStyleDesignView!
+  @IBOutlet var titleLabel: ButtonClickStyleDesignLabel!
+  @IBOutlet var iconView: ButtonClickStyleDesignView!
   
   @IBOutlet var _groupView: UIView!
-  @IBOutlet var _shadowView: DesignableView!
+  @IBOutlet var _shadowView: ButtonClickStyleDesignView!
   @IBOutlet var _mainView: UIView!
-  @IBOutlet var _elipseView: DesignableView!
-  @IBOutlet var _titleLabel: DesignableLabel!
-  @IBOutlet var _iconView: DesignableView!
+  @IBOutlet var _gradientView: ButtonClickStyleDesignView!
+  @IBOutlet var _elipseView: ButtonClickStyleDesignView!
+  @IBOutlet var _titleLabel: ButtonClickStyleDesignLabel!
+  @IBOutlet var _iconView: ButtonClickStyleDesignView!
   
   @IBOutlet var textTitleLabel: UILabel!
   @IBOutlet var typeLabel: UILabel!
   @IBOutlet var buttonAnimView: ButtonClickStyleView!
     
+  var oneView: Bool = false
+  
   static var exmpStart: Bool = true
   var animationDuration = 0.45
   var animationClickDuration: CGFloat?
@@ -53,9 +60,6 @@ var endAnimationCallback: (() -> ())?
     var d: CGFloat = self.animationDuration
     if let duration = duration {
       d = duration
-    }
-    if back {
-//      d = 0.05
     }
     
     if spring {
@@ -83,24 +87,42 @@ var endAnimationCallback: (() -> ())?
 
     guard let type = animationType else { return }
     
+//    buttonAnimView.
+    
     buttonAnimView.animType = type
-//    buttonAnimView.allSubviews
-//    if type == ButtonClick.Style.color(0.5, color: .red).indx() {
-//      buttonAnimView.addViews = [_mainView]
-//      buttonAnimView.cornerRadius = 8
-//      buttonAnimView.allSubviews = false
-//    } else {
-//      buttonAnimView.addViews = nil
-//      buttonAnimView.allSubviews = true
-//    }
+    buttonAnimView.allSubviews = true
+    
+    
+    if type == ButtonClick._Style.colorFlat.rawValue ||
+        type == ButtonClick._Style.androidClickable.rawValue ||
+        type == ButtonClick._Style.androidClickableDark.rawValue ||
+        type == ButtonClick._Style.glare.rawValue ||
+        type == ButtonClick._Style.fave.rawValue ||
+        type == ButtonClick._Style.color.rawValue {
+      
+      oneView = true
+      buttonAnimView.cornerRadius = 8
+      buttonAnimView.allSubviews = false
+    }
+    
     buttonAnimView.state?.animationDuration = animationClickDuration
     typeLabel.text = "\(ButtonClick.Style.allCases[type].str())"
     buttonAnimView.updateSubviews()
   }
   
-  public func buttonStartStopAction() {
+  public func startStopAction(_ value: Bool? = nil) {
+    if let value = value {
+      ButtonLayerExampleView.exmpStart = value
+    } else {
+      ButtonLayerExampleView.exmpStart = !ButtonLayerExampleView.exmpStart
+    }
+    
+    startStopUpdate()
+  }
   
-      self.startStopButton.setTitle(" \(ButtonLayerExampleView.exmpStart ? "🛑 Stop Hide" : "▶ Show Animated Demo")", for: .normal)
+  public func startStopUpdate() {
+  
+      self.startStopButton.setTitle(" \(ButtonLayerExampleView.exmpStart ? "▀ Stop Hide" : "▶ Show Animated Demo")", for: .normal)
       
     let hideLevel = 0.25
     
@@ -125,13 +147,8 @@ var endAnimationCallback: (() -> ())?
     override func setup() {
       
       startStopButton.click { [weak self] in
-        
-//        guard let self = self else { return }
-//        main {
           
-          ButtonLayerExampleView.exmpStart = !ButtonLayerExampleView.exmpStart
-          self?.buttonStartStopAction()
-//        }
+          self?.startStopAction()
       }
       
       backgroundColor = .clear
@@ -173,11 +190,18 @@ var endAnimationCallback: (() -> ())?
       fillView.addSubview(presentView)
       fillView.addSubview(_groupView)
     } else {
+      
+      if oneView {
+        buttonAnimView.addViews = [ shadowView ]
+      }
+      
+      
       fillView.addSubview(_groupView)
       fillView.addSubview(presentView)
     }
     
-    main(delay: animationDelay) { [weak self] in
+    
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + animationDelay) { [weak self] in
       guard let self = self else { return }
       
       if back {
@@ -188,8 +212,7 @@ var endAnimationCallback: (() -> ())?
         if back {
           self._shadowView.frame = self.fr1
         } else {
-          self._shadowView.set(y: 112)
-          self._shadowView.set(x: 189)
+          var frr = self._shadowView.frame;frr.origin = .init(x: 189, y: 112);self._shadowView.frame = frr;
         }
       }, completion: { f in
         if !back {
@@ -201,15 +224,8 @@ var endAnimationCallback: (() -> ())?
         }
         
         if !back {
-          print(" onClick 💭🌀‼️ step1 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
-//        if back {
-//          self.step3(back)
-//        } else {
-//          self.step2(back)
-//        }
-        
         
         if !back {
           self.step2(back)
@@ -225,11 +241,23 @@ var endAnimationCallback: (() -> ())?
     if !ButtonLayerExampleView.exmpStart { return }
     
     if !back {
+      if oneView {
+        buttonAnimView.addViews = [ mainView ]
+      }
+      if buttonAnimView.animType == ButtonClick._Style.fave.rawValue {
+        
+        mainView.fillColor = .clear
+        mainView.layer.backgroundColor = UIColor.clear.cgColor
+        mainView.setNeedsLayout()
+        buttonAnimView.addViews = [ fullView, gerenalView ]
+      }
+      
+      
       fillView.addSubview(presentView)
       fillView.addSubview(_groupView)
     }
     
-    main(delay: animationDelay) { [weak self] in
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + animationDelay) { [weak self] in
       guard let self = self else { return }
       if back {
         self._mainView.alpha = 1
@@ -240,8 +268,7 @@ var endAnimationCallback: (() -> ())?
         if back {
           self._mainView.frame = self.fr2
         } else {
-          self._mainView.set(y: 86)
-          self._mainView.set(x: 172)
+          var frr = self._mainView.frame;frr.origin = .init(x: 172, y: 86);self._mainView.frame = frr;
         }
       }, completion: { f in
         if !back {
@@ -250,7 +277,6 @@ var endAnimationCallback: (() -> ())?
         }
         
 //        if !back {
-        print(" onClick 💭🌀‼️ step2 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
 //        }
         
@@ -275,7 +301,7 @@ var endAnimationCallback: (() -> ())?
       fillView.addSubview(presentView)
     }
     
-    main(delay: animationDelay) { [weak self] in
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + animationDelay) { [weak self] in
       
       guard let self = self else { return }
       if back {
@@ -291,8 +317,7 @@ var endAnimationCallback: (() -> ())?
         if back {
           self._elipseView.frame = self.fr3
         } else {
-          self._elipseView.set(y: 106)
-          self._elipseView.set(x: 172)
+          var frr = self._elipseView.frame;frr.origin = .init(x: 172, y: 106);self._elipseView.frame = frr;
         }
         
       }, completion: { f in
@@ -305,7 +330,6 @@ var endAnimationCallback: (() -> ())?
         }
         
         if !back {
-          print(" onClick 💭🌀‼️ step3 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
 //        self.step4(back)
@@ -329,7 +353,7 @@ var endAnimationCallback: (() -> ())?
       fillView.addSubview(presentView)
       fillView.addSubview(_groupView)
     }
-    main(delay: animationDelay) { [weak self] in
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + animationDelay) { [weak self] in
       
       guard let self = self else { return }
       if back {
@@ -342,8 +366,7 @@ var endAnimationCallback: (() -> ())?
         if back {
           self._titleLabel.frame = self.fr4
         } else {
-          self._titleLabel.set(y: 100)
-          self._titleLabel.set(x: 187)
+          var frr = self._titleLabel.frame;frr.origin = .init(x: 187, y: 100);self._titleLabel.frame = frr
         }
         
       }, completion: { f in
@@ -354,7 +377,6 @@ var endAnimationCallback: (() -> ())?
         
         
         if !back {
-          print(" onClick 💭🌀‼️ step4 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
 //        self.step5(back)
@@ -371,7 +393,7 @@ var endAnimationCallback: (() -> ())?
   func step5(_ back: Bool = false, duration: CGFloat? = nil) {
     if !ButtonLayerExampleView.exmpStart { return }
     
-    main(delay: animationDelay) { [weak self] in
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + animationDelay) { [weak self] in
       
       guard let self = self else { return }
       if back {
@@ -384,8 +406,7 @@ var endAnimationCallback: (() -> ())?
         if back {
           self._iconView.frame = self.fr5
         } else {
-          self._iconView.set(y: 98)
-          self._iconView.set(x: 274)
+          var frr = self._iconView.frame;frr.origin = .init(x: 274, y: 98);self._iconView.frame = frr
         }
         
       }, completion: { f in
@@ -394,7 +415,6 @@ var endAnimationCallback: (() -> ())?
           self.iconView.alpha = 1
         }
         if !back {
-          print(" onClick 💭🌀‼️ step5 \(back ? "назад " : "вперед") \(ButtonClick.Style.allName[self.buttonAnimView.animType]) ")
           self.onClick()
         }
         
@@ -405,13 +425,13 @@ var endAnimationCallback: (() -> ())?
           
           
           self.step1(true, duration: 0.27)//0.15)
-          main(delay: 0.4) {
+          DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
             self.step3(true, duration: 0.25)//0.18)
-            main(delay: 0.3) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
               self.step4(true, duration: 0.22)
-              main(delay: 0.2) {
+              DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
                 self.step5(true, duration: 0.18)//0.25)
-                main(delay: 0.1) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
                   self.step2(true, duration: 0.15)//0.27)
                 }
               }

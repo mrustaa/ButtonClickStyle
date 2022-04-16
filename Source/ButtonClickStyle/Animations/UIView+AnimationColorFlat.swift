@@ -15,87 +15,48 @@ extension UIView {
     
     if visible {
       
-      
-      
-      
       superview.subviews.forEach { v1 in
         if v1.tag == flatImageTag || v1.tag == flatTextTag {
-//          v1.tag = 0
           UIView.animate(withDuration: 0.1 , animations: {
             v1.alpha = 0
           }, completion: { fin in
             v1.removeFromSuperview()
           })
-
         }
       }
       
-      if let desFig = self as? DesignableView {
+      if let desFig = self as? ButtonClickStyleDesignView {
         if let copyDesFig = superview.viewWithTag(flatBorderTag) {
-          
-//          if desFig.tag != flatBorderTag { return }
-          
-//          desFig.fillColor = desFig.brColor
-//          desFig.brWidth = 0
-//          desFig.brColor = UIColor.clear
-          
           desFig.alpha = 1
-          
-          let subFigures = desFig.subviews.compactMap { $0 as? DesignableView }
+          let subFigures = desFig.subviews.compactMap { $0 as? ButtonClickStyleDesignView }
           subFigures.forEach {
             if ($0.tag != flatBorderTag) && ($0.tag != flatTextTag) && ($0.tag != flatImageTag) {
               $0.alpha = 1.0
             }
           }
-//
-//          copyDesFig.tag = 0
+          
           UIView.animate(withDuration: 0.1  , animations: {
             copyDesFig.alpha = 0
           }, completion: { fin in
             copyDesFig.removeFromSuperview()
           })
-          
-          
         }
-      } else {
-        
-//        if self.tag != flatTextTag { return }
-//        
-//        let tintColor = self.tintColor
-//        self.backgroundColor = tintColor
-//        
-//        self.layer.borderWidth = 0
-//        self.layer.borderColor = UIColor.clear.cgColor
-//        
-//        self.tintColor = nil
-//        
-//        self.tag = 0
       }
       
     } else {
       
       
-//      if self.tag == flatBorderTag { return }
       if let _ = superview.viewWithTag(flatBorderTag) { return }
 
-      
-      
-      if let desFig = self as? DesignableView {
+      if let desFig = self as? ButtonClickStyleDesignView {
         
         let find = desFig.getFirstFindColorSubviews()
-        let type: DesignableView.ColorType = find.typee
+        let type: ButtonClickStyleDesignView.ColorType = find.typee
         let fill: UIColor? = color ?? find.color
-//        if let fillColor = desFig.fillColor, fillColor != .clear {
-//          fill = fillColor
-//        } else if let grColor1 = desFig.grColor1, grColor1 != .clear {
-//          fill = grColor1
-//        } else if let backColor = backgroundColor, backColor != .clear {
-//          fill = backColor
-//        }
 
         if let fill = fill {
           
-          if let copyDesFig = desFig.copy() as? DesignableView {
+          if let copyDesFig = desFig.copy() as? ButtonClickStyleDesignView {
             copyDesFig.tag = flatBorderTag
             
             let val: CGFloat = value * 10
@@ -116,7 +77,7 @@ extension UIView {
 
           desFig.alpha = 0.0
 
-          let subFigures = desFig.subviews.compactMap { $0 as? DesignableView }
+          let subFigures = desFig.subviews.compactMap { $0 as? ButtonClickStyleDesignView }
           subFigures.forEach {
             if ($0.tag != flatBorderTag) && ($0.tag != flatTextTag) && ($0.tag != flatImageTag) {
               $0.alpha = 0.0
@@ -130,7 +91,6 @@ extension UIView {
             if let copyImgV = $0.copy() as? UIImageView {
               copyImgV.frame = frame
               copyImgV.tag = flatImageTag
-//              copyImgV.backgroundColor = .red
               if let img = copyImgV.image?.withRenderingMode(.alwaysTemplate) {
                 copyImgV.image = img
               }
@@ -141,46 +101,21 @@ extension UIView {
 
           let labels = desFig.getAllLabelsSubviews()
           labels.forEach {
-//
             if let copyLabel = $0.copy() as? UILabel {
               copyLabel.tag = flatTextTag
               copyLabel.textColor = type == .fill ? fill : fill.inverted
               superview.addSubview(copyLabel)
             }
-            
           }
-          
-          
-
-//          desFig.tag = flatBorderTag
         }
-      } else {
-        
-//        var fill: UIColor?
-//        if let backColor = backgroundColor, backColor != .clear {
-//          fill = backColor
-//        }
-//
-//        if let fill = fill {
-//          layer.borderColor = fill.cgColor
-//          layer.borderWidth = 4
-//          let saveBackColor = self.backgroundColor
-//          self.tintColor = saveBackColor
-//          backgroundColor = .clear
-//        }
-//
-//        self.tag = flatTextTag
-        
-        
       }
       
     }
-    //
   }
   
 }
 
-extension DesignableView {
+extension ButtonClickStyleDesignView {
   
   public enum ColorType {
     case fill
@@ -203,7 +138,7 @@ extension DesignableView {
   public func getFillColorSubviews() -> UIColor? {
     var fill: UIColor? = self.getFillColor()
     if fill == nil {
-      let subFigures = self.subviews.compactMap { $0 as? DesignableView }
+      let subFigures = self.subviews.compactMap { $0 as? ButtonClickStyleDesignView }
       subFigures.forEach {
         if let color = $0.getFillColor(), fill == nil {
           fill = color

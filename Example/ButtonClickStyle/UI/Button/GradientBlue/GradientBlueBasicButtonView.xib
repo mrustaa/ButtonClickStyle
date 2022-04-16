@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,13 +26,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
                     <color key="backgroundColor" red="0.91372549020000005" green="0.95294117649999999" blue="0.98823529409999999" alpha="0.50176946634252262" colorSpace="custom" customColorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ou-CW-9cv" userLabel="Frame 3183349" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ou-CW-9cv" userLabel="Frame 3183349" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                     <rect key="frame" x="22" y="16.5" width="158" height="60"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2A-oZ-pFl" userLabel="Frame 3183349" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2A-oZ-pFl" userLabel="Frame 3183349" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="158" height="60"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-yQ-6kg" userLabel="Rectangle 35" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-yQ-6kg" userLabel="Rectangle 35" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="158" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="158" id="4ed-WI-9nD"/>
@@ -55,7 +53,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7Z-SQ-LU3" userLabel="Rectangle 35" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7Z-SQ-LU3" userLabel="Rectangle 35" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="158" height="60"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -69,7 +67,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-ff-1a7" userLabel="Rectangle 35" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-ff-1a7" userLabel="Rectangle 35" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="158" height="60"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -107,7 +105,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlN-eA-W9w" userLabel="Frame 3183347">
                                     <rect key="frame" x="105.5" y="7.5" width="45" height="45"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5J-w6-Z4R" userLabel="Rectangle 36" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5J-w6-Z4R" userLabel="Rectangle 36" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <userDefinedRuntimeAttributes>

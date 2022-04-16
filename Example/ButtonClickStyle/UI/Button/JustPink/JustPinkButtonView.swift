@@ -4,12 +4,12 @@ class JustPinkButtonView: BtnView {
   
   // MARK: Outlets
   
-  @IBOutlet var fillView: DesignableView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
   @IBOutlet var mainView: UIView!
-  @IBOutlet var mainShadowView: DesignableView!
-  @IBOutlet var subMainView: DesignableView!
-  @IBOutlet var mainDetailsView: DesignableView!
-  @IBOutlet var gradientView: DesignableView!
+  @IBOutlet var mainShadowView: ButtonClickStyleDesignView!
+  @IBOutlet var subMainView: ButtonClickStyleDesignView!
+  @IBOutlet var mainDetailsView: ButtonClickStyleDesignView!
+  @IBOutlet var gradientView: ButtonClickStyleDesignView!
   @IBOutlet var titleLabel: UILabel!
   
   
@@ -27,7 +27,6 @@ class JustPinkButtonView: BtnView {
      if !state.addBackgrondColor {
        backgroundColor = .clear
      }
-     fillView.isHidden = !state.addBackgrondColor
      
      if state.new {
        let color: UIColor = #colorLiteral(red: 0.568627451, green: 0.2784313725, blue: 1, alpha: 1)
@@ -74,15 +73,15 @@ class JustPinkButtonView: BtnView {
      mainDetailsView.layoutSubviews()
      
      
-     if type == ButtonClick.Style.color(0.5, color: .red).indx()  {
+     if type == ButtonClick._Style.color.rawValue {
 //        type == ButtonClick.Style.androidClickable(0.5, dark: true).indx() ||
 //        type == ButtonClick.Style.androidClickable(0.5, dark: false).indx() {
        views = [subMainView]
      }
-     if type == ButtonClick.Style.press(0.5).indx() {
+     if type == ButtonClick._Style.press.rawValue {
        views = [subMainView, mainShadowView]
      }
-     if type == ButtonClick.Style.colorFlat(0.5, color: .red).indx() {
+     if type == ButtonClick._Style.colorFlat.rawValue {
        views = [subMainView, titleLabel]// [mainDetailsView]
      }
     if type == ButtonClick._Style.androidClickable.rawValue ||
@@ -96,6 +95,8 @@ class JustPinkButtonView: BtnView {
      
      mainDetailsView.setNeedsLayout()
      mainShadowView.setNeedsLayout()
+     
+     fillView.isHidden = !state.addBackgrondColor
      
      let viewAn = ButtonClickStyleView(
       state: state,
@@ -117,7 +118,7 @@ class JustPinkButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
      
      
    }

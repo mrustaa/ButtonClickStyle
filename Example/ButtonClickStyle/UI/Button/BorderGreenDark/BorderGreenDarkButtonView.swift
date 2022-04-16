@@ -3,8 +3,8 @@ import UIKit
 class BorderGreenDarkButtonView: BtnView {
     
   @IBOutlet var mainView: UIView!
-  @IBOutlet var borderGradientView: DesignableView!
-  @IBOutlet var borderView: DesignableView!
+  @IBOutlet var borderGradientView: ButtonClickStyleDesignView!
+  @IBOutlet var borderView: ButtonClickStyleDesignView!
   @IBOutlet var textLabel: UILabel!
   
   @IBOutlet var backColor: UIView!
@@ -48,7 +48,7 @@ class BorderGreenDarkButtonView: BtnView {
       
       self.animation?.removeFromSuperview()
       self.animation = viewAn
-      mainView.origin = .zero
+      var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
     }
     
     textLabel.text = state.titleText

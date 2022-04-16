@@ -10,9 +10,9 @@
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
 
-- This is a customizable designable button view.
+- This is a customizable designable button view/leayr.
 - Inside the layer you can style your button, create your own subviews.
-- Can choose 1 of 9 button click animation styles.
+- Can choose 1 of 15 button click animation styles.
 - You can expand the project adding new click-animation-styles.
 
 ## Requirements
@@ -63,6 +63,8 @@ extension ButtonClick {
     case shakeNew
     case androidClickable
     case androidClickableDark
+    case fave
+    case glare
   }
 }  
 ```
@@ -93,26 +95,6 @@ var addViews: [UIView]?
 There is a property `addViews` - allows you to pass views / layers
 which you definitely want to use in the click animation only
 
-8) Or initialize through a struct `ButtonClick.State`
-
-```swift
-extension ButtonClick {
-  struct State: Equatable {
-    var titleText: String?
-    var allSubviews: Bool = true
-    var animationType: Int?
-    var animationTypeValue: CGFloat?
-    var animationDuration: CGFloat?
-    var new: Bool = false
-    var color: UIColor?
-    var startClick: Bool = false 
-    var addBackgrondColor: Bool = true
-  }
-}
-```
-
-![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
-
 ```swift
 @IBOutlet var mainView: UIView!
 
@@ -128,6 +110,29 @@ btnView.insertSubview(mainView, at: 0)
 btnView.updateSubviews()
 
 ```
+
+
+8) Or initialize through a struct `ButtonClick.State`
+
+```swift
+extension ButtonClick {
+  struct State: Equatable {
+    var titleText: String?
+    var allSubviews: Bool = true
+    var animationType: Int?
+    var animationTypeValue: CGFloat?
+    var animationDuration: CGFloat?
+    var new: Bool = false
+    var color: UIColor?
+    var startClick: Bool = false
+    var debugButtonShow: Bool = false
+    var addBackgrondColor: Bool = true
+  }
+}
+```
+
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
+
 
 ## License
 

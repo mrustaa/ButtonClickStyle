@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteButtonView" customModule="ButtonClickStyle" customModuleProvider="target">
             <connections>
                 <outlet property="backColor" destination="f0k-V1-ON7" id="Dit-Ra-2yj"/>
                 <outlet property="designImageView" destination="szT-gc-fjg" id="uVL-lf-aeI"/>
@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0k-V1-ON7" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0k-V1-ON7" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
@@ -36,11 +36,11 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyn-cp-f1m" userLabel="Button 5" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyn-cp-f1m" userLabel="Button 5" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                     <rect key="frame" x="18" y="22" width="166" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szT-gc-fjg" userLabel="Button 5" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szT-gc-fjg" userLabel="Button 5" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="166" height="49"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <userDefinedRuntimeAttributes>

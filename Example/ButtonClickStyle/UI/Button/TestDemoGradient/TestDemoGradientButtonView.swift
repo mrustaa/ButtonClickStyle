@@ -6,12 +6,12 @@ import UIKit
 
 class TestDemoGradientButtonView: BtnView {
   
-  @IBOutlet var shadowwView: DesignableView!
-  @IBOutlet var fillView: DesignableView!
+  @IBOutlet var shadowwView: ButtonClickStyleDesignView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
   @IBOutlet var mainView: UIView!
   @IBOutlet private weak var titleLabel: UILabel?
   
-  @IBOutlet var backColor: DesignableView!
+  @IBOutlet var backColor: ButtonClickStyleDesignView!
   override func fill(state: ButtonClick.State?) {
     guard let state = state else { return }
     self.state = state
@@ -52,7 +52,10 @@ class TestDemoGradientButtonView: BtnView {
       
       self.animation?.removeFromSuperview()
       self.animation = viewAn
-      mainView.origin = .zero
+      
+      var frr = mainView.frame
+      frr.origin = .zero
+      mainView.frame = frr
     }
     
     titleLabel?.text = state.titleText

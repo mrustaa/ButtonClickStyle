@@ -3,9 +3,9 @@ import UIKit
 class GoogleButtonView: BtnView {
   
   @IBOutlet var mainView: UIView!
-  @IBOutlet var shadowVieww: DesignableView!
+  @IBOutlet var shadowVieww: ButtonClickStyleDesignView!
   @IBOutlet var cardView: UIView!
-  @IBOutlet var fillView: DesignableView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
   @IBOutlet private weak var titleLabel: UILabel?
   @IBOutlet private weak var secondImageView: UIImageView?
     
@@ -24,7 +24,10 @@ class GoogleButtonView: BtnView {
      } else if type == ButtonClick._Style.androidClickable.rawValue ||
                 type == ButtonClick._Style.androidClickableDark.rawValue {
        addViews = nil
-     } else {
+     } else if type == ButtonClick._Style.color.rawValue {
+       addViews = nil
+       
+     }  else {
        addViews = [mainView]
        }
      
@@ -53,7 +56,7 @@ class GoogleButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
    
    

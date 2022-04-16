@@ -8,8 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DownloadButtonView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DownloadButtonView" customModule="ButtonClickStyle" customModuleProvider="target">
             <connections>
+                <outlet property="backColor" destination="HVZ-Yu-6o2" id="XJ7-0J-bQM"/>
                 <outlet property="fillView" destination="8ER-hZ-gV8" id="FJP-Ly-Ato"/>
                 <outlet property="mainTitleLabel" destination="DzW-Op-6cb" id="4ux-uH-ggu"/>
                 <outlet property="mainView" destination="a9q-fC-1Jz" id="JyP-PV-3M7"/>
@@ -21,10 +22,25 @@
             <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-fC-1Jz" userLabel="Button 17" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVZ-Yu-6o2" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
+                    <rect key="frame" x="5" y="5" width="192" height="83"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="0.42838567500000002" green="0.70809382200000004" blue="0.54507768150000002" alpha="0.25137227683629154" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="figureType">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="blur">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-fC-1Jz" userLabel="Button 17" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                     <rect key="frame" x="14" y="18" width="174" height="57"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gP6-34-C4u" userLabel=" DownloadButton" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gP6-34-C4u" userLabel=" DownloadButton" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                             <rect key="frame" x="-14" y="26" width="202" height="49"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -42,7 +58,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-j6-Axx" userLabel="Button 17" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-j6-Axx" userLabel="Button 17" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="8" width="174" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -58,7 +74,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ER-hZ-gV8" userLabel="Button 17" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ER-hZ-gV8" userLabel="Button 17" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="174" height="55"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Download" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzW-Op-6cb" userLabel="Download">
@@ -127,6 +143,10 @@
             <viewLayoutGuide key="safeArea" id="LBx-ak-lIE"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="HVZ-Yu-6o2" firstAttribute="leading" secondItem="k2F-ki-byH" secondAttribute="leading" constant="5" id="AoN-vx-rFZ"/>
+                <constraint firstItem="LBx-ak-lIE" firstAttribute="trailing" secondItem="HVZ-Yu-6o2" secondAttribute="trailing" constant="5" id="IDT-eY-H8n"/>
+                <constraint firstItem="LBx-ak-lIE" firstAttribute="bottom" secondItem="HVZ-Yu-6o2" secondAttribute="bottom" constant="5" id="KTE-Hk-efO"/>
+                <constraint firstItem="HVZ-Yu-6o2" firstAttribute="top" secondItem="k2F-ki-byH" secondAttribute="top" constant="5" id="W4n-yO-m5K"/>
                 <constraint firstItem="a9q-fC-1Jz" firstAttribute="centerY" secondItem="k2F-ki-byH" secondAttribute="centerY" id="pCO-dT-Z3y"/>
                 <constraint firstItem="a9q-fC-1Jz" firstAttribute="centerX" secondItem="k2F-ki-byH" secondAttribute="centerX" id="qOd-lI-azJ"/>
             </constraints>

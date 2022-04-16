@@ -3,10 +3,10 @@ import UIKit
 class DeleteButtonView: BtnView {
   
   @IBOutlet var mainView: UIView!
-  @IBOutlet var designImageView: DesignableView!
+  @IBOutlet var designImageView: ButtonClickStyleDesignView!
   @IBOutlet private weak var subtitleLabel: UILabel?
     
-  @IBOutlet var backColor: DesignableView!
+  @IBOutlet var backColor: ButtonClickStyleDesignView!
   
   
   override func fill(state: ButtonClick.State?) {
@@ -37,7 +37,7 @@ class DeleteButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
 //     firstImageView?.image = state.firstImage
 //    designImageView?.layer.cornerRadius = 24

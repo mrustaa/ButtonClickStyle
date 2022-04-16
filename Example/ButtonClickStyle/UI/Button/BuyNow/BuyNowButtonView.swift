@@ -4,7 +4,7 @@ import UIKit
 class BuyNowButtonView: BtnView {
   
   @IBOutlet var mainView: UIView!
-  @IBOutlet var borderView: DesignableView!
+  @IBOutlet var borderView: ButtonClickStyleDesignView!
   @IBOutlet var textLabel: UILabel!
   
   override func fill(state: ButtonClick.State?) {
@@ -41,7 +41,7 @@ class BuyNowButtonView: BtnView {
      
      self.animation?.removeFromSuperview()
      self.animation = viewAn
-     mainView.origin = .zero
+     var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
    }
    
      textLabel.text = state.titleText

@@ -6,12 +6,12 @@ import UIKit
 
 class TestDemoBlurButtonView: BtnView {
   
-  @IBOutlet var shadowwView: DesignableView!
-  @IBOutlet var mainView: DesignableView!
-  @IBOutlet var groupView: DesignableView!
+  @IBOutlet var shadowwView: ButtonClickStyleDesignView!
+  @IBOutlet var mainView: ButtonClickStyleDesignView!
+  @IBOutlet var groupView: ButtonClickStyleDesignView!
   @IBOutlet var mainH: NSLayoutConstraint!
   @IBOutlet var mainW: NSLayoutConstraint!
-  @IBOutlet var fillView: DesignableView!
+  @IBOutlet var fillView: ButtonClickStyleDesignView!
   @IBOutlet private weak var titleLabel: UILabel?
   
   override func fill(state: ButtonClick.State?) {
@@ -75,7 +75,10 @@ class TestDemoBlurButtonView: BtnView {
       
       self.animation?.removeFromSuperview()
       self.animation = viewAn
-      mainView.origin = .zero
+      
+      var frr = mainView.frame
+      frr.origin = .zero
+      mainView.frame = frr
     }
     
     titleLabel?.text = state.titleText

@@ -17,7 +17,6 @@ extension UIView {
     animation.duration = duration // 0.6
     
     let to = 5 + (value * 30.0)
-    //    print(" ❤️‍🔥 shake \(to) ")
     let offset: CGFloat = to  // 20.0
     animation.values = [-offset, offset, -offset, offset, -(offset/2), (offset/2), -(offset/4), (offset/4), 0.0 ]
     layer.add(animation, forKey: "shake")
@@ -33,7 +32,6 @@ extension UIView {
     shake.autoreverses = true
     
     let to = -10 + (value * 30)
-    //    print(" 🧡 shake new \(to) ")
     let fromPoint = CGPoint(x: center.x - to, y: center.y)
     let fromValue = NSValue(cgPoint: fromPoint)
     

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,10 +23,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="202" height="93"/>
                     <color key="backgroundColor" red="0.91764706370000004" green="0.92156863209999995" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bs-XX-SLl" userLabel="Frame 3183348" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bs-XX-SLl" userLabel="Frame 3183348" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                     <rect key="frame" x="25.5" y="22.5" width="151" height="48"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYD-mg-ZkJ" userLabel="button" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYD-mg-ZkJ" userLabel="button" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -42,7 +40,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyE-hM-Wn8" userLabel="Frame 3183348">
                             <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-8N-Fc8" userLabel="button" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-8N-Fc8" userLabel="button" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -62,7 +60,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ax-Dz-MQD" userLabel="button" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ax-Dz-MQD" userLabel="button" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -82,7 +80,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m57-3v-EjK" userLabel="button" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m57-3v-EjK" userLabel="button" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -102,7 +100,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-es-j4g" userLabel="button" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yco-es-j4g" userLabel="button" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -119,7 +117,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view alpha="0.050000000000000003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGr-aT-Uhl" userLabel="button" customClass="DesignableView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
+                                <view alpha="0.050000000000000003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGr-aT-Uhl" userLabel="button" customClass="ButtonClickStyleDesignView" customModule="ButtonCustomClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
