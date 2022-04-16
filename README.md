@@ -13,10 +13,7 @@
 ## Watch video with examples
 [▶️ Styling Buttons List 📱iPhone](https://youtu.be/OjpMy_LUCIU) 
 
-- This is a customizable designable button view/layer.
-- Inside the layer you can style your button, create your own subviews.
-- Can choose 1 of 15 button click animation styles.
-- You can expand the project adding new click-animation-styles.
+This is a customizable/designable "button view", with 15 animated click styles, that allows you to design your own buttons from subviews, in storyboard and xib right away.
 
 
 ## Requirements
