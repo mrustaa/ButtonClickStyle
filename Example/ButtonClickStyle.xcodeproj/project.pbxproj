@@ -193,6 +193,7 @@
 		4A85B5BD2803EBFD00DFD435 /* TableAdapterView+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+DataSource.swift"; sourceTree = "<group>"; };
 		4A85B5BE2803EBFD00DFD435 /* TableAdapterView+ScrollDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+ScrollDelegate.swift"; sourceTree = "<group>"; };
 		4A85B5BF2803EBFD00DFD435 /* TableAdapterView+AddRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+AddRefresh.swift"; sourceTree = "<group>"; };
+		4A9B5AE4280B4E200033761B /* ButtonClickStyle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ButtonClickStyle; path = ..; sourceTree = "<group>"; };
 		4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExampleButtonsViewController.storyboard; sourceTree = "<group>"; };
 		4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleButtonsViewController.swift; sourceTree = "<group>"; };
 		4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyle+Buttons.swift"; sourceTree = "<group>"; };
@@ -222,13 +223,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A14CBC12803437C00DA8A68 /* Source */ = {
+		4A14CBC12803437C00DA8A68 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				4A14CBC22803437C00DA8A68 /* ButtonClickStyle */,
 			);
-			name = Source;
-			path = ../Source;
+			name = Sources;
+			path = ../Sources;
 			sourceTree = "<group>";
 		};
 		4A14CBC22803437C00DA8A68 /* ButtonClickStyle */ = {
@@ -609,6 +610,14 @@
 			path = ScreenIPad;
 			sourceTree = "<group>";
 		};
+		4A9B5AE3280B4E200033761B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				4A9B5AE4280B4E200033761B /* ButtonClickStyle */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		4ADE26E12803837C00634B6C /* ExampleButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,7 +630,8 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				4A14CBC12803437C00DA8A68 /* Source */,
+				4A9B5AE3280B4E200033761B /* Packages */,
+				4A14CBC12803437C00DA8A68 /* Sources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* ButtonClickStyle */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -1044,7 +1054,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1065,7 +1075,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
