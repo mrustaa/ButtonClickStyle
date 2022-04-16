@@ -10,7 +10,7 @@
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
 
-- This is a customizable designable button view/leayr.
+- This is a customizable designable button view/layer.
 - Inside the layer you can style your button, create your own subviews.
 - Can choose 1 of 15 button click animation styles.
 - You can expand the project adding new click-animation-styles.
@@ -35,7 +35,7 @@ pod 'ButtonClickStyle'
 
 ## Usage
 
-#### С storyboard или xib
+#### With storyboard or xib files
 
 1) Create a "view" that inherits from `ButtonClickStyleView`
 
@@ -47,7 +47,7 @@ pod 'ButtonClickStyle'
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 ```swift
-extension ButtonClick {
+extension ButtonClick {  // animationType
   enum Style {
     case alpha
     case flash
@@ -72,14 +72,31 @@ extension ButtonClick {
 
 5) Add animation duration `animationDuration`
 
-6) Add animation value `animationTypeValue` - meaning means
-- "Hide       .Alpha/.Flash"              - will change alpha from 0.0 to 1.0
-- "Add        .Shadow/.Color/.ColorFlat"  
-- "Move       .Pulsate/.Press/.Shake"     - will increase movement decrease from 0.0 to 1.0
-- "TapGesture .Fave/.AndroidClickable"    - will increase bubble radius
-- "Loading    .Glare"                     - 
+6) Add animation value `animationTypeValue` -  meaning means for some types - alpha or power
+
+- Hide 
+   .Alpha / .Flash         
+   Will change alpha for "self.view" from 0.0 to 1.0
+
+- Add       
+   .Shadow / .Color / .ColorFlat
+   Will change alpha for "add.view" from 0.0 to 1.0
+
+- Move       
+   .Pulsate / .Press / .Shake   
+   Will change the strength of movement for "self.view" from 0.0 to 1.0
+
+- Tap Gesture 
+   .Fave / .AndroidClickable 
+   Will increase bubble radius for "add.view"
+
+- Loading   
+   .Glare               
+   No change for "add.view"
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
+
+## Init Programmatically
 
 7) If initializing programmatically
 There is a property `addViews` - allows you to pass views / layers
@@ -93,13 +110,15 @@ import UIKit
 
 class ViewController: UIViewController {
   
+  //MARK: Init Xib/Storyboards
+  
   @IBOutlet var xibButtonClickStyleView: ButtonClickStyleView?
+  
+  //MARK: Init Programmaticaly
   
   var prgmButtonClickStyleView: ButtonClickStyleView?
   var prgmFigureView: UIView!
   var prgmRectangleView: UIView!
-  
-  //MARK: - Create Programmaticaly
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -145,6 +164,10 @@ class ViewController: UIViewController {
 ```
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
+
+## Author
+
+<motionrustam@gmail.com> 📩| [mrustaa](https://github.com/mrustaa/)
 
 ## License
 
