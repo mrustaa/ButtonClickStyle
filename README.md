@@ -71,7 +71,6 @@ extension ButtonClick {
 
 4) Also you can select specific layers to animate / or just 1 specific one `allSubviews`
 
-
 5) Add animation duration `animationDuration`
 
 6) Add animation value `animationTypeValue` - meaning means
@@ -132,7 +131,6 @@ extension ButtonClick {
 ```
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
-
 
 ## License
 

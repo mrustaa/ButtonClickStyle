@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ButtonClickStyle'
-  s.version          = '1.1.0'
-  s.summary          = 'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 9 click animation styles'
+  s.version          = '1.1.1'
+  s.summary          = 'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 15 click animation styles'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.ios.deployment_target = '14.0'
   s.platform = :ios, "14.0"
 
-  s.source_files = 'Source/**/*.{swift}'
+  s.source_files = 'Source/ButtonClickStyle/**/*.{swift}'
   
   # s.resource_bundles = {
   #   'ButtonClickStyle' => ['ButtonClickStyle/Assets/*.png']

@@ -176,22 +176,6 @@ extension ButtonClick {
     ]
     
     public static var shortNames: [String] = ButtonClick.Buttons.allCases.map { $0.rawValue }
-//    public static var shortCases: [ButtonClick.Buttons] = [
-//      .JustPink,
-//      .NoShadow,
-//      .Blue,
-//      .BuyNow,
-//      .Download,
-//      .Delete,
-//      .Search,
-//      .Subscribe,
-//      .Firefox,
-//      .Google,
-//      .GrButton,
-//      .Neomorphism,
-//      .TestButton,
-//      .Green,
-//    ]
   }
 }
 

@@ -22,12 +22,10 @@ open class ButtonClickStyleView: UIView {
   @IBInspectable public var debugButtonShow: Bool = false
   
   public var addViews: [UIView]?
-          
   var state: ButtonClick.State?
   
   private var style: ButtonClick.Style = .alpha(0.5)
   private var setupDone = false
-  
   private var button: UIButton?
   
   // MARK: - Initialize
@@ -42,7 +40,7 @@ open class ButtonClickStyleView: UIView {
     super.init(frame: frame)
   }
   
-  init(
+  public init(
     state: ButtonClick.State,
     frame: CGRect,
     radius: CGFloat = 0.0,
