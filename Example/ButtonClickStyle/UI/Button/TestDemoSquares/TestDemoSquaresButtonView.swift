@@ -40,8 +40,8 @@ class TestDemoSquaresButtonView: BtnView {
       viewAn.widthAnchor.constraint(equalToConstant: fr.width).isActive = true
       viewAn.heightAnchor.constraint(equalToConstant: fr.height).isActive = true
       
-      self.animation?.removeFromSuperview()
-      self.animation = viewAn
+      self.btnClickStyleView?.removeFromSuperview()
+      self.btnClickStyleView = viewAn
       var frr = mainView.frame;frr.origin = .zero;mainView.frame = frr
     }
     

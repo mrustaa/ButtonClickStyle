@@ -12,7 +12,7 @@ class BtnView: XibView {
   // MARK: Properties
   
   var state: ButtonClick.State?
-  var animation: ButtonClickStyleView?
+  var btnClickStyleView: ButtonClickStyleView?
   
   func fill(state: ButtonClick.State?) {
     

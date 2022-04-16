@@ -40,7 +40,7 @@ open class ButtonClickStyleView: UIView {
     super.init(frame: frame)
   }
   
-  init(
+  public init(
     state: ButtonClick.State,
     frame: CGRect,
     radius: CGFloat = 0.0,
