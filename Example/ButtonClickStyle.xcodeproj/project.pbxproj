@@ -107,7 +107,7 @@
 		008AEF06A9D32E0C9EFBF7B1 /* Pods-ButtonClickStyle_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonClickStyle_Example.debug.xcconfig"; path = "Target Support Files/Pods-ButtonClickStyle_Example/Pods-ButtonClickStyle_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		03911DCE224C9681A312A56C /* Pods_ButtonClickStyle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonClickStyle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BD0C048E17837785AA335C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		3CC8C58CF19BEF113F8B61A0 /* ButtonClickStyle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ButtonClickStyle.podspec; path = ../ButtonClickStyle.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3CC8C58CF19BEF113F8B61A0 /* ButtonClickStyle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ButtonClickStyle.podspec; path = ../ButtonClickStyle.podspec; sourceTree = "<group>"; };
 		4A4545C32806C7570041D039 /* ButtonTableListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableListViewController.swift; sourceTree = "<group>"; };
 		4A4545C42806C7570041D039 /* ButtonTableListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ButtonTableListViewController.storyboard; sourceTree = "<group>"; };
 		4A62F3112803115C00534ABA /* StoryboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardController.swift; sourceTree = "<group>"; };
@@ -630,9 +630,9 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				4A9B5AAF280B48C80033761B /* Sources */,
 				4A9B5AAD280B484C0033761B /* Packages */,
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* ButtonClickStyle */,
 				607FACD11AFB9204008FA782 /* Products */,
 				DAC04F657E8533F49312BD6B /* Pods */,
@@ -1054,7 +1054,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1075,7 +1075,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
