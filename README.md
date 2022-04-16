@@ -1,4 +1,4 @@
-# ButtonClickStyle
+
 
 
 [![Version](https://img.shields.io/cocoapods/v/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
@@ -10,11 +10,15 @@
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
 
+# ButtonClickStyle
+
+- This is a customizable/designable "button view", 
+- with 15 animated click styles, 
+- that allows you to design your own buttons from subviews, 
+- in storyboard and xib right away.
+
 ## Watch video with examples
-[▶️ Styling Buttons List 📱iPhone](https://youtu.be/OjpMy_LUCIU) 
-
-This is a customizable/designable "button view", with 15 animated click styles, that allows you to design your own buttons from subviews, in storyboard and xib right away.
-
+[▶️ Styling ButtonList iPhone](https://youtu.be/OjpMy_LUCIU) 
 
 ## Requirements
 
