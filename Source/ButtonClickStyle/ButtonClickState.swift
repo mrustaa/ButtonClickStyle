@@ -20,6 +20,29 @@ extension ButtonClick {
     var startClick: Bool = false
     var debugButtonShow: Bool = false
     var addBackgrondColor: Bool = true
+    
+    public init(
+      titleText: String? = nil,
+      allSubviews: Bool = true,
+      animationType: Int? = nil,
+      animationTypeValue: CGFloat? = nil,
+      animationDuration: CGFloat? = nil,
+      new: Bool = false,
+      color: UIColor? = nil,
+      startClick: Bool = false,
+      debugButtonShow: Bool = false,
+      addBackgrondColor: Bool = true
+    ) {
+      self.titleText = titleText
+      self.allSubviews = allSubviews
+      self.animationType = animationType
+      self.animationTypeValue = animationTypeValue
+      self.animationDuration = animationDuration
+      self.new = new
+      self.color = color
+      self.startClick = startClick
+      self.debugButtonShow = debugButtonShow
+      self.addBackgrondColor = addBackgrondColor
+    }
   }
-  
 }
