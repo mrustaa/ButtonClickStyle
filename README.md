@@ -44,7 +44,6 @@ pod 'ButtonClickStyle'
 3) In Attributes Inspector of Interface Builder
    you can immediately select the button click style `animationType`
 
-
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 ```swift
@@ -74,19 +73,11 @@ extension ButtonClick {
 5) Add animation duration `animationDuration`
 
 6) Add animation value `animationTypeValue` - meaning means
-- "Hide .Alpha/Flash/Shadow/Color"  - will change alpha from 0.0 to 1.0
-- "Move .Pulsate/Press/Shake"       - will increase movement decrease from 0.0 to 1.0
-- "Add  .AndroidClickable"          - will increase bubble radius
-
-
-```swift
-@IBInspectable var allSubviews: Bool = true
-@IBInspectable var animationType: Int = 0
-@IBInspectable var animationValue: CGFloat = 0.0
-@IBInspectable var animationDuration: CGFloat = 0.0
-  
-var addViews: [UIView]?
-```
+- "Hide       .Alpha/.Flash"              - will change alpha from 0.0 to 1.0
+- "Add        .Shadow/.Color/.ColorFlat"  
+- "Move       .Pulsate/.Press/.Shake"     - will increase movement decrease from 0.0 to 1.0
+- "TapGesture .Fave/.AndroidClickable"    - will increase bubble radius
+- "Loading    .Glare"                     - 
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
@@ -94,38 +85,61 @@ var addViews: [UIView]?
 There is a property `addViews` - allows you to pass views / layers
 which you definitely want to use in the click animation only
 
-```swift
-@IBOutlet var mainView: UIView!
-
-var views: [UIView]? = [mainView]
-let frame: CGRect = .init(x: 23 , y: 22, width: 156, height: 48)
-let viewAn = ButtonClickStyleView(
-   state: state,
-   frame: frame,
-   radius: 20,
-   addViews: views
- )
-btnView.insertSubview(mainView, at: 0)
-btnView.updateSubviews()
-
-```
-
-
 8) Or initialize through a struct `ButtonClick.State`
 
 ```swift
-extension ButtonClick {
-  struct State: Equatable {
-    var titleText: String?
-    var allSubviews: Bool = true
-    var animationType: Int?
-    var animationTypeValue: CGFloat?
-    var animationDuration: CGFloat?
-    var new: Bool = false
-    var color: UIColor?
-    var startClick: Bool = false
-    var debugButtonShow: Bool = false
-    var addBackgrondColor: Bool = true
+import ButtonClickStyle
+import UIKit
+
+class ViewController: UIViewController {
+  
+  @IBOutlet var xibButtonClickStyleView: ButtonClickStyleView?
+  
+  var prgmButtonClickStyleView: ButtonClickStyleView?
+  var prgmFigureView: UIView!
+  var prgmRectangleView: UIView!
+  
+  //MARK: - Create Programmaticaly
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let figureView = UIView(frame: .init(x: 50, y: 10, width: 80, height: 40))
+    figureView.backgroundColor = .systemIndigo
+    figureView.layer.cornerRadius = 20
+    self.prgmFigureView = figureView
+    
+    let rectangleView = UIView(frame: .init(x: 15, y: 50, width: 50, height: 60))
+    rectangleView.backgroundColor = .systemPurple
+    self.prgmRectangleView = rectangleView
+    
+    let state = ButtonClick.State(
+      titleText: "Hello",       // debug text button
+      allSubviews: true,        // click animation all subviews 
+      animationType: 2,         // style 15 
+      animationTypeValue: 0.5,  // value - alpha/power move
+      animationDuration: nil,   // anim duration
+      new: false,               // same styles one of them new 
+      color: UIColor.green,     // value color for styles shadowColor/color/colorFlat 
+      startClick: true,         // animate on creation
+      debugButtonShow: false,   // debug highlight the real button inside
+      addBackgrondColor: true   // debug add background color/view
+    )
+    
+    let btnView = ButtonClickStyleView(
+      state: state,
+      frame: .init(x: 0, y: 300, width: 240, height: 128),
+      radius: 20,
+      addViews: [figureView]    // addViews - allows you to pass views / layers which you definitely want to use in the click animation only
+    )
+    btnView.backgroundColor = .yellow.withAlphaComponent(0.5)
+    
+    btnView.updateSubviews()
+    self.prgmButtonClickStyleView = btnView
+    
+    btnView.addSubview(figureView)
+    btnView.addSubview(rectangleView)
+    self.view.addSubview(btnView)
   }
 }
 ```

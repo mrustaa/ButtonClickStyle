@@ -234,29 +234,15 @@
 		4A14CBC22803437C00DA8A68 /* ButtonClickStyle */ = {
 			isa = PBXGroup;
 			children = (
-				4A14CBD02803437C00DA8A68 /* ButtonClickStyleAnim+UIViewAlpha.swift */,
-				4A14CBD12803437C00DA8A68 /* ButtonClickStyleAnim+UIViewShadow.swift */,
-				4A14CBD22803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPulsate.swift */,
-				4A14CBD32803437C00DA8A68 /* ButtonClickStyleAnim+UIViewAndroidPulse.swift */,
-				4A14CBD42803437C00DA8A68 /* ButtonClickStyleAnim+UIViewColor.swift */,
-				4A14CBD52803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPulse.swift */,
-				4A14CBD62803437C00DA8A68 /* ButtonClickStyleAnim+UIViewColorFlat.swift */,
-				4A14CBD72803437C00DA8A68 /* ButtonClickStyleAnim+UIViewSnake.swift */,
-				4A14CBD82803437C00DA8A68 /* ButtonClickStyleAnim+UIViewFlash.swift */,
-				4A14CBD92803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPress.swift */,
-				4A85B5A22803D59800DFD435 /* ButtonClickStyleAnim+UIViewGlare.swift */,
-				4A62F30D2803115C00534ABA /* ButtonClickStyleDesignLabel.swift */,
-				4A62F30E2803115C00534ABA /* ButtonClickStyleDesignView.swift */,
-				4A14CBC52803437C00DA8A68 /* ButtonClickStyleShort.swift */,
-				4A14CBC62803437C00DA8A68 /* ButtonClickStyle.swift */,
-				4A231B79280A82250073284C /* ButtonClickStyleEmoji.swift */,
-				4A14CBC72803437C00DA8A68 /* ButtonClickStyleBase.swift */,
-				4A14CBC92803437C00DA8A68 /* ButtonClickStyleGestureRecognizer.swift */,
+				4A477AC9280AEE280004156A /* Animations */,
+				4A477ACA280AEE3D0004156A /* UIDesignable */,
+				4A477ACB280AEE610004156A /* Style */,
 				4A14CBCE2803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift */,
 				4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */,
-				4A14CBCB2803437C00DA8A68 /* ButtonClickState.swift */,
 				4A14CBCC2803437C00DA8A68 /* ButtonClick.swift */,
+				4A14CBCB2803437C00DA8A68 /* ButtonClickState.swift */,
 				4A14CBCD2803437C00DA8A68 /* ButtonClicClosure.swift */,
+				4A14CBC92803437C00DA8A68 /* ButtonClickStyleGestureRecognizer.swift */,
 			);
 			path = ButtonClickStyle;
 			sourceTree = "<group>";
@@ -268,6 +254,44 @@
 				4A4545C42806C7570041D039 /* ButtonTableListViewController.storyboard */,
 			);
 			path = ButtonTableList;
+			sourceTree = "<group>";
+		};
+		4A477AC9280AEE280004156A /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				4A14CBD02803437C00DA8A68 /* ButtonClickStyleAnim+UIViewAlpha.swift */,
+				4A14CBD12803437C00DA8A68 /* ButtonClickStyleAnim+UIViewShadow.swift */,
+				4A14CBD22803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPulsate.swift */,
+				4A14CBD32803437C00DA8A68 /* ButtonClickStyleAnim+UIViewAndroidPulse.swift */,
+				4A14CBD42803437C00DA8A68 /* ButtonClickStyleAnim+UIViewColor.swift */,
+				4A14CBD52803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPulse.swift */,
+				4A14CBD62803437C00DA8A68 /* ButtonClickStyleAnim+UIViewColorFlat.swift */,
+				4A14CBD72803437C00DA8A68 /* ButtonClickStyleAnim+UIViewSnake.swift */,
+				4A14CBD82803437C00DA8A68 /* ButtonClickStyleAnim+UIViewFlash.swift */,
+				4A14CBD92803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPress.swift */,
+				4A85B5A22803D59800DFD435 /* ButtonClickStyleAnim+UIViewGlare.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		4A477ACA280AEE3D0004156A /* UIDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				4A62F30D2803115C00534ABA /* ButtonClickStyleDesignLabel.swift */,
+				4A62F30E2803115C00534ABA /* ButtonClickStyleDesignView.swift */,
+			);
+			path = UIDesignable;
+			sourceTree = "<group>";
+		};
+		4A477ACB280AEE610004156A /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4A14CBC52803437C00DA8A68 /* ButtonClickStyleShort.swift */,
+				4A14CBC62803437C00DA8A68 /* ButtonClickStyle.swift */,
+				4A231B79280A82250073284C /* ButtonClickStyleEmoji.swift */,
+				4A14CBC72803437C00DA8A68 /* ButtonClickStyleBase.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		4A62F3102803115C00534ABA /* LoadNib */ = {
@@ -1020,7 +1044,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1041,7 +1065,7 @@
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				INFOPLIST_FILE = ButtonClickStyle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.ButtonClickStyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
