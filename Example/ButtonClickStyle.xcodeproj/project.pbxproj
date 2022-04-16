@@ -170,30 +170,7 @@
 		4A85B5BD2803EBFD00DFD435 /* TableAdapterView+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+DataSource.swift"; sourceTree = "<group>"; };
 		4A85B5BE2803EBFD00DFD435 /* TableAdapterView+ScrollDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+ScrollDelegate.swift"; sourceTree = "<group>"; };
 		4A85B5BF2803EBFD00DFD435 /* TableAdapterView+AddRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableAdapterView+AddRefresh.swift"; sourceTree = "<group>"; };
-		4A9B5AAE280B484C0033761B /* ButtonClickStyle */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ButtonClickStyle; path = ..; sourceTree = "<group>"; };
-		4A9B5AB2280B48C80033761B /* ButtonClickStyleShort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleShort.swift; sourceTree = "<group>"; };
-		4A9B5AB3280B48C80033761B /* ButtonClickStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyle.swift; sourceTree = "<group>"; };
-		4A9B5AB4280B48C80033761B /* ButtonClickStyleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleBase.swift; sourceTree = "<group>"; };
-		4A9B5AB5280B48C80033761B /* ButtonClickStyleEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleEmoji.swift; sourceTree = "<group>"; };
-		4A9B5AB6280B48C80033761B /* ButtonClickStyleAddViewsAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleAddViewsAnimation.swift; sourceTree = "<group>"; };
-		4A9B5AB7280B48C80033761B /* ButtonClickState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickState.swift; sourceTree = "<group>"; };
-		4A9B5AB8280B48C80033761B /* ButtonClickStyleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleGestureRecognizer.swift; sourceTree = "<group>"; };
-		4A9B5ABA280B48C80033761B /* ButtonClickStyleAnim+UIViewAlpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewAlpha.swift"; sourceTree = "<group>"; };
-		4A9B5ABB280B48C80033761B /* ButtonClickStyleAnim+UIViewAndroidPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewAndroidPulse.swift"; sourceTree = "<group>"; };
-		4A9B5ABC280B48C80033761B /* ButtonClickStyleAnim+UIViewShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewShadow.swift"; sourceTree = "<group>"; };
-		4A9B5ABD280B48C80033761B /* ButtonClickStyleAnim+UIViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewColor.swift"; sourceTree = "<group>"; };
-		4A9B5ABE280B48C80033761B /* ButtonClickStyleAnim+UIViewColorFlat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewColorFlat.swift"; sourceTree = "<group>"; };
-		4A9B5ABF280B48C80033761B /* ButtonClickStyleAnim+UIViewPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewPulse.swift"; sourceTree = "<group>"; };
-		4A9B5AC0280B48C80033761B /* ButtonClickStyleAnim+UIViewSnake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewSnake.swift"; sourceTree = "<group>"; };
-		4A9B5AC1280B48C80033761B /* ButtonClickStyleAnim+UIViewFlash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewFlash.swift"; sourceTree = "<group>"; };
-		4A9B5AC2280B48C80033761B /* ButtonClickStyleAnim+UIViewPress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewPress.swift"; sourceTree = "<group>"; };
-		4A9B5AC3280B48C80033761B /* ButtonClickStyleAnim+UIViewPulsate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewPulsate.swift"; sourceTree = "<group>"; };
-		4A9B5AC4280B48C80033761B /* ButtonClickStyleAnim+UIViewGlare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewGlare.swift"; sourceTree = "<group>"; };
-		4A9B5AC5280B48C80033761B /* ButtonClickStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleView.swift; sourceTree = "<group>"; };
-		4A9B5AC6280B48C80033761B /* ButtonClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClick.swift; sourceTree = "<group>"; };
-		4A9B5AC7280B48C80033761B /* ButtonClicClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClicClosure.swift; sourceTree = "<group>"; };
-		4A9B5ADE280B48E80033761B /* ButtonClickStyleDesignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleDesignLabel.swift; sourceTree = "<group>"; };
-		4A9B5ADF280B48E80033761B /* ButtonClickStyleDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleDesignView.swift; sourceTree = "<group>"; };
+		4A9B5AE4280B4E200033761B /* ButtonClickStyle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ButtonClickStyle; path = ..; sourceTree = "<group>"; };
 		4ADE26E22803837C00634B6C /* ExampleButtonsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExampleButtonsViewController.storyboard; sourceTree = "<group>"; };
 		4ADE26E32803837C00634B6C /* ExampleButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleButtonsViewController.swift; sourceTree = "<group>"; };
 		4ADE26E6280383DC00634B6C /* ButtonClickStyle+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyle+Buttons.swift"; sourceTree = "<group>"; };
@@ -223,6 +200,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A14CBC12803437C00DA8A68 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4A14CBC22803437C00DA8A68 /* ButtonClickStyle */,
+			);
+			name = Sources;
+			path = ../Sources;
+			sourceTree = "<group>";
+		};
+		4A14CBC22803437C00DA8A68 /* ButtonClickStyle */ = {
+			isa = PBXGroup;
+			children = (
+				4A477AC9280AEE280004156A /* Animations */,
+				4A477ACA280AEE3D0004156A /* UIDesignable */,
+				4A477ACB280AEE610004156A /* Style */,
+				4A14CBCE2803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift */,
+				4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */,
+				4A14CBCC2803437C00DA8A68 /* ButtonClick.swift */,
+				4A14CBCB2803437C00DA8A68 /* ButtonClickState.swift */,
+				4A14CBCD2803437C00DA8A68 /* ButtonClicClosure.swift */,
+				4A14CBC92803437C00DA8A68 /* ButtonClickStyleGestureRecognizer.swift */,
+			);
+			path = ButtonClickStyle;
+			sourceTree = "<group>";
+		};
 		4A4545C22806C7570041D039 /* ButtonTableList */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,75 +549,12 @@
 			path = ScreenIPad;
 			sourceTree = "<group>";
 		};
-		4A9B5AAD280B484C0033761B /* Packages */ = {
+		4A9B5AE3280B4E200033761B /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				4A9B5AAE280B484C0033761B /* ButtonClickStyle */,
+				4A9B5AE4280B4E200033761B /* ButtonClickStyle */,
 			);
 			name = Packages;
-			sourceTree = "<group>";
-		};
-		4A9B5AAF280B48C80033761B /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				4A9B5AB0280B48C80033761B /* ButtonClickStyle */,
-			);
-			name = Sources;
-			path = ../Sources;
-			sourceTree = "<group>";
-		};
-		4A9B5AB0280B48C80033761B /* ButtonClickStyle */ = {
-			isa = PBXGroup;
-			children = (
-				4A9B5AB9280B48C80033761B /* Animations */,
-				4A9B5ADD280B48E80033761B /* UIDesignable */,
-				4A9B5AB1280B48C80033761B /* Style */,
-				4A9B5AB6280B48C80033761B /* ButtonClickStyleAddViewsAnimation.swift */,
-				4A9B5AB7280B48C80033761B /* ButtonClickState.swift */,
-				4A9B5AB8280B48C80033761B /* ButtonClickStyleGestureRecognizer.swift */,
-				4A9B5AC5280B48C80033761B /* ButtonClickStyleView.swift */,
-				4A9B5AC6280B48C80033761B /* ButtonClick.swift */,
-				4A9B5AC7280B48C80033761B /* ButtonClicClosure.swift */,
-			);
-			path = ButtonClickStyle;
-			sourceTree = "<group>";
-		};
-		4A9B5AB1280B48C80033761B /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				4A9B5AB2280B48C80033761B /* ButtonClickStyleShort.swift */,
-				4A9B5AB3280B48C80033761B /* ButtonClickStyle.swift */,
-				4A9B5AB4280B48C80033761B /* ButtonClickStyleBase.swift */,
-				4A9B5AB5280B48C80033761B /* ButtonClickStyleEmoji.swift */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		4A9B5AB9280B48C80033761B /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				4A9B5ABA280B48C80033761B /* ButtonClickStyleAnim+UIViewAlpha.swift */,
-				4A9B5ABB280B48C80033761B /* ButtonClickStyleAnim+UIViewAndroidPulse.swift */,
-				4A9B5ABC280B48C80033761B /* ButtonClickStyleAnim+UIViewShadow.swift */,
-				4A9B5ABD280B48C80033761B /* ButtonClickStyleAnim+UIViewColor.swift */,
-				4A9B5ABE280B48C80033761B /* ButtonClickStyleAnim+UIViewColorFlat.swift */,
-				4A9B5ABF280B48C80033761B /* ButtonClickStyleAnim+UIViewPulse.swift */,
-				4A9B5AC0280B48C80033761B /* ButtonClickStyleAnim+UIViewSnake.swift */,
-				4A9B5AC1280B48C80033761B /* ButtonClickStyleAnim+UIViewFlash.swift */,
-				4A9B5AC2280B48C80033761B /* ButtonClickStyleAnim+UIViewPress.swift */,
-				4A9B5AC3280B48C80033761B /* ButtonClickStyleAnim+UIViewPulsate.swift */,
-				4A9B5AC4280B48C80033761B /* ButtonClickStyleAnim+UIViewGlare.swift */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		4A9B5ADD280B48E80033761B /* UIDesignable */ = {
-			isa = PBXGroup;
-			children = (
-				4A9B5ADE280B48E80033761B /* ButtonClickStyleDesignLabel.swift */,
-				4A9B5ADF280B48E80033761B /* ButtonClickStyleDesignView.swift */,
-			);
-			path = UIDesignable;
 			sourceTree = "<group>";
 		};
 		4ADE26E12803837C00634B6C /* ExampleButtons */ = {
@@ -630,6 +569,8 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				4A9B5AE3280B4E200033761B /* Packages */,
+				4A14CBC12803437C00DA8A68 /* Sources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				4A9B5AAF280B48C80033761B /* Sources */,
 				4A9B5AAD280B484C0033761B /* Packages */,
