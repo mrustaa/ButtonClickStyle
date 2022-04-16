@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 9 click animation styles'
+'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 15 click animation styles'
                        DESC
 
   s.homepage         = 'https://github.com/mrustaa/ButtonClickStyle'
