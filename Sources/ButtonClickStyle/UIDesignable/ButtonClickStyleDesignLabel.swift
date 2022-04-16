@@ -5,32 +5,32 @@ import UIKit
 open class ButtonClickStyleDesignLabel: UILabel {
     
     //MARK: Gradient
-    @IBInspectable public var grColor1: UIColor?
-    @IBInspectable public var grColor2: UIColor?
-    @IBInspectable public var grColor3: UIColor?
-    @IBInspectable public var grColor4: UIColor?
-    @IBInspectable public var grColor5: UIColor?
-    @IBInspectable public var grColor6: UIColor?
+    @IBInspectable var grColor1: UIColor?
+    @IBInspectable var grColor2: UIColor?
+    @IBInspectable var grColor3: UIColor?
+    @IBInspectable var grColor4: UIColor?
+    @IBInspectable var grColor5: UIColor?
+    @IBInspectable var grColor6: UIColor?
     
-    @IBInspectable public var grStartPoint: CGPoint = .zero
-    @IBInspectable public var grEndPoint:   CGPoint = .zero
+    @IBInspectable var grStartPoint: CGPoint = .zero
+    @IBInspectable var grEndPoint:   CGPoint = .zero
     
-    @IBInspectable public var grRadial: Bool = false
-    @IBInspectable public var grDrawsOptions: Bool = true
-    @IBInspectable public var grDebug: Bool = false
-    @IBInspectable public var grPointPercent: Bool = true
-    @IBInspectable public var grBlendMode:    Int  = 20
+    @IBInspectable var grRadial: Bool = false
+    @IBInspectable var grDrawsOptions: Bool = true
+    @IBInspectable var grDebug: Bool = false
+    @IBInspectable var grPointPercent: Bool = true
+    @IBInspectable var grBlendMode: Int  = 20
     
     //MARK: - Shadow
     
-    @IBInspectable public var shColor: UIColor = .clear
-    @IBInspectable public var shRadius: CGFloat = 0.0
-    @IBInspectable public var shOffset: CGSize  = .zero
+    @IBInspectable var shColor: UIColor = .clear
+    @IBInspectable var shRadius: CGFloat = 0.0
+    @IBInspectable var shOffset: CGSize  = .zero
     
     //MARK: Border
     
-    @IBInspectable public var brColor: UIColor = .clear
-    @IBInspectable public var brWidth: CGFloat = 0.0
+    @IBInspectable var brColor: UIColor = .clear
+    @IBInspectable var brWidth: CGFloat = 0.0
     
      //MARK: - Draw
     
@@ -170,7 +170,7 @@ extension UILabel: NSCopying {
     makeCopy()
   }
   
-  func makeCopy() -> UILabel {
+  public func makeCopy() -> UILabel {
     
     let label = UILabel(frame: frame)
     label.text = text

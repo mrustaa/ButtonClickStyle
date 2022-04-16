@@ -2,42 +2,42 @@
 import UIKit
 
 @IBDesignable
-public class ButtonClickStyleDesignView: UIView {
+open class ButtonClickStyleDesignView: UIView {
     /// Rectange | Ellipse | Polygon | Star
-    @IBInspectable public var figureType: Int = 0
-    @IBInspectable public var starRadius: CGFloat = 0
-    @IBInspectable public var starCount: Int = 5
-    @IBInspectable public var cornerRadius: CGFloat = 0.0
-    @IBInspectable public var blur: CGFloat = 0.0
-    @IBInspectable public var image: UIImage?
+    @IBInspectable var figureType: Int = 0
+    @IBInspectable var starRadius: CGFloat = 0
+    @IBInspectable var starCount: Int = 5
+    @IBInspectable var cornerRadius: CGFloat = 0.0
+    @IBInspectable var blur: CGFloat = 0.0
+    @IBInspectable var image: UIImage?
     /// ScaleToFill | Fit | Fill
-    @IBInspectable public var imageMode: Int = 1
-    @IBInspectable public var fillColor: UIColor?
-    @IBInspectable public var grColor1: UIColor?
-    @IBInspectable public var grColor2: UIColor?
-    @IBInspectable public var grColor3: UIColor?
-    @IBInspectable public var grColor4: UIColor?
-    @IBInspectable public var grColor5: UIColor?
-    @IBInspectable public var grColor6: UIColor?
-    @IBInspectable public var grStartPoint: CGPoint = .zero
-    @IBInspectable public var grEndPoint: CGPoint = .zero
+    @IBInspectable var imageMode: Int = 1
+    @IBInspectable var fillColor: UIColor?
+    @IBInspectable var grColor1: UIColor?
+    @IBInspectable var grColor2: UIColor?
+    @IBInspectable var grColor3: UIColor?
+    @IBInspectable var grColor4: UIColor?
+    @IBInspectable var grColor5: UIColor?
+    @IBInspectable var grColor6: UIColor?
+    @IBInspectable var grStartPoint: CGPoint = .zero
+    @IBInspectable var grEndPoint: CGPoint = .zero
     /// Default: Linear
-    @IBInspectable public var grRadial: Bool = false
-    @IBInspectable public var grDrawsOptions: Bool = true
-    @IBInspectable public var grDebug: Bool = false
-    @IBInspectable public var grPointPercent: Bool = true
-    @IBInspectable public var grBlendMode: Int = 0
-    @IBInspectable public var brColor: UIColor = .clear
-    @IBInspectable public var brWidth: CGFloat = 0.0
-    @IBInspectable public var brDash: Int = 0
-    @IBInspectable public var inShColor: UIColor = .clear
-    @IBInspectable public var inShRadius: CGFloat = 0.0
-    @IBInspectable public var inShOffset: CGSize = .zero
-    @IBInspectable public var shColor: UIColor = .clear
-    @IBInspectable public var shRadius: CGFloat = 0.0
-    @IBInspectable public var shOffset: CGSize = .zero
+    @IBInspectable var grRadial: Bool = false
+    @IBInspectable var grDrawsOptions: Bool = true
+    @IBInspectable var grDebug: Bool = false
+    @IBInspectable var grPointPercent: Bool = true
+    @IBInspectable var grBlendMode: Int = 0
+    @IBInspectable var brColor: UIColor = .clear
+    @IBInspectable var brWidth: CGFloat = 0.0
+    @IBInspectable var brDash: Int = 0
+    @IBInspectable var inShColor: UIColor = .clear
+    @IBInspectable var inShRadius: CGFloat = 0.0
+    @IBInspectable var inShOffset: CGSize = .zero
+    @IBInspectable var shColor: UIColor = .clear
+    @IBInspectable var shRadius: CGFloat = 0.0
+    @IBInspectable var shOffset: CGSize = .zero
     
-  public func allColorClear() {
+  func allColorClear() {
     fillColor = .clear
     brColor = .clear
     shColor = .clear
@@ -51,7 +51,7 @@ public class ButtonClickStyleDesignView: UIView {
     setNeedsLayout()
   }
   
-  public func setup() {
+  func setup() {
         
         if let foundView = viewWithTag(55) {
             foundView.removeFromSuperview()
@@ -108,19 +108,11 @@ public class ButtonClickStyleDesignView: UIView {
         }
     }
 
-//  override init(frame: CGRect) {
-//    super.init(frame: frame)
-//  }
-  
-//  required init?(coder: NSCoder) {
-//    fatalError("init(coder:) has not been implemented")
-//  }
-  
-  public func createCopy() -> ButtonClickStyleDesignView {
+  func createCopy() -> ButtonClickStyleDesignView {
     ButtonClickStyleDesignView()
   }
   
-  public override func layoutSubviews() { setup() }
+  open override func layoutSubviews() { setup() }
     
 }
 
@@ -168,19 +160,19 @@ extension ButtonClickStyleDesignView: NSCopying {
 }
 
 @IBDesignable
-public class ButtonClickStyleDesignViewDebug: UIView {
+open class ButtonClickStyleDesignViewDebug: UIView {
     
-    @IBInspectable public var grStartPoint: CGPoint = .zero
-    @IBInspectable public var grEndPoint:   CGPoint = .zero
-    @IBInspectable public var grPointPercent: Bool = true
+    @IBInspectable var grStartPoint: CGPoint = .zero
+    @IBInspectable var grEndPoint:   CGPoint = .zero
+    @IBInspectable var grPointPercent: Bool = true
     
-  public override func draw(_ rect: CGRect) {
+  open override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         addGradientDebugPoints()
     }
     
-  public func addGradientDebugPoints() {
+  func addGradientDebugPoints() {
         
         var start = grStartPoint
         var end   = grStartPoint
@@ -219,8 +211,6 @@ public class ButtonClickStyleDesignViewDebug: UIView {
         
         context.fillEllipse(in: circleRect2)
         context.strokeEllipse(in: circleRect2)
-        
-        
     }
     
 }
@@ -233,70 +223,70 @@ public enum ButtonClickStyleDesignViewType: Int {
 }
 
 @IBDesignable
-public class ButtonClickStyleDesignView_: UIView {
+open class ButtonClickStyleDesignView_: UIView {
     
-    @IBInspectable public var figureType: Int = 0  /// Rectange Ellipse Polygon Star
+    @IBInspectable var figureType: Int = 0  /// Rectange Ellipse Polygon Star
     
-    @IBInspectable public var starRadius: CGFloat = 0
-    @IBInspectable public var starCount: Int = 5
+    @IBInspectable var starRadius: CGFloat = 0
+    @IBInspectable var starCount: Int = 5
     //MARK: Radius
     
-    @IBInspectable public var cornerRadius: CGFloat = 0.0
+    @IBInspectable var cornerRadius: CGFloat = 0.0
     
     //MARK: Blur
       
-    @IBInspectable public var blur: CGFloat = 0.0
+    @IBInspectable var blur: CGFloat = 0.0
     
     //MARK: Image
     
-    @IBInspectable public var image: UIImage?
-    @IBInspectable public var imageMode: Int = 1 /// Scale to fill / Aspect fit / fill
+    @IBInspectable var image: UIImage?
+    @IBInspectable var imageMode: Int = 1 /// Scale to fill / Aspect fit / fill
     
     //MARK: Fill
     
-    @IBInspectable public var fillColor: UIColor?
+    @IBInspectable var fillColor: UIColor?
     
     //MARK: Gradient
     
-    @IBInspectable public var grColor1: UIColor?
-    @IBInspectable public var grColor2: UIColor?
-    @IBInspectable public var grColor3: UIColor?
-    @IBInspectable public var grColor4: UIColor?
-    @IBInspectable public var grColor5: UIColor?
-    @IBInspectable public var grColor6: UIColor?
+    @IBInspectable var grColor1: UIColor?
+    @IBInspectable var grColor2: UIColor?
+    @IBInspectable var grColor3: UIColor?
+    @IBInspectable var grColor4: UIColor?
+    @IBInspectable var grColor5: UIColor?
+    @IBInspectable var grColor6: UIColor?
     
-    @IBInspectable public var grStartPoint: CGPoint = .zero
-    @IBInspectable public var grEndPoint:   CGPoint = .zero
+    @IBInspectable var grStartPoint: CGPoint = .zero
+    @IBInspectable var grEndPoint:   CGPoint = .zero
     
-    @IBInspectable public var grRadial:       Bool = false /// default: linear
-    @IBInspectable public var grDrawsOptions: Bool = true
-    @IBInspectable public var grDebug:        Bool = false
-    @IBInspectable public var grPointPercent: Bool = true
-    @IBInspectable public var grBlendMode:    Int  = 0
+    @IBInspectable var grRadial:       Bool = false /// default: linear
+    @IBInspectable var grDrawsOptions: Bool = true
+    @IBInspectable var grDebug:        Bool = false
+    @IBInspectable var grPointPercent: Bool = true
+    @IBInspectable var grBlendMode:    Int  = 0
     
     //MARK: Border
     
-    @IBInspectable public var brColor: UIColor = .clear
-    @IBInspectable public var brWidth: CGFloat = 0.0
-    @IBInspectable public var brDash: Int = 0
+    @IBInspectable var brColor: UIColor = .clear
+    @IBInspectable var brWidth: CGFloat = 0.0
+    @IBInspectable var brDash: Int = 0
     
     //MARK: Inner Shadow
     
-    @IBInspectable public var inShColor:  UIColor = .clear
-    @IBInspectable public var inShRadius: CGFloat = 0.0
-    @IBInspectable public var inShOffset: CGSize = .zero
+    @IBInspectable var inShColor:  UIColor = .clear
+    @IBInspectable var inShRadius: CGFloat = 0.0
+    @IBInspectable var inShOffset: CGSize = .zero
     
     //MARK: Shadow
         
-    @IBInspectable public var shColor:  UIColor = .clear
-    @IBInspectable public var shRadius: CGFloat = 0.0
-    @IBInspectable public var shOffset: CGSize  = .zero
+    @IBInspectable var shColor:  UIColor = .clear
+    @IBInspectable var shRadius: CGFloat = 0.0
+    @IBInspectable var shOffset: CGSize  = .zero
     
     
     
     //MARK: - Draw
     
-  public override func draw(_ rect: CGRect) {
+  open override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         guard let bezier = figurePath(bounds) else { return }
@@ -316,7 +306,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Figure Type
     
-  public func figurePath(_ rect: CGRect) -> UIBezierPath? {
+    func figurePath(_ rect: CGRect) -> UIBezierPath? {
         
         let starR = starRadius / 50
         if starCount < 1 { starCount = 1 }
@@ -331,13 +321,11 @@ public class ButtonClickStyleDesignView_: UIView {
     
     // MARK: - Border / Stroke
     
-  public func addBorder() {
+    func addBorder() {
         
         if brWidth < 0 { brWidth = 0 }
 
         guard let context = UIGraphicsGetCurrentContext() else { return }
-        
-//        brColor.setStroke()
         
         guard let bezier = figurePath(bounds) else { return }
         
@@ -373,7 +361,7 @@ public class ButtonClickStyleDesignView_: UIView {
     }
     
     
-  public func addImage(bezier: UIBezierPath) {
+  func addImage(bezier: UIBezierPath) {
         
         guard let image = image else { return }
         guard let context = UIGraphicsGetCurrentContext() else { return }
@@ -413,7 +401,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Fill
     
-  public func addFill(bezier: UIBezierPath) {
+    func addFill(bezier: UIBezierPath) {
         
         guard let fillColor = fillColor else { return }
         guard let context = UIGraphicsGetCurrentContext() else { return }
@@ -427,7 +415,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Gradient
     
-  public func addGradient(bezier: UIBezierPath) {
+    func addGradient(bezier: UIBezierPath) {
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
@@ -495,7 +483,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Shadow
     
-  public func addShadow() {
+  func addShadow() {
         
         if shRadius < 0 { shRadius = 0 }
         
@@ -505,7 +493,7 @@ public class ButtonClickStyleDesignView_: UIView {
         layer.shadowColor      = shColor.cgColor
     }
     
-  public func addShadowContext(bezier: UIBezierPath) {
+  func addShadowContext(bezier: UIBezierPath) {
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
@@ -528,7 +516,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Inner Shadow
     
-  public func addInnerShadow(bezier: UIBezierPath) {
+  func addInnerShadow(bezier: UIBezierPath) {
         
         if inShRadius < 0 { inShRadius = 0 }
         
@@ -566,7 +554,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     // MARK: - Blur
     
-  public func addBlur() {
+  func addBlur() {
         
         guard blur > 0 else { return }
         
@@ -577,7 +565,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     // MARK: Screen Shot Context
     
-  public func screenShotContext() -> UIImage? {
+  func screenShotContext() -> UIImage? {
         
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
         guard let cgimage: CGImage = context.makeImage() else { return nil }
@@ -588,7 +576,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     // MARK: Clear Context
     
-  public func clearContext() {
+  func clearContext() {
 
         let f = CGRect(x: 0, y: 0,
                        width:  frame.width  * 2,
@@ -599,7 +587,7 @@ public class ButtonClickStyleDesignView_: UIView {
     }
     
     
-  public func addblur(screen: UIImage, blur: CGFloat) {
+  func addblur(screen: UIImage, blur: CGFloat) {
         
         clearContext()
 
@@ -667,7 +655,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Rectangle Bezier
     
-  public func rectangle(rect: CGRect, radius: CGFloat) -> UIBezierPath {
+  func rectangle(rect: CGRect, radius: CGFloat) -> UIBezierPath {
         
         let r = self.cornerRadius(radius)
         let w = rect.width
@@ -710,7 +698,7 @@ public class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Star Bezier
     
-  public func star(polygon: Bool = false, rect: CGRect, radius: CGFloat, pointsOnStar: Int) -> UIBezierPath {
+  func star(polygon: Bool = false, rect: CGRect, radius: CGFloat, pointsOnStar: Int) -> UIBezierPath {
         
         let path = UIBezierPath()
         
@@ -780,7 +768,7 @@ extension UIView {
   
   //MARK: - Check CornerRadius
   
-  public func cornerRadius(_ cornerRadius: CGFloat) -> CGFloat {
+  func cornerRadius(_ cornerRadius: CGFloat) -> CGFloat {
     let minSize = min(frame.size.width, frame.size.height)
     let minSizeRadius = (minSize / 2)
     let radius = ((cornerRadius < 0) || (minSizeRadius < cornerRadius) ? minSizeRadius : cornerRadius)
@@ -801,7 +789,7 @@ extension UIImageView: NSCopying {
 }
 
 extension UIImage {
-  public func clone() -> UIImage? {
+   public func clone() -> UIImage? {
     guard let originalCgImage = self.cgImage, let newCgImage = originalCgImage.copy() else {
       return nil
     }
