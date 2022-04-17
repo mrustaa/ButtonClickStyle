@@ -20,9 +20,9 @@
 
 ## Watch video with examples
 
-[▶️ Xcode Create Storyboard/Xib ](https://youtu.be/VNupvYMYPmk)
+[▶️ Xcode Create in Storyboard/Xib](https://youtu.be/VNupvYMYPmk)
 
-[▶️ Styling Buttons List in iPhone](https://youtu.be/OjpMy_LUCIU) 
+[▶️ Styling Buttons TableList in iPhone](https://youtu.be/OjpMy_LUCIU) 
 
 [![ Xcode Create Storyboard/Xib](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/XcodeCreateXib40.png)](https://youtu.be/VNupvYMYPmk)
 
