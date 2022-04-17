@@ -19,7 +19,10 @@
 - in storyboard and xib right away.
 
 ## Watch video with examples
-[▶️ Styling ButtonList iPhone](https://youtu.be/OjpMy_LUCIU) 
+
+[▶️ Xcode Create Storyboard/Xib ](https://youtu.be/VNupvYMYPmk)
+
+[▶️ Styling Buttons List in iPhone](https://youtu.be/OjpMy_LUCIU) 
 
 ## Requirements
 
