@@ -1,19 +1,30 @@
-# ButtonClickStyle
 
+
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/header.png)
+![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
+
+# ButtonClickStyle
 
 [![Version](https://img.shields.io/cocoapods/v/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
 [![License](https://img.shields.io/cocoapods/l/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
 [![Platform](https://img.shields.io/cocoapods/p/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
+[![Xcode](https://img.shields.io/badge/Xcode-13-blue.svg)](https://developer.apple.com/xcode) 
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
-[![Swift 5.1](https://img.shields.io/badge/Swift-5.1-orange.svg?style=flat)](https://swift.org/)
-[![Swift 5.2](https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat)](https://swift.org/)
+[![Swift 5.2](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://swift.org/)
+[![License](https://img.shields.io/github/license/almazrafi/Fugen.svg)](https://github.com/mrustaa/ButtonClickStyle/LICENSE)
 
-![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/preview_10sec33fps.gif)
+- This is a customizable/designable "button view", 
+- with 15 animated click styles, 
+- that allows you to design your own buttons from subviews, 
+- in storyboard and xib right away.
 
-- This is a customizable designable button view/layer.
-- Inside the layer you can style your button, create your own subviews.
-- Can choose 1 of 15 button click animation styles.
-- You can expand the project adding new click-animation-styles.
+## Watch video with examples
+
+[▶️ Xcode Create in Storyboard/Xib](https://youtu.be/VNupvYMYPmk)
+
+[▶️ Styling Buttons TableList in iPhone](https://youtu.be/OjpMy_LUCIU) 
+
+[![ Xcode Create Storyboard/Xib](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/XcodeCreateXib40.png)](https://youtu.be/VNupvYMYPmk)
 
 ## Requirements
 
