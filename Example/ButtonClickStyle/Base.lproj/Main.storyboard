@@ -129,6 +129,44 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMb-4o-6mS">
+                                <rect key="frame" x="62.666666666666657" y="624.66666666666663" width="249.99999999999997" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="KW4-Bb-VlY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Test 2"/>
+                                <connections>
+                                    <action selector="testDoubleScreenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gws-uI-bIA"/>
+                                </connections>
+                            </button>
+                            <view tag="848" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzm-ef-ieH" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
+                                <rect key="frame" x="141" y="605" width="157" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" systemColor="tintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view tag="848" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F7E-0i-pI7" customClass="ButtonClickStyleDesignTest" customModule="ButtonClickStyle" customModuleProvider="target">
+                                <rect key="frame" x="191" y="368" width="142" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" systemColor="tintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,6 +174,7 @@
                             <constraint firstItem="kUF-dc-MTn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="05k-aE-9T4"/>
                             <constraint firstItem="ZeK-fQ-uaF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1iv-aD-McI"/>
                             <constraint firstItem="cq8-pe-CLh" firstAttribute="leading" secondItem="mXW-y9-Vhi" secondAttribute="leading" id="3wh-bk-m3a"/>
+                            <constraint firstItem="eMb-4o-6mS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4dd-Fp-G21"/>
                             <constraint firstItem="mXW-y9-Vhi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6gz-Es-SwW"/>
                             <constraint firstItem="U4i-jN-1m6" firstAttribute="top" secondItem="kUF-dc-MTn" secondAttribute="bottom" constant="60" id="8Ci-be-y2u"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="top" secondItem="U4i-jN-1m6" secondAttribute="bottom" id="J5M-I6-KR6"/>
@@ -143,6 +182,7 @@
                             <constraint firstItem="mXW-y9-Vhi" firstAttribute="top" secondItem="cq8-pe-CLh" secondAttribute="bottom" constant="8" id="Mt0-CE-MNn"/>
                             <constraint firstItem="Bw3-He-sJB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NQG-Ih-XNE"/>
                             <constraint firstItem="ZeK-fQ-uaF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SUP-3g-kgF"/>
+                            <constraint firstItem="eMb-4o-6mS" firstAttribute="top" secondItem="qXM-rs-wzT" secondAttribute="bottom" id="Tli-Sj-1EN"/>
                             <constraint firstItem="18u-xo-eAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UZ5-LE-85j"/>
                             <constraint firstItem="qXM-rs-wzT" firstAttribute="top" secondItem="18u-xo-eAM" secondAttribute="bottom" id="ad1-TS-n92"/>
                             <constraint firstItem="U4i-jN-1m6" firstAttribute="top" secondItem="ByY-Uq-qdL" secondAttribute="bottom" constant="8" id="cn0-Sl-68K"/>
@@ -163,12 +203,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466.40624999999994" y="-115.51976573938505"/>
+            <point key="canvasLocation" x="466.39999999999998" y="-116.00985221674877"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

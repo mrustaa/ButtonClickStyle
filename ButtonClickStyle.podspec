@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ButtonClickStyle'
   s.version          = '1.2.2'
-  s.summary          = 'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 15 click animation styles'
+  s.summary          = 'This is a customizable/designable button view, with 15 animated click styles, that allows you to design your own buttons from subviews, in storyboard and xib'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'This is a customizable designable button view. Inside layer you can style button, create your own subviews. Choose 15 click animation styles'
+'This is a customizable/designable button view, with 15 animated click styles, that allows you to design your own buttons from subviews, in storyboard and xib'
                        DESC
 
   s.homepage         = 'https://github.com/mrustaa/ButtonClickStyle'

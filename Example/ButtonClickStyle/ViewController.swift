@@ -34,7 +34,7 @@ class ViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    _ = startPushTableList
+//    _ = startPushTableList
     
     self.backController = backController + 1
     if backController > 0 {
@@ -132,6 +132,11 @@ class ViewController: UIViewController {
   @IBAction func testScreenButtonAction(_ sender: UIButton) {
     buttonLayerExampleView?.startStopAction(false)
     navigationController?.pushViewController(TestViewController.instantiate(), animated: true)
+  }
+  
+  @IBAction func testDoubleScreenButtonAction(_ sender: UIButton) {
+    buttonLayerExampleView?.startStopAction(false)
+    navigationController?.pushViewController(Test2ViewController.instantiate(), animated: true)
   }
   
   @IBAction func testDemoScreenButtonAction(_ sender: UIButton) {

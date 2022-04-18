@@ -2,7 +2,7 @@
 import UIKit
 
 @IBDesignable
-open class ButtonClickStyleDesignView: UIView {
+public class ButtonClickStyleDesignView: UIView {
     /// Rectange | Ellipse | Polygon | Star
     @IBInspectable var figureType: Int = 0
     @IBInspectable var starRadius: CGFloat = 0
@@ -51,7 +51,7 @@ open class ButtonClickStyleDesignView: UIView {
     setNeedsLayout()
   }
   
-  func setup() {
+  public func setup() {
         
         if let foundView = viewWithTag(55) {
             foundView.removeFromSuperview()
@@ -112,7 +112,7 @@ open class ButtonClickStyleDesignView: UIView {
     ButtonClickStyleDesignView()
   }
   
-  open override func layoutSubviews() { setup() }
+  public override func layoutSubviews() { setup() }
     
 }
 
@@ -160,13 +160,13 @@ extension ButtonClickStyleDesignView: NSCopying {
 }
 
 @IBDesignable
-open class ButtonClickStyleDesignViewDebug: UIView {
+public class ButtonClickStyleDesignViewDebug: UIView {
     
     @IBInspectable var grStartPoint: CGPoint = .zero
     @IBInspectable var grEndPoint:   CGPoint = .zero
     @IBInspectable var grPointPercent: Bool = true
     
-  open override func draw(_ rect: CGRect) {
+  public override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         addGradientDebugPoints()
@@ -223,7 +223,7 @@ public enum ButtonClickStyleDesignViewType: Int {
 }
 
 @IBDesignable
-open class ButtonClickStyleDesignView_: UIView {
+public class ButtonClickStyleDesignView_: UIView {
     
     @IBInspectable var figureType: Int = 0  /// Rectange Ellipse Polygon Star
     
@@ -286,7 +286,7 @@ open class ButtonClickStyleDesignView_: UIView {
     
     //MARK: - Draw
     
-  open override func draw(_ rect: CGRect) {
+  public override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         guard let bezier = figurePath(bounds) else { return }

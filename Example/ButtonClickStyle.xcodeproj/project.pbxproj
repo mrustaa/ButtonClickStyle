@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41F65848B23528DD818989C5 /* Pods_ButtonClickStyle_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585C1A339472B772504181DB /* Pods_ButtonClickStyle_Example.framework */; };
+		4A0BD3F8280B923B00727B76 /* Test2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0BD3F6280B923B00727B76 /* Test2ViewController.storyboard */; };
+		4A0BD3F9280B923B00727B76 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BD3F7280B923B00727B76 /* Test2ViewController.swift */; };
 		4A14CBDB2803437C00DA8A68 /* ButtonClickStyleShort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBC52803437C00DA8A68 /* ButtonClickStyleShort.swift */; };
 		4A14CBDC2803437C00DA8A68 /* ButtonClickStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBC62803437C00DA8A68 /* ButtonClickStyles.swift */; };
 		4A14CBDD2803437C00DA8A68 /* ButtonClickStyleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBC72803437C00DA8A68 /* ButtonClickStyleBase.swift */; };
@@ -28,6 +30,7 @@
 		4A14CBED2803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBD92803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPress.swift */; };
 		4A14CBEE2803437C00DA8A68 /* ButtonClickStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */; };
 		4A231B7A280A82250073284C /* ButtonClickStyleEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A231B79280A82250073284C /* ButtonClickStyleEmoji.swift */; };
+		4A2BC141280B982500E48EE6 /* ButtonClickStyleDesignTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BC140280B982500E48EE6 /* ButtonClickStyleDesignTest.swift */; };
 		4A4545C52806C7570041D039 /* ButtonTableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4545C32806C7570041D039 /* ButtonTableListViewController.swift */; };
 		4A4545C62806C7570041D039 /* ButtonTableListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4545C42806C7570041D039 /* ButtonTableListViewController.storyboard */; };
 		4A62F3722803115C00534ABA /* ButtonClickStyleDesignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62F30D2803115C00534ABA /* ButtonClickStyleDesignLabel.swift */; };
@@ -108,6 +111,8 @@
 		03911DCE224C9681A312A56C /* Pods_ButtonClickStyle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButtonClickStyle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BD0C048E17837785AA335C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3CC8C58CF19BEF113F8B61A0 /* ButtonClickStyle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ButtonClickStyle.podspec; path = ../ButtonClickStyle.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4A0BD3F6280B923B00727B76 /* Test2ViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test2ViewController.storyboard; sourceTree = "<group>"; };
+		4A0BD3F7280B923B00727B76 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		4A14CBC52803437C00DA8A68 /* ButtonClickStyleShort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleShort.swift; sourceTree = "<group>"; };
 		4A14CBC62803437C00DA8A68 /* ButtonClickStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyles.swift; sourceTree = "<group>"; };
 		4A14CBC72803437C00DA8A68 /* ButtonClickStyleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleBase.swift; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		4A14CBD92803437C00DA8A68 /* ButtonClickStyleAnim+UIViewPress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonClickStyleAnim+UIViewPress.swift"; sourceTree = "<group>"; };
 		4A14CBDA2803437C00DA8A68 /* ButtonClickStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleView.swift; sourceTree = "<group>"; };
 		4A231B79280A82250073284C /* ButtonClickStyleEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleEmoji.swift; sourceTree = "<group>"; };
+		4A2BC140280B982500E48EE6 /* ButtonClickStyleDesignTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleDesignTest.swift; sourceTree = "<group>"; };
 		4A4545C32806C7570041D039 /* ButtonTableListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableListViewController.swift; sourceTree = "<group>"; };
 		4A4545C42806C7570041D039 /* ButtonTableListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ButtonTableListViewController.storyboard; sourceTree = "<group>"; };
 		4A62F30D2803115C00534ABA /* ButtonClickStyleDesignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClickStyleDesignLabel.swift; sourceTree = "<group>"; };
@@ -223,6 +229,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A0BD3F5280B923B00727B76 /* Test2 */ = {
+			isa = PBXGroup;
+			children = (
+				4A0BD3F7280B923B00727B76 /* Test2ViewController.swift */,
+				4A0BD3F6280B923B00727B76 /* Test2ViewController.storyboard */,
+			);
+			path = Test2;
+			sourceTree = "<group>";
+		};
 		4A14CBC12803437C00DA8A68 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				4A62F30D2803115C00534ABA /* ButtonClickStyleDesignLabel.swift */,
+				4A2BC140280B982500E48EE6 /* ButtonClickStyleDesignTest.swift */,
 				4A62F30E2803115C00534ABA /* ButtonClickStyleDesignView.swift */,
 			);
 			path = UIDesignable;
@@ -602,6 +618,7 @@
 		4A8FF183280A40A200144254 /* ScreenIPad */ = {
 			isa = PBXGroup;
 			children = (
+				4A0BD3F5280B923B00727B76 /* Test2 */,
 				4A62F34C2803115C00534ABA /* Test */,
 				4A62F34F2803115C00534ABA /* TestDemo */,
 				4ADE26E12803837C00634B6C /* ExampleButtons */,
@@ -631,8 +648,8 @@
 			isa = PBXGroup;
 			children = (
 				4A9B5AE3280B4E200033761B /* Packages */,
-				4A14CBC12803437C00DA8A68 /* Sources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				4A14CBC12803437C00DA8A68 /* Sources */,
 				607FACD21AFB9204008FA782 /* ButtonClickStyle */,
 				607FACD11AFB9204008FA782 /* Products */,
 				DAC04F657E8533F49312BD6B /* Pods */,
@@ -784,6 +801,7 @@
 				4A62F3892803115C00534ABA /* GradientBlueBasicButtonView.xib in Resources */,
 				4A62F37C2803115C00534ABA /* FirefoxButtonView.xib in Resources */,
 				4A62F3922803115C00534ABA /* DownloadButtonView.xib in Resources */,
+				4A0BD3F8280B923B00727B76 /* Test2ViewController.storyboard in Resources */,
 				4A62F3962803115C00534ABA /* NeomorphismButtonView.xib in Resources */,
 				4A62F3852803115C00534ABA /* GoogleButtonView.xib in Resources */,
 				4A62F3832803115C00534ABA /* TestDemoBlurButtonView.xib in Resources */,
@@ -878,10 +896,12 @@
 				4A62F3752803115C00534ABA /* StoryboardController.swift in Sources */,
 				4A62F3722803115C00534ABA /* ButtonClickStyleDesignLabel.swift in Sources */,
 				4A14CBDD2803437C00DA8A68 /* ButtonClickStyleBase.swift in Sources */,
+				4A2BC141280B982500E48EE6 /* ButtonClickStyleDesignTest.swift in Sources */,
 				4A62F38F2803115C00534ABA /* JustPinkButtonView.swift in Sources */,
 				4A85B5D52803EBFE00DFD435 /* TableAdapterView+UpdateRows.swift in Sources */,
 				4A62F3942803115C00534ABA /* BorderGreenDarkButtonView.swift in Sources */,
 				4A85B5D32803EBFE00DFD435 /* TableAdapterView+Set.swift in Sources */,
+				4A0BD3F9280B923B00727B76 /* Test2ViewController.swift in Sources */,
 				4A14CBE82803437C00DA8A68 /* ButtonClickStyleAnim+UIViewColor.swift in Sources */,
 				4A14CBE52803437C00DA8A68 /* ButtonClickStyleAnim+UIViewShadow.swift in Sources */,
 				4A14CBE32803437C00DA8A68 /* ButtonClickStyleAddViewsAnimation.swift in Sources */,
