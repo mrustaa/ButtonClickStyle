@@ -30,7 +30,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
   - [CocoaPods](#cocoapods)
-  - [Swift Package Manager with Xcode 11](#swift-package-manager-with-xcode-13)
+  - [Swift Package Manager with Xcode 13](#swift-package-manager-with-xcode-13)
 - [Getting Started](#getting-started)
   - [Usage `ButtonClickStyleView`](#usage-buttonclickstyleview)
     - [Designable Attributes storyboard/xib files](#designable-attributes-storyboardxib-files)
