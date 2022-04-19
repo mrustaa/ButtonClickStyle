@@ -7,7 +7,7 @@ let package = Package(
   name: "ButtonClickStyle",
   platforms: [
     // Add support for all platforms starting from a specific version.
-    .iOS(.v14),
+    .iOS(.v9),
   ],
   products: [
     // Products define the executables and libraries a package produces, and make them visible to other packages.

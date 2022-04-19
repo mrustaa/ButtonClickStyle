@@ -49,9 +49,14 @@ open class ButtonClickStyleView: UIView {
     
     super.init(frame: frame)
     
+    var type: Int = state.animationType ?? self.animType
+    if let style = state.animationStyle {
+      type = style.rawValue
+    }
+    
     var state = state
-    if state.animationType == ButtonClick._Style.colorFlat.rawValue ||
-        state.animationType == ButtonClick._Style.color.rawValue {
+    if type == ButtonClick._Style.colorFlat.rawValue ||
+        type == ButtonClick._Style.color.rawValue {
       state.allSubviews = false
     }
     
@@ -59,7 +64,7 @@ open class ButtonClickStyleView: UIView {
     self.cornerRadius = radius
     self.layer.cornerRadius = radius
     self.allSubviews = state.allSubviews
-    self.animType = state.animationType ?? 0
+    self.animType = type
     self.addViews = addViews
     self.debugButtonShow = state.debugButtonShow
     
