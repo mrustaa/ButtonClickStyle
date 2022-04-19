@@ -32,7 +32,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
   - [CocoaPods](#cocoapods)
-  - [Swift Package Manager with Xcode 13](#swift-package-manager-with-xcode-13)
+  - [Swift Package Manager](#swift-package-manager)
 - [Getting Started](#getting-started)
   - [Usage `ButtonClickStyleView`](#usage-buttonclickstyleview)
     - [Designable Attributes Storyboard/Xib files](#designable-attributes-storyboardxib-files)
@@ -61,7 +61,18 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ButtonClickStyle'
 ```
-### Swift Package Manager with Xcode 13
+
+
+### Swift Package Manager
+
+Select Xcode menu `File > Add Packages...` and paste in the repository URL, enter.
+
+
+```swift
+https://github.com/mrustaa/ButtonClickStyle
+```
+
+
 
 Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
