@@ -17,7 +17,7 @@
 - that allows you to design your own buttons from subviews, 
 - in storyboard and xib right away.
 
-
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 ## Watch video with examples
 
@@ -27,7 +27,7 @@
 
 [![ Xcode Create Storyboard/Xib](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/XcodeCreateXib40.png)](https://youtu.be/VNupvYMYPmk)
 
-
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -42,7 +42,7 @@
 - [License](#license)
 
 
-
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 ## Requirements
 
@@ -50,6 +50,7 @@
 - iOS 9.0+
 - Swift 5.5+
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 ## Installation 
 
@@ -62,11 +63,11 @@ it, simply add the following line to your Podfile:
 pod 'ButtonClickStyle'
 ```
 
-
 ### Swift Package Manager
 
 Select Xcode menu `File > Add Packages...` and paste in the repository URL, enter.
 
+Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
 ```swift
 https://github.com/mrustaa/ButtonClickStyle
@@ -74,10 +75,7 @@ https://github.com/mrustaa/ButtonClickStyle
 
 
 
-Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
-
-
-
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 ## Getting Started 
 
@@ -146,7 +144,7 @@ extension ButtonClick {
    .Glare       
    No change for "add.view"
 
-
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 #### Addition `ButtonClickStyleDesignView`
 
@@ -162,7 +160,7 @@ Also you can use in special custom Designable `ButtonClickStyleDesignView` or `B
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
-
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 ### Init Programmatically
 
@@ -170,7 +168,7 @@ If initializing programmatically
 There is a property `addViews` - allows you to pass views / layers
 which you definitely want to use in the click animation only
 
-
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 #### Usage `ButtonClick.State`
 
@@ -234,6 +232,8 @@ class ViewController: UIViewController {
   }
 }
 ```
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
 
