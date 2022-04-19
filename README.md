@@ -18,6 +18,8 @@
 - that allows you to design your own buttons from subviews, 
 - in storyboard and xib right away.
 
+
+
 ## Watch video with examples
 
 [▶️ Xcode Create in Storyboard/Xib](https://youtu.be/VNupvYMYPmk)
@@ -27,17 +29,20 @@
 [![ Xcode Create Storyboard/Xib](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/XcodeCreateXib40.png)](https://youtu.be/VNupvYMYPmk)
 
 
+
 - [Requirements](#requirements)
 - [Installation](#installation)
   - [CocoaPods](#cocoapods)
   - [Swift Package Manager with Xcode 13](#swift-package-manager-with-xcode-13)
 - [Getting Started](#getting-started)
   - [Usage `ButtonClickStyleView`](#usage-buttonclickstyleview)
-    - [Designable Attributes storyboard/xib files](#designable-attributes-storyboardxib-files)
+    - [Designable Attributes Storyboard/Xib files](#designable-attributes-storyboardxib-files)
   - [Init Programmatically](#init-programmatically)
     - [Addition `ButtonClickStyleDesignView`](#addition-buttonclickstyledesignview)
 - [Author](#author)
 - [License](#license)
+
+
 
 
 ## Requirements
@@ -63,11 +68,12 @@ Follow [this doc](https://developer.apple.com/documentation/swift_packages/addin
 
 
 
+
 ## Getting Started 
 
 ### Usage `ButtonClickStyleView`
 
-#### Designable Attributes storyboard/xib files
+#### Designable Attributes Storyboard/Xib files
 
 1) Create a `UIView` that inherits from `ButtonClickStyleView`
 
