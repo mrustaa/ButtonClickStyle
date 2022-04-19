@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ButtonClickStyle'
-  s.version          = '1.2.2'
+  s.version          = '1.3.0'
   s.summary          = 'This is a customizable/designable button view, with 15 animated click styles, that allows you to design your own buttons from subviews, in storyboard and xib'
 
 # This description is used to generate tags and improve search results.
