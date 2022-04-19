@@ -6,6 +6,8 @@ extension ButtonClick {
   public typealias Emoji = (type: String, color: String, repeats: String, new: String)
   public typealias Full = (base: String, name: String, emoji: Emoji, index: Int)
   public typealias Closure = () -> ()
+  public typealias ClosureEvent = (_ event: UIControl.Event) -> ()
+  
   
   @objc public func invoke() {
     closureSleeve?()

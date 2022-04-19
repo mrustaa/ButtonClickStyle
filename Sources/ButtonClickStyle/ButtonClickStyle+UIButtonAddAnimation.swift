@@ -9,7 +9,7 @@ import UIKit
 
 private let btnTapGesture = 49
 
-extension UIButton {
+extension ButtonClickStyleButton {
 
   // MARK: Add View
   
@@ -88,7 +88,8 @@ extension UIButton {
     callback: ((UIControl.Event) -> Void)? = nil
   ) {
     
-    print("onClick \(style.indx()) \(style.str())")
+    self.click?(.allEvents)
+//    print("onClick \(style.indx()) \(style.str())")
     
     switch style {
     case .androidClickable(let value, let color):
@@ -148,8 +149,10 @@ extension UIButton {
     visible: Bool = false
   ) {
     
+    self.click?(event)
+    
     tag = style.indx()
-    print(" duration \(duration ?? 0) 👌 \(style.str()) 👌 \(event.strName())")
+//    print(" duration \(duration ?? 0) 👌 \(style.str()) 👌 \(event.strName())")
     
     let dur: CGFloat = duration ?? style.defaultDuration()
     switch style {

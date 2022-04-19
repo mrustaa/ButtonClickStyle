@@ -21,12 +21,18 @@ open class ButtonClickStyleView: UIView {
   @IBInspectable public var startClick: Bool = false
   @IBInspectable public var debugButtonShow: Bool = false
   
+  public var click: ButtonClick.ClosureEvent? {
+    didSet {
+      button?.click = click
+    }
+  }
+  
   public var addViews: [UIView]?
   var state: ButtonClick.State?
   
   private var style: ButtonClick.Style = .alpha(0.5)
   private var setupDone = false
-  private var button: UIButton?
+  private var button: ButtonClickStyleButton?
   
   // MARK: - Initialize
   
@@ -44,7 +50,8 @@ open class ButtonClickStyleView: UIView {
     state: ButtonClick.State,
     frame: CGRect,
     radius: CGFloat = 0.0,
-    addViews: [UIView]? = nil
+    addViews: [UIView]? = nil,
+    click: ButtonClick.ClosureEvent? = nil
   ) {
     
     super.init(frame: frame)
@@ -59,6 +66,8 @@ open class ButtonClickStyleView: UIView {
         type == ButtonClick._Style.color.rawValue {
       state.allSubviews = false
     }
+    
+    self.click = click
     
     self.state = state
     self.cornerRadius = radius
@@ -130,7 +139,7 @@ open class ButtonClickStyleView: UIView {
     if onlyButtonReturn {
       let nviews = getViews()
       if nviews.count == 1 {
-        if nviews[0] is UIButton {
+        if nviews[0] is ButtonClickStyleButton {
           return
         }
       }
@@ -198,8 +207,8 @@ open class ButtonClickStyleView: UIView {
   // MARK: - Create Button
   
   
-  public func createButton() -> UIButton {
-    let btn = UIButton(type: .system)
+  public func createButton() -> ButtonClickStyleButton {
+    let btn = ButtonClickStyleButton(frame: bounds, click: self.click) //UIButton(type: .system)
     btn.frame = bounds
     btn.backgroundColor = debugButtonShow ? .systemRed.withAlphaComponent(0.45) : .clear
     btn.setTitle(nil, for: .normal)
@@ -447,7 +456,7 @@ extension UIColor {
 }
 
 extension UIView {
-  public func getButtonRadius(_ btn: UIButton) {
+  public func getButtonRadius(_ btn: ButtonClickStyleButton) {
     if btn.layer.cornerRadius == 0 {
       if let desFig = self as? ButtonClickStyleDesignView, desFig.cornerRadius != 0 {
         btn.layer.cornerRadius = desFig.cornerRadius

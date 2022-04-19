@@ -1,9 +1,3 @@
-//
-//  UIButton+AllAnimations.swift
-//  PlusBank
-//
-//  Created by Рустам Мотыгуллин on 20.08.2021.
-//
 
 import UIKit
 

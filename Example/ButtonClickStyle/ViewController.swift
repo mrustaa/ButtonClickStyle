@@ -129,6 +129,12 @@ class ViewController: UIViewController {
     navigationController?.pushViewController(ButtonListViewController.instantiate(), animated: true)
   }
   
+  @IBAction func buttonProgramScreenButtonAction(_ sender: UIButton) {
+    buttonLayerExampleView?.startStopAction(false)
+    navigationController?.pushViewController(ButtonProgramViewController.instantiate(), animated: true)
+  }
+  
+  
   @IBAction func testScreenButtonAction(_ sender: UIButton) {
     buttonLayerExampleView?.startStopAction(false)
     navigationController?.pushViewController(TestViewController.instantiate(), animated: true)

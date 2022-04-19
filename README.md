@@ -38,6 +38,7 @@
     - [Designable Attributes Storyboard/Xib files](#designable-attributes-storyboardxib-files)
   - [Init Programmatically](#init-programmatically)
     - [Addition `ButtonClickStyleDesignView`](#addition-buttonclickstyledesignview)
+  - [Button Click/Action Closure](#button-clickaction-closure)
 - [Author](#author)
 - [License](#license)
 
@@ -220,7 +221,10 @@ class ViewController: UIViewController {
       state: state,
       frame: .init(x: 0, y: 300, width: 240, height: 128),
       radius: 20,
-      addViews: [figureView]    // addViews - allows you to pass views / layers which you definitely want to use in the click animation only
+      addViews: [figureView],    // addViews - allows you to pass views / layers which you definitely want to use in the click animation only
+      click: { event in
+        
+      }
     )
     btnView.backgroundColor = .yellow.withAlphaComponent(0.5)
     
@@ -238,6 +242,30 @@ For an already created ButtonView to update the animation type
 
 ```swift
  self.prgmButtonClickStyleView?.update(animationType: type, allSubviews: true)
+```
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+### Button Click/Action Closure
+
+Add at init programmatically Button Action-Closure event 
+
+```swift
+ let btnView = ButtonClickStyleView(
+      state: state, 
+      frame: frame,
+      click: { event in
+          ... 
+      }
+    )
+```
+
+Or define Action-Closure after
+
+```swift
+ self.prgmButtonClickStyleView?.click = { event in
+    ...  
+ }
 ```
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
