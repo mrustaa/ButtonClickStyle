@@ -92,6 +92,7 @@ https://github.com/mrustaa/ButtonClickStyle
 
    - IBDesignable ...... | `animType` ........ | Number Value | Init Interface Builder
    - ButtonClick.State | `animationType` | Number Value | Init Programmatiсaly State
+   - ButtonClick.State | `animationStyle` | Style Value | Init Programmatiсaly State
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
