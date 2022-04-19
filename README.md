@@ -233,6 +233,12 @@ class ViewController: UIViewController {
 }
 ```
 
+For an already created ButtonView to update the animation type
+
+```swift
+ self.prgmButtonClickStyleView?.update(animationType: type, allSubviews: true)
+```
+
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif)
