@@ -5,18 +5,19 @@
 
 # ButtonClickStyle
 
-[![Version](https://img.shields.io/cocoapods/v/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
-[![License](https://img.shields.io/cocoapods/l/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
 [![Platform](https://img.shields.io/cocoapods/p/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
+[![Version](https://img.shields.io/cocoapods/v/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
 [![Xcode](https://img.shields.io/badge/Xcode-13-blue.svg)](https://developer.apple.com/xcode) 
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
 [![Swift 5.2](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://swift.org/)
 [![License](https://img.shields.io/github/license/almazrafi/Fugen.svg)](https://github.com/mrustaa/ButtonClickStyle/LICENSE)
 
-- This is a customizable/designable "button view", 
+- This is a customizable/designable Button View, 
 - with 15 animated click styles, 
 - that allows you to design your own buttons from subviews, 
 - in storyboard and xib right away.
+
+
 
 ## Watch video with examples
 
@@ -26,11 +27,29 @@
 
 [![ Xcode Create Storyboard/Xib](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/XcodeCreateXib40.png)](https://youtu.be/VNupvYMYPmk)
 
+
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [CocoaPods](#cocoapods)
+  - [Swift Package Manager with Xcode 13](#swift-package-manager-with-xcode-13)
+- [Getting Started](#getting-started)
+  - [Usage `ButtonClickStyleView`](#usage-buttonclickstyleview)
+    - [Designable Attributes Storyboard/Xib files](#designable-attributes-storyboardxib-files)
+  - [Init Programmatically](#init-programmatically)
+    - [Addition `ButtonClickStyleDesignView`](#addition-buttonclickstyledesignview)
+- [Author](#author)
+- [License](#license)
+
+
+
+
 ## Requirements
 
 - Xcode 13+
 - iOS 9.0+
 - Swift 5.5+
+
 
 ## Installation 
 
@@ -42,77 +61,109 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ButtonClickStyle'
 ```
+### Swift Package Manager with Xcode 13
 
-## Usage
+Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
-#### With storyboard or xib files
 
-1) Create a "view" that inherits from `ButtonClickStyleView`
 
-2) Inside this layer, create your own button
 
-3) In Attributes Inspector of Interface Builder
-   you can immediately select the button click style `animationType`
+## Getting Started 
+
+### Usage `ButtonClickStyleView`
+
+#### Designable Attributes Storyboard/Xib files
+
+1) Create a `UIView` that inherits from `ButtonClickStyleView`
+
+2) Inside this View, create design your own button from subviews
+
+3) In Attributes Inspector of Interface Builder,
+   you can immediately select the button click style `animType`
+
+   - IBDesignable ...... | `animType` ........ | Number Value | Init Interface Builder
+   - ButtonClick.State | `animationType` | Number Value | Init Programmatiсaly State
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 ```swift
-extension ButtonClick {  // animationType
-  enum Style {
-    case alpha
-    case flash
-    case shadow
-    case shadowColor
-    case color
-    case colorFlat
-    case pulsateNew
-    case pulsate
-    case press
-    case shake
-    case shakeNew
-    case androidClickable
-    case androidClickableDark
-    case fave
-    case glare
+extension ButtonClick {  
+  //                          Number Value
+  enum Style {                
+    case alpha                //  0
+    case flash                //  1
+    case shadow               //  2
+    case shadowColor          //  3
+    case color                //  4
+    case colorFlat            //  5
+    case pulsateNew           //  6
+    case pulsate              //  7
+    case press                //  8
+    case shake                //  9
+    case shakeNew             // 10
+    case androidClickable     // 11
+    case androidClickableDark // 12
+    case fave                 // 13
+    case glare                // 14
   }
 }  
 ```
 
-4) Also you can select specific layers to animate / or just 1 specific one `allSubviews`
+4) Also you can select specific subviews to animate / or just 1 specific one-view `allSubviews`
 
-5) Add animation duration `animationDuration`
+5) Add animation duration `animDuration`
 
-6) Add animation value `animationTypeValue` -  meaning means for some types - alpha or power
+6) Add animation value `animValue` -  meaning means for some types - alpha or power
 
-- Hide 
-   .Alpha / .Flash         
+- Hide       
+   .Alpha / .Flash       
    Will change alpha for "self.view" from 0.0 to 1.0
-
+ 
 - Add       
-   .Shadow / .Color / .ColorFlat
+   .Shadow / .Color / .ColorFlat       
    Will change alpha for "add.view" from 0.0 to 1.0
 
 - Move       
-   .Pulsate / .Press / .Shake   
+   .Pulsate / .Press / .Shake       
    Will change the strength of movement for "self.view" from 0.0 to 1.0
 
-- Tap Gesture 
-   .Fave / .AndroidClickable 
+- Tap Gesture       
+   .Fave / .AndroidClickable       
    Will increase bubble radius for "add.view"
 
 - Loading   
-   .Glare               
+   .Glare       
    No change for "add.view"
+
+
+
+#### Addition `ButtonClickStyleDesignView`
+
+Also you can use in special custom Designable `ButtonClickStyleDesignView` or `ButtonClickStyleDesignLabel` 
+   with bunch of options, adding 
+   + cornerRadius 
+   + figure type 
+   + gradient 
+   + shadows 
+   + borders 
+   + blur
+   + etc
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
-## Init Programmatically
 
-7) If initializing programmatically
+
+### Init Programmatically
+
+If initializing programmatically
 There is a property `addViews` - allows you to pass views / layers
 which you definitely want to use in the click animation only
 
-8) Or initialize through a struct `ButtonClick.State`
+
+
+#### Usage `ButtonClick.State`
+
+Or initialize through a struct `ButtonClick.State`
 
 ```swift
 import ButtonClickStyle
