@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-3H-Wjd" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="375" height="194"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rpt-Pf-R0P">
                                         <rect key="frame" x="8" y="0.0" width="150.33333333333334" height="31"/>
@@ -147,7 +147,7 @@
                                         <rect key="frame" x="10" y="96" width="188.66666666666666" height="31"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML7-yX-qg9" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
-                                                <rect key="frame" x="132.66666666666666" y="0.66666666666665719" width="51" height="30"/>
+                                                <rect key="frame" x="132.66666666666666" y="0.6666666666666714" width="51" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eue-Vc-STp">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
@@ -215,7 +215,7 @@
                                     </view>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sl7-H4-suC">
                                         <rect key="frame" x="197.66666666666663" y="0.0" width="150.33333333333337" height="31"/>
-                                        <color key="minimumTrackTintColor" systemColor="systemIndigoColor"/>
+                                        <color key="minimumTrackTintColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </slider>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-Yi-aUc">
                                         <rect key="frame" x="5" y="162" width="187.66666666666666" height="31"/>
@@ -289,22 +289,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-DD-rOI" customClass="TableAdapterView" customModule="ButtonClickStyle" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-DD-rOI" customClass="TableAdapterView" customModule="ButtonClickStyle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <sections/>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="0J8-mu-Jra"/>
+                        <viewLayoutGuide key="safeArea" id="EM1-Yd-xx1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="top" secondItem="0J8-mu-Jra" secondAttribute="top" id="653-Jr-QAd"/>
-                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="trailing" secondItem="0J8-mu-Jra" secondAttribute="trailing" id="DJt-e2-4CJ"/>
-                            <constraint firstItem="ANa-3H-Wjd" firstAttribute="top" secondItem="0J8-mu-Jra" secondAttribute="top" id="HDE-DL-NVr"/>
+                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="top" secondItem="dR3-qA-oMw" secondAttribute="top" id="653-Jr-QAd"/>
+                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="trailing" secondItem="dR3-qA-oMw" secondAttribute="trailing" id="DJt-e2-4CJ"/>
+                            <constraint firstItem="ANa-3H-Wjd" firstAttribute="top" secondItem="dR3-qA-oMw" secondAttribute="top" id="HDE-DL-NVr"/>
                             <constraint firstItem="aga-qs-eZZ" firstAttribute="width" secondItem="dR3-qA-oMw" secondAttribute="width" multiplier="0.5" constant="1" id="J6r-11-Ydh"/>
-                            <constraint firstItem="ANa-3H-Wjd" firstAttribute="leading" secondItem="0J8-mu-Jra" secondAttribute="leading" id="M33-CN-Id9"/>
+                            <constraint firstItem="ANa-3H-Wjd" firstAttribute="leading" secondItem="dR3-qA-oMw" secondAttribute="leading" id="M33-CN-Id9"/>
                             <constraint firstAttribute="bottom" secondItem="vnZ-DD-rOI" secondAttribute="bottom" id="QoQ-Yc-tJy"/>
-                            <constraint firstItem="0J8-mu-Jra" firstAttribute="trailing" secondItem="ANa-3H-Wjd" secondAttribute="trailing" id="g6N-xz-5hF"/>
-                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="leading" secondItem="0J8-mu-Jra" secondAttribute="leading" id="zFq-D7-PmR"/>
+                            <constraint firstAttribute="trailing" secondItem="ANa-3H-Wjd" secondAttribute="trailing" id="g6N-xz-5hF"/>
+                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="leading" secondItem="dR3-qA-oMw" secondAttribute="leading" id="zFq-D7-PmR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table Buttons Customizable" id="tsF-r7-Sgs">

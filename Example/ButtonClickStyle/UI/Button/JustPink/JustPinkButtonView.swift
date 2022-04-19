@@ -49,7 +49,8 @@ class JustPinkButtonView: BtnView {
        views = [subMainView]
        
      } else {
-       fillView.fillColor = .systemGray5.withAlphaComponent(0.55)
+       
+       fillView.fillColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.9176470588, alpha: 1).withAlphaComponent(0.55)
        gradientView.isHidden = false
        gradientView.alpha = 1
        mainShadowView.blur = 24

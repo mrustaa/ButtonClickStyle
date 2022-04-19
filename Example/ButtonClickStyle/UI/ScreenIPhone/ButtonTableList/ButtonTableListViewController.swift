@@ -39,8 +39,6 @@ class ButtonTableListViewController: StoryboardController {
   var colorChanging: Bool = false
   @IBOutlet var colorButtonClickStyleDesignView: ButtonClickStyleDesignView!
   var colorSelected: UIColor?
-  let colorPicker = UIColorPickerViewController()
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -53,8 +51,6 @@ class ButtonTableListViewController: StoryboardController {
       target: nil,
       action: nil
     )
-    
-    colorPicker.delegate = self
     
     
     allSubviewsSwitch.addTarget(self, action: #selector(allSubviewsSwitchAction(swtch:event:)), for: .valueChanged)
@@ -152,7 +148,27 @@ class ButtonTableListViewController: StoryboardController {
   @IBAction func colorPickerAction(_ sender: Any) {
     resetAllColorChangeFlags()
     colorChanging = true
-    present(colorPicker, animated: true, completion: nil)
+    if #available(iOS 14.0, *) {
+      let colorPicker = UIColorPickerViewController()
+      colorPicker.delegate = self
+      present(colorPicker, animated: true, completion: nil)
+    } else {
+      colorNotPicker()
+    }
+  }
+  
+  func colorNotPicker() {
+    colorSelected = UIColor.random()
+    colorSelectButton.setTitle("", for: .normal)
+    colorClearButton.setTitle("Color Clear", for: .normal)
+    let indigo = #colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)
+    colorClearButton.setTitleColor(indigo, for: .normal)
+    colorClearButton.titleLabel?.font =  UIFont.boldSystemFont(ofSize: 12)
+    
+    updateButtons()
+    colorButtonClickStyleDesignView.fillColor = colorSelected
+    colorButtonClickStyleDesignView.setNeedsLayout()
+    resetAllColorChangeFlags()
   }
   
   @objc func allSubviewsSwitchAction(swtch: UISwitch, event: UIEvent) {
@@ -240,6 +256,7 @@ class ButtonTableListViewController: StoryboardController {
 
 extension ButtonTableListViewController: UIColorPickerViewControllerDelegate {
   
+  @available(iOS 14.0, *)
   func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
     
     
@@ -252,6 +269,7 @@ extension ButtonTableListViewController: UIColorPickerViewControllerDelegate {
     }
   }
   
+  @available(iOS 14.0, *)
   func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController)
   {
     updateButtons()
@@ -297,9 +315,8 @@ extension ButtonTableListViewController: UIPickerViewDelegate {
     var text: String = ""
     text = ButtonClick.Style.allNameFull[row].name
     
-    
     pickerLabel?.text = text
-    pickerLabel?.textColor = .systemIndigo
+    pickerLabel?.textColor = #colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)
     
     return pickerLabel!
   }

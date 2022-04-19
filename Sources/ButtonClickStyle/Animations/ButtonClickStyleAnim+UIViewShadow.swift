@@ -59,7 +59,7 @@ extension UIView {
       
       $0.superview?.clipsToBounds = false
       
-        image = $0.asImage().withRenderingMode(.alwaysTemplate)
+        image = $0.snapshot().withRenderingMode(.alwaysTemplate)
       $0.superview?.clipsToBounds = clip
         
         imgBtn.setImage(image, for: .normal)
@@ -117,15 +117,3 @@ extension UIView {
     }
   }
 }
-
-//MARK: - extensions
-
-extension UIView {
-  public func asImage() -> UIImage {
-    let renderer = UIGraphicsImageRenderer(bounds: bounds)
-    return renderer.image { rendererContext in
-      layer.render(in: rendererContext.cgContext)
-    }
-  }
-}
-

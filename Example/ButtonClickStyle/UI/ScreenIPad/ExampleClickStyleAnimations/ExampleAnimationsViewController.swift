@@ -7,7 +7,6 @@ class ExampleAnimationsViewController: StoryboardController {
   var colorChanging: Bool = false
   @IBOutlet var colorButtonClickStyleDesignView: ButtonClickStyleDesignView!
   var colorSelected: UIColor?
-  let colorPicker = UIColorPickerViewController()
   
   @IBOutlet var allSubviewsSwitch: UISwitch!
   @IBOutlet var addBackgroundColorSwitch: UISwitch!
@@ -25,8 +24,6 @@ class ExampleAnimationsViewController: StoryboardController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    colorPicker.delegate = self
     
 //    title = "Click Style Animations"
     
@@ -108,7 +105,21 @@ class ExampleAnimationsViewController: StoryboardController {
   @IBAction func colorPickerAction(_ sender: Any) {
     resetAllColorChangeFlags()
     colorChanging = true
-    present(colorPicker, animated: true, completion: nil)
+    if #available(iOS 14.0, *) {
+      let colorPicker = UIColorPickerViewController()
+      colorPicker.delegate = self
+      present(colorPicker, animated: true, completion: nil)
+    } else {
+      colorNotPicker()
+    }
+  }
+  
+  func colorNotPicker() {
+    colorSelected = UIColor.random()
+    update()
+    colorButtonClickStyleDesignView.fillColor = colorSelected
+    colorButtonClickStyleDesignView.setNeedsLayout()
+    resetAllColorChangeFlags()
   }
   
   @objc func allSubviewsSwitchAction(swtch: UISwitch, event: UIEvent) {
@@ -272,6 +283,7 @@ class ExampleAnimationsViewController: StoryboardController {
 
 extension ExampleAnimationsViewController: UIColorPickerViewControllerDelegate {
   
+  @available(iOS 14.0, *)
   func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
     
     if colorChanging
@@ -280,6 +292,7 @@ extension ExampleAnimationsViewController: UIColorPickerViewControllerDelegate {
     }
   }
   
+  @available(iOS 14.0, *)
   func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController)
   {
     update()

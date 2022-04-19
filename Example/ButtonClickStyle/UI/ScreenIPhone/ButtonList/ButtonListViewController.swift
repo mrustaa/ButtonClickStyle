@@ -28,7 +28,6 @@ class ButtonListViewController: StoryboardController {
   var colorChanging: Bool = false
   @IBOutlet var colorButtonClickStyleDesignView: ButtonClickStyleDesignView!
   var colorSelected: UIColor?
-  let colorPicker = UIColorPickerViewController()
   
   
   let buttonTypes = ButtonClick.Buttons.allNameFull
@@ -36,7 +35,21 @@ class ButtonListViewController: StoryboardController {
   @IBAction func colorPickerAction(_ sender: Any) {
     resetAllColorChangeFlags()
     colorChanging = true
-    present(colorPicker, animated: true, completion: nil)
+    if #available(iOS 14.0, *) {
+      let colorPicker = UIColorPickerViewController()
+      colorPicker.delegate = self
+      present(colorPicker, animated: true, completion: nil)
+    } else {
+      colorNotPicker()
+    }
+  }
+  
+  func colorNotPicker() {
+    colorSelected = UIColor.random()
+    updateButtons()
+    colorButtonClickStyleDesignView.fillColor = colorSelected
+    colorButtonClickStyleDesignView.setNeedsLayout()
+    resetAllColorChangeFlags()
   }
   
   @IBAction func buttonColorClear(_ sender: Any) {
@@ -73,7 +86,6 @@ class ButtonListViewController: StoryboardController {
     
     title = "One Button Customizable"
     
-    colorPicker.delegate = self
     
     animationValueSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
     
@@ -276,6 +288,7 @@ extension ButtonListViewController: UIPickerViewDelegate {
 
 extension ButtonListViewController: UIColorPickerViewControllerDelegate {
   
+  @available(iOS 14.0, *)
   func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
     
     if colorChanging
@@ -285,6 +298,7 @@ extension ButtonListViewController: UIColorPickerViewControllerDelegate {
     colorClearButton.isHidden = (colorSelected == nil) || (colorSelected == .clear)
   }
   
+  @available(iOS 14.0, *)
   func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController)
   {
     updateButtons()

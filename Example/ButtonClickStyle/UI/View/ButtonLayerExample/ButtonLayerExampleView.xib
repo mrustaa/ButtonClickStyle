@@ -357,7 +357,7 @@
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="allSubviews" value="YES"/>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="startClick" value="NO"/>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="animationType">
+                                        <userDefinedRuntimeAttribute type="number" keyPath="animType">
                                             <integer key="value" value="9"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>

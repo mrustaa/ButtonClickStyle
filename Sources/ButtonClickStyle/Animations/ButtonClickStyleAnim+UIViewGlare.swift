@@ -13,7 +13,7 @@ extension UIView {
   public func buttonClickStyleGlare(alpha: CGFloat, color: UIColor? = nil, duration: CGFloat? = nil) {
     
 //    let snapshot = self.asImage().withRenderingMode(.alwaysTemplate)
-    let snapshot = self.snapshot?.withRenderingMode(.alwaysTemplate)
+    let snapshot = self.snapshot().withRenderingMode(.alwaysTemplate)
     let imageView = UIImageView(image: snapshot)
     
     var clr: UIColor = UIColor(white: 0.9, alpha: alpha)
@@ -21,7 +21,7 @@ extension UIView {
       clr = color.withAlphaComponent(alpha)
     }
     imageView.tintColor = clr
-    guard let image = imageView.snapshot  else { return }
+    let image = imageView.snapshot()
 //    let image = imageView.asImage()// else { return }
     
     let width = image.size.width
@@ -57,16 +57,5 @@ extension UIView {
     layer.sublayers?.forEach {
       $0.mask?.removeAnimation(forKey: "shine")
     }
-  }
-}
-
-extension UIView {
-  var snapshot: UIImage? {
-    let renderer = UIGraphicsImageRenderer(size: bounds.size)
-    
-    let image = renderer.image { context in
-      layer.render(in: context.cgContext)
-    }
-    return image
   }
 }
