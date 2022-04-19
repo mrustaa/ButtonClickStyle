@@ -5,9 +5,8 @@
 
 # ButtonClickStyle
 
-[![Version](https://img.shields.io/cocoapods/v/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
-[![License](https://img.shields.io/cocoapods/l/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
 [![Platform](https://img.shields.io/cocoapods/p/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
+[![Version](https://img.shields.io/cocoapods/v/ButtonClickStyle.svg?style=flat)](https://cocoapods.org/pods/ButtonClickStyle)
 [![Xcode](https://img.shields.io/badge/Xcode-13-blue.svg)](https://developer.apple.com/xcode) 
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
 [![Swift 5.2](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://swift.org/)
