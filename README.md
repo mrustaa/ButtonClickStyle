@@ -13,7 +13,7 @@
 [![Swift 5.2](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://swift.org/)
 [![License](https://img.shields.io/github/license/almazrafi/Fugen.svg)](https://github.com/mrustaa/ButtonClickStyle/LICENSE)
 
-- This is a customizable/designable "button view", 
+- This is a customizable/designable Button View, 
 - with 15 animated click styles, 
 - that allows you to design your own buttons from subviews, 
 - in storyboard and xib right away.
@@ -45,64 +45,77 @@ pod 'ButtonClickStyle'
 
 ## Usage
 
-#### With storyboard or xib files
+#### With Storyboard or Xib files. Designable 
 
-1) Create a "view" that inherits from `ButtonClickStyleView`
+1) Create a `UIView` that inherits from `ButtonClickStyleView`
 
-2) Inside this layer, create your own button
+2) Inside this View, create design your own button from subviews
 
-3) In Attributes Inspector of Interface Builder
-   you can immediately select the button click style `animationType`
+3) In Attributes Inspector of Interface Builder,
+   you can immediately select the button click style `animType`
 
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 ```swift
-extension ButtonClick {  // animationType
-  enum Style {
-    case alpha
-    case flash
-    case shadow
-    case shadowColor
-    case color
-    case colorFlat
-    case pulsateNew
-    case pulsate
-    case press
-    case shake
-    case shakeNew
-    case androidClickable
-    case androidClickableDark
-    case fave
-    case glare
+extension ButtonClick {  
+  //                          Number Value
+  // ButtonClickStyleView     `animType`      
+  // ButtonClick.State        `animationType` 
+  enum Style {                
+    case alpha                //  0
+    case flash                //  1
+    case shadow               //  2
+    case shadowColor          //  3
+    case color                //  4
+    case colorFlat            //  5
+    case pulsateNew           //  6
+    case pulsate              //  7
+    case press                //  8
+    case shake                //  9
+    case shakeNew             // 10
+    case androidClickable     // 11
+    case androidClickableDark // 12
+    case fave                 // 13
+    case glare                // 14
   }
 }  
 ```
 
-4) Also you can select specific layers to animate / or just 1 specific one `allSubviews`
+4) Also you can select specific subviews to animate / or just 1 specific one-view `allSubviews`
 
-5) Add animation duration `animationDuration`
+5) Add animation duration `animDuration`
 
-6) Add animation value `animationTypeValue` -  meaning means for some types - alpha or power
+6) Add animation value `animValue` -  meaning means for some types - alpha or power
 
-- Hide 
-   .Alpha / .Flash         
+- Hide       
+   .Alpha / .Flash       
    Will change alpha for "self.view" from 0.0 to 1.0
-
+ 
 - Add       
-   .Shadow / .Color / .ColorFlat
+   .Shadow / .Color / .ColorFlat       
    Will change alpha for "add.view" from 0.0 to 1.0
 
 - Move       
-   .Pulsate / .Press / .Shake   
+   .Pulsate / .Press / .Shake       
    Will change the strength of movement for "self.view" from 0.0 to 1.0
 
-- Tap Gesture 
-   .Fave / .AndroidClickable 
+- Tap Gesture       
+   .Fave / .AndroidClickable       
    Will increase bubble radius for "add.view"
 
 - Loading   
-   .Glare               
+   .Glare       
    No change for "add.view"
+
+6) Also you can use in special custom Designable `ButtonClickStyleDesignView` or `ButtonClickStyleDesignLabel` 
+   with bunch of options, adding 
+   + cornerRadius 
+   + figure type 
+   + gradient 
+   + shadows 
+   + borders 
+   + blur
+   + etc
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
