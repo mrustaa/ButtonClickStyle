@@ -26,11 +26,26 @@
 
 [![ Xcode Create Storyboard/Xib](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/XcodeCreateXib40.png)](https://youtu.be/VNupvYMYPmk)
 
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [CocoaPods](#cocoapods)
+  - [Swift Package Manager with Xcode 11](#swift-package-manager-with-xcode-13)
+- [Getting Started](#getting-started)
+  - [Usage `ButtonClickStyleView`](#usage-buttonclickstyleview)
+    - [Designable Attributes storyboard/xib files](#designable-attributes-storyboardxib-files)
+  - [Init Programmatically](#init-programmatically)
+    - [Addition `ButtonClickStyleDesignView`](#addition-buttonclickstyledesignview)
+- [Author](#author)
+- [License](#license)
+
+
 ## Requirements
 
 - Xcode 13+
 - iOS 9.0+
 - Swift 5.5+
+
 
 ## Installation 
 
@@ -42,10 +57,17 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ButtonClickStyle'
 ```
+### Swift Package Manager with Xcode 13
 
-## Usage
+Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
-#### With Storyboard or Xib files. Designable 
+
+
+## Getting Started 
+
+### Usage `ButtonClickStyleView`
+
+#### Designable Attributes storyboard/xib files
 
 1) Create a `UIView` that inherits from `ButtonClickStyleView`
 
@@ -54,13 +76,14 @@ pod 'ButtonClickStyle'
 3) In Attributes Inspector of Interface Builder,
    you can immediately select the button click style `animType`
 
+   - IBDesignable ...... | `animType` ........ | Number Value | Init Interface Builder
+   - ButtonClick.State | `animationType` | Number Value | Init Programmatiсaly State
+
 ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/click_styles_example_2x_10sec33fps.gif)
 
 ```swift
 extension ButtonClick {  
   //                          Number Value
-  // ButtonClickStyleView     `animType`      
-  // ButtonClick.State        `animationType` 
   enum Style {                
     case alpha                //  0
     case flash                //  1
@@ -107,7 +130,11 @@ extension ButtonClick {
    .Glare       
    No change for "add.view"
 
-6) Also you can use in special custom Designable `ButtonClickStyleDesignView` or `ButtonClickStyleDesignLabel` 
+
+
+#### Addition `ButtonClickStyleDesignView`
+
+Also you can use in special custom Designable `ButtonClickStyleDesignView` or `ButtonClickStyleDesignLabel` 
    with bunch of options, adding 
    + cornerRadius 
    + figure type 
@@ -119,13 +146,19 @@ extension ButtonClick {
 
 <!-- ![image](https://github.com/mrustaa/GifPresentations/blob/master/ButtonClickStyle/ui3.gif) -->
 
-## Init Programmatically
 
-7) If initializing programmatically
+
+### Init Programmatically
+
+If initializing programmatically
 There is a property `addViews` - allows you to pass views / layers
 which you definitely want to use in the click animation only
 
-8) Or initialize through a struct `ButtonClick.State`
+
+
+#### Usage `ButtonClick.State`
+
+Or initialize through a struct `ButtonClick.State`
 
 ```swift
 import ButtonClickStyle
