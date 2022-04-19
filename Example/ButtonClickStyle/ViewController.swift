@@ -34,7 +34,7 @@ class ViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-//    _ = startPushTableList
+    _ = startPushTableList
     
     self.backController = backController + 1
     if backController > 0 {
