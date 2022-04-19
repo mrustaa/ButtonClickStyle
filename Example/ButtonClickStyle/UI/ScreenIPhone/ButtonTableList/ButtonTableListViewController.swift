@@ -18,7 +18,7 @@ class ButtonTableListViewController: StoryboardController {
   
   
   var panelShow: Bool = false
-  @IBOutlet var panelTop: NSLayoutConstraint!
+  @IBOutlet var panelWidth: NSLayoutConstraint!
   @IBOutlet var tableTop: NSLayoutConstraint!
   
   @IBOutlet var animationTypePicker: UIPickerView!
@@ -40,6 +40,29 @@ class ButtonTableListViewController: StoryboardController {
   @IBOutlet var colorButtonClickStyleDesignView: ButtonClickStyleDesignView!
   var colorSelected: UIColor?
   
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+      self.tableView.scrollToBottom()
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+        self.tableView.scrollToTop()
+      }
+      
+    }
+    
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.8) {
+      self.animationTypePicker.selectRow(ButtonClick._Style.allCases.count - 1, inComponent: 0, animated: true)
+      
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+        self.animationTypePicker.selectRow(0, inComponent: 0, animated: true)
+      }
+    }
+    
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -52,6 +75,12 @@ class ButtonTableListViewController: StoryboardController {
       action: nil
     )
     
+    let barButtonReload = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(navBarButtonReloadAction(_:)) )
+    
+    
+    let barButtonShowHidePanel = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(navBarShowHidePanel))
+    
+    navigationItem.rightBarButtonItems = [barButtonShowHidePanel, barButtonReload]
     
     allSubviewsSwitch.addTarget(self, action: #selector(allSubviewsSwitchAction(swtch:event:)), for: .valueChanged)
     addBackgroundColorSwitch.addTarget(self, action: #selector(addBackgroundColorSwitchAction(swtch:event:)), for: .valueChanged)
@@ -72,25 +101,10 @@ class ButtonTableListViewController: StoryboardController {
     buttonTypes = ButtonClick.Buttons.allCases
     
     
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
-      self.animationTypePicker.selectRow(ButtonClick._Style.allCases.count - 1, inComponent: 0, animated: true)
-      
-      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-        self.animationTypePicker.selectRow(0, inComponent: 0, animated: true)
-      }
-    }
-    
     buttonColorClearAction()
     updateButtons()
     navBarShowHidePanel()
     
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-      self.tableView.scrollToBottom()
-      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
-        self.tableView.scrollToTop()
-      }
-    
-    }
   }
   
   
@@ -189,9 +203,10 @@ class ButtonTableListViewController: StoryboardController {
   }
   
   
-  @IBAction func navBarShowHidePanel() {
+  @objc func navBarShowHidePanel() {
     panelShow = !panelShow
     
+    self.panelWidth.constant = self.panelShow ? 194 : 0
     self.tableTop.constant = self.panelShow ? 194 : 0
     UIView.animate(withDuration: 0.5, animations: {
       self.view.layoutIfNeeded()
@@ -199,7 +214,7 @@ class ButtonTableListViewController: StoryboardController {
     
   }
   
-  @IBAction func navBarButtonReloadAction(_ sender: Any) {
+  @objc func navBarButtonReloadAction(_ sender: Any) {
     updateButtons()
   }
   

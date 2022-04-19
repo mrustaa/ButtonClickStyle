@@ -225,7 +225,7 @@
                             <rect key="frame" x="10" y="10" width="131" height="59"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-6m-ujx" userLabel="JustPink" customClass="ButtonClickStyleView" customModule="ButtonClickStyle" customModuleProvider="target">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELq-6m-ujx" userLabel="ButtonClickStyleView" customClass="ButtonClickStyleView" customModule="ButtonClickStyle" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="131" height="59"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>

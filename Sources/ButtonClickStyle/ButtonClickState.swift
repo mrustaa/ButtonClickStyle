@@ -13,6 +13,7 @@ extension ButtonClick {
     var titleText: String?
     var allSubviews: Bool = true
     var animationType: Int?
+    var animationStyle: _Style?
     var animationTypeValue: CGFloat?
     var animationDuration: CGFloat?
     var new: Bool = false
@@ -25,6 +26,7 @@ extension ButtonClick {
       titleText: String? = nil,
       allSubviews: Bool = true,
       animationType: Int? = nil,
+      animationStyle: _Style? = nil,
       animationTypeValue: CGFloat? = nil,
       animationDuration: CGFloat? = nil,
       new: Bool = false,
@@ -36,6 +38,7 @@ extension ButtonClick {
       self.titleText = titleText
       self.allSubviews = allSubviews
       self.animationType = animationType
+      self.animationStyle = animationStyle
       self.animationTypeValue = animationTypeValue
       self.animationDuration = animationDuration
       self.new = new

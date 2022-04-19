@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YTe-EZ-Seo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4sU-sg-c5X">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,35 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="FZB-CG-Eqe">
-            <objects>
-                <navigationController id="YTe-EZ-Seo" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yhZ-ii-piQ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <navigationBarAppearance key="scrollEdgeAppearance"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="4sU-sg-c5X" kind="relationship" relationship="rootViewController" id="Kt3-N1-rum"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7uL-4R-4N8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-268" y="-115"/>
-        </scene>
-        <!--Table Buttons Customizable-->
+        <!--Button Table List View Controller-->
         <scene sceneID="Q2b-nP-qfv">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5m1-gw-Vhp" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ButtonTableListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4sU-sg-c5X" customClass="ButtonTableListViewController" customModule="ButtonClickStyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dR3-qA-oMw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-3H-Wjd" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-DD-rOI" customClass="TableAdapterView" customModule="ButtonClickStyle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                            </tableView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-3H-Wjd" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="194"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rpt-Pf-R0P">
                                         <rect key="frame" x="8" y="0.0" width="150.33333333333334" height="31"/>
@@ -147,7 +134,7 @@
                                         <rect key="frame" x="10" y="96" width="188.66666666666666" height="31"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML7-yX-qg9" customClass="ButtonClickStyleDesignView" customModule="ButtonClickStyle" customModuleProvider="target">
-                                                <rect key="frame" x="132.66666666666666" y="0.6666666666666714" width="51" height="30"/>
+                                                <rect key="frame" x="132.66666666666666" y="0.66666666666665719" width="51" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eue-Vc-STp">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
@@ -245,31 +232,31 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="rpt-Pf-R0P" firstAttribute="width" secondItem="ANa-3H-Wjd" secondAttribute="width" multiplier="0.39" id="0hf-TN-NC9"/>
-                                    <constraint firstItem="sl7-H4-suC" firstAttribute="top" secondItem="ANa-3H-Wjd" secondAttribute="top" id="2ec-Wz-3NY"/>
                                     <constraint firstItem="DAu-6I-2mP" firstAttribute="width" secondItem="ANa-3H-Wjd" secondAttribute="width" multiplier="0.5" id="52c-OZ-6aq"/>
                                     <constraint firstItem="DAu-6I-2mP" firstAttribute="top" secondItem="aga-qs-eZZ" secondAttribute="bottom" constant="2" id="6FE-r7-hd3"/>
-                                    <constraint firstItem="4p8-Vz-7M8" firstAttribute="top" secondItem="ANa-3H-Wjd" secondAttribute="top" id="6JU-XB-9Tn"/>
+                                    <constraint firstItem="sl7-H4-suC" firstAttribute="top" secondItem="rpt-Pf-R0P" secondAttribute="top" id="8OS-AE-Yyn"/>
                                     <constraint firstItem="UyY-fk-EXR" firstAttribute="bottom" secondItem="ANa-3H-Wjd" secondAttribute="bottom" id="9V7-dD-zWe"/>
                                     <constraint firstItem="UyY-fk-EXR" firstAttribute="trailing" secondItem="ANa-3H-Wjd" secondAttribute="trailing" id="A9q-b4-NtF"/>
                                     <constraint firstItem="6en-Oj-LeB" firstAttribute="width" secondItem="ANa-3H-Wjd" secondAttribute="width" multiplier="0.5" id="Abb-qy-2L5"/>
                                     <constraint firstItem="aga-qs-eZZ" firstAttribute="leading" secondItem="ANa-3H-Wjd" secondAttribute="leading" constant="10" id="BIY-CP-LjK"/>
-                                    <constraint firstItem="rpt-Pf-R0P" firstAttribute="top" secondItem="ANa-3H-Wjd" secondAttribute="top" id="IwR-Uf-Irw"/>
                                     <constraint firstItem="sl7-H4-suC" firstAttribute="width" secondItem="ANa-3H-Wjd" secondAttribute="width" multiplier="0.39" id="Lge-yz-QZc"/>
-                                    <constraint firstItem="rpt-Pf-R0P" firstAttribute="top" secondItem="lGT-kK-Quk" secondAttribute="top" id="MwX-gb-49Z"/>
                                     <constraint firstItem="6en-Oj-LeB" firstAttribute="leading" secondItem="ANa-3H-Wjd" secondAttribute="leading" constant="5" id="Nb0-tM-jVP"/>
+                                    <constraint firstItem="UyY-fk-EXR" firstAttribute="top" secondItem="4p8-Vz-7M8" secondAttribute="bottom" id="PqU-Ya-uB6"/>
                                     <constraint firstItem="zY0-Yi-aUc" firstAttribute="leading" secondItem="ANa-3H-Wjd" secondAttribute="leading" constant="5" id="RtP-KX-HCl"/>
                                     <constraint firstItem="rpt-Pf-R0P" firstAttribute="leading" secondItem="ANa-3H-Wjd" secondAttribute="leading" constant="10" id="TTT-y6-thU"/>
                                     <constraint firstItem="aga-qs-eZZ" firstAttribute="top" secondItem="AuT-gr-gNr" secondAttribute="bottom" constant="2" id="TfS-Fw-TvL"/>
                                     <constraint firstItem="AuT-gr-gNr" firstAttribute="top" secondItem="6en-Oj-LeB" secondAttribute="bottom" constant="2" id="UI8-kL-rXK"/>
                                     <constraint firstItem="AuT-gr-gNr" firstAttribute="leading" secondItem="ANa-3H-Wjd" secondAttribute="leading" constant="5" id="Wqk-AA-qbt"/>
                                     <constraint firstItem="lGT-kK-Quk" firstAttribute="trailing" secondItem="rpt-Pf-R0P" secondAttribute="trailing" constant="30" id="c8P-fb-yI5"/>
+                                    <constraint firstItem="lGT-kK-Quk" firstAttribute="top" secondItem="rpt-Pf-R0P" secondAttribute="top" id="fUc-Gf-bu2"/>
                                     <constraint firstItem="AuT-gr-gNr" firstAttribute="width" secondItem="ANa-3H-Wjd" secondAttribute="width" multiplier="0.5" id="gdt-v0-qUT"/>
                                     <constraint firstItem="zY0-Yi-aUc" firstAttribute="width" secondItem="ANa-3H-Wjd" secondAttribute="width" multiplier="0.5" id="gmQ-Cz-F4c"/>
+                                    <constraint firstItem="4p8-Vz-7M8" firstAttribute="top" secondItem="rpt-Pf-R0P" secondAttribute="top" id="huV-jR-Zf3"/>
                                     <constraint firstAttribute="height" constant="194" id="j5d-1T-fuS"/>
                                     <constraint firstItem="DAu-6I-2mP" firstAttribute="leading" secondItem="ANa-3H-Wjd" secondAttribute="leading" constant="5" id="jeq-Nd-8TI"/>
                                     <constraint firstAttribute="trailing" secondItem="4p8-Vz-7M8" secondAttribute="trailing" constant="10" id="mB2-12-EQ8"/>
                                     <constraint firstItem="6en-Oj-LeB" firstAttribute="top" secondItem="rpt-Pf-R0P" secondAttribute="bottom" id="odq-C4-1iv"/>
-                                    <constraint firstItem="UyY-fk-EXR" firstAttribute="top" secondItem="4p8-Vz-7M8" secondAttribute="bottom" id="rpj-k9-AOM"/>
+                                    <constraint firstItem="rpt-Pf-R0P" firstAttribute="top" secondItem="ANa-3H-Wjd" secondAttribute="top" id="rgb-FA-9gb"/>
                                     <constraint firstItem="zY0-Yi-aUc" firstAttribute="top" secondItem="DAu-6I-2mP" secondAttribute="bottom" constant="2" id="tYq-7Q-Xl3"/>
                                     <constraint firstItem="UyY-fk-EXR" firstAttribute="width" secondItem="ANa-3H-Wjd" secondAttribute="width" multiplier="0.466667" id="uPX-AX-Wjv"/>
                                     <constraint firstAttribute="trailing" secondItem="sl7-H4-suC" secondAttribute="trailing" constant="29" id="urH-ZS-yGF"/>
@@ -289,39 +276,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-DD-rOI" customClass="TableAdapterView" customModule="ButtonClickStyle" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <sections/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EM1-Yd-xx1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="top" secondItem="dR3-qA-oMw" secondAttribute="top" id="653-Jr-QAd"/>
                             <constraint firstItem="vnZ-DD-rOI" firstAttribute="trailing" secondItem="dR3-qA-oMw" secondAttribute="trailing" id="DJt-e2-4CJ"/>
-                            <constraint firstItem="ANa-3H-Wjd" firstAttribute="top" secondItem="dR3-qA-oMw" secondAttribute="top" id="HDE-DL-NVr"/>
                             <constraint firstItem="aga-qs-eZZ" firstAttribute="width" secondItem="dR3-qA-oMw" secondAttribute="width" multiplier="0.5" constant="1" id="J6r-11-Ydh"/>
+                            <constraint firstItem="vnZ-DD-rOI" firstAttribute="top" secondItem="EM1-Yd-xx1" secondAttribute="top" id="K00-Dm-Jpf"/>
                             <constraint firstItem="ANa-3H-Wjd" firstAttribute="leading" secondItem="dR3-qA-oMw" secondAttribute="leading" id="M33-CN-Id9"/>
                             <constraint firstAttribute="bottom" secondItem="vnZ-DD-rOI" secondAttribute="bottom" id="QoQ-Yc-tJy"/>
+                            <constraint firstItem="ANa-3H-Wjd" firstAttribute="top" secondItem="EM1-Yd-xx1" secondAttribute="top" id="b6h-9v-kQM"/>
                             <constraint firstAttribute="trailing" secondItem="ANa-3H-Wjd" secondAttribute="trailing" id="g6N-xz-5hF"/>
                             <constraint firstItem="vnZ-DD-rOI" firstAttribute="leading" secondItem="dR3-qA-oMw" secondAttribute="leading" id="zFq-D7-PmR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Table Buttons Customizable" id="tsF-r7-Sgs">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="bookmarks" id="Rzp-qn-Qov">
-                                <connections>
-                                    <action selector="navBarShowHidePanel" destination="4sU-sg-c5X" id="y0B-Y8-CbZ"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="refresh" id="rLf-pr-XT0">
-                                <connections>
-                                    <action selector="navBarButtonReloadAction:" destination="4sU-sg-c5X" id="3Kv-1Z-zJO"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addBackgroundColorSwitch" destination="wz3-DO-PUR" id="EKy-fB-YOa"/>
                         <outlet property="allSubviewsSwitch" destination="rsd-Ug-RsG" id="dkx-JU-5Vo"/>
@@ -335,12 +304,11 @@
                         <outlet property="colorSelectButton" destination="Eue-Vc-STp" id="hba-WD-Vkd"/>
                         <outlet property="createStartClick" destination="0bK-F8-Isx" id="NLY-bZ-L7P"/>
                         <outlet property="debugButtonShow" destination="KOd-4M-tGK" id="4rZ-pg-4rw"/>
-                        <outlet property="panelTop" destination="HDE-DL-NVr" id="Xub-Hj-f0E"/>
-                        <outlet property="tableTop" destination="653-Jr-QAd" id="k75-M2-lCx"/>
+                        <outlet property="panelWidth" destination="j5d-1T-fuS" id="M1s-ry-Cg5"/>
+                        <outlet property="tableTop" destination="K00-Dm-Jpf" id="6qw-f4-Ozp"/>
                         <outlet property="tableView" destination="vnZ-DD-rOI" id="ht1-S8-s2u"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5m1-gw-Vhp" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="466.39999999999998" y="-116.00985221674877"/>
         </scene>
